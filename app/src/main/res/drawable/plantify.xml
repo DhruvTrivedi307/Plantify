@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Aps xmlns:tools="http://schemas.android.com/tools">
+	<Group>
+		<Page Width="216" Height="216" PaperTray="0"
+            tools:ignore="MissingPrefix">
+			<Canvas>
+				<Canvas>
+					<Clip>
+						<Path FillMode="Winding">
+							<PathFigure IsClosed="True">
+								<PolyLine LineColor="#FF000000">
+									<Point X="0" Y="216" />
+									<Point X="0" Y="0" />
+								</PolyLine>
+								<PolyLine LineColor="#FF000000">
+									<Point X="0" Y="0" />
+									<Point X="216" Y="0" />
+								</PolyLine>
+								<PolyLine LineColor="#FF000000">
+									<Point X="216" Y="0" />
+									<Point X="216" Y="216" />
+								</PolyLine>
+								<PolyLine LineColor="#FF000000">
+									<Point X="216" Y="216" />
+									<Point X="0" Y="216" />
+								</PolyLine>
+							</PathFigure>
+						</Path>
+					</Clip>
+				</Canvas>
+			</Canvas>
+		</Page>
+	</Group>
+</Aps>
