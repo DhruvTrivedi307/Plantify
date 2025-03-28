@@ -1,15 +1,20 @@
 package com.example.plantify;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Paint;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -64,8 +69,30 @@ public class home extends AppCompatActivity {
         };
         handler.postDelayed(runnable, 3000);
 
+    }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.home) {
+            return true;
+        } else if (id == R.id.shop) {
+            Toast.makeText(this, "shop", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getApplicationContext(), shop.class);
+            startActivity(intent);
+            return true;
+        } else if (id == R.id.trending) {
+            return true;
+        } else if (id == R.id.profile) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
