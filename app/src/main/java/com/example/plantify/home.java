@@ -21,6 +21,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.google.android.material.bottomappbar.BottomAppBar;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -30,16 +33,19 @@ public class home extends AppCompatActivity {
     private Handler handler = new Handler(Looper.getMainLooper());
     private Runnable runnable;
     private ViewPager2 vp;
+    BottomNavigationView bnv;
     int currentPage = 0;
 
     RadioGroup rg;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
         vp = findViewById(R.id.vp);
+        bnv = findViewById(R.id.bnv);
 
         List<Integer> imgs = Arrays.asList(
                 R.drawable.carousel_img_1,
@@ -69,30 +75,18 @@ public class home extends AppCompatActivity {
         };
         handler.postDelayed(runnable, 3000);
 
-    }
+        bnv.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                if (item.getItemId()==R.id.shop){
+                    Intent i = new Intent(home.this,shop.class);
+                    startActivity(i);
+                    return true;
+                }
+                return true;
+            }
+        });
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int id = item.getItemId();
-        if (id == R.id.home) {
-            return true;
-        } else if (id == R.id.shop) {
-            Toast.makeText(this, "shop", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(getApplicationContext(), shop.class);
-            startActivity(intent);
-            return true;
-        } else if (id == R.id.trending) {
-            return true;
-        } else if (id == R.id.profile) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
     }
 
     @Override

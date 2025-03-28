@@ -264,6 +264,7 @@
         app:itemIconSize="35dp"
         app:itemIconTint="@color/bottom_nav_selector"
         app:itemPaddingTop="2dp"
+        android:id="@+id/bnv"
         app:itemTextAppearanceActive="@style/BottomNavActiveText"
         app:itemTextAppearanceInactive="@style/BottomNavInactiveText"
         app:itemTextColor="@color/bottom_nav_selector"
