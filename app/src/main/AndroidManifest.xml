@@ -19,17 +19,41 @@
             android:name=".create_account"
             android:exported="false" />
         <activity
-            android:name=".profile_signin"
+            android:name=".pots"
             android:exported="false" />
+        <activity
+            android:name=".easy_to_care"
+            android:exported="false" />
+        <activity
+            android:name=".bestsellers"
+            android:exported="false" />
+        <activity
+            android:name=".tools"
+            android:exported="false" />
+        <activity
+            android:name=".search"
+            android:exported="false"
+            android:theme="@style/Theme.Plantify" />
+        <activity
+            android:name=".product"
+            android:exported="false"
+            android:theme="@style/Theme.Plantify" />
+        <activity
+            android:name=".profile_signin"
+            android:exported="false"
+            android:theme="@style/Theme.Plantify" />
         <activity
             android:name=".Trending"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Plantify" />
         <activity
             android:name=".shop"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Plantify" />
         <activity
             android:name=".home"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Plantify" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

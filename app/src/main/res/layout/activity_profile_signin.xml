@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_gravity="center"
     tools:context=".profile_signin">
 
     <LinearLayout
@@ -62,6 +61,12 @@
     </LinearLayout>
 
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -73,7 +78,7 @@
             android:text="Welcome Back! Sign in with"
             android:textSize="25sp"
             android:layout_marginTop="35dp"
-            style="@style/TextAppearance.Material3.BodyLarge"
+            android:fontFamily="@font/inter_extrabold"
             android:textColor="#626262"
             android:textStyle="bold"/>
         <LinearLayout
@@ -84,12 +89,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New here?  "/>
+            android:text="New here?  "
+            android:fontFamily="@font/inter_medium"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Create Account"
-            android:textColor="#738B35"/>
+            android:textColor="#738B35"
+            android:fontFamily="@font/inter_medium"/>
         </LinearLayout>
 
 
@@ -107,45 +114,63 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Email address*"
-            android:textColor="@color/black"/>
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/theme_text"
+            android:fontFamily="@font/outfit_medium"/>
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter your email address"
-            android:layout_marginBottom="35dp"/>
+            android:layout_marginBottom="35dp"
+            android:padding="10dp"
+            android:textColorHint="@color/edit_text_stroke"
+            android:textSize="15dp"
+            android:background="@drawable/edit_text_stroke"
+            android:fontFamily="@font/outfit_medium"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Password*"
-            android:textColor="@color/black"
-            />
+            android:textColor="@color/theme_text"
+            android:fontFamily="@font/outfit_medium"
+            android:layout_marginBottom="5dp"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter your password"/>
+            android:hint="Enter your password"
+            android:padding="10dp"
+            android:textSize="15dp"
+            android:background="@drawable/edit_text_stroke"
+            android:textColorHint="@color/edit_text_stroke"
+            android:fontFamily="@font/outfit_medium"/>
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Show Password"/>
+            android:text="Show Password"
+            android:fontFamily="@font/outfit_medium"
+            android:textColor="@color/theme_text"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Forgot Password?"
-            android:textColor="#738B35"
+            android:fontFamily="@font/inter_medium"
+            android:textColor="@color/theme"
             android:layout_gravity="end"
             android:layout_marginBottom="30dp"/>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             app:cornerRadius="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Sign In"
-            android:textColor="#ddd"
-            android:background="#738B35"
-            android:textSize="20sp" />
+            android:fontFamily="@font/inter_medium"
+            android:textColor="@color/white"
+            android:background="@drawable/sign_in_button_fill"
+            android:textSize="15sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -165,6 +190,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Or continue with"
+                android:fontFamily="@font/outfit_medium"
                 android:textColor="#888888"
                 android:paddingStart="8dp"
                 android:paddingEnd="8dp"
@@ -176,16 +202,27 @@
                 android:layout_height="1dp"
                 android:layout_weight="1"
                 android:background="#CCCCCC"/>
+
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/google_sign_in_button"
+            android:layout_gravity="center">
 
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/google"
+                android:layout_margin="10dp"/>
+
+        </LinearLayout>
 
     </LinearLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"/>
+    </LinearLayout>
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bnv"

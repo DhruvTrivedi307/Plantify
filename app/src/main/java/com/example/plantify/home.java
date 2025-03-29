@@ -8,6 +8,9 @@ import android.os.Handler;
 import android.os.Looper;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -35,8 +38,9 @@ public class home extends AppCompatActivity {
     private ViewPager2 vp;
     BottomNavigationView bnv;
     int currentPage = 0;
-
     RadioGroup rg;
+    ImageView search_icon;
+    LinearLayout tools,bestsellers,easy_to_care,pots,seeds;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -46,6 +50,11 @@ public class home extends AppCompatActivity {
 
         vp = findViewById(R.id.vp);
         bnv = findViewById(R.id.bnv);
+        tools = findViewById(R.id.tools);
+        bestsellers = findViewById(R.id.bestsellers);
+        easy_to_care = findViewById(R.id.easy_to_care);
+        pots = findViewById(R.id.pots);
+        seeds = findViewById(R.id.seeds);
 
         List<Integer> imgs = Arrays.asList(
                 R.drawable.carousel_img_1,
@@ -75,18 +84,72 @@ public class home extends AppCompatActivity {
         };
         handler.postDelayed(runnable, 3000);
 
+        search_icon = findViewById(R.id.search_icon);
+
+        search_icon.setOnClickListener(v -> {
+            Intent i = new Intent(getApplicationContext(),search.class);
+            startActivity(i);
+            overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
+        });
+
+        tools.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), tools.class);
+                startActivity(i);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+            }
+        });
+
+        bestsellers.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), bestsellers.class);
+                startActivity(i);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+            }
+        });
+
+        easy_to_care.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), easy_to_care.class);
+                startActivity(i);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+            }
+        });
+
+        bnv.setSelectedItemId(R.id.home);
+
         bnv.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                if (item.getItemId()==R.id.shop){
-                    Intent i = new Intent(home.this,shop.class);
+                if (item.getItemId() == R.id.shop) {
+                    Intent i = new Intent(getApplicationContext(), shop.class);
                     startActivity(i);
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                    return true;
+                } else if (item.getItemId() == R.id.trending) {
+                    Intent i = new Intent(getApplicationContext(), Trending.class);
+                    startActivity(i);
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                    return true;
+                } else if (item.getItemId() == R.id.profile) {
+                    Intent i = new Intent(getApplicationContext(), profile_signin.class);
+                    startActivity(i);
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                     return true;
                 }
                 return true;
             }
         });
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(0, R.anim.fade_out);
     }
 
     @Override

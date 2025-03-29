@@ -41,14 +41,14 @@
             android:layout_weight="1" />
 
         <ImageView
-            android:id="@+id/search_icon"
+            android:id="@+id/cart_icon"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_gravity="center"
             android:src="@drawable/cart" />
 
         <ImageView
-            android:id="@+id/cart_icon"
+            android:id="@+id/search_icon"
             android:layout_width="40dp"
             android:layout_height="30dp"
             android:layout_marginRight="5dp"
@@ -56,7 +56,7 @@
             android:layout_gravity="center"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:src="@drawable/search" />
+            android:src="@drawable/search"/>
 
     </LinearLayout>
 
@@ -120,7 +120,8 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:paddingLeft="10dp"
-                    android:paddingRight="10dp">
+                    android:paddingRight="10dp"
+                    android:id="@+id/tools">
 
                     <ImageView
                         android:layout_width="60dp"
@@ -143,7 +144,8 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:paddingLeft="10dp"
-                    android:paddingRight="10dp">
+                    android:paddingRight="10dp"
+                    android:id="@+id/bestsellers">
 
                     <ImageView
                         android:layout_width="60dp"
@@ -166,7 +168,8 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:paddingLeft="10dp"
-                    android:paddingRight="10dp">
+                    android:paddingRight="10dp"
+                    android:id="@+id/easy_to_care">
 
                     <ImageView
                         android:layout_width="60dp"
@@ -189,7 +192,8 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:paddingLeft="10dp"
-                    android:paddingRight="10dp">
+                    android:paddingRight="10dp"
+                    android:id="@+id/pots">
 
                     <ImageView
                         android:layout_width="60dp"
@@ -212,7 +216,8 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:paddingLeft="10dp"
-                    android:paddingRight="10dp">
+                    android:paddingRight="10dp"
+                    android:id="@+id/seeds">
 
                     <ImageView
                         android:layout_width="60dp"
@@ -259,7 +264,7 @@
                         android:layout_width="180dp"
                         android:layout_height="230dp"
                         android:layout_margin="10dp"
-                        android:src="@drawable/broken_heart_plant" />
+                        android:src="@drawable/broken_heart_plant_2" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -690,48 +695,6 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-<!--                <LinearLayout-->
-<!--                    android:layout_width="100dp"-->
-<!--                    android:layout_height="40dp"-->
-<!--                    android:layout_gravity="center"-->
-<!--                    android:layout_marginLeft="20dp"-->
-<!--                    android:background="@drawable/radius"-->
-<!--                    android:gravity="center">-->
-
-<!--                    <Button-->
-<!--                        android:layout_width="93dp"-->
-<!--                        android:layout_height="45dp"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:layout_margin="20dp"-->
-<!--                        android:backgroundTint="@color/white"-->
-<!--                        android:hint="Small"-->
-<!--                        android:stateListAnimator="@null"-->
-<!--                        android:textColorHint="@color/theme"-->
-<!--                        android:textSize="12dp" />-->
-
-<!--                </LinearLayout>-->
-
-<!--                <LinearLayout-->
-<!--                    android:layout_width="100dp"-->
-<!--                    android:layout_height="40dp"-->
-<!--                    android:layout_gravity="center"-->
-<!--                    android:layout_marginLeft="20dp"-->
-<!--                    android:background="@drawable/radius"-->
-<!--                    android:gravity="center">-->
-
-<!--                    <Button-->
-<!--                        android:layout_width="93dp"-->
-<!--                        android:layout_height="45dp"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:layout_margin="20dp"-->
-<!--                        android:backgroundTint="@color/white"-->
-<!--                        android:hint="Medium"-->
-<!--                        android:stateListAnimator="@null"-->
-<!--                        android:textColorHint="@color/theme"-->
-<!--                        android:textSize="12dp" />-->
-
-<!--                </LinearLayout>-->
-
                 <androidx.appcompat.widget.AppCompatButton
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
@@ -748,8 +711,6 @@
                     android:hint="Medium"
                     android:fontFamily="@font/outfit_medium"/>
 
-
-
             </LinearLayout>
 
             <TextView
@@ -761,26 +722,6 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginBottom="10dp"/>
-
-<!--            <LinearLayout-->
-<!--                android:layout_width="100dp"-->
-<!--                android:layout_height="40dp"-->
-<!--                android:layout_marginLeft="20dp"-->
-<!--                android:background="@drawable/radius"-->
-<!--                android:gravity="center">-->
-
-<!--                <Button-->
-<!--                    android:layout_width="93dp"-->
-<!--                    android:layout_height="45dp"-->
-<!--                    android:layout_gravity="center"-->
-<!--                    android:layout_margin="20dp"-->
-<!--                    android:backgroundTint="@color/white"-->
-<!--                    android:hint="-    1    +"-->
-<!--                    android:stateListAnimator="@null"-->
-<!--                    android:textColorHint="@color/theme"-->
-<!--                    android:textSize="12dp"/>-->
-
-<!--            </LinearLayout>-->
 
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="wrap_content"
@@ -815,22 +756,6 @@
                     android:layout_margin="10dp"
                     android:textColorHint="@color/white"
                     android:fontFamily="@font/outfit_medium"/>
-
-<!--                <Button-->
-<!--                    android:layout_width="180dp"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:hint="BUY NOW"-->
-<!--                    android:textColorHint="@color/white"-->
-<!--                    android:backgroundTint="@color/theme"-->
-<!--                    android:layout_marginRight="10dp"/>-->
-
-<!--                <Button-->
-<!--                    android:layout_width="180dp"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:hint="ADD TO CART"-->
-<!--                    android:textColorHint="@color/white"-->
-<!--                    android:backgroundTint="@color/theme"-->
-<!--                    android:layout_marginRight="10dp"/>-->
 
             </LinearLayout>
 
