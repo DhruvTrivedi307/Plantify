@@ -110,7 +110,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingTop="20dp">
+                    android:paddingTop="20dp"
+                    android:id="@+id/s_amaranths">
 
                     <ImageView
                         android:layout_width="180dp"
@@ -164,6 +165,7 @@
                     </LinearLayout>
 
                     <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn1"
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:fontFamily="@font/outfit_medium"
@@ -178,6 +180,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/s_beetroots"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -260,6 +263,7 @@
                 android:gravity="center">
 
                 <LinearLayout
+                    android:id="@+id/s_broccolis"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -332,6 +336,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/s_capsicums"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -412,6 +417,7 @@
                 android:gravity="center">
 
                 <LinearLayout
+                    android:id="@+id/s_corianders"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -483,6 +489,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/s_fenugreeks"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -564,6 +571,7 @@
                 android:layout_marginBottom="20dp">
 
                 <LinearLayout
+                    android:id="@+id/s_greenchillis"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -635,6 +643,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/s_greencucumbers"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -716,6 +725,7 @@
                 android:layout_marginBottom="20dp">
 
                 <LinearLayout
+                    android:id="@+id/s_okras"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -787,6 +797,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/s_redamaranthuss"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -868,6 +879,7 @@
                 android:layout_marginBottom="20dp">
 
                 <LinearLayout
+                    android:id="@+id/s_spinchs"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -939,6 +951,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/s_tomatos"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"

@@ -3,6 +3,8 @@ package com.example.plantify;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -17,6 +19,7 @@ public class product extends AppCompatActivity {
 
     ImageView productImg;
     TextView productName,productPrice;
+    Button buy_now;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -28,9 +31,11 @@ public class product extends AppCompatActivity {
         productName = findViewById(R.id.productName);
         productPrice = findViewById(R.id.productPrice);
 
+        buy_now = findViewById(R.id.buy_now);
+
 
         Intent i = getIntent();
-        if (i != null) {  // Check if intent is not null
+        if (i != null) {
             int img = i.getIntExtra("img", 0);
             String name = i.getStringExtra("name");
             int price = i.getIntExtra("price", 0);
@@ -47,6 +52,14 @@ public class product extends AppCompatActivity {
 
             productPrice.setText("₹" + price);
         }
+
+        buy_now.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), checkout.class);
+                startActivity(i);
+            }
+        });
 
 
 

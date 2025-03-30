@@ -581,6 +581,7 @@
             android:layout_margin="10dp">
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buy_now"
                 android:layout_width="180dp"
                 android:layout_height="40dp"
                 android:background="@drawable/button_stroke"
