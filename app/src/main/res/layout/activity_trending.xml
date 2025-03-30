@@ -110,14 +110,14 @@
                         <ImageView
                             android:layout_width="160dp"
                             android:layout_height="200dp"
-                            android:src="@drawable/broken_heart_plant" />
+                            android:src="@drawable/bamboo_palm_plant" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/outfit_bold"
                             android:paddingTop="5dp"
-                            android:text="Broken Heart Plant" />
+                            android:text="Bamboo Palm Plant" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -129,7 +129,149 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/sansita_swashed"
                                 android:paddingRight="5dp"
-                                android:text="₹1999"
+                                android:text="₹999"
+                                android:foreground="@drawable/strikethrough_foreground"
+                                android:textSize="10dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sansita_swashed"
+                                android:padding="5dp"
+                                android:text="₹849"
+                                android:textColor="@color/theme"
+                                android:textSize="12dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="200dp"
+                            android:src="@drawable/fiddle_leaf_fig_plant" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/outfit_bold"
+                            android:paddingTop="5dp"
+                            android:text="Fiddle Leaf Fig Plant" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sansita_swashed"
+                                android:paddingRight="5dp"
+                                android:text="₹999"
+                                android:foreground="@drawable/strikethrough_foreground"
+                                android:textSize="10dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sansita_swashed"
+                                android:padding="5dp"
+                                android:text="₹699"
+                                android:textColor="@color/theme"
+                                android:textSize="12dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="200dp"
+                            android:src="@drawable/aglaonema_pink_beauty_plant" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/outfit_bold"
+                            android:paddingTop="5dp"
+                            android:text="Aglaonema Pink\nBeauty Pkant" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sansita_swashed"
+                                android:paddingRight="5dp"
+                                android:text="₹599"
+                                android:foreground="@drawable/strikethrough_foreground"
+                                android:textSize="10dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sansita_swashed"
+                                android:padding="5dp"
+                                android:text="₹269"
+                                android:textColor="@color/theme"
+                                android:textSize="12dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="200dp"
+                            android:src="@drawable/aglaonema_red_plant" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/outfit_bold"
+                            android:paddingTop="5dp"
+                            android:text="Aglaonema Red Plant" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sansita_swashed"
+                                android:paddingRight="5dp"
+                                android:text="₹369"
+                                android:foreground="@drawable/strikethrough_foreground"
                                 android:textSize="10dp" />
 
                             <TextView
@@ -156,14 +298,14 @@
                         <ImageView
                             android:layout_width="160dp"
                             android:layout_height="200dp"
-                            android:src="@drawable/jade_mini_plats" />
+                            android:src="@drawable/bamboo_palm_xl" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/outfit_bold"
                             android:paddingTop="5dp"
-                            android:text="Jade Plant Mini" />
+                            android:text="Bamboo Palm Xl" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -175,7 +317,8 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/sansita_swashed"
                                 android:paddingRight="5dp"
-                                android:text="₹1999"
+                                android:text="₹589"
+                                android:foreground="@drawable/strikethrough_foreground"
                                 android:textSize="10dp" />
 
                             <TextView
@@ -202,14 +345,14 @@
                         <ImageView
                             android:layout_width="160dp"
                             android:layout_height="200dp"
-                            android:src="@drawable/brazilian_wood_plant" />
+                            android:src="@drawable/chlorophytum_spider_plant" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/outfit_bold"
                             android:paddingTop="5dp"
-                            android:text="Brazilian Wood Plant" />
+                            android:text="Chlorophytum Spider Plant" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -221,7 +364,8 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/sansita_swashed"
                                 android:paddingRight="5dp"
-                                android:text="₹1999"
+                                android:text="₹859"
+                                android:foreground="@drawable/strikethrough_foreground"
                                 android:textSize="10dp" />
 
                             <TextView
@@ -229,7 +373,7 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/sansita_swashed"
                                 android:padding="5dp"
-                                android:text="₹499"
+                                android:text="₹449"
                                 android:textColor="@color/theme"
                                 android:textSize="12dp" />
 
@@ -243,19 +387,20 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="20dp"
                         android:layout_marginBottom="20dp"
+                        android:layout_marginRight="20dp"
                         android:orientation="vertical">
 
                         <ImageView
                             android:layout_width="160dp"
                             android:layout_height="200dp"
-                            android:src="@drawable/peacock_plant" />
+                            android:src="@drawable/monstera_deliciosa_plant" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/outfit_bold"
                             android:paddingTop="5dp"
-                            android:text="Peacock Plant" />
+                            android:text="Monstera Deliciosa Plant" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -267,7 +412,8 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/sansita_swashed"
                                 android:paddingRight="5dp"
-                                android:text="₹1999"
+                                android:text="₹959"
+                                android:foreground="@drawable/strikethrough_foreground"
                                 android:textSize="10dp" />
 
                             <TextView
@@ -275,145 +421,7 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/sansita_swashed"
                                 android:padding="5dp"
-                                android:text="₹499"
-                                android:textColor="@color/theme"
-                                android:textSize="12dp" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginBottom="20dp"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="160dp"
-                            android:layout_height="200dp"
-                            android:src="@drawable/ficus_bonsai_plant" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/outfit_bold"
-                            android:paddingTop="5dp"
-                            android:text="Ficus Bonsai Plant" />
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/sansita_swashed"
-                                android:paddingRight="5dp"
-                                android:text="₹1999"
-                                android:textSize="10dp" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/sansita_swashed"
-                                android:padding="5dp"
-                                android:text="₹499"
-                                android:textColor="@color/theme"
-                                android:textSize="12dp" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginBottom="20dp"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="160dp"
-                            android:layout_height="200dp"
-                            android:src="@drawable/lucky_bamboo_plant" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/outfit_bold"
-                            android:paddingTop="5dp"
-                            android:text="Lucky Bamboo Plant" />
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/sansita_swashed"
-                                android:paddingRight="5dp"
-                                android:text="₹1999"
-                                android:textSize="10dp" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/sansita_swashed"
-                                android:padding="5dp"
-                                android:text="₹499"
-                                android:textColor="@color/theme"
-                                android:textSize="12dp" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginBottom="20dp"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="160dp"
-                            android:layout_height="200dp"
-                            android:src="@drawable/broken_heart_plant" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/outfit_bold"
-                            android:paddingTop="5dp"
-                            android:text="Broken Heart Plant" />
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/sansita_swashed"
-                                android:paddingRight="5dp"
-                                android:text="₹1999"
-                                android:textSize="10dp" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/sansita_swashed"
-                                android:padding="5dp"
-                                android:text="₹499"
+                                android:text="₹379"
                                 android:textColor="@color/theme"
                                 android:textSize="12dp" />
 
@@ -467,14 +475,14 @@
                         <ImageView
                             android:layout_width="160dp"
                             android:layout_height="200dp"
-                            android:src="@drawable/broken_heart_plant" />
+                            android:src="@drawable/dom_metallic_mister" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/outfit_bold"
                             android:paddingTop="5dp"
-                            android:text="Broken Heart Plant" />
+                            android:text="Dom Metallic Mister" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -486,8 +494,56 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/sansita_swashed"
                                 android:paddingRight="5dp"
-                                android:text="₹1999"
-                                android:textSize="10dp" />
+                                android:text="₹789"
+                                android:textSize="10dp"
+                                android:foreground="@drawable/strikethrough_foreground"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sansita_swashed"
+                                android:padding="5dp"
+                                android:text="₹699"
+                                android:textColor="@color/theme"
+                                android:textSize="12dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="200dp"
+                            android:src="@drawable/hydra_watering_pitcher" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/outfit_bold"
+                            android:paddingTop="5dp"
+                            android:text="Hydra Watering Pitcher" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sansita_swashed"
+                                android:paddingRight="5dp"
+                                android:text="₹569"
+                                android:textSize="10dp"
+                                android:foreground="@drawable/strikethrough_foreground"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -513,14 +569,14 @@
                         <ImageView
                             android:layout_width="160dp"
                             android:layout_height="200dp"
-                            android:src="@drawable/jade_mini_plats" />
+                            android:src="@drawable/sienna_terracotta_pots" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/outfit_bold"
                             android:paddingTop="5dp"
-                            android:text="Jade Plant Mini" />
+                            android:text="Sienna Terracotta Pots" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -532,15 +588,16 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/sansita_swashed"
                                 android:paddingRight="5dp"
-                                android:text="₹1999"
-                                android:textSize="10dp" />
+                                android:text="₹739"
+                                android:textSize="10dp"
+                                android:foreground="@drawable/strikethrough_foreground"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/sansita_swashed"
                                 android:padding="5dp"
-                                android:text="₹499"
+                                android:text="₹359"
                                 android:textColor="@color/theme"
                                 android:textSize="12dp" />
 
@@ -559,14 +616,14 @@
                         <ImageView
                             android:layout_width="160dp"
                             android:layout_height="200dp"
-                            android:src="@drawable/brazilian_wood_plant" />
+                            android:src="@drawable/beetroot_seeds" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/outfit_bold"
                             android:paddingTop="5dp"
-                            android:text="Brazilian Wood Plant" />
+                            android:text="Beetroot Seeds" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -578,15 +635,16 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/sansita_swashed"
                                 android:paddingRight="5dp"
-                                android:text="₹1999"
-                                android:textSize="10dp" />
+                                android:text="₹949"
+                                android:textSize="10dp"
+                                android:foreground="@drawable/strikethrough_foreground"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/sansita_swashed"
                                 android:padding="5dp"
-                                android:text="₹499"
+                                android:text="₹849"
                                 android:textColor="@color/theme"
                                 android:textSize="12dp" />
 
@@ -605,14 +663,14 @@
                         <ImageView
                             android:layout_width="160dp"
                             android:layout_height="200dp"
-                            android:src="@drawable/peacock_plant" />
+                            android:src="@drawable/amaranth_seeds" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/outfit_bold"
                             android:paddingTop="5dp"
-                            android:text="Peacock Plant" />
+                            android:text="Amaranth Seeds" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -624,15 +682,16 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/sansita_swashed"
                                 android:paddingRight="5dp"
-                                android:text="₹1999"
-                                android:textSize="10dp" />
+                                android:text="₹739"
+                                android:textSize="10dp"
+                                android:foreground="@drawable/strikethrough_foreground"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/sansita_swashed"
                                 android:padding="5dp"
-                                android:text="₹499"
+                                android:text="₹379"
                                 android:textColor="@color/theme"
                                 android:textSize="12dp" />
 
@@ -651,14 +710,14 @@
                         <ImageView
                             android:layout_width="160dp"
                             android:layout_height="200dp"
-                            android:src="@drawable/ficus_bonsai_plant" />
+                            android:src="@drawable/five_prong_weeder" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/outfit_bold"
                             android:paddingTop="5dp"
-                            android:text="Ficus Bonsai Plant" />
+                            android:text="Five Prong Weeder" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -670,15 +729,16 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/sansita_swashed"
                                 android:paddingRight="5dp"
-                                android:text="₹1999"
-                                android:textSize="10dp" />
+                                android:text="₹949"
+                                android:textSize="10dp"
+                                android:foreground="@drawable/strikethrough_foreground"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/sansita_swashed"
                                 android:padding="5dp"
-                                android:text="₹499"
+                                android:text="₹879"
                                 android:textColor="@color/theme"
                                 android:textSize="12dp" />
 
@@ -692,19 +752,20 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="20dp"
                         android:layout_marginBottom="20dp"
+                        android:layout_marginRight="20dp"
                         android:orientation="vertical">
 
                         <ImageView
                             android:layout_width="160dp"
                             android:layout_height="200dp"
-                            android:src="@drawable/lucky_bamboo_plant" />
+                            android:src="@drawable/curve_pruning_saw" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/outfit_bold"
                             android:paddingTop="5dp"
-                            android:text="Lucky Bamboo Plant" />
+                            android:text="Curve pruning Saw" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -716,54 +777,9 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/sansita_swashed"
                                 android:paddingRight="5dp"
-                                android:text="₹1999"
-                                android:textSize="10dp" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/sansita_swashed"
-                                android:padding="5dp"
-                                android:text="₹499"
-                                android:textColor="@color/theme"
-                                android:textSize="12dp" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginBottom="20dp"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="160dp"
-                            android:layout_height="200dp"
-                            android:src="@drawable/broken_heart_plant" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/outfit_bold"
-                            android:paddingTop="5dp"
-                            android:text="Broken Heart Plant" />
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/sansita_swashed"
-                                android:paddingRight="5dp"
-                                android:text="₹1999"
-                                android:textSize="10dp" />
+                                android:text="₹539"
+                                android:textSize="10dp"
+                                android:foreground="@drawable/strikethrough_foreground"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -824,7 +840,7 @@
                         <ImageView
                             android:layout_width="160dp"
                             android:layout_height="200dp"
-                            android:src="@drawable/broken_heart_plant" />
+                            android:src="@drawable/broken_heart_plant_2" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -843,15 +859,16 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/sansita_swashed"
                                 android:paddingRight="5dp"
-                                android:text="₹1999"
-                                android:textSize="10dp" />
+                                android:text="₹849"
+                                android:textSize="10dp"
+                                android:foreground="@drawable/strikethrough_foreground"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/sansita_swashed"
                                 android:padding="5dp"
-                                android:text="₹499"
+                                android:text="₹449"
                                 android:textColor="@color/theme"
                                 android:textSize="12dp" />
 
@@ -889,15 +906,16 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/sansita_swashed"
                                 android:paddingRight="5dp"
-                                android:text="₹1999"
-                                android:textSize="10dp" />
+                                android:text="₹829"
+                                android:textSize="10dp"
+                                android:foreground="@drawable/strikethrough_foreground"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/sansita_swashed"
                                 android:padding="5dp"
-                                android:text="₹499"
+                                android:text="₹509"
                                 android:textColor="@color/theme"
                                 android:textSize="12dp" />
 
@@ -935,15 +953,16 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/sansita_swashed"
                                 android:paddingRight="5dp"
-                                android:text="₹1999"
-                                android:textSize="10dp" />
+                                android:text="₹389"
+                                android:textSize="10dp"
+                                android:foreground="@drawable/strikethrough_foreground"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/sansita_swashed"
                                 android:padding="5dp"
-                                android:text="₹499"
+                                android:text="₹289"
                                 android:textColor="@color/theme"
                                 android:textSize="12dp" />
 
@@ -981,15 +1000,16 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/sansita_swashed"
                                 android:paddingRight="5dp"
-                                android:text="₹1999"
-                                android:textSize="10dp" />
+                                android:text="₹829"
+                                android:textSize="10dp"
+                                android:foreground="@drawable/strikethrough_foreground"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/sansita_swashed"
                                 android:padding="5dp"
-                                android:text="₹499"
+                                android:text="₹389"
                                 android:textColor="@color/theme"
                                 android:textSize="12dp" />
 
@@ -1027,15 +1047,16 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/sansita_swashed"
                                 android:paddingRight="5dp"
-                                android:text="₹1999"
-                                android:textSize="10dp" />
+                                android:text="₹929"
+                                android:textSize="10dp"
+                                android:foreground="@drawable/strikethrough_foreground"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/sansita_swashed"
                                 android:padding="5dp"
-                                android:text="₹499"
+                                android:text="₹899"
                                 android:textColor="@color/theme"
                                 android:textSize="12dp" />
 
@@ -1073,15 +1094,16 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/sansita_swashed"
                                 android:paddingRight="5dp"
-                                android:text="₹1999"
-                                android:textSize="10dp" />
+                                android:text="₹929"
+                                android:textSize="10dp"
+                                android:foreground="@drawable/strikethrough_foreground"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/sansita_swashed"
                                 android:padding="5dp"
-                                android:text="₹499"
+                                android:text="₹579"
                                 android:textColor="@color/theme"
                                 android:textSize="12dp" />
 
@@ -1095,19 +1117,20 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="20dp"
                         android:layout_marginBottom="20dp"
+                        android:layout_marginRight="20dp"
                         android:orientation="vertical">
 
                         <ImageView
                             android:layout_width="160dp"
                             android:layout_height="200dp"
-                            android:src="@drawable/broken_heart_plant" />
+                            android:src="@drawable/peperomia_green_plant" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/outfit_bold"
                             android:paddingTop="5dp"
-                            android:text="Broken Heart Plant" />
+                            android:text="Peperomia Green Plant" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -1119,15 +1142,16 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/sansita_swashed"
                                 android:paddingRight="5dp"
-                                android:text="₹1999"
-                                android:textSize="10dp" />
+                                android:text="₹729"
+                                android:textSize="10dp"
+                                android:foreground="@drawable/strikethrough_foreground"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/sansita_swashed"
                                 android:padding="5dp"
-                                android:text="₹499"
+                                android:text="₹719"
                                 android:textColor="@color/theme"
                                 android:textSize="12dp" />
 
