@@ -39,7 +39,7 @@ public class home extends AppCompatActivity {
     BottomNavigationView bnv;
     int currentPage = 0;
     RadioGroup rg;
-    ImageView search_icon;
+    ImageView search_icon,cart_icon;
     LinearLayout tools,bestsellers,easy_to_care,pots,seeds;
 
     @SuppressLint("MissingInflatedId")
@@ -85,9 +85,16 @@ public class home extends AppCompatActivity {
         handler.postDelayed(runnable, 3000);
 
         search_icon = findViewById(R.id.search_icon);
+        cart_icon = findViewById(R.id.cart_icon);
 
         search_icon.setOnClickListener(v -> {
             Intent i = new Intent(getApplicationContext(),search.class);
+            startActivity(i);
+            overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
+        });
+
+        cart_icon.setOnClickListener(v -> {
+            Intent i = new Intent(getApplicationContext(),cart.class);
             startActivity(i);
             overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
         });
@@ -114,6 +121,24 @@ public class home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), easy_to_care.class);
+                startActivity(i);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+            }
+        });
+
+        seeds.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), seeds.class);
+                startActivity(i);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+            }
+        });
+
+        pots.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), pots.class);
                 startActivity(i);
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             }

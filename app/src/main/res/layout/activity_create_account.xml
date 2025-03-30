@@ -162,12 +162,12 @@
             android:layout_marginBottom="20dp"
             />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="CREATE ACCOUNT"
             android:textSize="20sp"
-            android:background="@color/theme"
+            android:background="@drawable/sign_in_button_fill"
             />
 
         <LinearLayout
