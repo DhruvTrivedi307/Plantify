@@ -16,6 +16,12 @@
             android:name=".seeds"
             android:exported="false" />
         <activity
+            android:name=".profile_logout"
+            android:exported="false" />
+        <activity
+            android:name=".payment"
+            android:exported="false" />
+        <activity
             android:name=".filter_by_indoor_outdoor"
             android:exported="false" />
         <activity

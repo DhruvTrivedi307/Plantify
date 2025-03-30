@@ -18,7 +18,8 @@
             android:paddingTop="40dp"
             android:paddingBottom="20dp">
 
-            <ImageView
+            <ImageButton
+                android:background="#f0f0f0"
                 android:id="@+id/back"
                 android:layout_width="18dp"
                 android:layout_height="18dp"
