@@ -9,6 +9,7 @@ import android.os.Looper;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
@@ -42,7 +43,11 @@ public class home extends AppCompatActivity {
     ImageView search_icon,cart_icon;
     LinearLayout tools,bestsellers,easy_to_care,pots,seeds;
 
-    @SuppressLint("MissingInflatedId")
+    ImageView h_bhp,h_jmp,h_bwp,h_pp;
+
+    Button viewAll;
+
+    @SuppressLint({"MissingInflatedId", "WrongViewCast"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +60,72 @@ public class home extends AppCompatActivity {
         easy_to_care = findViewById(R.id.easy_to_care);
         pots = findViewById(R.id.pots);
         seeds = findViewById(R.id.seeds);
+
+        h_bhp = findViewById(R.id.h_bhp);
+        h_jmp = findViewById(R.id.h_jmp);
+        h_bwp = findViewById(R.id.h_bwp);
+        h_pp = findViewById(R.id.h_pp);
+        viewAll = findViewById(R.id.viewAll);
+
+        viewAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),shop.class);
+                startActivity(i);
+            }
+        });
+
+        h_bhp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String name = "Broken Heart Plant";
+                int price = 499;
+                Intent i = new Intent(getApplicationContext(),product.class);
+                i.putExtra("img",R.drawable.broken_heart_plant_2);
+                i.putExtra("name",name);
+                i.putExtra("price",price);
+                startActivity(i);
+            }
+        });
+
+        h_jmp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String name = "Jade Mini Plant";
+                int price = 499;
+                Intent i = new Intent(getApplicationContext(),product.class);
+                i.putExtra("img",R.drawable.jade_mini_plats);
+                i.putExtra("name",name);
+                i.putExtra("price",price);
+                startActivity(i);
+            }
+        });
+
+        h_bwp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String name = "Brazilian Wood Plant";
+                int price = 499;
+                Intent i = new Intent(getApplicationContext(),product.class);
+                i.putExtra("img",R.drawable.brazilian_wood_plant);
+                i.putExtra("name",name);
+                i.putExtra("price",price);
+                startActivity(i);
+            }
+        });
+
+        h_pp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String name = "Peacock Plant";
+                int price = 499;
+                Intent i = new Intent(getApplicationContext(),product.class);
+                i.putExtra("img",R.drawable.peacock_plant);
+                i.putExtra("name",name);
+                i.putExtra("price",price);
+                startActivity(i);
+            }
+        });
 
         List<Integer> imgs = Arrays.asList(
                 R.drawable.carousel_img_1,

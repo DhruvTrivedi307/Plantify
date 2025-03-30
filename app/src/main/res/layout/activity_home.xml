@@ -261,6 +261,7 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/h_bhp"
                         android:layout_width="180dp"
                         android:layout_height="230dp"
                         android:layout_margin="10dp"
@@ -334,6 +335,7 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/h_jmp"
                         android:layout_width="180dp"
                         android:layout_height="230dp"
                         android:layout_margin="10dp"
@@ -369,7 +371,6 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/priceText2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
@@ -417,6 +418,7 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/h_bwp"
                         android:layout_width="180dp"
                         android:layout_height="230dp"
                         android:layout_margin="10dp"
@@ -452,7 +454,6 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/priceText"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
@@ -490,6 +491,7 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/h_pp"
                         android:layout_width="180dp"
                         android:layout_height="230dp"
                         android:layout_margin="10dp"
@@ -567,6 +569,7 @@
                 android:gravity="center">
 
                 <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/viewAll"
                     android:layout_width="150dp"
                     android:layout_height="40dp"
                     android:background="@drawable/button_stroke"

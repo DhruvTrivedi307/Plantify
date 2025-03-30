@@ -23,18 +23,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         vv = findViewById(R.id.vv);
 
-        String path = "android.resource://"+getPackageName()+"/"+R.raw.splash;
-        Uri uri = Uri.parse(path);
-        vv.setVideoURI(uri);
-        vv.start();
+//        String path = "android.resource://"+getPackageName()+"/"+R.raw.splash;
+//        Uri uri = Uri.parse(path);
+//        vv.setVideoURI(uri);
+//        vv.start();
 
-        new Handler().postDelayed(() -> {
+//        new Handler().postDelayed(() -> {
             startActivity(new Intent(this, home.class));
             finish();
-        }, SPLASH_TIME_OUT);
+//        }, SPLASH_TIME_OUT);
 
         getWindow().getDecorView().setSystemUiVisibility(
                 View.SYSTEM_UI_FLAG_HIDE_NAVIGATION |View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
