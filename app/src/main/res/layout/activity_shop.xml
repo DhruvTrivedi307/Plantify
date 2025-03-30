@@ -157,6 +157,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/sansita_swashed"
+                        android:foreground="@drawable/strikethrough_foreground"
                         android:text="₹1999"
                         android:textSize="10dp"/>
 
@@ -165,7 +166,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:fontFamily="@font/sansita_swashed"
-                        android:text="₹499"
+                        android:text="₹299"
                         android:textColor="@color/theme"
                         android:textSize="12dp"/>
 
@@ -229,7 +230,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/sansita_swashed"
-                        android:text="₹1999"
+                        android:foreground="@drawable/strikethrough_foreground"
+                        android:text="₹299"
                         android:textSize="10dp"/>
 
                     <TextView
@@ -237,7 +239,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:fontFamily="@font/sansita_swashed"
-                        android:text="₹499"
+                        android:text="₹279"
                         android:textColor="@color/theme"
                         android:textSize="12dp"/>
 
@@ -309,7 +311,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/sansita_swashed"
-                            android:text="₹1999"
+                            android:foreground="@drawable/strikethrough_foreground"
+                            android:text="₹399"
                             android:textSize="10dp"/>
 
                         <TextView
@@ -317,7 +320,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:fontFamily="@font/sansita_swashed"
-                            android:text="₹499"
+                            android:text="₹299"
                             android:textColor="@color/theme"
                             android:textSize="12dp"/>
 
@@ -379,7 +382,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/sansita_swashed"
-                            android:text="₹1999"
+                            android:text="₹1249"
+                            android:foreground="@drawable/strikethrough_foreground"
                             android:textSize="10dp"/>
 
                         <TextView
@@ -387,7 +391,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:fontFamily="@font/sansita_swashed"
-                            android:text="₹499"
+                            android:text="₹949"
                             android:textColor="@color/theme"
                             android:textSize="12dp"/>
 
@@ -460,7 +464,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/sansita_swashed"
-                            android:text="₹1999"
+                            android:foreground="@drawable/strikethrough_foreground"
+                            android:text="₹499"
                             android:textSize="10dp"/>
 
                         <TextView
@@ -468,7 +473,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:fontFamily="@font/sansita_swashed"
-                            android:text="₹499"
+                            android:text="₹349"
                             android:textColor="@color/theme"
                             android:textSize="12dp"/>
 
@@ -530,7 +535,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/sansita_swashed"
-                            android:text="₹1999"
+                            android:foreground="@drawable/strikethrough_foreground"
+                            android:text="₹599"
                             android:textSize="10dp"/>
 
                         <TextView
@@ -538,7 +544,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:fontFamily="@font/sansita_swashed"
-                            android:text="₹499"
+                            android:text="₹349"
                             android:textColor="@color/theme"
                             android:textSize="12dp"/>
 
@@ -610,7 +616,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/sansita_swashed"
-                            android:text="₹1999"
+                            android:foreground="@drawable/strikethrough_foreground"
+                            android:text="₹299"
                             android:textSize="10dp"/>
 
                         <TextView
@@ -618,7 +625,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:fontFamily="@font/sansita_swashed"
-                            android:text="₹499"
+                            android:text="₹279"
                             android:textColor="@color/theme"
                             android:textSize="12dp"/>
 
@@ -680,7 +687,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/sansita_swashed"
-                            android:text="₹1999"
+                            android:foreground="@drawable/strikethrough_foreground"
+                            android:text="₹299"
                             android:textSize="10dp"/>
 
                         <TextView
@@ -688,7 +696,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:fontFamily="@font/sansita_swashed"
-                            android:text="₹499"
+                            android:text="₹279"
                             android:textColor="@color/theme"
                             android:textSize="12dp"/>
 
@@ -760,7 +768,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/sansita_swashed"
-                            android:text="₹1999"
+                            android:foreground="@drawable/strikethrough_foreground"
+                            android:text="₹899"
                             android:textSize="10dp"/>
 
                         <TextView
@@ -768,7 +777,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:fontFamily="@font/sansita_swashed"
-                            android:text="₹499"
+                            android:text="₹699"
                             android:textColor="@color/theme"
                             android:textSize="12dp"/>
 
@@ -830,6 +839,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/sansita_swashed"
+                            android:foreground="@drawable/strikethrough_foreground"
                             android:text="₹1999"
                             android:textSize="10dp"/>
 
@@ -906,11 +916,12 @@
                         android:layout_marginTop="5dp">
 
                         <TextView
-                            android:id="@+id/priceText9"
+                            android:id="@+id/priceText11"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/sansita_swashed"
-                            android:text="₹1999"
+                            android:foreground="@drawable/strikethrough_foreground"
+                            android:text="₹899"
                             android:textSize="10dp"/>
 
                         <TextView
@@ -918,7 +929,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:fontFamily="@font/sansita_swashed"
-                            android:text="₹499"
+                            android:text="₹749"
                             android:textColor="@color/theme"
                             android:textSize="12dp"/>
 
@@ -976,11 +987,12 @@
                         android:layout_marginTop="5dp">
 
                         <TextView
-                            android:id="@+id/priceText10"
+                            android:id="@+id/priceText12"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/sansita_swashed"
-                            android:text="₹1999"
+                            android:foreground="@drawable/strikethrough_foreground"
+                            android:text="₹899"
                             android:textSize="10dp"/>
 
                         <TextView
@@ -988,7 +1000,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:fontFamily="@font/sansita_swashed"
-                            android:text="₹499"
+                            android:text="₹714"
                             android:textColor="@color/theme"
                             android:textSize="12dp"/>
 
@@ -1056,11 +1068,12 @@
                         android:layout_marginTop="5dp">
 
                         <TextView
-                            android:id="@+id/priceText9"
+                            android:id="@+id/priceText13"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/sansita_swashed"
-                            android:text="₹1999"
+                            android:foreground="@drawable/strikethrough_foreground"
+                            android:text="₹899"
                             android:textSize="10dp"/>
 
                         <TextView
@@ -1068,7 +1081,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:fontFamily="@font/sansita_swashed"
-                            android:text="₹499"
+                            android:text="₹857"
                             android:textColor="@color/theme"
                             android:textSize="12dp"/>
 
@@ -1126,11 +1139,12 @@
                         android:layout_marginTop="5dp">
 
                         <TextView
-                            android:id="@+id/priceText10"
+                            android:id="@+id/priceText14"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/sansita_swashed"
-                            android:text="₹1999"
+                            android:foreground="@drawable/strikethrough_foreground"
+                            android:text="₹499"
                             android:textSize="10dp"/>
 
                         <TextView
@@ -1138,7 +1152,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:fontFamily="@font/sansita_swashed"
-                            android:text="₹499"
+                            android:text="₹399"
                             android:textColor="@color/theme"
                             android:textSize="12dp"/>
 
@@ -1175,12 +1189,12 @@
                     <ImageView
                         android:layout_width="185dp"
                         android:layout_height="244dp"
-                        android:src="@drawable/peacock_plant"/>
+                        android:src="@drawable/fiddle_leaf_fig_plant"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Peacock Plant"
+                        android:text="Fiddle Leaf Fig Plant"
                         android:fontFamily="@font/outfit_medium"
                         android:textSize="15dp"
                         android:textColor="@color/black"
@@ -1206,11 +1220,12 @@
                         android:layout_marginTop="5dp">
 
                         <TextView
-                            android:id="@+id/priceText9"
+                            android:id="@+id/priceText15"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/sansita_swashed"
-                            android:text="₹1999"
+                            android:foreground="@drawable/strikethrough_foreground"
+                            android:text="₹1499"
                             android:textSize="10dp"/>
 
                         <TextView
@@ -1218,7 +1233,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:fontFamily="@font/sansita_swashed"
-                            android:text="₹499"
+                            android:text="₹1199"
                             android:textColor="@color/theme"
                             android:textSize="12dp"/>
 
@@ -1245,12 +1260,12 @@
                     <ImageView
                         android:layout_width="185dp"
                         android:layout_height="244dp"
-                        android:src="@drawable/brazilian_wood_plant"/>
+                        android:src="@drawable/variegated_jade_mini_plant"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Brazilian Wood Plant"
+                        android:text="Variegated Jade Mini Plant"
                         android:fontFamily="@font/outfit_medium"
                         android:textSize="15dp"
                         android:textColor="@color/black"
@@ -1276,11 +1291,12 @@
                         android:layout_marginTop="5dp">
 
                         <TextView
-                            android:id="@+id/priceText10"
+                            android:id="@+id/priceText16"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/sansita_swashed"
-                            android:text="₹1999"
+                            android:foreground="@drawable/strikethrough_foreground"
+                            android:text="₹799"
                             android:textSize="10dp"/>
 
                         <TextView
@@ -1288,7 +1304,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:fontFamily="@font/sansita_swashed"
-                            android:text="₹499"
+                            android:text="₹299"
                             android:textColor="@color/theme"
                             android:textSize="12dp"/>
 

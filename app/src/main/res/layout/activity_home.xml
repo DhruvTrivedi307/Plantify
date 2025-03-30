@@ -258,7 +258,8 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
 
                     <ImageView
                         android:id="@+id/h_bhp"
@@ -332,7 +333,8 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
 
                     <ImageView
                         android:id="@+id/h_jmp"
@@ -415,7 +417,8 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
 
                     <ImageView
                         android:id="@+id/h_bwp"
@@ -488,7 +491,8 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
 
                     <ImageView
                         android:id="@+id/h_pp"
