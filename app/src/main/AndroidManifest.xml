@@ -16,6 +16,21 @@
             android:name=".seeds"
             android:exported="false" />
         <activity
+            android:name=".filter_by_indoor_outdoor"
+            android:exported="false" />
+        <activity
+            android:name=".filter_by_size"
+            android:exported="false" />
+        <activity
+            android:name=".filter_by_price"
+            android:exported="false" />
+        <activity
+            android:name=".filter_type_of_plants"
+            android:exported="false" />
+        <activity
+            android:name=".checkout"
+            android:exported="false" />
+        <activity
             android:name=".cart"
             android:exported="false" />
         <activity
