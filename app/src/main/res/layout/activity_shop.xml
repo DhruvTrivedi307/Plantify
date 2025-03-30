@@ -105,21 +105,22 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center"
-                android:layout_gravity="center">
+                android:layout_gravity="center"
+                android:paddingTop="20dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="10dp"
+                android:paddingRight="5dp"
                 android:id="@+id/productClick" >
 
                 <ImageView
-                    android:layout_width="195dp"
+                    android:layout_width="185dp"
                     android:layout_height="244dp"
                     android:src="@drawable/broken_heart_plant_2"/>
 
@@ -188,10 +189,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="10dp">
+                android:paddingLeft="5dp">
 
                 <ImageView
-                    android:layout_width="195dp"
+                    android:layout_width="185dp"
                     android:layout_height="244dp"
                     android:src="@drawable/jade_mini_plats"/>
 
@@ -257,20 +258,21 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center"
-                android:layout_gravity="center">
+                android:layout_gravity="center"
+                android:paddingTop="20dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="10dp">
+                    android:paddingRight="5dp">
 
                     <ImageView
-                        android:layout_width="195dp"
+                        android:layout_width="185dp"
                         android:layout_height="244dp"
                         android:src="@drawable/peace_lily_plant"/>
 
@@ -337,10 +339,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="10dp">
+                    android:paddingLeft="5dp">
 
                     <ImageView
-                        android:layout_width="195dp"
+                        android:layout_width="185dp"
                         android:layout_height="244dp"
                         android:src="@drawable/ficus_bonsai_plant"/>
 
@@ -407,20 +409,21 @@
 
             </LinearLayout>
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center"
-                android:layout_gravity="center">
+                android:layout_gravity="center"
+                android:paddingTop="20dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="10dp">
+                    android:paddingRight="5dp">
 
                     <ImageView
-                        android:layout_width="195dp"
+                        android:layout_width="185dp"
                         android:layout_height="244dp"
                         android:src="@drawable/lucky_bamboo_plant"/>
 
@@ -487,10 +490,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="10dp">
+                    android:paddingLeft="5dp">
 
                     <ImageView
-                        android:layout_width="195dp"
+                        android:layout_width="185dp"
                         android:layout_height="244dp"
                         android:src="@drawable/stromanthe_triostar_plant"/>
 
@@ -556,20 +559,21 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center"
-                android:layout_gravity="center">
+                android:layout_gravity="center"
+                android:paddingTop="20dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="10dp">
+                    android:paddingRight="5dp">
 
                     <ImageView
-                        android:layout_width="195dp"
+                        android:layout_width="185dp"
                         android:layout_height="244dp"
                         android:src="@drawable/peperomia_green_plant"/>
 
@@ -636,10 +640,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="10dp">
+                    android:paddingLeft="5dp">
 
                     <ImageView
-                        android:layout_width="195dp"
+                        android:layout_width="185dp"
                         android:layout_height="244dp"
                         android:src="@drawable/money_plant_golden"/>
 
@@ -705,20 +709,21 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center"
-                android:layout_gravity="center">
+                android:layout_gravity="center"
+                android:paddingTop="20dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="10dp">
+                    android:paddingRight="5dp">
 
                     <ImageView
-                        android:layout_width="195dp"
+                        android:layout_width="185dp"
                         android:layout_height="244dp"
                         android:src="@drawable/peacock_plant"/>
 
@@ -785,10 +790,460 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="10dp">
+                    android:paddingLeft="5dp">
 
                     <ImageView
-                        android:layout_width="195dp"
+                        android:layout_width="185dp"
+                        android:layout_height="244dp"
+                        android:src="@drawable/brazilian_wood_plant"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Brazilian Wood Plant"
+                        android:fontFamily="@font/outfit_medium"
+                        android:textSize="15dp"
+                        android:textColor="@color/black"
+                        android:paddingTop="10dp"/>
+
+                    <RatingBar
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:isIndicator="true"
+                        android:numStars="5"
+                        android:padding="0dp"
+                        android:layout_marginTop="5dp"
+                        android:progressTint="@color/yellow"
+                        android:rating="4"
+                        android:scaleX="1"
+                        android:scaleY="1"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:id="@+id/priceText10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sansita_swashed"
+                            android:text="₹1999"
+                            android:textSize="10dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/sansita_swashed"
+                            android:text="₹499"
+                            android:textColor="@color/theme"
+                            android:textSize="12dp"/>
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:fontFamily="@font/outfit_medium"
+                        android:text="Add to Cart"
+                        android:textColor="@color/theme"
+                        android:textSize="12dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/button_stroke_shop_page"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:paddingTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingRight="5dp">
+
+                    <ImageView
+                        android:layout_width="185dp"
+                        android:layout_height="244dp"
+                        android:src="@drawable/aglaonema_red_plant"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Aglaonema Red Plant"
+                        android:fontFamily="@font/outfit_medium"
+                        android:textSize="15dp"
+                        android:textColor="@color/black"
+                        android:paddingTop="10dp"/>
+
+                    <RatingBar
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:isIndicator="true"
+                        android:numStars="5"
+                        android:padding="0dp"
+                        android:layout_marginTop="5dp"
+                        android:progressTint="@color/yellow"
+                        android:rating="4"
+                        android:scaleX="1"
+                        android:scaleY="1"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:id="@+id/priceText9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sansita_swashed"
+                            android:text="₹1999"
+                            android:textSize="10dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/sansita_swashed"
+                            android:text="₹499"
+                            android:textColor="@color/theme"
+                            android:textSize="12dp"/>
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:fontFamily="@font/outfit_medium"
+                        android:text="Add to Cart"
+                        android:textColor="@color/theme"
+                        android:textSize="12dp"
+                        android:layout_marginTop="25dp"
+                        android:background="@drawable/button_stroke_shop_page"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="5dp">
+
+                    <ImageView
+                        android:layout_width="185dp"
+                        android:layout_height="244dp"
+                        android:src="@drawable/aglaonema_pink_beauty_plant"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Aglaonema Pink\nBeauty Plant"
+                        android:fontFamily="@font/outfit_medium"
+                        android:textSize="15dp"
+                        android:textColor="@color/black"
+                        android:paddingTop="10dp"/>
+
+                    <RatingBar
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:isIndicator="true"
+                        android:numStars="5"
+                        android:padding="0dp"
+                        android:layout_marginTop="5dp"
+                        android:progressTint="@color/yellow"
+                        android:rating="4"
+                        android:scaleX="1"
+                        android:scaleY="1"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:id="@+id/priceText10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sansita_swashed"
+                            android:text="₹1999"
+                            android:textSize="10dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/sansita_swashed"
+                            android:text="₹499"
+                            android:textColor="@color/theme"
+                            android:textSize="12dp"/>
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:fontFamily="@font/outfit_medium"
+                        android:text="Add to Cart"
+                        android:textColor="@color/theme"
+                        android:textSize="12dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/button_stroke_shop_page"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:paddingTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingRight="5dp">
+
+                    <ImageView
+                        android:layout_width="185dp"
+                        android:layout_height="244dp"
+                        android:src="@drawable/bamboo_palm_xl"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bamboo Palm XL"
+                        android:fontFamily="@font/outfit_medium"
+                        android:textSize="15dp"
+                        android:textColor="@color/black"
+                        android:paddingTop="10dp"/>
+
+                    <RatingBar
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:isIndicator="true"
+                        android:numStars="5"
+                        android:padding="0dp"
+                        android:layout_marginTop="5dp"
+                        android:progressTint="@color/yellow"
+                        android:rating="4"
+                        android:scaleX="1"
+                        android:scaleY="1"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:id="@+id/priceText9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sansita_swashed"
+                            android:text="₹1999"
+                            android:textSize="10dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/sansita_swashed"
+                            android:text="₹499"
+                            android:textColor="@color/theme"
+                            android:textSize="12dp"/>
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:fontFamily="@font/outfit_medium"
+                        android:text="Add to Cart"
+                        android:textColor="@color/theme"
+                        android:textSize="12dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/button_stroke_shop_page"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="5dp">
+
+                    <ImageView
+                        android:layout_width="185dp"
+                        android:layout_height="244dp"
+                        android:src="@drawable/bamboo_palm_plant"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bamboo Palm Plant"
+                        android:fontFamily="@font/outfit_medium"
+                        android:textSize="15dp"
+                        android:textColor="@color/black"
+                        android:paddingTop="10dp"/>
+
+                    <RatingBar
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:isIndicator="true"
+                        android:numStars="5"
+                        android:padding="0dp"
+                        android:layout_marginTop="5dp"
+                        android:progressTint="@color/yellow"
+                        android:rating="4"
+                        android:scaleX="1"
+                        android:scaleY="1"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:id="@+id/priceText10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sansita_swashed"
+                            android:text="₹1999"
+                            android:textSize="10dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/sansita_swashed"
+                            android:text="₹499"
+                            android:textColor="@color/theme"
+                            android:textSize="12dp"/>
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:fontFamily="@font/outfit_medium"
+                        android:text="Add to Cart"
+                        android:textColor="@color/theme"
+                        android:textSize="12dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/button_stroke_shop_page"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:paddingTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingRight="5dp">
+
+                    <ImageView
+                        android:layout_width="185dp"
+                        android:layout_height="244dp"
+                        android:src="@drawable/peacock_plant"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Peacock Plant"
+                        android:fontFamily="@font/outfit_medium"
+                        android:textSize="15dp"
+                        android:textColor="@color/black"
+                        android:paddingTop="10dp"/>
+
+                    <RatingBar
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:isIndicator="true"
+                        android:numStars="5"
+                        android:padding="0dp"
+                        android:layout_marginTop="5dp"
+                        android:progressTint="@color/yellow"
+                        android:rating="4"
+                        android:scaleX="1"
+                        android:scaleY="1"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:id="@+id/priceText9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sansita_swashed"
+                            android:text="₹1999"
+                            android:textSize="10dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/sansita_swashed"
+                            android:text="₹499"
+                            android:textColor="@color/theme"
+                            android:textSize="12dp"/>
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:fontFamily="@font/outfit_medium"
+                        android:text="Add to Cart"
+                        android:textColor="@color/theme"
+                        android:textSize="12dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/button_stroke_shop_page"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="5dp">
+
+                    <ImageView
+                        android:layout_width="185dp"
                         android:layout_height="244dp"
                         android:src="@drawable/brazilian_wood_plant"/>
 

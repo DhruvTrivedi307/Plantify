@@ -75,6 +75,7 @@
                     android:id="@+id/productImg"
                     android:layout_width="wrap_content"
                     android:layout_height="430dp"
+                    android:layout_gravity="center"
                     android:src="@drawable/product_img"/>
 
             <LinearLayout
