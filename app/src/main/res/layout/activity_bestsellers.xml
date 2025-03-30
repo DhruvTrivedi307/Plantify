@@ -110,7 +110,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingTop="20dp">
+                    android:paddingTop="20dp"
+                    android:id="@+id/b_lbp">
 
                     <ImageView
                         android:layout_width="180dp"
@@ -173,7 +174,8 @@
                         android:layout_marginTop="10dp"
                         android:background="@drawable/button_stroke_shop_page"
                         android:clickable="true"
-                        android:focusable="true"/>
+                        android:focusable="true"
+                        android:id="@+id/b_lbp_cart_click"/>
 
                 </LinearLayout>
 
@@ -182,7 +184,8 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:paddingLeft="20dp"
-                    android:paddingTop="20dp">
+                    android:paddingTop="20dp"
+                    android:id="@+id/b_fbp">
 
                     <ImageView
                         android:layout_width="180dp"
@@ -246,7 +249,8 @@
                         android:layout_marginTop="10dp"
                         android:background="@drawable/button_stroke_shop_page"
                         android:clickable="true"
-                        android:focusable="true"/>
+                        android:focusable="true"
+                        android:id="@+id/b_fbp_cart_click"/>
 
                 </LinearLayout>
 
@@ -263,7 +267,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingTop="20dp">
+                    android:paddingTop="20dp"
+                    android:id="@+id/b_pp">
 
                     <ImageView
                         android:layout_width="180dp"
@@ -327,7 +332,8 @@
                         android:layout_marginTop="10dp"
                         android:background="@drawable/button_stroke_shop_page"
                         android:clickable="true"
-                        android:focusable="true"/>
+                        android:focusable="true"
+                        android:id="@+id/b_pp_cart_click"/>
 
                 </LinearLayout>
 
@@ -336,7 +342,8 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:paddingLeft="20dp"
-                    android:paddingTop="20dp">
+                    android:paddingTop="20dp"
+                    android:id="@+id/b_bwp">
 
                     <ImageView
                         android:layout_width="180dp"
@@ -399,7 +406,8 @@
                         android:layout_marginTop="10dp"
                         android:background="@drawable/button_stroke_shop_page"
                         android:clickable="true"
-                        android:focusable="true"/>
+                        android:focusable="true"
+                        android:id="@+id/b_bwp_cart_click"/>
 
                 </LinearLayout>
 
@@ -415,7 +423,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingTop="20dp">
+                    android:paddingTop="20dp"
+                    android:id="@+id/b_jmp">
 
                     <ImageView
                         android:layout_width="180dp"
@@ -478,7 +487,8 @@
                         android:layout_marginTop="10dp"
                         android:background="@drawable/button_stroke_shop_page"
                         android:clickable="true"
-                        android:focusable="true"/>
+                        android:focusable="true"
+                        android:id="@+id/b_jmp_cart_click"/>
 
                 </LinearLayout>
 
@@ -487,7 +497,8 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:paddingLeft="20dp"
-                    android:paddingTop="20dp">
+                    android:paddingTop="20dp"
+                    android:id="@+id/b_mpg">
 
                     <ImageView
                         android:layout_width="180dp"
@@ -550,7 +561,8 @@
                         android:layout_marginTop="10dp"
                         android:background="@drawable/button_stroke_shop_page"
                         android:clickable="true"
-                        android:focusable="true"/>
+                        android:focusable="true"
+                        android:id="@+id/b_mpg_cart_click"/>
 
                 </LinearLayout>
 
@@ -567,12 +579,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingTop="20dp">
+                    android:paddingTop="20dp"
+                    android:id="@+id/b_bhp">
 
                     <ImageView
                         android:layout_width="180dp"
                         android:layout_height="230dp"
-                        android:src="@drawable/broken_heart_plant"/>
+                        android:src="@drawable/broken_heart_plant_2"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -630,7 +643,8 @@
                         android:layout_marginTop="10dp"
                         android:background="@drawable/button_stroke_shop_page"
                         android:clickable="true"
-                        android:focusable="true"/>
+                        android:focusable="true"
+                        android:id="@+id/b_bhp_cart_click"/>
 
                 </LinearLayout>
 
@@ -639,7 +653,8 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:paddingLeft="20dp"
-                    android:paddingTop="20dp">
+                    android:paddingTop="20dp"
+                    android:id="@+id/b_plp">
 
                     <ImageView
                         android:layout_width="180dp"
@@ -702,7 +717,8 @@
                         android:layout_marginTop="10dp"
                         android:background="@drawable/button_stroke_shop_page"
                         android:clickable="true"
-                        android:focusable="true"/>
+                        android:focusable="true"
+                        android:id="@+id/b_plp_cart_click"/>
 
                 </LinearLayout>
 

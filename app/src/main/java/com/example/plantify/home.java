@@ -45,7 +45,7 @@ public class home extends AppCompatActivity {
 
     ImageView h_bhp,h_jmp,h_bwp,h_pp;
 
-    Button viewAll;
+    Button viewAll, h_bhp_cart_click, h_jmp_cart_click, h_bwp_cart_click, h_pp_cart_click;
 
     @SuppressLint({"MissingInflatedId", "WrongViewCast"})
     @Override
@@ -66,6 +66,11 @@ public class home extends AppCompatActivity {
         h_bwp = findViewById(R.id.h_bwp);
         h_pp = findViewById(R.id.h_pp);
         viewAll = findViewById(R.id.viewAll);
+
+        h_bhp_cart_click = findViewById(R.id.h_bhp_cart_click);
+        h_jmp_cart_click = findViewById(R.id.h_jmp_cart_click);
+        h_bwp_cart_click = findViewById(R.id.h_bwp_cart_click);
+        h_pp_cart_click = findViewById(R.id.h_pp_cart_click);
 
         viewAll.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -124,6 +129,34 @@ public class home extends AppCompatActivity {
                 i.putExtra("name",name);
                 i.putExtra("price",price);
                 startActivity(i);
+            }
+        });
+
+        h_bhp_cart_click.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onCartClick();
+            }
+        });
+
+        h_jmp_cart_click.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onCartClick();
+            }
+        });
+
+        h_bwp_cart_click.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onCartClick();
+            }
+        });
+
+        h_pp_cart_click.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onCartClick();
             }
         });
 
@@ -240,6 +273,11 @@ public class home extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void onCartClick() {
+        Intent intent = new Intent(getApplicationContext(), cart.class);
+        startActivity(intent);
     }
 
     @Override

@@ -326,7 +326,10 @@
                         android:fontFamily="@font/outfit_medium"
                         android:hint="Add To Cart"
                         android:textSize="12dp"
-                        android:textColorHint="@color/white" />
+                        android:textColorHint="@color/white"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:id="@+id/h_bhp_cart_click"/>
 
                 </LinearLayout>
 
@@ -400,7 +403,10 @@
                         android:fontFamily="@font/outfit_medium"
                         android:hint="Add To Cart"
                         android:textSize="12dp"
-                        android:textColorHint="@color/white" />
+                        android:textColorHint="@color/white"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:id="@+id/h_jmp_cart_click"/>
 
                 </LinearLayout>
 
@@ -484,7 +490,10 @@
                         android:fontFamily="@font/outfit_medium"
                         android:hint="Add To Cart"
                         android:textSize="12dp"
-                        android:textColorHint="@color/white" />
+                        android:textColorHint="@color/white"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:id="@+id/h_bwp_cart_click"/>
 
                 </LinearLayout>
 
@@ -559,7 +568,10 @@
                         android:fontFamily="@font/outfit_medium"
                         android:hint="Add To Cart"
                         android:textSize="12dp"
-                        android:textColorHint="@color/white" />
+                        android:textColorHint="@color/white"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:id="@+id/h_pp_cart_click"/>
 
                 </LinearLayout>
 

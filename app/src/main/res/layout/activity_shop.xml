@@ -117,7 +117,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:paddingRight="5dp"
-                android:id="@+id/productClick" >
+                android:id="@+id/h_bhp" >
 
                 <ImageView
                     android:layout_width="185dp"
@@ -182,7 +182,8 @@
                     android:layout_marginTop="10dp"
                     android:background="@drawable/button_stroke_shop_page"
                     android:clickable="true"
-                    android:focusable="true"/>
+                    android:focusable="true"
+                    android:id="@+id/h_bhp_cart_click"/>
 
             </LinearLayout>
 
@@ -190,7 +191,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:paddingLeft="5dp">
+                android:paddingLeft="5dp"
+                android:id="@+id/h_jmp">
 
                 <ImageView
                     android:layout_width="185dp"
@@ -253,7 +255,10 @@
                     android:textColor="@color/theme"
                     android:textSize="12dp"
                     android:layout_marginTop="10dp"
-                    android:background="@drawable/button_stroke_shop_page"/>
+                    android:background="@drawable/button_stroke_shop_page"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:id="@+id/h_jpm_cart_click"/>
 
             </LinearLayout>
 
@@ -271,7 +276,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingRight="5dp">
+                    android:paddingRight="5dp"
+                    android:id="@+id/h_plp">
 
                     <ImageView
                         android:layout_width="185dp"
@@ -334,7 +340,10 @@
                         android:textColor="@color/theme"
                         android:textSize="12dp"
                         android:layout_marginTop="10dp"
-                        android:background="@drawable/button_stroke_shop_page"/>
+                        android:background="@drawable/button_stroke_shop_page"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:id="@+id/h_plp_cart_click"/>
 
                 </LinearLayout>
 
@@ -342,7 +351,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingLeft="5dp">
+                    android:paddingLeft="5dp"
+                    android:id="@+id/h_fbp">
 
                     <ImageView
                         android:layout_width="185dp"
@@ -407,7 +417,10 @@
                         android:textColor="@color/theme"
                         android:textSize="12dp"
                         android:layout_marginTop="10dp"
-                        android:background="@drawable/button_stroke_shop_page"/>
+                        android:background="@drawable/button_stroke_shop_page"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:id="@+id/h_fbp_cart_click"/>
 
                 </LinearLayout>
 
@@ -424,7 +437,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingRight="5dp">
+                    android:paddingRight="5dp"
+                    android:id="@+id/h_lbp">
 
                     <ImageView
                         android:layout_width="185dp"
@@ -487,7 +501,10 @@
                         android:textColor="@color/theme"
                         android:textSize="12dp"
                         android:layout_marginTop="10dp"
-                        android:background="@drawable/button_stroke_shop_page"/>
+                        android:background="@drawable/button_stroke_shop_page"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:id="@+id/h_lbp_cart_click"/>
 
                 </LinearLayout>
 
@@ -495,7 +512,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingLeft="5dp">
+                    android:paddingLeft="5dp"
+                    android:id="@+id/h_stp">
 
                     <ImageView
                         android:layout_width="185dp"
@@ -558,7 +576,10 @@
                         android:textColor="@color/theme"
                         android:textSize="12dp"
                         android:layout_marginTop="10dp"
-                        android:background="@drawable/button_stroke_shop_page"/>
+                        android:background="@drawable/button_stroke_shop_page"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:id="@+id/h_stp_cart_click"/>
 
                 </LinearLayout>
 
@@ -576,7 +597,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingRight="5dp">
+                    android:paddingRight="5dp"
+                    android:id="@+id/h_pgp">
 
                     <ImageView
                         android:layout_width="185dp"
@@ -639,7 +661,10 @@
                         android:textColor="@color/theme"
                         android:textSize="12dp"
                         android:layout_marginTop="10dp"
-                        android:background="@drawable/button_stroke_shop_page"/>
+                        android:background="@drawable/button_stroke_shop_page"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:id="@+id/h_pgp_cart_click"/>
 
                 </LinearLayout>
 
@@ -647,7 +672,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingLeft="5dp">
+                    android:paddingLeft="5dp"
+                    android:id="@+id/h_mpg">
 
                     <ImageView
                         android:layout_width="185dp"
@@ -710,7 +736,10 @@
                         android:textColor="@color/theme"
                         android:textSize="12dp"
                         android:layout_marginTop="10dp"
-                        android:background="@drawable/button_stroke_shop_page"/>
+                        android:background="@drawable/button_stroke_shop_page"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:id="@+id/h_mpg_cart_click"/>
 
                 </LinearLayout>
 
@@ -728,7 +757,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingRight="5dp">
+                    android:paddingRight="5dp"
+                    android:id="@+id/h_pp">
 
                     <ImageView
                         android:layout_width="185dp"
@@ -791,7 +821,10 @@
                         android:textColor="@color/theme"
                         android:textSize="12dp"
                         android:layout_marginTop="10dp"
-                        android:background="@drawable/button_stroke_shop_page"/>
+                        android:background="@drawable/button_stroke_shop_page"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:id="@+id/h_pp_cart_click"/>
 
                 </LinearLayout>
 
@@ -799,7 +832,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingLeft="5dp">
+                    android:paddingLeft="5dp"
+                    android:id="@+id/h_bwp">
 
                     <ImageView
                         android:layout_width="185dp"
@@ -862,7 +896,10 @@
                         android:textColor="@color/theme"
                         android:textSize="12dp"
                         android:layout_marginTop="10dp"
-                        android:background="@drawable/button_stroke_shop_page"/>
+                        android:background="@drawable/button_stroke_shop_page"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:id="@+id/h_bwp_cart_click"/>
 
                 </LinearLayout>
 
@@ -880,7 +917,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingRight="5dp">
+                    android:paddingRight="5dp"
+                    android:id="@+id/h_arp">
 
                     <ImageView
                         android:layout_width="185dp"
@@ -943,7 +981,10 @@
                         android:textColor="@color/theme"
                         android:textSize="12dp"
                         android:layout_marginTop="25dp"
-                        android:background="@drawable/button_stroke_shop_page"/>
+                        android:background="@drawable/button_stroke_shop_page"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:id="@+id/h_arp_cart_click"/>
 
                 </LinearLayout>
 
@@ -951,7 +992,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingLeft="5dp">
+                    android:paddingLeft="5dp"
+                    android:id="@+id/h_apbp">
 
                     <ImageView
                         android:layout_width="185dp"
@@ -1014,7 +1056,10 @@
                         android:textColor="@color/theme"
                         android:textSize="12dp"
                         android:layout_marginTop="10dp"
-                        android:background="@drawable/button_stroke_shop_page"/>
+                        android:background="@drawable/button_stroke_shop_page"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:id="@+id/h_apbp_cart_click"/>
 
                 </LinearLayout>
 
@@ -1032,7 +1077,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingRight="5dp">
+                    android:paddingRight="5dp"
+                    android:id="@+id/h_bpx">
 
                     <ImageView
                         android:layout_width="185dp"
@@ -1095,7 +1141,10 @@
                         android:textColor="@color/theme"
                         android:textSize="12dp"
                         android:layout_marginTop="10dp"
-                        android:background="@drawable/button_stroke_shop_page"/>
+                        android:background="@drawable/button_stroke_shop_page"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:id="@+id/h_bpx_cart_click"/>
 
                 </LinearLayout>
 
@@ -1103,7 +1152,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingLeft="5dp">
+                    android:paddingLeft="5dp"
+                    android:id="@+id/h_bpp">
 
                     <ImageView
                         android:layout_width="185dp"
@@ -1166,7 +1216,10 @@
                         android:textColor="@color/theme"
                         android:textSize="12dp"
                         android:layout_marginTop="10dp"
-                        android:background="@drawable/button_stroke_shop_page"/>
+                        android:background="@drawable/button_stroke_shop_page"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:id="@+id/h_bpp_cart_click"/>
 
                 </LinearLayout>
 
@@ -1184,7 +1237,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingRight="5dp">
+                    android:paddingRight="5dp"
+                    android:id="@+id/h_flp">
 
                     <ImageView
                         android:layout_width="185dp"
@@ -1247,7 +1301,10 @@
                         android:textColor="@color/theme"
                         android:textSize="12dp"
                         android:layout_marginTop="10dp"
-                        android:background="@drawable/button_stroke_shop_page"/>
+                        android:background="@drawable/button_stroke_shop_page"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:id="@+id/h_flp_cart_click"/>
 
                 </LinearLayout>
 
@@ -1255,7 +1312,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingLeft="5dp">
+                    android:paddingLeft="5dp"
+                    android:id="@+id/h_vjmp">
 
                     <ImageView
                         android:layout_width="185dp"
@@ -1318,7 +1376,10 @@
                         android:textColor="@color/theme"
                         android:textSize="12dp"
                         android:layout_marginTop="10dp"
-                        android:background="@drawable/button_stroke_shop_page"/>
+                        android:background="@drawable/button_stroke_shop_page"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:id="@+id/h_vjmp_cart_click"/>
 
                 </LinearLayout>
 

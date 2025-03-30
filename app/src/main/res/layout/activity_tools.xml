@@ -107,6 +107,7 @@
                 android:gravity="center">
 
                 <LinearLayout
+                    android:id="@+id/dmm"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -115,65 +116,67 @@
                     <ImageView
                         android:layout_width="180dp"
                         android:layout_height="230dp"
-                        android:src="@drawable/dom_metallic_mister"/>
+                        android:src="@drawable/dom_metallic_mister" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Dom Metallic Mister"
                         android:fontFamily="@font/outfit_medium"
-                        android:textSize="15dp"
+                        android:paddingTop="10dp"
+                        android:text="Dom Metallic Mister"
                         android:textColor="@color/black"
-                        android:paddingTop="10dp"/>
+                        android:textSize="15dp" />
 
                     <RatingBar
                         style="?android:attr/ratingBarStyleSmall"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
                         android:isIndicator="true"
                         android:numStars="5"
                         android:padding="0dp"
-                        android:layout_marginTop="5dp"
                         android:progressTint="@color/yellow"
                         android:rating="4"
                         android:scaleX="1"
-                        android:scaleY="1"/>
+                        android:scaleY="1" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="5dp">
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/sansita_swashed"
                             android:text="₹1999"
-                            android:textSize="10dp"/>
+                            android:foreground="@drawable/strikethrough_foreground"
+                            android:textSize="10dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:fontFamily="@font/sansita_swashed"
-                            android:text="₹499"
+                            android:text="₹859"
                             android:textColor="@color/theme"
-                            android:textSize="12dp"/>
+                            android:textSize="12dp" />
 
                     </LinearLayout>
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/button_stroke_shop_page"
+                        android:clickable="true"
+                        android:focusable="true"
                         android:fontFamily="@font/outfit_medium"
                         android:text="Add to Cart"
                         android:textColor="@color/theme"
                         android:textSize="12dp"
-                        android:layout_marginTop="10dp"
-                        android:background="@drawable/button_stroke_shop_page"
-                        android:clickable="true"
-                        android:focusable="true"/>
+                        android:id="@+id/dmm_cart_click"/>
 
                 </LinearLayout>
 
@@ -182,7 +185,8 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:paddingLeft="20dp"
-                    android:paddingTop="20dp">
+                    android:paddingTop="20dp"
+                    android:id="@+id/hwp">
 
                     <ImageView
                         android:layout_width="180dp"
@@ -218,11 +222,11 @@
                         android:layout_marginTop="5dp">
 
                         <TextView
-                            android:id="@+id/priceText1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/sansita_swashed"
                             android:text="₹1999"
+                            android:foreground="@drawable/strikethrough_foreground"
                             android:textSize="10dp"/>
 
                         <TextView
@@ -230,7 +234,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:fontFamily="@font/sansita_swashed"
-                            android:text="₹499"
+                            android:text="₹399"
                             android:textColor="@color/theme"
                             android:textSize="12dp"/>
 
@@ -246,7 +250,8 @@
                         android:layout_marginTop="10dp"
                         android:background="@drawable/button_stroke_shop_page"
                         android:clickable="true"
-                        android:focusable="true"/>
+                        android:focusable="true"
+                        android:id="@+id/hwp_cart_click"/>
 
                 </LinearLayout>
 
@@ -263,7 +268,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingTop="20dp">
+                    android:paddingTop="20dp"
+                    android:id="@+id/dpw">
 
                     <ImageView
                         android:layout_width="180dp"
@@ -299,11 +305,11 @@
                         android:layout_marginTop="5dp">
 
                         <TextView
-                            android:id="@+id/priceText1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/sansita_swashed"
                             android:text="₹1999"
+                            android:foreground="@drawable/strikethrough_foreground"
                             android:textSize="10dp"/>
 
                         <TextView
@@ -311,7 +317,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:fontFamily="@font/sansita_swashed"
-                            android:text="₹499"
+                            android:text="₹399"
                             android:textColor="@color/theme"
                             android:textSize="12dp"/>
 
@@ -327,7 +333,8 @@
                         android:layout_marginTop="10dp"
                         android:background="@drawable/button_stroke_shop_page"
                         android:clickable="true"
-                        android:focusable="true"/>
+                        android:focusable="true"
+                        android:id="@+id/dpw_cart_click"/>
 
                 </LinearLayout>
 
@@ -336,7 +343,8 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:paddingLeft="20dp"
-                    android:paddingTop="20dp">
+                    android:paddingTop="20dp"
+                    android:id="@+id/fpw">
 
                     <ImageView
                         android:layout_width="180dp"
@@ -376,14 +384,15 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/sansita_swashed"
                             android:text="₹1999"
-                            android:textSize="10dp"/>
+                            android:textSize="10dp"
+                            android:foreground="@drawable/strikethrough_foreground"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:fontFamily="@font/sansita_swashed"
-                            android:text="₹499"
+                            android:text="₹969"
                             android:textColor="@color/theme"
                             android:textSize="12dp"/>
 
@@ -399,7 +408,8 @@
                         android:layout_marginTop="10dp"
                         android:background="@drawable/button_stroke_shop_page"
                         android:clickable="true"
-                        android:focusable="true"/>
+                        android:focusable="true"
+                        android:id="@+id/fpw_cart_click"/>
 
                 </LinearLayout>
 
@@ -415,7 +425,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingTop="20dp">
+                    android:paddingTop="20dp"
+                    android:id="@+id/cps">
 
                     <ImageView
                         android:layout_width="180dp"
@@ -455,14 +466,15 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/sansita_swashed"
                             android:text="₹1999"
-                            android:textSize="10dp"/>
+                            android:textSize="10dp"
+                            android:foreground="@drawable/strikethrough_foreground"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:fontFamily="@font/sansita_swashed"
-                            android:text="₹499"
+                            android:text="₹599"
                             android:textColor="@color/theme"
                             android:textSize="12dp"/>
 
@@ -478,7 +490,8 @@
                         android:layout_marginTop="10dp"
                         android:background="@drawable/button_stroke_shop_page"
                         android:clickable="true"
-                        android:focusable="true"/>
+                        android:focusable="true"
+                        android:id="@+id/cps_cart_click"/>
 
                 </LinearLayout>
 
@@ -487,7 +500,8 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:paddingLeft="20dp"
-                    android:paddingTop="20dp">
+                    android:paddingTop="20dp"
+                    android:id="@+id/pis">
 
                     <ImageView
                         android:layout_width="180dp"
@@ -527,14 +541,15 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/sansita_swashed"
                             android:text="₹1999"
-                            android:textSize="10dp"/>
+                            android:textSize="10dp"
+                            android:foreground="@drawable/strikethrough_foreground"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:fontFamily="@font/sansita_swashed"
-                            android:text="₹499"
+                            android:text="₹879"
                             android:textColor="@color/theme"
                             android:textSize="12dp"/>
 
@@ -550,7 +565,8 @@
                         android:layout_marginTop="10dp"
                         android:background="@drawable/button_stroke_shop_page"
                         android:clickable="true"
-                        android:focusable="true"/>
+                        android:focusable="true"
+                        android:id="@+id/pis_cart_click"/>
 
                 </LinearLayout>
 
@@ -567,7 +583,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingTop="20dp">
+                    android:paddingTop="20dp"
+                    android:id="@+id/ss">
 
                     <ImageView
                         android:layout_width="180dp"
@@ -607,14 +624,15 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/sansita_swashed"
                             android:text="₹1999"
-                            android:textSize="10dp"/>
+                            android:textSize="10dp"
+                            android:foreground="@drawable/strikethrough_foreground"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:fontFamily="@font/sansita_swashed"
-                            android:text="₹499"
+                            android:text="₹839"
                             android:textColor="@color/theme"
                             android:textSize="12dp"/>
 
@@ -630,7 +648,8 @@
                         android:layout_marginTop="10dp"
                         android:background="@drawable/button_stroke_shop_page"
                         android:clickable="true"
-                        android:focusable="true"/>
+                        android:focusable="true"
+                        android:id="@+id/ss_cart_click"/>
 
                 </LinearLayout>
 
@@ -639,7 +658,8 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:paddingLeft="20dp"
-                    android:paddingTop="20dp">
+                    android:paddingTop="20dp"
+                    android:id="@+id/ws">
 
                     <ImageView
                         android:layout_width="180dp"
@@ -649,7 +669,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="The Watermatic Stake"
+                        android:text="Watermatic Stake"
                         android:fontFamily="@font/outfit_medium"
                         android:textSize="15dp"
                         android:textColor="@color/black"
@@ -679,14 +699,15 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/sansita_swashed"
                             android:text="₹1999"
-                            android:textSize="10dp"/>
+                            android:textSize="10dp"
+                            android:foreground="@drawable/strikethrough_foreground"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:fontFamily="@font/sansita_swashed"
-                            android:text="₹499"
+                            android:text="₹529"
                             android:textColor="@color/theme"
                             android:textSize="12dp"/>
 
@@ -702,7 +723,8 @@
                         android:layout_marginTop="10dp"
                         android:background="@drawable/button_stroke_shop_page"
                         android:clickable="true"
-                        android:focusable="true"/>
+                        android:focusable="true"
+                        android:id="@+id/ws_cart_click"/>
 
                 </LinearLayout>
 
