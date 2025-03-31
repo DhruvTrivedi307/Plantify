@@ -93,6 +93,7 @@
             android:layout_marginBottom="3dp"/>
 
         <EditText
+            android:id="@+id/fname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter your first name"
@@ -107,6 +108,7 @@
             android:layout_marginBottom="3dp"/>
 
         <EditText
+            android:id="@+id/lname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter your last name"
@@ -121,6 +123,7 @@
             android:layout_marginBottom="3dp"/>
 
         <EditText
+            android:id="@+id/phone_no"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter your phone number"
@@ -136,6 +139,7 @@
             android:layout_marginBottom="3dp"/>
 
         <EditText
+            android:id="@+id/email_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter your email address"
@@ -150,12 +154,15 @@
             android:layout_marginBottom="3dp"/>
 
         <EditText
+            android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter your Password"
             android:layout_marginBottom="10dp"
+            android:inputType="textPassword"
             />
         <CheckBox
+            android:id="@+id/toggle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Show password"
@@ -163,6 +170,7 @@
             />
 
         <Button
+            android:id="@+id/createAccount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="CREATE ACCOUNT"

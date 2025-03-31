@@ -30,8 +30,8 @@ public class checkout extends AppCompatActivity {
             return insets;
         });
 
-//        p_img = findViewById(R.id.p_img);
-//        p_name = findViewById(R.id.p_name);
+        p_img = findViewById(R.id.p_img);
+        p_name = findViewById(R.id.p_name);
 
         Intent i = getIntent();
         int img = i.getIntExtra("img",0);

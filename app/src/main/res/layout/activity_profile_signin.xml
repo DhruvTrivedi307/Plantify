@@ -93,6 +93,7 @@
                 android:text="New here?  "
                 android:fontFamily="@font/inter_medium"/>
             <TextView
+                android:id="@+id/create_account"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Create Account"
@@ -142,6 +143,8 @@
             android:hint="Enter your password"
             android:padding="10dp"
             android:textSize="15dp"
+            android:id="@+id/password_toggle"
+            android:inputType="textPassword"
             android:background="@drawable/edit_text_stroke"
             android:textColorHint="@color/edit_text_stroke"
             android:fontFamily="@font/outfit_medium"/>
@@ -150,6 +153,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Show Password"
+            android:id="@+id/toggle"
             android:fontFamily="@font/outfit_medium"
             android:textColor="@color/theme_text"/>
 
@@ -166,7 +170,7 @@
             app:cornerRadius="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sign In"
+            android:text="SIGN IN"
             android:fontFamily="@font/inter_medium"
             android:textColor="@color/white"
             android:background="@drawable/sign_in_button_fill"
@@ -212,6 +216,7 @@
             android:layout_gravity="center">
 
             <ImageView
+                android:id="@+id/sign_in"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:src="@drawable/google"
