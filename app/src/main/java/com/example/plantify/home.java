@@ -20,6 +20,7 @@ import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -42,10 +43,11 @@ public class home extends AppCompatActivity {
     RadioGroup rg;
     ImageView search_icon,cart_icon;
     LinearLayout tools,bestsellers,easy_to_care,pots,seeds;
-
     ImageView h_bhp,h_jmp,h_bwp,h_pp;
-
+    AppCompatButton small,medium;
+    private String selectedSize = "";
     Button viewAll, h_bhp_cart_click, h_jmp_cart_click, h_bwp_cart_click, h_pp_cart_click;
+    TextView size;
 
     @SuppressLint({"MissingInflatedId", "WrongViewCast"})
     @Override
@@ -71,6 +73,10 @@ public class home extends AppCompatActivity {
         h_jmp_cart_click = findViewById(R.id.h_jmp_cart_click);
         h_bwp_cart_click = findViewById(R.id.h_bwp_cart_click);
         h_pp_cart_click = findViewById(R.id.h_pp_cart_click);
+
+        small = findViewById(R.id.small);
+        medium = findViewById(R.id.medium);
+        size = findViewById(R.id.size);
 
 
         viewAll.setOnClickListener(new View.OnClickListener() {
@@ -274,6 +280,24 @@ public class home extends AppCompatActivity {
                 return true;
             }
         });
+
+        View.OnClickListener sizeClickListener = v -> {
+            small.setSelected(false);
+            medium.setSelected(false);
+            v.setSelected(true);
+
+            if (v == small) {
+                selectedSize = "Small";
+                size.setText(selectedSize);
+            } else if (v == medium) {
+                selectedSize = "Medium";
+                size.setText(selectedSize);
+            }
+
+        };
+
+        small.setOnClickListener(sizeClickListener);
+        medium.setOnClickListener(sizeClickListener);
 
     }
 

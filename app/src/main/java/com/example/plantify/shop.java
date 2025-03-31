@@ -66,97 +66,113 @@ public class shop extends AppCompatActivity {
         h_bhp.setOnClickListener(v -> {
             String name = "Broken Heart Plant";
             int price = 299;
-            RedirectProduct(R.drawable.broken_heart_plant_2,name,price);
+            String description = "One of the most popular houseplants, and our all-time bestseller, this easy-growing plant with its heart-shaped leaves is loved for its beautiful fenestrations. Quick to grow with delicate trailing vines that can be styled for every space, the Philodendron broken heart is the monstera charm you want to add to your home if you don't have the space for the huge monstera. Scientifically known as the Monstera adansonii, this broken heart plant thrives indoors in bright indirect light and with very little care.";
+            RedirectProduct(R.drawable.broken_heart_plant_2,name,price,description);
         });
 
         h_jmp.setOnClickListener(v -> {
             String name = "Jade Plant Mini";
             int price = 279;
-            RedirectProduct(R.drawable.jade_mini_plats,name,price);
+            String description = "An easy-to-care-for succulent, the Crassula Green Mini boasts lush foliage that enhances any room. Its coin-like round plump leaves are considered lucky in Feng Shui.";
+            RedirectProduct(R.drawable.jade_mini_plats,name,price,description);
         });
 
         h_plp.setOnClickListener(v -> {
             String name = "Peace Lily Plant";
             int price = 299;
-            RedirectProduct(R.drawable.peace_lily_plant,name,price);
+            String description = " Known for its elegant white blooms and lush green leaves, the Peace Lily is a popular houseplant that purifies indoor air. It thrives in low to medium light conditions and prefers consistently moist soil.";
+            RedirectProduct(R.drawable.peace_lily_plant,name,price,description);
         });
 
         h_fbp.setOnClickListener(v -> {
             String name = "Ficus Bonsai Plant";
             int price = 949;
-            RedirectProduct(R.drawable.ficus_bonsai_plant,name,price);
+            String description = "A miniature version of the traditional Ficus tree, this Bonsai adds a touch of tranquility to indoor spaces. It requires bright indirect light and regular watering to maintain its shape and health.";
+            RedirectProduct(R.drawable.ficus_bonsai_plant,name,price,description);
         });
 
         h_lbp.setOnClickListener(v -> {
             String name = "Lucky bamboo Plant";
             int price = 349;
-            RedirectProduct(R.drawable.lucky_bamboo_plant,name,price);
+            String description = "Symbolizing good fortune and prosperity, the Lucky Bamboo is easy to grow and can thrive in water or soil. It prefers indirect light and adds an elegant touch to any decor.";
+            RedirectProduct(R.drawable.lucky_bamboo_plant,name,price,description);
         });
 
         h_stp.setOnClickListener(v -> {
             String name = "Stormanthe Triostar Plant";
             int price = 349;
-            RedirectProduct(R.drawable.stromanthe_triostar_plant,name,price);
+            String description = "This plant is known for its striking foliage, featuring a blend of green, white, and pink colors. It prefers bright, indirect light and high humidity levels to maintain its vibrant leaves.";
+            RedirectProduct(R.drawable.stromanthe_triostar_plant,name,price,description);
         });
 
         h_pgp.setOnClickListener(v -> {
             String name = "Peperomia Green Plant";
             int price = 279;
-            RedirectProduct(R.drawable.peperomia_green_plant,name,price);
+            String description = "A compact houseplant with thick, green leaves, the Peperomia is low-maintenance and ideal for indoor settings. It thrives in moderate light and requires minimal watering.";
+            RedirectProduct(R.drawable.peperomia_green_plant,name,price,description);
         });
 
         h_mpg.setOnClickListener(v -> {
             String name = "Money Plant Golden";
             int price = 279;
-            RedirectProduct(R.drawable.money_plant_golden,name,price);
+            String description = "Also known as Golden Pothos, this plant is renowned for its trailing vines and heart-shaped leaves with golden variegation. It’s hardy, tolerates low light, and is believed to attract wealth and prosperity.";
+            RedirectProduct(R.drawable.money_plant_golden,name,price,description);
         });
 
         h_pp.setOnClickListener(v -> {
             String name = "Peacock Plant";
             int price = 699;
-            RedirectProduct(R.drawable.peacock_plant,name,price);
+            String description = "Featuring decorative leaves with intricate patterns resembling a peacock’s tail, this plant prefers low to medium light and high humidity. It’s a stunning addition to any indoor plant collection.";
+            RedirectProduct(R.drawable.peacock_plant,name,price,description);
         });
 
         h_bwp.setOnClickListener(v -> {
             String name = "Brazilian Wood Plant";
             int price = 499;
-            RedirectProduct(R.drawable.brazilian_wood_plant,name,price);
+            String description = "Also known as Dracaena fragrans, this plant has broad, arching leaves and is known for its air-purifying qualities. It thrives in low to medium light and requires moderate watering.";
+            RedirectProduct(R.drawable.brazilian_wood_plant,name,price,description);
         });
 
         h_arp.setOnClickListener(v -> {
             String name = "Aglaonema Red Plant";
             int price = 749;
-            RedirectProduct(R.drawable.aglaonema_red_plant,name,price);
+            String description = "This plant stands out with its vibrant red and green leaves. It’s easy to care for, tolerates low light conditions, and adds a pop of color to indoor spaces.";
+            RedirectProduct(R.drawable.aglaonema_red_plant,name,price,description);
         });
 
         h_apbp.setOnClickListener(v -> {
             String name = "Aglaonema Pink Beauty Plant";
             int price = 714;
-            RedirectProduct(R.drawable.aglaonema_pink_beauty_plant,name,price);
+            String description = "Known for its attractive pink and green foliage, this plant is both decorative and low-maintenance. It prefers indirect light and regular watering.";
+            RedirectProduct(R.drawable.aglaonema_pink_beauty_plant,name,price,description);
         });
 
         h_bpx.setOnClickListener(v -> {
             String name = "Bamboo Palm XL";
             int price = 857;
-            RedirectProduct(R.drawable.bamboo_palm_xl,name,price);
+            String description = "A larger variety of the Bamboo Palm, this plant adds a tropical feel to interiors. It’s effective in purifying indoor air and thrives in low to medium light conditions.";
+            RedirectProduct(R.drawable.bamboo_palm_xl,name,price,description);
         });
 
         h_bpp.setOnClickListener(v -> {
             String name = "Bamboo Palm Plant";
             int price = 399;
-            RedirectProduct(R.drawable.bamboo_palm_plant,name,price);
+            String description = "A compact version of the Bamboo Palm, ideal for smaller spaces. It requires low to medium light and regular watering to keep the soil moist.";
+            RedirectProduct(R.drawable.bamboo_palm_plant,name,price,description);
         });
 
         h_flp.setOnClickListener(v -> {
             String name = "Fiddle Leaf Fig Plant";
             int price = 1199;
-            RedirectProduct(R.drawable.fiddle_leaf_fig_plant,name,price);
+            String description = "Known for its large, violin-shaped leaves, this plant is a popular choice for modern interiors. It requires bright, indirect light and consistent watering.";
+            RedirectProduct(R.drawable.fiddle_leaf_fig_plant,name,price,description);
         });
 
         h_vjmp.setOnClickListener(v -> {
             String name = "Variegated Jade Mini Plant";
             int price = 299;
-            RedirectProduct(R.drawable.variegated_jade_mini_plant,name,price);
+            String description = "A succulent with fleshy, variegated leaves featuring shades of green and cream. It’s easy to care for, requiring bright light and minimal watering.";
+            RedirectProduct(R.drawable.variegated_jade_mini_plant,name,price,description);
         });
 
         h_bhp_cart_click.setOnClickListener(v -> {
@@ -249,11 +265,12 @@ public class shop extends AppCompatActivity {
 
     }
 
-    public void RedirectProduct(int imageResId,String name, int price){
+    public void RedirectProduct(int imageResId,String name, int price, String description){
         Intent intent = new Intent(getApplicationContext(), product.class);
         intent.putExtra("img", imageResId);
         intent.putExtra("name", name);
         intent.putExtra("price", price);
+        intent.putExtra("description", description);
         startActivity(intent);
     }
 

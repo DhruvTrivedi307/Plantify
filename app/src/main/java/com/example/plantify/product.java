@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -22,8 +23,11 @@ public class product extends AppCompatActivity {
     TextView productName,productPrice,txtCount;
     Button buy_now;
     Button btnMinus,btnPlus;
-
+    AppCompatButton small,medium;
+    private String selectedSize = "";
     private int count = 1;
+    TextView size,description,pageName;
+    AppCompatButton buy_now_btn, add_to_cart;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -40,6 +44,12 @@ public class product extends AppCompatActivity {
         btnMinus = findViewById(R.id.btnMinus);
         btnPlus = findViewById(R.id.btnPlus);
         txtCount = findViewById(R.id.txtCount);
+
+        small = findViewById(R.id.small);
+        medium = findViewById(R.id.medium);
+        size = findViewById(R.id.size);
+        description = findViewById(R.id.description);
+        pageName = findViewById(R.id.pageName);
 
         btnMinus.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,6 +78,7 @@ public class product extends AppCompatActivity {
             int img = i.getIntExtra("img", 0);
             String name = i.getStringExtra("name");
             int price = i.getIntExtra("price", 0);
+            String desc = i.getStringExtra("description");
 
             if (img != 0) {
                 productImg.setImageResource(img);
@@ -75,8 +86,15 @@ public class product extends AppCompatActivity {
 
             if (name != null) {
                 productName.setText(name);
+                pageName.setText(name);
             } else {
                 productName.setText("No Name Available");
+            }
+
+            if (desc != null) {
+                description.setText(desc);
+            } else {
+                description.setText("No Description Available");
             }
 
             productPrice.setText("₹" + price);
@@ -92,6 +110,25 @@ public class product extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        View.OnClickListener sizeClickListener = v -> {
+            small.setSelected(false);
+            medium.setSelected(false);
+            v.setSelected(true);
+
+            if (v == small) {
+                selectedSize = "Small";
+                size.setText(selectedSize);
+            } else if (v == medium) {
+                selectedSize = "Medium";
+                size.setText(selectedSize);
+
+            }
+
+        };
+
+        small.setOnClickListener(sizeClickListener);
+        medium.setOnClickListener(sizeClickListener);
 
     }
 }
