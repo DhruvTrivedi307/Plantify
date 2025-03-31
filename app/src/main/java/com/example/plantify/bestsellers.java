@@ -61,7 +61,7 @@ public class bestsellers extends AppCompatActivity {
         b_bwp.setOnClickListener(v -> {
             String name = "Bamboo Palm Plant";
             int price = 499;
-            RedirectProduct(R.drawable.bamboo_palm_plant,name,price);
+            RedirectProduct(R.drawable.brazilian_wood_plant,name,price);
         });
 
         b_jmp.setOnClickListener(v -> {
@@ -77,9 +77,15 @@ public class bestsellers extends AppCompatActivity {
         });
 
         b_bhp.setOnClickListener(v -> {
-            String name = "Bamboo Plant XL";
+            String name = "Broken Heart Plant";
             int price = 499;
-            RedirectProduct(R.drawable.bamboo_palm_xl,name,price);
+            RedirectProduct(R.drawable.broken_heart_plant_2,name,price);
+        });
+
+        b_plp.setOnClickListener(v -> {
+            String name = "Peace Lily Plant";
+            int price = 499;
+            RedirectProduct(R.drawable.peace_lily_plant,name,price);
         });
 
         b_lbp_cart_click.setOnClickListener(v -> {

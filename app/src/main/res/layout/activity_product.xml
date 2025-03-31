@@ -26,6 +26,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/pageName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -153,9 +154,10 @@
                         android:layout_marginBottom="10dp"/>
 
                     <TextView
+                        android:id="@+id/size"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Small"
+                        android:text=""
                         android:fontFamily="@font/outfit_medium"
                         android:textColor="@color/black"/>
 
@@ -167,16 +169,18 @@
                     android:orientation="horizontal">
 
                     <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/small"
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
-                        android:background="@drawable/button_stroke"
+                        android:background="@drawable/size_button_selector"
                         android:hint="Small"
                         android:fontFamily="@font/outfit_medium"/>
 
                     <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/medium"
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
-                        android:background="@drawable/button_stroke"
+                        android:background="@drawable/size_button_selector"
                         android:layout_marginLeft="20dp"
                         android:hint="Medium"
                         android:fontFamily="@font/outfit_medium"/>
@@ -244,7 +248,8 @@
                     android:text="One of the most popular houseplants, and our all-time bestseller, this easy-growing plant with its heart-shaped leaves is loved for its beautiful fenestrations. Quick to grow with delicate trailing vines that can be styled for every space, the Philodendron broken heart is the monstera charm you want to add to your home if you don't have the space for the huge monstera. Scientifically known as the Monstera adansonii, this broken heart plant thrives indoors in bright indirect light and with very little care."
                     android:textSize="11dp"
                     android:gravity="center"
-                    android:fontFamily="@font/inter_medium"/>
+                    android:fontFamily="@font/inter_medium"
+                    android:id="@+id/description"/>
 
             </LinearLayout>
 
@@ -628,7 +633,8 @@
                 android:hint="ADD TO CART"
                 android:layout_margin="10dp"
                 android:textColorHint="@color/white"
-                android:fontFamily="@font/outfit_medium"/>
+                android:fontFamily="@font/outfit_medium"
+                android:id="@+id/add_to_cart"/>
 
         </LinearLayout>
 

@@ -33,7 +33,8 @@
             android:paddingLeft="5dp"
             android:text="Broken Heart Plant"
             android:textColor="@color/black"
-            android:textSize="15dp" />
+            android:textSize="15dp"
+            android:id="@+id/pageName"/>
 
         <View
             android:layout_width="0dp"
@@ -76,7 +77,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="520dp"
                 android:layout_gravity="center"
-                android:background="@color/background_gray"
                 android:src="@drawable/hydra_watering_pitcher"/>
 
             <LinearLayout
@@ -199,7 +199,8 @@
                     android:text="One of the most popular houseplants, and our all-time bestseller, this easy-growing plant with its heart-shaped leaves is loved for its beautiful fenestrations. Quick to grow with delicate trailing vines that can be styled for every space, the Philodendron broken heart is the monstera charm you want to add to your home if you don't have the space for the huge monstera. Scientifically known as the Monstera adansonii, this broken heart plant thrives indoors in bright indirect light and with very little care."
                     android:textSize="11dp"
                     android:gravity="center"
-                    android:fontFamily="@font/inter_medium"/>
+                    android:fontFamily="@font/inter_medium"
+                    android:id="@+id/description"/>
 
             </LinearLayout>
 
