@@ -58,14 +58,21 @@
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:fontFamily="@font/outfit_bold"/>
-
+                <LinearLayout
+                    android:id="@+id/cart_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
             <LinearLayout
+                android:id="@+id/main"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="15dp">
+                android:layout_marginTop="15dp"
+                tools:ignore="DuplicateIds">
 
                 <ImageView
+                    android:id="@+id/item_img"
                     android:layout_width="161dp"
                     android:layout_height="198dp"
                     android:layout_gravity="left"
@@ -78,6 +85,7 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/item_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Peacock Plant"
@@ -87,14 +95,11 @@
                         android:fontFamily="@font/outfit_medium"
                         android:layout_marginBottom="10dp"/>
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Selected Plant Size:"
+                            android:text="Selected Plant Size :-"
                             android:textSize="16dp"
                             android:fontFamily="@font/outfit_medium"
                             android:textColor="@color/theme_text"
@@ -106,7 +111,7 @@
                             android:textSize="16dp"
                             android:fontFamily="@font/outfit_medium"
                             android:textColor="@color/theme_text"/>
-                    </LinearLayout>
+
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -123,6 +128,7 @@
                             android:textSize="10dp"/>
 
                         <TextView
+                            android:id="@+id/item_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
@@ -171,7 +177,7 @@
 
                 </LinearLayout>
             </LinearLayout>
-
+                </LinearLayout>
             <View
                 android:layout_marginTop="30dp"
                 android:layout_width="match_parent"

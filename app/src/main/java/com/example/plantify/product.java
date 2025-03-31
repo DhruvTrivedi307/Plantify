@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,8 +19,11 @@ import androidx.core.view.WindowInsetsCompat;
 public class product extends AppCompatActivity {
 
     ImageView productImg;
-    TextView productName,productPrice;
+    TextView productName,productPrice,txtCount;
     Button buy_now;
+    Button btnMinus,btnPlus;
+
+    private int count = 1;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -33,9 +37,34 @@ public class product extends AppCompatActivity {
 
         buy_now = findViewById(R.id.buy_now);
 
+        btnMinus = findViewById(R.id.btnMinus);
+        btnPlus = findViewById(R.id.btnPlus);
+        txtCount = findViewById(R.id.txtCount);
+
+        btnMinus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (count > 1) {
+                    count--;
+                    txtCount.setText(String.valueOf(count));
+                }
+            }
+        });
+
+        btnPlus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (count < 5) {
+                    count++;
+                    txtCount.setText(String.valueOf(count));
+                }
+            }
+        });
+
+
 
         Intent i = getIntent();
-        if (i != null) {
+
             int img = i.getIntExtra("img", 0);
             String name = i.getStringExtra("name");
             int price = i.getIntExtra("price", 0);
@@ -51,12 +80,15 @@ public class product extends AppCompatActivity {
             }
 
             productPrice.setText("₹" + price);
-        }
 
         buy_now.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), checkout.class);
+                    i.putExtra("page","product");
+                    i.putExtra("img",img);
+                    i.putExtra("name",name);
+                    i.putExtra("price",price);
                 startActivity(i);
             }
         });

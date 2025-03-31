@@ -72,6 +72,7 @@ public class home extends AppCompatActivity {
         h_bwp_cart_click = findViewById(R.id.h_bwp_cart_click);
         h_pp_cart_click = findViewById(R.id.h_pp_cart_click);
 
+
         viewAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -159,6 +160,7 @@ public class home extends AppCompatActivity {
                 onCartClick();
             }
         });
+
 
         List<Integer> imgs = Arrays.asList(
                 R.drawable.carousel_img_1,

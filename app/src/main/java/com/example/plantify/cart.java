@@ -3,8 +3,10 @@ package com.example.plantify;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -19,6 +21,7 @@ public class cart extends AppCompatActivity {
     TextView txtCount;
     private int count = 1;
     ImageView back;
+
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -45,7 +48,7 @@ public class cart extends AppCompatActivity {
         btnPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (count <= 5) {
+                if (count < 5) {
                     count++;
                     txtCount.setText(String.valueOf(count));
                 }
@@ -58,6 +61,7 @@ public class cart extends AppCompatActivity {
                 finish();
             }
         });
+
 
     }
 }
