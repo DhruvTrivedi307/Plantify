@@ -92,10 +92,12 @@ public class home extends AppCompatActivity {
             public void onClick(View v) {
                 String name = "Broken Heart Plant";
                 int price = 499;
+                String description = "One of the most popular houseplants, and our all-time bestseller, this easy-growing plant with its heart-shaped leaves is loved for its beautiful fenestrations. Quick to grow with delicate trailing vines that can be styled for every space, the Philodendron broken heart is the monstera charm you want to add to your home if you don't have the space for the huge monstera. Scientifically known as the Monstera adansonii, this broken heart plant thrives indoors in bright indirect light and with very little care.";
                 Intent i = new Intent(getApplicationContext(),product.class);
                 i.putExtra("img",R.drawable.broken_heart_plant_2);
                 i.putExtra("name",name);
                 i.putExtra("price",price);
+                i.putExtra("description",description);
                 startActivity(i);
             }
         });
@@ -105,10 +107,12 @@ public class home extends AppCompatActivity {
             public void onClick(View v) {
                 String name = "Jade Mini Plant";
                 int price = 499;
+                String description = "An easy-to-care-for succulent, the Crassula Green Mini boasts lush foliage that enhances any room. Its coin-like round plump leaves are considered lucky in Feng Shui.";
                 Intent i = new Intent(getApplicationContext(),product.class);
                 i.putExtra("img",R.drawable.jade_mini_plats);
                 i.putExtra("name",name);
                 i.putExtra("price",price);
+                i.putExtra("description",description);
                 startActivity(i);
             }
         });
@@ -118,10 +122,12 @@ public class home extends AppCompatActivity {
             public void onClick(View v) {
                 String name = "Brazilian Wood Plant";
                 int price = 499;
+                String description = "Also known as Dracaena fragrans, this plant has broad, arching leaves and is known for its air-purifying qualities. It thrives in low to medium light and requires moderate watering.";
                 Intent i = new Intent(getApplicationContext(),product.class);
                 i.putExtra("img",R.drawable.brazilian_wood_plant);
                 i.putExtra("name",name);
                 i.putExtra("price",price);
+                i.putExtra("description",description);
                 startActivity(i);
             }
         });
@@ -131,10 +137,12 @@ public class home extends AppCompatActivity {
             public void onClick(View v) {
                 String name = "Peacock Plant";
                 int price = 499;
+                String description = "Featuring decorative leaves with intricate patterns resembling a peacock’s tail, this plant prefers low to medium light and high humidity. It’s a stunning addition to any indoor plant collection.";
                 Intent i = new Intent(getApplicationContext(),product.class);
                 i.putExtra("img",R.drawable.peacock_plant);
                 i.putExtra("name",name);
                 i.putExtra("price",price);
+                i.putExtra("description",description);
                 startActivity(i);
             }
         });
