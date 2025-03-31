@@ -44,49 +44,57 @@ public class tools extends AppCompatActivity {
         dmm.setOnClickListener(v -> {
             String name = "Dom Metallic Mister";
             int price = 859;
-            RedirectProduct(R.drawable.dom_metallic_mister,name,price);
+            String description = "A 0.5-litre watering can, essential for home or office gardeners. Its size is perfect for spritzing small indoor plants without spilling onto nearby surfaces, and it also serves as an attractive decor piece.";
+            RedirectProduct(R.drawable.dom_metallic_mister,name,price,description);
         });
 
         hwp.setOnClickListener(v -> {
             String name = "Hydra Watering Pitcher";
             int price = 399;
-            RedirectProduct(R.drawable.hydra_watering_pitcher,name,price);
+            String description = "An ergonomically designed premium watering jug, ideal for easily watering indoor and outdoor plants without stress.";
+            RedirectProduct(R.drawable.hydra_watering_pitcher,name,price,description);
         });
 
         dpw.setOnClickListener(v -> {
             String name = "Double Prong Weeder";
             int price = 399;
-            RedirectProduct(R.drawable.double_prong_weeder,name,price);
+            String description = "An upgraded version of the Single Prong Weeder, this tool is used for weeding, small root removal, efficiently loosening soil, and digging holes to sow seeds. It features a wooden handle for a firm grip and is perfectly sized for flower beds and small vegetable gardens.";
+            RedirectProduct(R.drawable.double_prong_weeder,name,price,description);
         });
 
         fpw.setOnClickListener(v -> {
             String name = "Five Prong Weeder";
             int price = 969;
-            RedirectProduct(R.drawable.five_prong_weeder,name,price);
+            String description = "This tool comes with five metal prongs and a wooden handle, making it suitable for comfortably turning soil and cleaning leaves from the garden. The product height is approximately 33 cm.";
+            RedirectProduct(R.drawable.five_prong_weeder,name,price,description);
         });
 
         cps.setOnClickListener(v -> {
             String name = "Curve Pruning Saw - 33 Cm";
             int price = 599;
-            RedirectProduct(R.drawable.curve_pruning_saw,name,price);
+            String description = "The Pyramid Curve Pruning Saw features a double-edged 33 cm blade of excellent quality with a rubber grip for comfortable and firm handling. It’s popular among garden enthusiasts for cutting small branches, limbs, and trees up to 120 mm in diameter. ";
+            RedirectProduct(R.drawable.curve_pruning_saw,name,price,description);
         });
 
         pis.setOnClickListener(v -> {
             String name = "Plastic Impulse Sprinkler";
             int price = 879;
-            RedirectProduct(R.drawable.plastic_impulse_sprinkler,name,price);
+            String description = "The Pyramid Plastic Sprinkler is ideal for watering medium-sized lawns. It has an adjustable shower head that covers a radius of 15 to 20 square feet. The body is made of plastic. ";
+            RedirectProduct(R.drawable.plastic_impulse_sprinkler,name,price,description);
         });
 
         ss.setOnClickListener(v -> {
             String name = "Sprinkler Stand";
             int price = 839;
-            RedirectProduct(R.drawable.sprinkler_stand,name,price);
+            String description = "Primarily used as an attachment for the Concorde Brass G2 and G3 sprinkler heads, this stand is made of mild steel with brass components. It offers dual compatibility for both sprinkler types. ";
+            RedirectProduct(R.drawable.sprinkler_stand,name,price,description);
         });
 
         ws.setOnClickListener(v -> {
             String name = "Watermatic Stack";
             int price = 299;
-            RedirectProduct(R.drawable.watermatic_stake,name,price);
+            String description = " An automatic watering system suitable for both indoor and outdoor plants. The Watermatic Stake is easy to use and install, providing consistent watering for your garden throughout the year. ";
+            RedirectProduct(R.drawable.watermatic_stake,name,price,description);
         });
 
         dmm_cart_click.setOnClickListener(v -> {
@@ -123,11 +131,12 @@ public class tools extends AppCompatActivity {
 
     }
 
-    public void RedirectProduct(int imageResId,String name, int price){
+    public void RedirectProduct(int imageResId,String name, int price, String description){
         Intent intent = new Intent(getApplicationContext(), product_explore.class);
         intent.putExtra("img", imageResId);
         intent.putExtra("name", name);
         intent.putExtra("price", price);
+        intent.putExtra("description",description);
         startActivity(intent);
     }
 
