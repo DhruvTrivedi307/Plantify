@@ -49,6 +49,10 @@ public class home extends AppCompatActivity {
     Button viewAll, h_bhp_cart_click, h_jmp_cart_click, h_bwp_cart_click, h_pp_cart_click;
     TextView size;
 
+    TextView txtCount;
+    private int count = 1;
+    Button btnMinus,btnPlus;
+
     @SuppressLint({"MissingInflatedId", "WrongViewCast"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +81,31 @@ public class home extends AppCompatActivity {
         small = findViewById(R.id.small);
         medium = findViewById(R.id.medium);
         size = findViewById(R.id.size);
+
+        btnMinus = findViewById(R.id.btnMinus);
+        btnPlus = findViewById(R.id.btnPlus);
+        txtCount = findViewById(R.id.txtCount);
+
+
+        btnMinus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (count > 1) {
+                    count--;
+                    txtCount.setText(String.valueOf(count));
+                }
+            }
+        });
+
+        btnPlus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (count < 5) {
+                    count++;
+                    txtCount.setText(String.valueOf(count));
+                }
+            }
+        });
 
 
         viewAll.setOnClickListener(new View.OnClickListener() {
