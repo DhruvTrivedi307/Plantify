@@ -21,13 +21,12 @@ public class product extends AppCompatActivity {
 
     ImageView productImg,back;
     TextView productName,productPrice,txtCount;
-    Button buy_now;
     Button btnMinus,btnPlus;
     AppCompatButton small,medium;
     private String selectedSize = "";
     private int count = 1;
     TextView size,description,pageName;
-    AppCompatButton buy_now_btn, add_to_cart;
+    AppCompatButton buy_now, add_to_cart;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -136,8 +135,6 @@ public class product extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
-
 
         back.setOnClickListener(view -> {
             finish();

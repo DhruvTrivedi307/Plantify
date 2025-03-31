@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -21,19 +22,13 @@ public class checkout extends AppCompatActivity {
     ImageView p_img;
     TextView p_name,quantity,subtotalPrice,grandtotalPrice,bottomnavPrice,Plantsize;
     EditText fname,lname,mono,email,pin_code,city,state,add1,add2;
-    Button checkout;
+    AppCompatButton checkout;
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_checkout);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
 
         p_img = findViewById(R.id.p_img);
         p_name = findViewById(R.id.p_name);
@@ -81,7 +76,7 @@ public class checkout extends AppCompatActivity {
         checkout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(fname.getText().toString().trim().isEmpty() || lname.getText().toString().trim().isEmpty() || mono.getText().toString().trim().isEmpty() || email.getText().toString().trim().isEmpty() || pin_code.getText().toString().trim().isEmpty() || city.getText().toString().trim().isEmpty() || state.getText().toString().trim().isEmpty() || add1.getText().toString().trim().isEmpty() || add2.getText().toString().trim().isEmpty()){
+                if(fname.getText().toString().trim().isEmpty() || lname.getText().toString().trim().isEmpty() || mono.getText().toString().trim().isEmpty() || email.getText().toString().trim().isEmpty() || pin_code.getText().toString().trim().isEmpty() || city.getText().toString().trim().isEmpty() || state.getText().toString().trim().isEmpty() || add1.getText().toString().trim().isEmpty()){
                     Toast.makeText(checkout.this, "Please first fill all details", Toast.LENGTH_SHORT).show();
                 } else {
                     Intent i = new Intent(checkout.this, payment.class);
@@ -93,8 +88,8 @@ public class checkout extends AppCompatActivity {
                     i.putExtra("city",city.getText().toString().trim());
                     i.putExtra("state",state.getText().toString().trim());
                     i.putExtra("add1",add1.getText().toString().trim());
-                    i.putExtra("add2",fname.getText().toString().trim());
-                    i.putExtra("totalPrice",totalPrice);
+                    i.putExtra("add2",add2.getText().toString().trim());
+                    i.putExtra("totalPrice", totalPrice);
                     startActivity(i);
 
                 }
