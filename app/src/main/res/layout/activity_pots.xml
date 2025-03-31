@@ -107,6 +107,7 @@
                 android:gravity="center">
 
                 <LinearLayout
+                    android:id="@+id/p_gwp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -178,6 +179,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/p_owp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -218,7 +220,6 @@
                         android:layout_marginTop="5dp">
 
                         <TextView
-                            android:id="@+id/priceText1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/sansita_swashed"
@@ -260,6 +261,7 @@
                 android:gravity="center">
 
                 <LinearLayout
+                    android:id="@+id/p_rwwp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -332,6 +334,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/p_rcp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -412,6 +415,7 @@
                 android:gravity="center">
 
                 <LinearLayout
+                    android:id="@+id/p_cagcp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -483,6 +487,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/p_stp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -564,6 +569,7 @@
                 android:layout_marginBottom="20dp">
 
                 <LinearLayout
+                    android:id="@+id/p_tfbcp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -635,6 +641,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/p_tffcp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -716,6 +723,7 @@
                 android:layout_marginBottom="20dp">
 
                 <LinearLayout
+                    android:id="@+id/p_tccp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -787,6 +795,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/p_vep"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
