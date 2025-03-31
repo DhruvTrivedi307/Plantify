@@ -17,7 +17,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class product_explore extends AppCompatActivity {
 
     ImageView productImg;
-    TextView productName,productPrice,description,txtCount;
+    TextView productName,productPrice,description,txtCount,pageName;
     Button buy_now,btnMinus,btnPlus;
     private int count = 1;
 
@@ -32,6 +32,7 @@ public class product_explore extends AppCompatActivity {
         productPrice = findViewById(R.id.productPrice);
         description = findViewById(R.id.description);
         buy_now = findViewById(R.id.buy_now);
+        pageName = findViewById(R.id.pageName);
 
         btnMinus = findViewById(R.id.btnMinus);
         btnPlus = findViewById(R.id.btnPlus);
@@ -51,6 +52,7 @@ public class product_explore extends AppCompatActivity {
 
             if (name != null) {
                 productName.setText(name);
+                pageName.setText(name);
             } else {
                 productName.setText("No Name Available");
             }
