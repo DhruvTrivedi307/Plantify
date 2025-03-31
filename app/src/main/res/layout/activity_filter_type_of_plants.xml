@@ -23,7 +23,7 @@
             android:layout_marginStart="16dp"
             android:text="Filter"
             android:textSize="25dp"
-            android:fontFamily="@font/outfit"
+            android:fontFamily="@font/outfit_bold"
             android:textColor="@color/black"
             android:layout_gravity="center"/>
 
@@ -67,7 +67,7 @@
                 android:layout_height="wrap_content"
                 android:text="Type of plants"
                 android:textColor="@color/theme"
-                android:fontFamily="@font/outfit"
+                android:fontFamily="@font/outfit_medium"
                 android:textSize="20dp"
                 android:layout_marginTop="15dp"
                 />
@@ -77,7 +77,7 @@
                 android:layout_height="wrap_content"
                 android:text="Price"
                 android:textColor="@color/black"
-                android:fontFamily="@font/outfit"
+                android:fontFamily="@font/outfit_medium"
                 android:textSize="20dp"
                 android:layout_marginTop="25dp"
                 />
@@ -87,7 +87,7 @@
                 android:layout_height="wrap_content"
                 android:text="Size"
                 android:textColor="@color/black"
-                android:fontFamily="@font/outfit"
+                android:fontFamily="@font/outfit_medium"
                 android:textSize="20dp"
                 android:layout_marginTop="25dp"
                 />
@@ -97,7 +97,7 @@
                 android:layout_height="wrap_content"
                 android:text="Indoor/Outdoor"
                 android:textColor="@color/black"
-                android:fontFamily="@font/outfit"
+                android:fontFamily="@font/outfit_medium"
                 android:textSize="20dp"
                 android:layout_marginTop="25dp"
                 />
@@ -119,6 +119,7 @@
                 android:layout_height="wrap_content"
                 android:text="Air Plants"
                 android:layout_marginLeft="20dp"
+                android:fontFamily="@font/outfit_medium"
                 />
 
             <CheckBox
@@ -126,6 +127,7 @@
                 android:layout_height="wrap_content"
                 android:text="Flowering Plants"
                 android:layout_marginLeft="20dp"
+                android:fontFamily="@font/outfit_medium"
                 />
 
             <CheckBox
@@ -133,6 +135,7 @@
                 android:layout_height="wrap_content"
                 android:text="Climbers"
                 android:layout_marginLeft="20dp"
+                android:fontFamily="@font/outfit_medium"
                 />
 
             <CheckBox
@@ -140,6 +143,7 @@
                 android:layout_height="wrap_content"
                 android:text="Focal Plants"
                 android:layout_marginLeft="20dp"
+                android:fontFamily="@font/outfit_medium"
                 />
 
             <CheckBox
@@ -147,6 +151,7 @@
                 android:layout_height="wrap_content"
                 android:text="Fruit Plants"
                 android:layout_marginLeft="20dp"
+                android:fontFamily="@font/outfit_medium"
                 />
 
             <CheckBox
@@ -154,6 +159,7 @@
                 android:layout_height="wrap_content"
                 android:text="Ground Covers"
                 android:layout_marginLeft="20dp"
+                android:fontFamily="@font/outfit_medium"
                 />
 
 
@@ -171,6 +177,7 @@
         android:textColor="@color/white"
         android:background="@drawable/sign_in_button_fill"
         android:textSize="20sp"
-        android:layout_gravity="bottom"/>
+        android:layout_gravity="bottom"
+        android:layout_margin="20dp"/>
 
 </LinearLayout>

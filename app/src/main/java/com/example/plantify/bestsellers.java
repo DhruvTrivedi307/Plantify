@@ -3,6 +3,7 @@ package com.example.plantify;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import androidx.activity.EdgeToEdge;
@@ -16,6 +17,7 @@ public class bestsellers extends AppCompatActivity {
 
     LinearLayout b_lbp, b_fbp, b_pp, b_bwp, b_jmp, b_mpg, b_bhp, b_plp;
     AppCompatButton b_lbp_cart_click, b_fbp_cart_click, b_pp_cart_click, b_bwp_cart_click, b_jmp_cart_click, b_mpg_cart_click, b_bhp_cart_click;
+    ImageView cart_icon,search_icon;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -39,6 +41,9 @@ public class bestsellers extends AppCompatActivity {
         b_jmp_cart_click = findViewById(R.id.b_jmp_cart_click);
         b_mpg_cart_click = findViewById(R.id.b_mpg_cart_click);
         b_bhp_cart_click = findViewById(R.id.b_bhp_cart_click);
+
+        cart_icon = findViewById(R.id.cart_icon);
+        search_icon = findViewById(R.id.search_icon);
 
         b_lbp.setOnClickListener(v -> {
             String name = "Lucky Bamboo Plant";
@@ -114,6 +119,18 @@ public class bestsellers extends AppCompatActivity {
 
         b_bhp_cart_click.setOnClickListener(v -> {
             onCartClick();
+        });
+
+        search_icon.setOnClickListener(v -> {
+            Intent i = new Intent(getApplicationContext(),search.class);
+            startActivity(i);
+            overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
+        });
+
+        cart_icon.setOnClickListener(v -> {
+            Intent i = new Intent(getApplicationContext(),cart.class);
+            startActivity(i);
+            overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
         });
 
     }

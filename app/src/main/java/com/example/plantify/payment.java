@@ -59,8 +59,8 @@ public class payment extends AppCompatActivity {
         e_state.setText(state);
         e_add1.setText(add1);
         e_add2.setText(add2);
-        subtotalPrice.setText(totalPrice);
-        grandtotalPrice.setText(totalPrice);
-        bottomnavPrice.setText(totalPrice);
+        subtotalPrice.setText("₹"+totalPrice);
+        grandtotalPrice.setText("₹"+totalPrice);
+        bottomnavPrice.setText("₹"+totalPrice);
     }
 }

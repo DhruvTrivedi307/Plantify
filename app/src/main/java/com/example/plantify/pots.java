@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import androidx.activity.EdgeToEdge;
@@ -107,6 +108,21 @@ public class pots extends AppCompatActivity {
             public void onClick(View v) {
                 RedirectProduct(R.drawable.verona_eco_planter,"Verona Eco Planter",399,"Elevate your indoor décor with the Verona Eco Series planters, stylish and functional additions that seamlessly blend eco-friendly materials with contemporary design. Shop these stunning planters in different size in the color of your choice! Why get one when you can get them all?");
             }
+        });
+
+        ImageView search_icon = findViewById(R.id.search_icon);
+        ImageView cart_icon = findViewById(R.id.cart_icon);
+
+        search_icon.setOnClickListener(v -> {
+            Intent i = new Intent(getApplicationContext(),search.class);
+            startActivity(i);
+            overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
+        });
+
+        cart_icon.setOnClickListener(v -> {
+            Intent i = new Intent(getApplicationContext(),cart.class);
+            startActivity(i);
+            overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
         });
 
     }

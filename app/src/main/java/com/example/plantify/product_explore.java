@@ -40,6 +40,21 @@ public class product_explore extends AppCompatActivity {
 
         back = findViewById(R.id.back);
 
+        ImageView search_icon = findViewById(R.id.search_icon);
+        ImageView cart_icon = findViewById(R.id.cart_icon);
+
+        search_icon.setOnClickListener(v -> {
+            Intent i = new Intent(getApplicationContext(),search.class);
+            startActivity(i);
+            overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
+        });
+
+        cart_icon.setOnClickListener(v -> {
+            Intent i = new Intent(getApplicationContext(),cart.class);
+            startActivity(i);
+            overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
+        });
+
         Intent i = getIntent();
 
         if (i != null) {
