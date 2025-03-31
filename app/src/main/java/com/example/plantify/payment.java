@@ -48,6 +48,7 @@ public class payment extends AppCompatActivity {
         String state = i.getStringExtra("state");
         String add1 = i.getStringExtra("add1");
         String add2 = i.getStringExtra("add2");
+
         int totalPrice = i.getIntExtra("totalPrice",1);
 
         e_fname.setText(fname);
@@ -59,8 +60,8 @@ public class payment extends AppCompatActivity {
         e_state.setText(state);
         e_add1.setText(add1);
         e_add2.setText(add2);
-        subtotalPrice.setText(totalPrice);
-        grandtotalPrice.setText(totalPrice);
-        bottomnavPrice.setText(totalPrice);
+        subtotalPrice.setText("₹"+totalPrice);
+        grandtotalPrice.setText("₹"+totalPrice);
+        bottomnavPrice.setText("₹"+totalPrice);
     }
 }
