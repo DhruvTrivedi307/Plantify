@@ -16,7 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class product_explore extends AppCompatActivity {
 
-    ImageView productImg;
+    ImageView productImg,back;
     TextView productName,productPrice,description,txtCount,pageName;
     Button buy_now,btnMinus,btnPlus;
     private int count = 1;
@@ -37,6 +37,8 @@ public class product_explore extends AppCompatActivity {
         btnMinus = findViewById(R.id.btnMinus);
         btnPlus = findViewById(R.id.btnPlus);
         txtCount = findViewById(R.id.txtCount);
+
+        back = findViewById(R.id.back);
 
         Intent i = getIntent();
 
@@ -91,6 +93,13 @@ public class product_explore extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), checkout.class);
                 startActivity(i);
+            }
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
 

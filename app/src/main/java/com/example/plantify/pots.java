@@ -63,49 +63,49 @@ public class pots extends AppCompatActivity {
         p_rcp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RedirectProduct(R.drawable.roma_ceramic_pot,"Roma Ceramic Pot",499,"");
+                RedirectProduct(R.drawable.roma_ceramic_pot,"Roma Ceramic Pot",499,"Introducing the exquisite Roma Pot, a stunning ceramic masterpiece inspired by the timeless beauty of old Roman architecture. Reminiscent of majestic pillars, this unique pot brings an air of elegance and grandeur to your indoor or outdoor space.");
             }
         });
 
         p_cagcp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RedirectProduct(R.drawable.cats_are_gods_ceramic_planter,"Cats Are Gods Ceramic Planter",339,"");
+                RedirectProduct(R.drawable.cats_are_gods_ceramic_planter,"Cats Are Gods Ceramic Planter",339,"The stunning ceramic planters are hand-crafted with the finest clay, locally sourced from Hyderabad and Andhra Pradesh. These beautiful planters are built to last and promise to stay with your plants for more than 20 years without fading, chipping or losing their charm. The ceramic is skillfully baked and vitrified at 1200°C, giving it a stronger built and a longer-lasting life.");
             }
         });
 
         p_stp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RedirectProduct(R.drawable.sienna_terracotta_pots,"Sienna Terracotta Pots",359,"");
+                RedirectProduct(R.drawable.sienna_terracotta_pots,"Sienna Terracotta Pots",359,"The Sienna Terracotta Set of 3 Pots brings you three premium pots in aesthetic colors, adorned with elegant designs. These pots are sturdy, strong, and durable, making them the perfect companions for your plants. Find luxury and convenience all in one with these stunning terracotta pots.");
             }
         });
 
         p_tfbcp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RedirectProduct(R.drawable.tulip_fantasy_bowl_ceramic_planter,"Tulip Fantasy Bowl Ceramic Planter",429,"");
+                RedirectProduct(R.drawable.tulip_fantasy_bowl_ceramic_planter,"Tulip Fantasy Bowl Ceramic Planter",429,"Our tulip fantasy planter is beautiful in its simplicity. The minimalist design with carefully handcrafted shape means its the best fit for your plants while also elevating the decor of your home. Made of premium grade ceramic, the planter sports the silkiest glaze you will ever come across in planters. ");
             }
         });
 
         p_tffcp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RedirectProduct(R.drawable.tulip_fantasy_flat_ceramic_planter,"Tulip Fantasy Flat Ceramic Planter",279,"");
+                RedirectProduct(R.drawable.tulip_fantasy_flat_ceramic_planter,"Tulip Fantasy Flat Ceramic Planter",279,"Our tulip fantasy planter is beautiful in its simplicity. The minimalist design with carefully handcrafted shape means its the best fit for your plants while also elevating the decor of your home. Made of premium grade ceramic, the planter sports the silkiest glaze you will ever come across in planters. ");
             }
         });
 
         p_tccp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RedirectProduct(R.drawable.twilight_clouds_ceramic_planter,"Twilight Clouds Ceramic Planter", 189,"");
+                RedirectProduct(R.drawable.twilight_clouds_ceramic_planter,"Twilight Clouds Ceramic Planter", 189,"The stunning ceramic planters are hand-crafted with the finest clay, locally sourced from Hyderabad and Andhra Pradesh. These beautiful planters are built to last and promise to stay with your plants for more than 20 years without fading, chipping or losing their charm. ");
             }
         });
 
         p_vep.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RedirectProduct(R.drawable.verona_eco_planter,"Verona Eco Planter",399,"");
+                RedirectProduct(R.drawable.verona_eco_planter,"Verona Eco Planter",399,"Elevate your indoor décor with the Verona Eco Series planters, stylish and functional additions that seamlessly blend eco-friendly materials with contemporary design. Shop these stunning planters in different size in the color of your choice! Why get one when you can get them all?");
             }
         });
 

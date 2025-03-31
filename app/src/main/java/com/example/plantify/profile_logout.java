@@ -3,6 +3,7 @@ package com.example.plantify;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -20,12 +21,14 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class profile_logout extends AppCompatActivity {
     GoogleSignInOptions gso;
     GoogleSignInClient gsc;
     TextView name,email;
     Button sign_out;
+    BottomNavigationView bnv;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -57,6 +60,38 @@ public class profile_logout extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 signOut();
+            }
+        });
+
+        bnv = findViewById(R.id.bnv);
+
+        bnv.setSelectedItemId(R.id.profile);
+
+        bnv.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                if (item.getItemId() == R.id.home) {
+                    Intent i = new Intent(getApplicationContext(), home.class);
+                    startActivity(i);
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                    return true;
+                } else if (item.getItemId() == R.id.shop) {
+                    Intent i = new Intent(getApplicationContext(), shop.class);
+                    startActivity(i);
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                    return true;
+                } else if (item.getItemId() == R.id.trending) {
+                    Intent i = new Intent(getApplicationContext(), Trending.class);
+                    startActivity(i);
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                    return true;
+                } else if (item.getItemId() == R.id.profile) {
+                    Intent i = new Intent(getApplicationContext(), profile_logout.class);
+                    startActivity(i);
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                    return true;
+                }
+                return true;
             }
         });
 

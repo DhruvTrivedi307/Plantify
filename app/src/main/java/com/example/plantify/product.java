@@ -19,7 +19,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class product extends AppCompatActivity {
 
-    ImageView productImg;
+    ImageView productImg,back;
     TextView productName,productPrice,txtCount;
     Button buy_now;
     Button btnMinus,btnPlus;
@@ -50,6 +50,8 @@ public class product extends AppCompatActivity {
         size = findViewById(R.id.size);
         description = findViewById(R.id.description);
         pageName = findViewById(R.id.pageName);
+
+        back = findViewById(R.id.back);
 
         btnMinus.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -129,6 +131,10 @@ public class product extends AppCompatActivity {
 
         small.setOnClickListener(sizeClickListener);
         medium.setOnClickListener(sizeClickListener);
+
+        back.setOnClickListener(view -> {
+            finish();
+        });
 
     }
 }
