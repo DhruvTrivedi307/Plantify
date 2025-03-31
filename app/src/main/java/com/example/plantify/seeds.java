@@ -1,11 +1,10 @@
 package com.example.plantify;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,17 +15,12 @@ import androidx.core.view.WindowInsetsCompat;
 public class seeds extends AppCompatActivity {
 
     LinearLayout s_amaranths,s_beetroots,s_broccolis,s_capsicums,s_corianders,s_fenugreek,s_greenchilli,s_greencucumber,s_okras,s_redamaranthus,s_spinch,s_tomatos;
-
+    LinearLayout s_amaranths_cart_click, s_beetroots_cart_click, s_broccolis_cart_click, s_capsicums_cart_click, s_corianders_cart_click, s_fenugreek_cart_click, s_greenchilli_cart_click, s_greencucumber_cart_click, s_okras_cart_click, s_redamaranthus_cart_click, s_spinch_cart_click, s_tomatos_cart_click;
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_seeds);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
 
         s_amaranths = findViewById(R.id.s_amaranths);
         s_beetroots = findViewById(R.id.s_beetroots);
@@ -40,99 +34,190 @@ public class seeds extends AppCompatActivity {
         s_redamaranthus = findViewById(R.id.s_redamaranthuss);
         s_spinch = findViewById(R.id.s_spinchs);
         s_tomatos = findViewById(R.id.s_tomatos);
+
+//        s_amaranths_cart_click = findViewById(R.id.s_amaranths_cart_click);
+//        s_beetroots_cart_click = findViewById(R.id.s_beetroots_cart_click);
+//        s_broccolis_cart_click = findViewById(R.id.s_broccolis_cart_click);
+//        s_capsicums_cart_click = findViewById(R.id.s_capsicums_cart_click);
+//        s_corianders_cart_click = findViewById(R.id.s_corianders_cart_click);
+//        s_fenugreek_cart_click = findViewById(R.id.s_fenugreek_cart_click);
+//        s_greenchilli_cart_click = findViewById(R.id.s_greenchillis_cart_click);
+//        s_greencucumber_cart_click = findViewById(R.id.s_greencucumbers_cart_click);
+//        s_okras_cart_click = findViewById(R.id.s_okras_cart_click);
+//        s_redamaranthus_cart_click = findViewById(R.id.s_redamaranthuss_cart_click);
+//        s_spinch_cart_click = findViewById(R.id.s_spinchs_cart_click);
+//        s_tomatos_cart_click = findViewById(R.id.s_tomatos_cart_click);
         
+//        s_amaranths_cart_click.setOnClickListener(v -> {
+//            onCartClick();
+//        });
+//        s_beetroots_cart_click.setOnClickListener(v -> {
+//            onCartClick();
+//        });
+//        s_broccolis_cart_click.setOnClickListener(v -> {
+//            onCartClick();
+//        });
+//        s_capsicums_cart_click.setOnClickListener(v -> {
+//            onCartClick();
+//        });
+//        s_corianders_cart_click.setOnClickListener(v -> {
+//            onCartClick();
+//        });
+//        s_fenugreek_cart_click.setOnClickListener(v -> {
+//            onCartClick();
+//        });
+//        s_greenchilli_cart_click.setOnClickListener(v -> {
+//            onCartClick();
+//        });
+//        s_greencucumber_cart_click.setOnClickListener(v -> {
+//            onCartClick();
+//        });
+//        s_okras_cart_click.setOnClickListener(v -> {
+//            onCartClick();
+//        });
+//        s_redamaranthus_cart_click.setOnClickListener(v -> {
+//            onCartClick();
+//        });
+//        s_spinch_cart_click.setOnClickListener(v -> {
+//            onCartClick();
+//        });
+//        s_tomatos_cart_click.setOnClickListener(v -> {
+//            onCartClick();
+//        });
+
         s_amaranths.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String name = "Jade Mini Plant";
+                String name = "Amaranth Seeds";
                 int price = 499;
-                RedirectProduct(R.drawable.amaranth_seeds,"Amaranth Seeds",499);
+                String description = "Amaranth is known for its rapid growth, quick rejuvenation after each harvest, and high yield in a short time. It is highly efficient at photosynthesis and thrives even in adverse environmental conditions.";
+                RedirectProduct(R.drawable.amaranth_seeds,name,price,description);
             }
         });
 
         s_beetroots.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RedirectProduct(R.drawable.beetroot_seeds,"Beetroot Seeds",99);
+                String name = "Beetroot Seeds";
+                int price = 499;
+                String description = "These open-pollinated, 100% organic seeds are designed to provide authentic taste and superior quality harvests compared to commonly found seeds.";
+                RedirectProduct(R.drawable.beetroot_seeds,name,price,description);
             }
         });
 
         s_broccolis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RedirectProduct(R.drawable.broccoli_seeds,"Broccoli Seeds",129);
+                String name = "Broccoli Seeds";
+                int price = 499;
+                String description = "Broccoli is relatively easy to grow and can thrive in various climates. As a cool-season crop, it’s ideal for fall or early spring planting, yielding a bountiful harvest with minimal care in just a few months.";
+                RedirectProduct(R.drawable.broccoli_seeds,name,price,description);
             }
         });
 
         s_capsicums.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RedirectProduct(R.drawable.capsicum_seeds,"Capsicum Seeds",99);
+                String name = "Capsicum Seeds";
+                int price = 499;
+                String description = "Capsicum plants take approximately 55-60 days from seed to harvest-ready peppers. They sprout in 14-18 days, grow steadily, and begin flowering in about two months. With proper care—including ample sunlight, water, and regular feeding—you’ll have vibrant, crunchy capsicums ready to pick.";
+                RedirectProduct(R.drawable.capsicum_seeds,name,price,description);
             }
         });
 
         s_corianders.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RedirectProduct(R.drawable.coriander_seeds,"Coriander Seeds",139);
+                String name = "Coriander Seeds";
+                int price = 499;
+                String description = "Coriander seeds contain two seeds within one shell. Gently crushing them before planting helps them split and sprout faster, leading to improved germination.";
+                RedirectProduct(R.drawable.coriander_seeds,name,price,description);
             }
         });
 
         s_fenugreek.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RedirectProduct(R.drawable.fenugreek_seeds,"Fenugreek Seeds",99);
+                String name = "Fenugreek Seeds";
+                int price = 499;
+                String description = "Fenugreek seeds are tiny powerhouses packed with benefits, including aiding digestion, controlling blood sugar, and enhancing hair and skin health. They are commonly used in various culinary dishes and traditional remedies.";
+                RedirectProduct(R.drawable.fenugreek_seeds,name,price,description);
             }
         });
 
         s_greenchilli.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RedirectProduct(R.drawable.green_chilli_seed,"Green Chilli Seeds",99);
+                String name = "Green Chilli Seeds";
+                int price = 499;
+                String description = "Green chilli is one of the easiest and most rewarding plants to grow in a kitchen garden. They can be added to curries, made into spice mixes, or pickled. Green chillies are also a great source of Vitamin A.";
+                RedirectProduct(R.drawable.green_chilli_seed,name,price,description);
             }
         });
 
         s_greencucumber.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RedirectProduct(R.drawable.green_cucumber_seeds,"Green Cucumber Seeds",99);
+                String name = "Green Cucumber Seeds";
+                int price = 499;
+                String description = "Cucumbers are packed with vitamins and minerals, making them excellent for cooling the body and increasing hydration due to their high water content. The ideal growing medium for cucumber seeds is a mix of two parts garden soil and one part organic manure or a combination of garden soil, coco peat, and vermicompost.";
+                RedirectProduct(R.drawable.green_cucumber_seeds,name,price,description);
             }
         });
 
         s_okras.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RedirectProduct(R.drawable.okra_seeds,"Okra Seeds",119);
+                String name = "Okra Seeds";
+                int price = 499;
+                String description = "Okra is valued for its high content of magnesium, fiber, antioxidants, and vitamins. Including okra in your diet can promote a feeling of fullness due to its fiber content, improve digestion, and boost immunity through its vital nutrients.";
+                RedirectProduct(R.drawable.okra_seeds,name,price,description);
             }
         });
 
         s_redamaranthus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RedirectProduct(R.drawable.red_amaranthus_seeds,"Red Amaranthus Seeds",99);
+                String name = "Red Amaranth Seeds";
+                int price = 499;
+                String description = "Red Amaranth is notable for its rapid growth, quick rejuvenation after each harvest, and high yield in a short period. It is highly efficient at photosynthesis and performs well even under adverse environmental conditions.";
+                RedirectProduct(R.drawable.red_amaranthus_seeds,name,price,description);
             }
         });
 
         s_spinch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RedirectProduct(R.drawable.spinach_seeds,"Spinch Seeds",99);
+                String name = "Spinch Seeds";
+                int price = 499;
+                String description = "Spinach seeds yield plants rich in vitamins and minerals, including vitamins A, C, and K, as well as iron, calcium, and potassium.";
+                RedirectProduct(R.drawable.spinach_seeds,name,price,description);
             }
         });
 
         s_tomatos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RedirectProduct(R.drawable.tomato_seeds,"Tomato Seeds",79);
+                String name = "Tomato Seeds";
+                int price = 499;
+                String description = "Tomatoes are fragrant, edible berries packed with Vitamin C, fiber, Vitamin A, calcium, and many other important antioxidants.";
+                RedirectProduct(R.drawable.tomato_seeds,name,price,description);
             }
         });
+
     }
 
-    public void RedirectProduct(int imageResId,String name, int price){
-        Intent intent = new Intent(getApplicationContext(), product.class);
+    public void RedirectProduct(int imageResId,String name, int price, String description){
+        Intent intent = new Intent(getApplicationContext(), product_explore.class);
         intent.putExtra("img", imageResId);
         intent.putExtra("name", name);
         intent.putExtra("price", price);
+        intent.putExtra("description", description);
+        startActivity(intent);
+    }
+
+    public void onCartClick() {
+        Intent intent = new Intent(getApplicationContext(), cart.class);
         startActivity(intent);
     }
 }

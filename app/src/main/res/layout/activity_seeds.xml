@@ -165,7 +165,7 @@
                     </LinearLayout>
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/btn1"
+                        android:id="@+id/s_amaranths_cart_click"
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:fontFamily="@font/outfit_medium"
@@ -239,6 +239,7 @@
                     </LinearLayout>
 
                     <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/s_beetroots_cart_click"
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:fontFamily="@font/outfit_medium"
@@ -302,7 +303,6 @@
                         android:layout_marginTop="5dp">
 
                         <TextView
-                            android:id="@+id/priceText1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/sansita_swashed"
@@ -321,6 +321,7 @@
                     </LinearLayout>
 
                     <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/s_broccolis_cart_click"
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:fontFamily="@font/outfit_medium"
@@ -394,6 +395,7 @@
                     </LinearLayout>
 
                     <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/s_capsicums_cart_click"
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:fontFamily="@font/outfit_medium"
@@ -474,6 +476,7 @@
                     </LinearLayout>
 
                     <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/s_corianders_cart_click"
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:fontFamily="@font/outfit_medium"
@@ -547,6 +550,7 @@
                     </LinearLayout>
 
                     <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/s_fenugreek_cart_click"
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:fontFamily="@font/outfit_medium"
@@ -628,6 +632,7 @@
                     </LinearLayout>
 
                     <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/s_greenchillis_cart_click"
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:fontFamily="@font/outfit_medium"
@@ -701,6 +706,7 @@
                     </LinearLayout>
 
                     <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/s_greencucumbers_cart_click"
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:fontFamily="@font/outfit_medium"
@@ -782,6 +788,7 @@
                     </LinearLayout>
 
                     <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/s_okras_cart_click"
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:fontFamily="@font/outfit_medium"
@@ -855,6 +862,7 @@
                     </LinearLayout>
 
                     <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/s_redamaranthuss_cart_click"
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:fontFamily="@font/outfit_medium"
@@ -936,6 +944,7 @@
                     </LinearLayout>
 
                     <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/s_spinchs_cart_click"
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:fontFamily="@font/outfit_medium"
@@ -1009,6 +1018,7 @@
                     </LinearLayout>
 
                     <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/s_tomatos_cart_click"
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:fontFamily="@font/outfit_medium"
