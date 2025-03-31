@@ -48,6 +48,7 @@ public class payment extends AppCompatActivity {
         String state = i.getStringExtra("state");
         String add1 = i.getStringExtra("add1");
         String add2 = i.getStringExtra("add2");
+
         int totalPrice = i.getIntExtra("totalPrice",1);
 
         e_fname.setText(fname);
