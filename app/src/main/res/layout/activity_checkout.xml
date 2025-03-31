@@ -70,6 +70,7 @@
 
                 />
             <EditText
+                android:id="@+id/fname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter your First name"
@@ -88,6 +89,7 @@
                 android:textSize="20dp"
                 />
             <EditText
+                android:id="@+id/lname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -107,6 +109,7 @@
                 android:textSize="20dp"
                 />
             <EditText
+                android:id="@+id/mono"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -126,6 +129,7 @@
                 android:textSize="20dp"
                 />
             <EditText
+                android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -160,6 +164,7 @@
                 android:textSize="20dp"
                 />
             <EditText
+                android:id="@+id/pin_code"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -179,6 +184,7 @@
                 android:textSize="20dp"
                 />
             <EditText
+                android:id="@+id/city"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -198,6 +204,7 @@
                 android:textSize="20dp"
                 />
             <EditText
+                android:id="@+id/state"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -217,6 +224,7 @@
                 android:textSize="20dp"
                 />
             <EditText
+                android:id="@+id/add1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -235,7 +243,9 @@
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 />
+
             <EditText
+                android:id="@+id/add2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -292,6 +302,7 @@
                             android:layout_marginTop="6dp"
                             />
                         <TextView
+                            android:id="@+id/size"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Small"
@@ -313,6 +324,7 @@
                             android:layout_marginTop="6dp"
                             />
                         <TextView
+                            android:id="@+id/quantity"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="1"
@@ -367,6 +379,7 @@
                         android:layout_weight="1"/>
 
                     <TextView
+                        android:id="@+id/subtotalPrice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="₹499"
@@ -451,6 +464,7 @@
                         android:layout_weight="1"/>
 
                     <TextView
+                        android:id="@+id/grandtotalPrice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="right"
@@ -484,6 +498,7 @@
                 android:layout_marginLeft="30dp">
 
                 <TextView
+                    android:id="@+id/bottomnavPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="₹499"
@@ -504,6 +519,7 @@
                 android:layout_weight="1" />
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/checkout"
                 android:layout_width="230dp"
                 android:layout_height="40dp"
                 android:hint="CHECKOUT"

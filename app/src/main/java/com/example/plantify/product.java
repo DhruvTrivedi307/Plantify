@@ -72,6 +72,27 @@ public class product extends AppCompatActivity {
         });
 
 
+        View.OnClickListener sizeClickListener = v -> {
+            small.setSelected(false);
+            medium.setSelected(false);
+            v.setSelected(true);
+
+            if (v == small) {
+                selectedSize = "Small";
+                size.setText(selectedSize);
+            } else if (v == medium) {
+                selectedSize = "Medium";
+                size.setText(selectedSize);
+
+            }
+
+        };
+
+        small.setOnClickListener(sizeClickListener);
+        medium.setOnClickListener(sizeClickListener);
+
+
+
 
         Intent i = getIntent();
 
@@ -107,28 +128,14 @@ public class product extends AppCompatActivity {
                     i.putExtra("img",img);
                     i.putExtra("name",name);
                     i.putExtra("price",price);
+                    i.putExtra("size",selectedSize);
+                i.putExtra("qty", Integer.parseInt(txtCount.getText().toString()));
+
                 startActivity(i);
             }
         });
 
-        View.OnClickListener sizeClickListener = v -> {
-            small.setSelected(false);
-            medium.setSelected(false);
-            v.setSelected(true);
 
-            if (v == small) {
-                selectedSize = "Small";
-                size.setText(selectedSize);
-            } else if (v == medium) {
-                selectedSize = "Medium";
-                size.setText(selectedSize);
-
-            }
-
-        };
-
-        small.setOnClickListener(sizeClickListener);
-        medium.setOnClickListener(sizeClickListener);
 
     }
 }
