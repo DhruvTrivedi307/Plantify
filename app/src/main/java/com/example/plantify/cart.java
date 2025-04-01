@@ -1,6 +1,7 @@
 package com.example.plantify;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,9 +19,9 @@ import androidx.core.view.WindowInsetsCompat;
 public class cart extends AppCompatActivity {
 
     Button btnMinus,btnPlus;
-    TextView txtCount;
+    TextView txtCount,item_name,item_price,item_size;
     private int count = 1;
-    ImageView back;
+    ImageView back,item_img;
 
 
     @SuppressLint("MissingInflatedId")
@@ -34,6 +35,32 @@ public class cart extends AppCompatActivity {
         btnPlus = findViewById(R.id.btnPlus);
         txtCount = findViewById(R.id.txtCount);
         back = findViewById(R.id.back);
+
+        item_img = findViewById(R.id.item_img);
+        item_name = findViewById(R.id.item_name);
+        item_price = findViewById(R.id.item_price);
+        item_size = findViewById(R.id.item_size);
+
+        Intent i = getIntent();
+
+        int img = i.getIntExtra("img", 0);
+        String name = i.getStringExtra("name");
+        int price = i.getIntExtra("price", 0);
+        String size = i.getStringExtra("size");
+        int qty = i.getIntExtra("qty", 0);
+
+        if (img != 0) {
+            item_img.setImageResource(img);
+        }
+
+        if (name != null) {
+            item_name.setText(name);
+            item_name.setText(name);
+        } else {
+            item_name.setText("No Name Available");
+        }
+
+        item_price.setText("₹" + price);
 
         btnMinus.setOnClickListener(new View.OnClickListener() {
             @Override

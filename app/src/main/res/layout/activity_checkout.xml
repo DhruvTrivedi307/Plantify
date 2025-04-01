@@ -54,198 +54,216 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Contact Information"
-                android:textColor="@color/black"
-                android:textSize="30dp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:fontFamily="@font/outfit_bold"
+                android:textColor="@color/black" />
 
             <TextView
+                android:layout_marginTop="25dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
                 android:text="First name*"
-                android:textColor="@color/black"
-                android:textSize="20dp"
-
-                />
+                android:textColor="@color/theme_text"
+                android:textSize="15dp"
+                android:fontFamily="@font/outfit_medium"
+                android:layout_marginBottom="5dp"/>
 
             <EditText
                 android:id="@+id/fname"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/edit_text_stroke"
-                android:fontFamily="@font/outfit_medium"
+                android:layout_height="50dp"
                 android:hint="Enter your First name"
                 android:padding="10dp"
+                android:textSize="15dp"
                 android:textColorHint="@color/edit_text_stroke"
-                android:textSize="15dp" />
+                android:background="@drawable/edit_text_stroke"
+                android:fontFamily="@font/outfit_medium"/>
 
             <TextView
+                android:layout_marginTop="25dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
                 android:text="Last name*"
-                android:textColor="@color/black"
-                android:textSize="20dp" />
+                android:textColor="@color/theme_text"
+                android:textSize="15dp"
+                android:fontFamily="@font/outfit_medium"
+                android:layout_marginBottom="5dp"/>
 
             <EditText
                 android:id="@+id/lname"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/edit_text_stroke"
-                android:fontFamily="@font/outfit_medium"
+                android:layout_height="50dp"
                 android:hint="Enter your Last name"
                 android:padding="10dp"
-                android:textColorHint="@color/edit_text_stroke" />
+                android:textSize="15dp"
+                android:textColorHint="@color/edit_text_stroke"
+                android:background="@drawable/edit_text_stroke"
+                android:fontFamily="@font/outfit_medium"/>
 
             <TextView
+                android:layout_marginTop="25dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
                 android:text="Phone Number*"
-                android:textColor="@color/black"
-                android:textSize="20dp" />
+                android:textColor="@color/theme_text"
+                android:textSize="15dp"
+                android:fontFamily="@font/outfit_medium"
+                android:layout_marginBottom="5dp"/>
 
             <EditText
                 android:id="@+id/mono"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/edit_text_stroke"
-                android:fontFamily="@font/outfit_medium"
-                android:hint="Enter your phone number"
+                android:layout_height="50dp"
+                android:hint="Enter your Phone number name"
                 android:padding="10dp"
-                android:textColorHint="@color/edit_text_stroke" />
+                android:textSize="15dp"
+                android:textColorHint="@color/edit_text_stroke"
+                android:background="@drawable/edit_text_stroke"
+                android:fontFamily="@font/outfit_medium"/>
 
             <TextView
+                android:layout_marginTop="25dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
                 android:text="Email address*"
-                android:textColor="@color/black"
-                android:textSize="20dp" />
+                android:textColor="@color/theme_text"
+                android:textSize="15dp"
+                android:fontFamily="@font/outfit_medium"
+                android:layout_marginBottom="5dp"/>
 
             <EditText
                 android:id="@+id/email"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/edit_text_stroke"
-                android:fontFamily="@font/outfit_medium"
+                android:layout_height="50dp"
                 android:hint="Enter your email address"
                 android:padding="10dp"
-                android:textColorHint="@color/edit_text_stroke" />
+                android:textSize="15dp"
+                android:textColorHint="@color/edit_text_stroke"
+                android:background="@drawable/edit_text_stroke"
+                android:fontFamily="@font/outfit_medium"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/outfit_bold"
                 android:text="Shipping Orders"
-                android:textColor="@color/black"
-                android:textSize="25dp"
-                android:textStyle="bold" />
-
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
             <TextView
                 android:layout_width="wrap_content"
+                android:fontFamily="@font/outfit_medium"
+                android:textColor="@color/theme_text"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="Note:Our are only shipped across India,Nepal and SriLanka" />
+                android:text="Note: Our are only shipped across India,Nepal and SriLanka"
+                android:layout_marginTop="5dp"/>
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="PIN Code*"
-                android:textColor="@color/black"
-                android:textSize="20dp" />
+                android:textColor="@color/theme_text"
+                android:fontFamily="@font/outfit_medium"
+                android:textSize="15dp" />
 
             <EditText
                 android:id="@+id/pin_code"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_marginTop="5dp"
+                android:hint="Enter your pin code"
+                android:textSize="15dp"
+                android:textColorHint="@color/edit_text_stroke"
                 android:background="@drawable/edit_text_stroke"
                 android:fontFamily="@font/outfit_medium"
-                android:hint="Enter your pin code"
-                android:padding="10dp"
-                android:textColorHint="@color/edit_text_stroke" />
+                android:padding="10dp" />
 
             <TextView
+                android:layout_marginTop="25dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
                 android:text="City*"
-                android:textColor="@color/black"
-                android:textSize="20dp" />
+                android:textColor="@color/theme_text"
+                android:fontFamily="@font/outfit_medium"
+                android:textSize="15dp" />
 
             <EditText
                 android:id="@+id/city"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_marginTop="5dp"
+                android:hint="Enter your City"
+                android:textSize="15dp"
+                android:textColorHint="@color/edit_text_stroke"
                 android:background="@drawable/edit_text_stroke"
                 android:fontFamily="@font/outfit_medium"
-                android:hint="Enter your city"
-                android:padding="10dp"
-                android:textColorHint="@color/edit_text_stroke" />
+                android:padding="10dp" />
 
             <TextView
+                android:layout_marginTop="25dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
                 android:text="State*"
-                android:textColor="@color/black"
-                android:textSize="20dp" />
+                android:textColor="@color/theme_text"
+                android:fontFamily="@font/outfit_medium"
+                android:textSize="15dp" />
 
             <EditText
                 android:id="@+id/state"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_marginTop="5dp"
+                android:textSize="15dp"
+                android:hint="Enter your State"
+                android:textColorHint="@color/edit_text_stroke"
                 android:background="@drawable/edit_text_stroke"
                 android:fontFamily="@font/outfit_medium"
-                android:hint="Enter your State"
-                android:padding="10dp"
-                android:textColorHint="@color/edit_text_stroke" />
+                android:padding="10dp" />
 
             <TextView
+                android:layout_marginTop="25dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
                 android:text="Address line 1*"
-                android:textColor="@color/black"
-                android:textSize="20dp" />
+                android:textColor="@color/theme_text"
+                android:fontFamily="@font/outfit_medium"
+                android:textSize="15dp" />
 
             <EditText
                 android:id="@+id/add1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_marginTop="5dp"
+                android:textSize="15dp"
+                android:hint="Enter your Address line 1"
+                android:textColorHint="@color/edit_text_stroke"
                 android:background="@drawable/edit_text_stroke"
                 android:fontFamily="@font/outfit_medium"
-                android:hint="Enter address line 1"
-                android:padding="10dp"
-                android:textColorHint="@color/edit_text_stroke" />
+                android:padding="10dp" />
 
             <TextView
+                android:layout_marginTop="25dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
                 android:text="Address line 2*"
-                android:textColor="@color/black"
-                android:textSize="20dp" />
+                android:textColor="@color/theme_text"
+                android:fontFamily="@font/outfit_medium"
+                android:textSize="15dp" />
 
             <EditText
                 android:id="@+id/add2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_marginTop="5dp"
+                android:textSize="15dp"
+                android:hint="Enter your Address line 2"
+                android:textColorHint="@color/edit_text_stroke"
                 android:background="@drawable/edit_text_stroke"
                 android:fontFamily="@font/outfit_medium"
-                android:hint="Enter address line 2"
-                android:padding="10dp"
-                android:textColorHint="@color/edit_text_stroke" />
-
+                android:padding="10dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -312,7 +330,7 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:orientation="vertical">
 
                         <TextView
                             android:layout_width="wrap_content"
