@@ -73,6 +73,8 @@ public class product extends AppCompatActivity {
         });
 
 
+        small.setSelected(true);
+        size.setText("Small");
         View.OnClickListener sizeClickListener = v -> {
             small.setSelected(false);
             medium.setSelected(false);
@@ -92,56 +94,41 @@ public class product extends AppCompatActivity {
         small.setOnClickListener(sizeClickListener);
         medium.setOnClickListener(sizeClickListener);
 
-        ImageView search_icon = findViewById(R.id.search_icon);
-        ImageView cart_icon = findViewById(R.id.cart_icon);
-
-        search_icon.setOnClickListener(v -> {
-            Intent i = new Intent(getApplicationContext(),search.class);
-            startActivity(i);
-            overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
-        });
-
-        cart_icon.setOnClickListener(v -> {
-            Intent i = new Intent(getApplicationContext(),cart.class);
-            startActivity(i);
-            overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
-        });
-
         Intent i = getIntent();
 
-            int img = i.getIntExtra("img", 0);
-            String name = i.getStringExtra("name");
-            int price = i.getIntExtra("price", 0);
-            String desc = i.getStringExtra("description");
+        int img = i.getIntExtra("img", 0);
+        String name = i.getStringExtra("name");
+        int price = i.getIntExtra("price", 0);
+        String desc = i.getStringExtra("description");
 
-            if (img != 0) {
-                productImg.setImageResource(img);
-            }
+        if (img != 0) {
+            productImg.setImageResource(img);
+        }
 
-            if (name != null) {
-                productName.setText(name);
-                pageName.setText(name);
-            } else {
-                productName.setText("No Name Available");
-            }
+        if (name != null) {
+            productName.setText(name);
+            pageName.setText(name);
+        } else {
+            productName.setText("No Name Available");
+        }
 
-            if (desc != null) {
-                description.setText(desc);
-            } else {
-                description.setText("No Description Available");
-            }
+        if (desc != null) {
+            description.setText(desc);
+        } else {
+            description.setText("No Description Available");
+        }
 
-            productPrice.setText("₹" + price);
+        productPrice.setText("₹" + price);
 
         buy_now.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), checkout.class);
-                    i.putExtra("page","product");
-                    i.putExtra("img",img);
-                    i.putExtra("name",name);
-                    i.putExtra("price",price);
-                    i.putExtra("size",selectedSize);
+                i.putExtra("page","product");
+                i.putExtra("img",img);
+                i.putExtra("name",name);
+                i.putExtra("price",price);
+                i.putExtra("size",selectedSize);
                 i.putExtra("qty", Integer.parseInt(txtCount.getText().toString()));
 
                 startActivity(i);

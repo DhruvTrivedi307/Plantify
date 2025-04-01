@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -29,9 +30,7 @@ public class create_account extends AppCompatActivity {
     EditText passwordEditText;
     CheckBox toggleCheckBox;
 
-    LinearLayout sign_in;
-    GoogleSignInOptions gso;
-    GoogleSignInClient gsc;
+    ImageView sign_in;
     private EditText fname, lname, phone, email, password;
     private CheckBox toggle;
     private Button createAccount;
@@ -73,33 +72,21 @@ public class create_account extends AppCompatActivity {
             }
         });
 
-        // Handle Create Account Button Click
-        createAccount.setOnClickListener(view -> registerUser());
-
-        toggleCheckBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if (isChecked) {
-                passwordEditText.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
-            } else {
-                passwordEditText.setTransformationMethod(PasswordTransformationMethod.getInstance());
-            }
-        });
-
-        gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
-        gsc = GoogleSignIn.getClient(this, gso);
-
-        GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
-        if(acct != null){
-            finish();
-            Intent i = new Intent(getApplicationContext(),profile_logout.class);
-            startActivity(i);
-        }
-
-        sign_in.setOnClickListener(new View.OnClickListener() {
+        createAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                signIn();
+                registerUser();
             }
         });
+
+//        toggleCheckBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
+//            if (isChecked) {
+//                passwordEditText.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+//            } else {
+//                passwordEditText.setTransformationMethod(PasswordTransformationMethod.getInstance());
+//            }
+//        });
+
     }
 
     private void registerUser() {
@@ -120,28 +107,6 @@ public class create_account extends AppCompatActivity {
                 finish();
             } else {
                 Toast.makeText(this, "Error: Could not create account", Toast.LENGTH_SHORT).show();
-            }
-        }
-    }
-
-    public void signIn(){
-        Intent signInInten = gsc.getSignInIntent();
-        startActivityForResult(signInInten,1000);
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode,Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode == 1000){
-            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
-
-            try{
-                task.getResult(ApiException.class);
-                finish();
-                Intent i = new Intent(getApplicationContext(),profile_logout.class);
-                startActivity(i);
-            } catch (ApiException e){
-                Toast.makeText(this, "Something went wrong", Toast.LENGTH_SHORT).show();
             }
         }
     }

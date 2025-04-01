@@ -7,6 +7,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -21,6 +22,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class shop extends AppCompatActivity {
 
     BottomNavigationView bnv;
+    LinearLayout filter;
     LinearLayout h_bhp, h_jmp, h_plp, h_fbp, h_lbp, h_stp, h_pgp, h_mpg, h_pp, h_bwp, h_arp, h_apbp, h_bpx, h_bpp, h_flp, h_vjmp;
     AppCompatButton h_bhp_cart_click, h_jmp_cart_click, h_plp_cart_click, h_fbp_cart_click, h_lbp_cart_click, h_stp_cart_click, h_pgp_cart_click, h_mpg_cart_click, h_pp_cart_click, h_bwp_cart_click, h_arp_cart_click, h_apbp_cart_click, h_bpx_cart_click, h_bpp_cart_click, h_flp_cart_click, h_vjmp_cart_click;
 
@@ -63,6 +65,15 @@ public class shop extends AppCompatActivity {
         h_bpp_cart_click = findViewById(R.id.h_bpp_cart_click);
         h_flp_cart_click = findViewById(R.id.h_flp_cart_click);
         h_vjmp_cart_click = findViewById(R.id.h_vjmp_cart_click);
+        
+        filter = findViewById(R.id.filter);
+
+        filter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(shop.this, filter_type_of_plants.class));
+            }
+        });
 
         h_bhp.setOnClickListener(v -> {
             String name = "Broken Heart Plant";
