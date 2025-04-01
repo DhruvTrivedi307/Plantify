@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -16,7 +17,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class seeds extends AppCompatActivity {
 
     LinearLayout s_amaranths,s_beetroots,s_broccolis,s_capsicums,s_corianders,s_fenugreek,s_greenchilli,s_greencucumber,s_okras,s_redamaranthus,s_spinch,s_tomatos;
-    LinearLayout s_amaranths_cart_click, s_beetroots_cart_click, s_broccolis_cart_click, s_capsicums_cart_click, s_corianders_cart_click, s_fenugreek_cart_click, s_greenchilli_cart_click, s_greencucumber_cart_click, s_okras_cart_click, s_redamaranthus_cart_click, s_spinch_cart_click, s_tomatos_cart_click;
+    Button s_amaranths_cart_click, s_beetroots_cart_click, s_broccolis_cart_click, s_capsicums_cart_click, s_corianders_cart_click, s_fenugreek_cart_click, s_greenchilli_cart_click, s_greencucumber_cart_click, s_okras_cart_click, s_redamaranthus_cart_click, s_spinch_cart_click, s_tomatos_cart_click;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,55 +37,91 @@ public class seeds extends AppCompatActivity {
         s_spinch = findViewById(R.id.s_spinchs);
         s_tomatos = findViewById(R.id.s_tomatos);
 
-//        s_amaranths_cart_click = findViewById(R.id.s_amaranths_cart_click);
-//        s_beetroots_cart_click = findViewById(R.id.s_beetroots_cart_click);
-//        s_broccolis_cart_click = findViewById(R.id.s_broccolis_cart_click);
-//        s_capsicums_cart_click = findViewById(R.id.s_capsicums_cart_click);
-//        s_corianders_cart_click = findViewById(R.id.s_corianders_cart_click);
-//        s_fenugreek_cart_click = findViewById(R.id.s_fenugreek_cart_click);
-//        s_greenchilli_cart_click = findViewById(R.id.s_greenchillis_cart_click);
-//        s_greencucumber_cart_click = findViewById(R.id.s_greencucumbers_cart_click);
-//        s_okras_cart_click = findViewById(R.id.s_okras_cart_click);
-//        s_redamaranthus_cart_click = findViewById(R.id.s_redamaranthuss_cart_click);
-//        s_spinch_cart_click = findViewById(R.id.s_spinchs_cart_click);
-//        s_tomatos_cart_click = findViewById(R.id.s_tomatos_cart_click);
-        
-//        s_amaranths_cart_click.setOnClickListener(v -> {
-//            onCartClick();
-//        });
-//        s_beetroots_cart_click.setOnClickListener(v -> {
-//            onCartClick();
-//        });
-//        s_broccolis_cart_click.setOnClickListener(v -> {
-//            onCartClick();
-//        });
-//        s_capsicums_cart_click.setOnClickListener(v -> {
-//            onCartClick();
-//        });
-//        s_corianders_cart_click.setOnClickListener(v -> {
-//            onCartClick();
-//        });
-//        s_fenugreek_cart_click.setOnClickListener(v -> {
-//            onCartClick();
-//        });
-//        s_greenchilli_cart_click.setOnClickListener(v -> {
-//            onCartClick();
-//        });
-//        s_greencucumber_cart_click.setOnClickListener(v -> {
-//            onCartClick();
-//        });
-//        s_okras_cart_click.setOnClickListener(v -> {
-//            onCartClick();
-//        });
-//        s_redamaranthus_cart_click.setOnClickListener(v -> {
-//            onCartClick();
-//        });
-//        s_spinch_cart_click.setOnClickListener(v -> {
-//            onCartClick();
-//        });
-//        s_tomatos_cart_click.setOnClickListener(v -> {
-//            onCartClick();
-//        });
+        s_amaranths_cart_click = findViewById(R.id.s_amaranths_cart_click);
+        s_beetroots_cart_click = findViewById(R.id.s_beetroots_cart_click);
+        s_broccolis_cart_click = findViewById(R.id.s_broccolis_cart_click);
+        s_capsicums_cart_click = findViewById(R.id.s_capsicums_cart_click);
+        s_corianders_cart_click = findViewById(R.id.s_corianders_cart_click);
+        s_fenugreek_cart_click = findViewById(R.id.s_fenugreek_cart_click);
+        s_greenchilli_cart_click = findViewById(R.id.s_greenchillis_cart_click);
+        s_greencucumber_cart_click = findViewById(R.id.s_greencucumbers_cart_click);
+        s_okras_cart_click = findViewById(R.id.s_okras_cart_click);
+        s_redamaranthus_cart_click = findViewById(R.id.s_redamaranthuss_cart_click);
+        s_spinch_cart_click = findViewById(R.id.s_spinchs_cart_click);
+        s_tomatos_cart_click = findViewById(R.id.s_tomatos_cart_click);
+//
+        s_amaranths_cart_click.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onCartClick();
+            }
+        });
+        s_beetroots_cart_click.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onCartClick();
+            }
+        });
+        s_broccolis_cart_click.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onCartClick();
+            }
+        });
+        s_capsicums_cart_click.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onCartClick();
+            }
+        });
+        s_corianders_cart_click.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onCartClick();
+            }
+        });
+        s_fenugreek_cart_click.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onCartClick();
+            }
+        });
+        s_greenchilli_cart_click.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onCartClick();
+            }
+        });
+        s_greencucumber_cart_click.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onCartClick();
+            }
+        });
+        s_okras_cart_click.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onCartClick();
+            }
+        });
+        s_redamaranthus_cart_click.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onCartClick();
+            }
+        });
+        s_spinch_cart_click.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onCartClick();
+            }
+        });
+        s_tomatos_cart_click.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onCartClick();
+            }
+        });
 
         s_amaranths.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -224,7 +261,7 @@ public class seeds extends AppCompatActivity {
     }
 
     public void RedirectProduct(int imageResId,String name, int price, String description){
-        Intent intent = new Intent(getApplicationContext(), product_explore.class);
+        Intent intent = new Intent(seeds.this, product_explore.class);
         intent.putExtra("img", imageResId);
         intent.putExtra("name", name);
         intent.putExtra("price", price);
@@ -233,7 +270,7 @@ public class seeds extends AppCompatActivity {
     }
 
     public void onCartClick() {
-        Intent intent = new Intent(getApplicationContext(), cart.class);
+        Intent intent = new Intent(seeds.this, cart.class);
         startActivity(intent);
     }
 }

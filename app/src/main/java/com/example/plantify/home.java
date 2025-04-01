@@ -42,7 +42,8 @@ public class home extends AppCompatActivity {
     int currentPage = 0;
     RadioGroup rg;
     ImageView search_icon,cart_icon;
-    LinearLayout tools,bestsellers,easy_to_care,pots,seeds;
+    LinearLayout tools,bestsellers,easy_to_care,pots;
+    ImageView seeds;
     ImageView h_bhp,h_jmp,h_bwp,h_pp;
     AppCompatButton small,medium;
     private String selectedSize = "";
@@ -302,9 +303,7 @@ public class home extends AppCompatActivity {
         seeds.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), seeds.class);
-                startActivity(i);
-                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                startActivity(new Intent(home.this, seeds.class));
             }
         });
 

@@ -134,7 +134,7 @@ public class create_account extends AppCompatActivity {
                                     Toast.makeText(create_account.this, "Success!", Toast.LENGTH_SHORT).show();
 
                                 } else {
-                                    // If sign in fails, display a message to the user.
+
                                     Log.w(TAG, "createUserWithEmail:failure", task.getException());
                                     Toast.makeText(getApplicationContext(), "Authentication failed.",
                                             Toast.LENGTH_SHORT).show();
