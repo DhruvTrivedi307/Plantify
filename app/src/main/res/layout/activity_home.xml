@@ -216,10 +216,10 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:paddingLeft="10dp"
-                    android:paddingRight="10dp"
-                    android:id="@+id/seeds">
+                    android:paddingRight="10dp">
 
                     <ImageView
+                        android:id="@+id/seeds"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_gravity="center"
