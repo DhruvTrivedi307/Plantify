@@ -19,12 +19,12 @@
             android:id="@+id/logo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginStart="16dp"
             android:src="@drawable/arrow_back"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_gravity="center"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -48,438 +48,453 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="20dp"
-            >
+            android:padding="20dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Contact Information"
-                android:textStyle="bold"
-                android:textSize="30dp"
                 android:textColor="@color/black"
-                />
+                android:textSize="30dp"
+                android:textStyle="bold" />
 
             <TextView
-                android:layout_marginTop="25dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
                 android:text="First name*"
                 android:textColor="@color/black"
                 android:textSize="20dp"
 
                 />
+
             <EditText
                 android:id="@+id/fname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_stroke"
+                android:fontFamily="@font/outfit_medium"
                 android:hint="Enter your First name"
                 android:padding="10dp"
-                android:textSize="15dp"
                 android:textColorHint="@color/edit_text_stroke"
-                android:background="@drawable/edit_text_stroke"
-                android:fontFamily="@font/outfit_medium"/>
+                android:textSize="15dp" />
 
             <TextView
-                android:layout_marginTop="25dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
                 android:text="Last name*"
                 android:textColor="@color/black"
-                android:textSize="20dp"
-                />
+                android:textSize="20dp" />
+
             <EditText
                 android:id="@+id/lname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:hint="Enter your Last name"
-                android:textColorHint="@color/edit_text_stroke"
                 android:background="@drawable/edit_text_stroke"
                 android:fontFamily="@font/outfit_medium"
+                android:hint="Enter your Last name"
                 android:padding="10dp"
-                />
+                android:textColorHint="@color/edit_text_stroke" />
 
             <TextView
-                android:layout_marginTop="25dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
                 android:text="Phone Number*"
                 android:textColor="@color/black"
-                android:textSize="20dp"
-                />
+                android:textSize="20dp" />
+
             <EditText
                 android:id="@+id/mono"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:hint="Enter your phone number"
-                android:textColorHint="@color/edit_text_stroke"
                 android:background="@drawable/edit_text_stroke"
                 android:fontFamily="@font/outfit_medium"
+                android:hint="Enter your phone number"
                 android:padding="10dp"
-                />
+                android:textColorHint="@color/edit_text_stroke" />
 
             <TextView
-                android:layout_marginTop="25dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
                 android:text="Email address*"
                 android:textColor="@color/black"
-                android:textSize="20dp"
-                />
+                android:textSize="20dp" />
+
             <EditText
                 android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:hint="Enter your email address"
-                android:textColorHint="@color/edit_text_stroke"
                 android:background="@drawable/edit_text_stroke"
                 android:fontFamily="@font/outfit_medium"
+                android:hint="Enter your email address"
                 android:padding="10dp"
-                />
+                android:textColorHint="@color/edit_text_stroke" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:text="Shipping Orders"
-                android:textSize="25dp"
-                android:textStyle="bold"
                 android:textColor="@color/black"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Note:Our are only shipped across India,Nepal and SriLanka"
-                android:layout_marginTop="5dp"/>
+                android:textSize="25dp"
+                android:textStyle="bold" />
 
             <TextView
-                android:layout_marginTop="25dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Note:Our are only shipped across India,Nepal and SriLanka" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
                 android:text="PIN Code*"
                 android:textColor="@color/black"
-                android:textSize="20dp"
-                />
+                android:textSize="20dp" />
+
             <EditText
                 android:id="@+id/pin_code"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:hint="Enter your pin code"
-                android:textColorHint="@color/edit_text_stroke"
                 android:background="@drawable/edit_text_stroke"
                 android:fontFamily="@font/outfit_medium"
+                android:hint="Enter your pin code"
                 android:padding="10dp"
-                />
+                android:textColorHint="@color/edit_text_stroke" />
 
             <TextView
-                android:layout_marginTop="25dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
                 android:text="City*"
                 android:textColor="@color/black"
-                android:textSize="20dp"
-                />
+                android:textSize="20dp" />
+
             <EditText
                 android:id="@+id/city"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:hint="Enter your city"
-                android:textColorHint="@color/edit_text_stroke"
                 android:background="@drawable/edit_text_stroke"
                 android:fontFamily="@font/outfit_medium"
+                android:hint="Enter your city"
                 android:padding="10dp"
-                />
+                android:textColorHint="@color/edit_text_stroke" />
 
             <TextView
-                android:layout_marginTop="25dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
                 android:text="State*"
                 android:textColor="@color/black"
-                android:textSize="20dp"
-                />
+                android:textSize="20dp" />
+
             <EditText
                 android:id="@+id/state"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:hint="Enter your State"
-                android:textColorHint="@color/edit_text_stroke"
                 android:background="@drawable/edit_text_stroke"
                 android:fontFamily="@font/outfit_medium"
+                android:hint="Enter your State"
                 android:padding="10dp"
-                />
+                android:textColorHint="@color/edit_text_stroke" />
 
             <TextView
-                android:layout_marginTop="25dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
                 android:text="Address line 1*"
                 android:textColor="@color/black"
-                android:textSize="20dp"
-                />
+                android:textSize="20dp" />
+
             <EditText
                 android:id="@+id/add1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:hint="Enter address line 1"
-                android:textColorHint="@color/edit_text_stroke"
                 android:background="@drawable/edit_text_stroke"
                 android:fontFamily="@font/outfit_medium"
+                android:hint="Enter address line 1"
                 android:padding="10dp"
-                />
+                android:textColorHint="@color/edit_text_stroke" />
 
             <TextView
-                android:layout_marginTop="25dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
                 android:text="Address line 2*"
                 android:textColor="@color/black"
-                android:textSize="20dp"
-                />
+                android:textSize="20dp" />
 
             <EditText
                 android:id="@+id/add2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:hint="Enter address line 2"
-                android:textColorHint="@color/edit_text_stroke"
                 android:background="@drawable/edit_text_stroke"
                 android:fontFamily="@font/outfit_medium"
+                android:hint="Enter address line 2"
                 android:padding="10dp"
-                />
+                android:textColorHint="@color/edit_text_stroke" />
 
 
             <TextView
-                android:layout_marginTop="30dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/outfit_bold"
                 android:text="Order Summary"
                 android:textColor="@color/black"
-                android:textSize="25dp"
-                android:textStyle="bold"/>
+                android:textSize="20dp" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_marginTop="25dp"
-                >
+                android:orientation="horizontal">
+
                 <ImageView
                     android:id="@+id/p_img"
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:src="@drawable/peacock_plant"
-                    />
+                    android:layout_width="85dp"
+                    android:layout_height="105dp"
+                    android:src="@drawable/peacock_plant" />
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    >
+                    android:orientation="vertical">
+
                     <TextView
                         android:id="@+id/p_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/outfit_medium"
                         android:text="Peacock Plant"
-                        android:textSize="20dp"
-                        android:layout_marginTop="6dp"
-                        android:textStyle="bold"
                         android:textColor="@color/black"
-                        />
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Selected plant Size :- "
-                        android:textSize="20dp"
-                        android:layout_marginTop="6dp"
-                        />
-                    <TextView
-                        android:id="@+id/size"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/outfit_medium"
+                            android:text="Selected plant Size : "
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/size"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/outfit_medium"
+                            android:text="Small"
+                            android:textSize="16dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Small"
-                        android:textSize="20dp"
-                        android:layout_marginTop="6dp"
-                        />
+                        android:orientation="horizontal">
 
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/outfit_medium"
+                            android:text="Quantity : "
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/quantity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/outfit_medium"
+                            android:text="1"
+                            android:textSize="16dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="30dp"
+                android:layout_weight="1"
+                android:background="#CCCCCC" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/outfit_bold"
+                android:text="Payment Details"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/background_gray"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        >
+                        android:paddingLeft="20dp"
+                        android:paddingTop="20dp"
+                        android:paddingRight="20dp">
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Quantity : "
-                            android:textSize="20dp"
-                            android:layout_marginTop="6dp"
-                            />
+                            android:fontFamily="@font/outfit_medium"
+                            android:text="Subtotal"
+                            android:textSize="14dp" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
                         <TextView
-                            android:id="@+id/quantity"
+                            android:id="@+id/subtotalPrice"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="1"
-                            android:textSize="20dp"
-                            android:layout_marginTop="6dp"
-                            />
+                            android:text="₹499" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="20dp"
+                        android:paddingRight="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/outfit_medium"
+                            android:text="Discount"
+                            android:textSize="14dp" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="₹0" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="20dp"
+                        android:paddingRight="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/outfit_medium"
+                            android:text="Shipping"
+                            android:textSize="14dp" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="FREE" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/edit_text_stroke" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingBottom="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/outfit_medium"
+                            android:text="Grand Total"
+                            android:textSize="16dp" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:id="@+id/grandtotalPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/outfit_bold"
+                            android:text="₹499" />
+
                     </LinearLayout>
 
                 </LinearLayout>
-            </LinearLayout>
 
 
-
-
-            <View
-                android:layout_marginTop="30dp"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_weight="1"
-                android:background="#CCCCCC"/>
-
-            <TextView
-                android:layout_marginTop="25dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Payment Details"
-                android:textStyle="bold"
-                android:textSize="30dp"
-                android:textColor="@color/black"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:orientation="vertical"
-                android:background="#F2F2F2"
-                android:paddingTop="8dp"
-                android:layout_marginBottom="50dp"
-                >
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingRight="15dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Subtotal"
-                        android:textSize="20dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_weight="1"/>
-
-                    <TextView
-                        android:id="@+id/subtotalPrice"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="₹499"
-                        android:fontFamily="@font/outfit"
-                        android:textSize="25dp"
-                        android:layout_marginRight="8dp"/>
-                </LinearLayout>
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="25dp"
-                    android:paddingRight="15dp"
-                    >
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Discount"
-                        android:layout_marginLeft="8dp"
-                        android:textSize="20dp"
-                        android:layout_weight="1"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="right"
-                        android:text="₹0"
-                        android:fontFamily="@font/outfit"
-                        android:textSize="25dp"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="25dp"
-                    android:paddingRight="15dp"
-                    >
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Shipping"
-                        android:layout_marginLeft="8dp"
-                        android:layout_weight="1"
-                        android:textSize="20dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="right"
-                        android:text="FREE"
-                        android:fontFamily="@font/outfit"
-                        android:textSize="25dp"/>
-
-                </LinearLayout>
-
-                <View
-                    android:layout_marginTop="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#B9B9B9"/>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="15dp"
-                    android:paddingRight="15dp"
-                    >
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Grand Total"
-                        android:layout_marginLeft="8dp"
-                        android:textSize="20dp"
-                        android:layout_weight="1"/>
-
-                    <TextView
-                        android:id="@+id/grandtotalPrice"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="right"
-                        android:text="₹499"
-                        android:fontFamily="@font/outfit"
-                        android:textSize="25dp"/>
-
-                </LinearLayout>
-
-            </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
         </LinearLayout>
 
 
     </ScrollView>
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bnv"
         android:layout_width="match_parent"
@@ -494,25 +509,26 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginLeft="30dp">
+                android:layout_marginLeft="30dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/bottomnavPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/outfit_bold"
                     android:text="₹499"
-                    android:textSize="16dp"
-                    android:fontFamily="@font/outfit_bold"/>
+                    android:textSize="16dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/outfit_bold"
                     android:text="Incl. of all taxes"
-                    android:textSize="12dp"
-                    android:fontFamily="@font/outfit_bold"/>
+                    android:textSize="12dp" />
 
             </LinearLayout>
+
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -522,10 +538,10 @@
                 android:id="@+id/checkout"
                 android:layout_width="230dp"
                 android:layout_height="40dp"
-                android:hint="CHECKOUT"
-                android:textColorHint="@color/white"
+                android:layout_marginRight="20dp"
                 android:background="@drawable/sign_in_button_fill"
-                android:layout_marginRight="20dp"/>
+                android:hint="CHECKOUT"
+                android:textColorHint="@color/white" />
 
         </LinearLayout>
 
