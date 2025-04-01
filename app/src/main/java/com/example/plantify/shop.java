@@ -3,24 +3,21 @@ package com.example.plantify;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.HapticFeedbackConstants;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class shop extends AppCompatActivity {
 
+    LinearLayout main;
     BottomNavigationView bnv;
     LinearLayout filter;
     LinearLayout h_bhp, h_jmp, h_plp, h_fbp, h_lbp, h_stp, h_pgp, h_mpg, h_pp, h_bwp, h_arp, h_apbp, h_bpx, h_bpp, h_flp, h_vjmp;
@@ -31,6 +28,8 @@ public class shop extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shop);
+
+        main = findViewById(R.id.main);
 
         bnv = findViewById(R.id.bnv);
         h_bhp = findViewById(R.id.h_bhp);
@@ -259,16 +258,19 @@ public class shop extends AppCompatActivity {
                     Intent i = new Intent(getApplicationContext(), home.class);
                     startActivity(i);
                     overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                    bnv.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
                     return true;
                 } else if (item.getItemId() == R.id.trending) {
-                    Intent i = new Intent(getApplicationContext(), Trending.class);
+                    Intent i = new Intent(getApplicationContext(), trending.class);
                     startActivity(i);
                     overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                    bnv.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
                     return true;
                 } else if (item.getItemId() == R.id.profile) {
                     Intent i = new Intent(getApplicationContext(), profile_signin.class);
                     startActivity(i);
                     overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                    bnv.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
                     return true;
                 }
                 return true;
@@ -302,6 +304,7 @@ public class shop extends AppCompatActivity {
     }
 
     public void onCartClick() {
+        main.performHapticFeedback(HapticFeedbackConstants.CONTEXT_CLICK);
         Intent intent = new Intent(getApplicationContext(), cart.class);
         startActivity(intent);
     }

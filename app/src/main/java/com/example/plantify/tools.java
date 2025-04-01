@@ -3,6 +3,7 @@ package com.example.plantify;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.HapticFeedbackConstants;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -16,6 +17,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class tools extends AppCompatActivity {
 
+    LinearLayout main;
     LinearLayout dmm, hwp, dpw, fpw, cps, pis, ss, ws;
     AppCompatButton dmm_cart_click, hwp_cart_click, dpw_cart_click, fpw_cart_click, cps_cart_click, pis_cart_click, ss_cart_click, ws_cart_click;
 
@@ -24,6 +26,8 @@ public class tools extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tools);
+
+        main = findViewById(R.id.main);
 
         dmm = findViewById(R.id.dmm);
         hwp = findViewById(R.id.hwp);
@@ -157,6 +161,7 @@ public class tools extends AppCompatActivity {
     }
 
     public void onCartClick() {
+        main.performHapticFeedback(HapticFeedbackConstants.CONTEXT_CLICK);
         Intent intent = new Intent(getApplicationContext(), cart.class);
         startActivity(intent);
     }

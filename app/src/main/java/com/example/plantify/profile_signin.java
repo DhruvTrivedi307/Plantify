@@ -5,12 +5,10 @@ import static android.content.ContentValues.TAG;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.method.HideReturnsTransformationMethod;
-import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
+import android.view.HapticFeedbackConstants;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -143,21 +141,19 @@ public class profile_signin extends AppCompatActivity {
                     Intent i = new Intent(getApplicationContext(), home.class);
                     startActivity(i);
                     overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                    bnv.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
                     return true;
                 } else if (item.getItemId() == R.id.shop) {
                     Intent i = new Intent(getApplicationContext(), shop.class);
+                    bnv.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
                     startActivity(i);
                     overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                     return true;
                 } else if (item.getItemId() == R.id.trending) {
-                    Intent i = new Intent(getApplicationContext(), Trending.class);
+                    Intent i = new Intent(getApplicationContext(), trending.class);
                     startActivity(i);
                     overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-                    return true;
-                } else if (item.getItemId() == R.id.profile) {
-                    Intent i = new Intent(getApplicationContext(), profile_signin.class);
-                    startActivity(i);
-                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                    bnv.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
                     return true;
                 }
                 return true;

@@ -3,21 +3,20 @@ package com.example.plantify;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.DragEvent;
+import android.view.HapticFeedbackConstants;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class Trending extends AppCompatActivity {
+public class trending extends AppCompatActivity {
 
     LinearLayout t_bpp, t_flp, t_apbp, t_arp, t_bpx, t_csp, t_mdp, t_dmm, t_hwp, t_stp, t_bs, t_as, t_fpw, t_cps, t_bhp, t_jpm, t_bwp, t_pp, t_fbp, t_lbp, t_pgp;
     BottomNavigationView bnv;
@@ -214,16 +213,19 @@ public class Trending extends AppCompatActivity {
                     Intent i = new Intent(getApplicationContext(), home.class);
                     startActivity(i);
                     overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                    bnv.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
                     return true;
                 } else if (item.getItemId() == R.id.shop) {
                     Intent i = new Intent(getApplicationContext(), shop.class);
                     startActivity(i);
                     overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                    bnv.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
                     return true;
                 } else if (item.getItemId() == R.id.profile) {
                     Intent i = new Intent(getApplicationContext(), profile_signin.class);
                     startActivity(i);
                     overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                    bnv.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
                     return true;
                 }
                 return true;

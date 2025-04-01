@@ -3,6 +3,7 @@ package com.example.plantify;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.HapticFeedbackConstants;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -16,6 +17,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class easy_to_care extends AppCompatActivity {
 
+    LinearLayout main;
     LinearLayout e_apbp, e_bpp, e_bpx, e_arp, e_flp, e_csp, e_mdp, e_pgp, e_vjmp, e_bhp;
     AppCompatButton e_apbp_cart_click, e_bpp_cart_click, e_bpx_cart_click, e_arp_cart_click, e_flp_cart_click, e_csp_cart_click, e_mdp_cart_click, e_pgp_cart_click, e_vjmp_cart_click, e_bhp_cart_click;
 
@@ -24,6 +26,8 @@ public class easy_to_care extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_easy_to_care);
+
+        main = findViewById(R.id.main);
 
         e_apbp = findViewById(R.id.e_apbp);
         e_bpp = findViewById(R.id.e_bpp);
@@ -183,6 +187,7 @@ public class easy_to_care extends AppCompatActivity {
     }
 
     public void onCartClick() {
+        main.performHapticFeedback(HapticFeedbackConstants.CLOCK_TICK);
         Intent intent = new Intent(getApplicationContext(), cart.class);
         startActivity(intent);
     }

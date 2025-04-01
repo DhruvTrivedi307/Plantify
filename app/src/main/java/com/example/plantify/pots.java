@@ -3,6 +3,7 @@ package com.example.plantify;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.HapticFeedbackConstants;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -15,19 +16,16 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class pots extends AppCompatActivity {
 
+    LinearLayout main;
     LinearLayout p_gwp,p_owp,p_rwwp,p_rcp,p_cagcp,p_stp,p_tfbcp,p_tffcp,p_tccp,p_vep;
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_pots);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+
+        main = findViewById(R.id.main);
 
         p_gwp = findViewById(R.id.p_gwp);
         p_owp = findViewById(R.id.p_owp);
@@ -128,6 +126,7 @@ public class pots extends AppCompatActivity {
     }
 
     public void RedirectProduct(int imageResId,String name, int price,String desc){
+        main.performHapticFeedback(HapticFeedbackConstants.CONTEXT_CLICK);
         Intent intent = new Intent(getApplicationContext(), product_explore.class);
         intent.putExtra("img", imageResId);
         intent.putExtra("name", name);

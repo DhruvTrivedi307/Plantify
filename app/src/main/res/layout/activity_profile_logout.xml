@@ -82,15 +82,34 @@
             android:orientation="horizontal"
             android:layout_marginTop="20dp">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:text="JD"
+                android:orientation="horizontal"
+                android:background="@drawable/profile_picture"
+                android:gravity="center">
+
+            <TextView
+                android:id="@+id/first_letter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="J"
                 android:textColor="@color/white"
                 android:fontFamily="@font/outfit_medium"
                 android:gravity="center"
-                android:textSize="30dp"
-                android:background="@drawable/profile_picture"/>
+                android:textSize="30dp"/>
+
+                <TextView
+                    android:id="@+id/second_letter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="D"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/outfit_medium"
+                    android:gravity="center"
+                    android:textSize="30dp" />
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -145,7 +164,8 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:id="@+id/edit_profile">
 
                 <ImageView
                     android:layout_width="30dp"

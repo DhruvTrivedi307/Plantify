@@ -125,7 +125,7 @@ public class create_account extends AppCompatActivity {
 
                                         userRef.setValue(userData).addOnCompleteListener(task1 -> {
                                             if (task1.isSuccessful()) {
-                                                Toast.makeText(create_account.this, "Account created successfully!", Toast.LENGTH_SHORT).show();
+//                                                Toast.makeText(create_account.this, "Account created successfully!", Toast.LENGTH_SHORT).show();
                                             } else {
                                                 Toast.makeText(create_account.this, "Failed to store user data.", Toast.LENGTH_SHORT).show();
                                             }

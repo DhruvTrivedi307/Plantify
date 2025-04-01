@@ -7,33 +7,35 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class profile_logout extends AppCompatActivity {
     GoogleSignInOptions gso;
     GoogleSignInClient gsc;
-    TextView name,email;
+    TextView name,email,first_letter,second_letter;
     Button sign_out;
     BottomNavigationView bnv;
     FirebaseAuth auth;
     FirebaseUser user;
+    LinearLayout edit_profile;
+    private DatabaseReference userRef;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -47,35 +49,83 @@ public class profile_logout extends AppCompatActivity {
         gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
         gsc = GoogleSignIn.getClient(this, gso);
 
+        first_letter = findViewById(R.id.first_letter);
+        second_letter = findViewById(R.id.second_letter);
+
         auth = FirebaseAuth.getInstance();
         user = auth.getCurrentUser();
 
-        if (user == null){
-            Intent i = new Intent(getApplicationContext(),profile_signin.class);
-            startActivity(i);
-            finish();
-        }  else {
-            name.setText(user.getDisplayName());
-            email.setText(user.getEmail());
+//        if (user == null){
+//            Intent i = new Intent(getApplicationContext(),profile_signin.class);
+//            startActivity(i);
+//            finish();
+//        } else {
+//            name.setText(user.getDisplayName());
+//            email.setText(user.getEmail());
+//        }
+
+        if (user != null) {
+            String userId = user.getUid();
+            userRef = FirebaseDatabase.getInstance().getReference("users").child(userId);
+        }
+
+        if (userRef != null){
+            userRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    if (snapshot.exists()){
+                        String f_name = snapshot.child("firstName").getValue(String.class);
+                        String l_name = snapshot.child("lastName").getValue(String.class);
+                        name.setText(f_name);
+                        String fl = String.valueOf(f_name.charAt(0));
+                        String sl = String.valueOf(l_name.charAt(0));
+                        first_letter.setText(fl);
+                        second_letter.setText(sl);
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
         }
 
         sign_out.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
-                Intent i = new Intent(getApplicationContext(),profile_signin.class);
-                startActivity(i);
-                finish();
+                gsc.signOut().addOnCompleteListener(task -> {
+                    Intent i = new Intent(getApplicationContext(),profile_signin.class);
+                    startActivity(i);
+                    finish();
+                });
             }
         });
 
         GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
         if(acct != null){
             String personName = acct.getDisplayName();
+            String[] parts = personName.split(" ",2);
+            String firstName = parts[0];
+            String lastName = parts[1];
             String personEmail = acct.getEmail();
-            name.setText(personName);
+            first_letter.setText(String.valueOf(firstName.charAt(0)));
+            second_letter.setText(String.valueOf(lastName.charAt(0)));
+            name.setText(firstName);
             email.setText(personEmail);
         }
+
+        edit_profile = findViewById(R.id.edit_profile);
+
+        edit_profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),profile.class);
+                startActivity(i);
+                overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
+            }
+        });
 
         ImageView search_icon = findViewById(R.id.search_icon);
         ImageView cart_icon = findViewById(R.id.cart_icon);
@@ -117,7 +167,7 @@ public class profile_logout extends AppCompatActivity {
                     overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                     return true;
                 } else if (item.getItemId() == R.id.trending) {
-                    Intent i = new Intent(getApplicationContext(), Trending.class);
+                    Intent i = new Intent(getApplicationContext(), trending.class);
                     startActivity(i);
                     overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                     return true;

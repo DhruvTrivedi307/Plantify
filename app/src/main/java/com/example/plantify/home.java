@@ -6,35 +6,28 @@ import android.graphics.Paint;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import android.view.Menu;
+import android.view.HapticFeedbackConstants;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.viewpager2.widget.ViewPager2;
 
-import com.google.android.material.bottomappbar.BottomAppBar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class home extends AppCompatActivity {
 
+    LinearLayout main;
     private Handler handler = new Handler(Looper.getMainLooper());
     private Runnable runnable;
     private ViewPager2 vp;
@@ -58,6 +51,8 @@ public class home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        main = findViewById(R.id.main);
 
         vp = findViewById(R.id.vp);
         bnv = findViewById(R.id.bnv);
@@ -90,6 +85,7 @@ public class home extends AppCompatActivity {
         buy_now_bottom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                main.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS);
                 String name = "Jade Mini Plant";
                 int price = 279;
                 String description = "One of the most popular houseplants, and our all-time bestseller, this easy-growing plant with its heart-shaped leaves is loved for its beautiful fenestrations. Quick to grow with delicate trailing vines that can be styled for every space, the Philodendron broken heart is the monstera charm you want to add to your home if you don't have the space for the huge monstera. Scientifically known as the Monstera adansonii, this broken heart plant thrives indoors in bright indirect light and with very little care.";
@@ -106,6 +102,7 @@ public class home extends AppCompatActivity {
         btnMinus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                main.performHapticFeedback(HapticFeedbackConstants.GESTURE_END);
                 if (count > 1) {
                     count--;
                     txtCount.setText(String.valueOf(count));
@@ -116,6 +113,7 @@ public class home extends AppCompatActivity {
         btnPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                main.performHapticFeedback(HapticFeedbackConstants.GESTURE_START);
                 if (count < 5) {
                     count++;
                     txtCount.setText(String.valueOf(count));
@@ -127,6 +125,7 @@ public class home extends AppCompatActivity {
         viewAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                main.performHapticFeedback(HapticFeedbackConstants.CONTEXT_CLICK);
                 Intent i = new Intent(getApplicationContext(),shop.class);
                 startActivity(i);
             }
@@ -135,6 +134,7 @@ public class home extends AppCompatActivity {
         h_bhp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                main.performHapticFeedback(HapticFeedbackConstants.CONTEXT_CLICK);
                 String name = "Broken Heart Plant";
                 int price = 499;
                 String description = "One of the most popular houseplants, and our all-time bestseller, this easy-growing plant with its heart-shaped leaves is loved for its beautiful fenestrations. Quick to grow with delicate trailing vines that can be styled for every space, the Philodendron broken heart is the monstera charm you want to add to your home if you don't have the space for the huge monstera. Scientifically known as the Monstera adansonii, this broken heart plant thrives indoors in bright indirect light and with very little care.";
@@ -150,6 +150,7 @@ public class home extends AppCompatActivity {
         h_jmp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                main.performHapticFeedback(HapticFeedbackConstants.CONTEXT_CLICK);
                 String name = "Jade Mini Plant";
                 int price = 499;
                 String description = "An easy-to-care-for succulent, the Crassula Green Mini boasts lush foliage that enhances any room. Its coin-like round plump leaves are considered lucky in Feng Shui.";
@@ -165,6 +166,7 @@ public class home extends AppCompatActivity {
         h_bwp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                main.performHapticFeedback(HapticFeedbackConstants.CONTEXT_CLICK);
                 String name = "Brazilian Wood Plant";
                 int price = 499;
                 String description = "Also known as Dracaena fragrans, this plant has broad, arching leaves and is known for its air-purifying qualities. It thrives in low to medium light and requires moderate watering.";
@@ -180,6 +182,7 @@ public class home extends AppCompatActivity {
         h_pp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                main.performHapticFeedback(HapticFeedbackConstants.CONTEXT_CLICK);
                 String name = "Peacock Plant";
                 int price = 499;
                 String description = "Featuring decorative leaves with intricate patterns resembling a peacock’s tail, this plant prefers low to medium light and high humidity. It’s a stunning addition to any indoor plant collection.";
@@ -261,12 +264,14 @@ public class home extends AppCompatActivity {
         cart_icon = findViewById(R.id.cart_icon);
 
         search_icon.setOnClickListener(v -> {
+            main.performHapticFeedback(HapticFeedbackConstants.CONTEXT_CLICK);
             Intent i = new Intent(getApplicationContext(),search.class);
             startActivity(i);
             overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
         });
 
         cart_icon.setOnClickListener(v -> {
+            main.performHapticFeedback(HapticFeedbackConstants.CONTEXT_CLICK);
             Intent i = new Intent(getApplicationContext(),cart.class);
             startActivity(i);
             overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
@@ -275,6 +280,7 @@ public class home extends AppCompatActivity {
         tools.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                v.performHapticFeedback(HapticFeedbackConstants.CLOCK_TICK);
                 Intent i = new Intent(getApplicationContext(), tools.class);
                 startActivity(i);
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
@@ -284,6 +290,7 @@ public class home extends AppCompatActivity {
         bestsellers.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                v.performHapticFeedback(HapticFeedbackConstants.CLOCK_TICK);
                 Intent i = new Intent(getApplicationContext(), bestsellers.class);
                 startActivity(i);
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
@@ -293,6 +300,7 @@ public class home extends AppCompatActivity {
         easy_to_care.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                v.performHapticFeedback(HapticFeedbackConstants.CLOCK_TICK);
                 Intent i = new Intent(getApplicationContext(), easy_to_care.class);
                 startActivity(i);
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
@@ -302,6 +310,7 @@ public class home extends AppCompatActivity {
         seeds.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                v.performHapticFeedback(HapticFeedbackConstants.CLOCK_TICK);
                 Intent i = new Intent(getApplicationContext(), seeds.class);
                 startActivity(i);
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
@@ -311,6 +320,7 @@ public class home extends AppCompatActivity {
         pots.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                v.performHapticFeedback(HapticFeedbackConstants.CLOCK_TICK);
                 Intent i = new Intent(getApplicationContext(), pots.class);
                 startActivity(i);
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
@@ -326,16 +336,19 @@ public class home extends AppCompatActivity {
                     Intent i = new Intent(getApplicationContext(), shop.class);
                     startActivity(i);
                     overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                    bnv.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
                     return true;
                 } else if (item.getItemId() == R.id.trending) {
-                    Intent i = new Intent(getApplicationContext(), Trending.class);
+                    Intent i = new Intent(getApplicationContext(), trending.class);
                     startActivity(i);
                     overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                    bnv.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
                     return true;
                 } else if (item.getItemId() == R.id.profile) {
                     Intent i = new Intent(getApplicationContext(), profile_signin.class);
                     startActivity(i);
                     overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                    bnv.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
                     return true;
                 }
                 return true;
@@ -348,9 +361,11 @@ public class home extends AppCompatActivity {
             v.setSelected(true);
 
             if (v == small) {
+                main.performHapticFeedback(HapticFeedbackConstants.GESTURE_END);
                 selectedSize = "Small";
                 size.setText(selectedSize);
             } else if (v == medium) {
+                main.performHapticFeedback(HapticFeedbackConstants.GESTURE_START);
                 selectedSize = "Medium";
                 size.setText(selectedSize);
             }
@@ -363,6 +378,7 @@ public class home extends AppCompatActivity {
     }
 
     public void onCartClick(String name, int price) {
+        main.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS);
         Intent intent = new Intent(getApplicationContext(), cart.class);
         intent.putExtra("img",R.drawable.broken_heart_plant_2);
         intent.putExtra("name",name);

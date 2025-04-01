@@ -3,6 +3,7 @@ package com.example.plantify;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.HapticFeedbackConstants;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -15,6 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class bestsellers extends AppCompatActivity {
 
+    LinearLayout main;
     LinearLayout b_lbp, b_fbp, b_pp, b_bwp, b_jmp, b_mpg, b_bhp, b_plp;
     AppCompatButton b_lbp_cart_click, b_fbp_cart_click, b_pp_cart_click, b_bwp_cart_click, b_jmp_cart_click, b_mpg_cart_click, b_bhp_cart_click;
     ImageView cart_icon,search_icon;
@@ -24,6 +26,8 @@ public class bestsellers extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bestsellers);
+
+        main = findViewById(R.id.main);
 
         b_lbp = findViewById(R.id.b_lbp);
         b_fbp = findViewById(R.id.b_fbp);
@@ -144,6 +148,7 @@ public class bestsellers extends AppCompatActivity {
     }
 
     public void onCartClick() {
+        main.performHapticFeedback(HapticFeedbackConstants.CONTEXT_CLICK);
         Intent intent = new Intent(getApplicationContext(), cart.class);
         startActivity(intent);
     }
