@@ -120,6 +120,7 @@
             android:fontFamily="@font/outfit_medium"/>
 
         <EditText
+            android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter your email address"
@@ -137,13 +138,14 @@
             android:textColor="@color/theme_text"
             android:fontFamily="@font/outfit_medium"
             android:layout_marginBottom="5dp"/>
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter your password"
             android:padding="10dp"
             android:textSize="15dp"
-            android:id="@+id/password_toggle"
+            android:id="@+id/password"
             android:inputType="textPassword"
             android:background="@drawable/edit_text_stroke"
             android:textColorHint="@color/edit_text_stroke"
@@ -167,6 +169,7 @@
             android:layout_marginBottom="30dp"/>
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/login"
             app:cornerRadius="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

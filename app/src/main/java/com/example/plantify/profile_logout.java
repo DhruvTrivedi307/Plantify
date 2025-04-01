@@ -23,6 +23,8 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class profile_logout extends AppCompatActivity {
     GoogleSignInOptions gso;
@@ -30,24 +32,42 @@ public class profile_logout extends AppCompatActivity {
     TextView name,email;
     Button sign_out;
     BottomNavigationView bnv;
+    FirebaseAuth auth;
+    FirebaseUser user;
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_profile_logout);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
 
         sign_out = findViewById(R.id.sign_out);
         name = findViewById(R.id.name);
         email = findViewById(R.id.email);
         gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
         gsc = GoogleSignIn.getClient(this, gso);
+
+        auth = FirebaseAuth.getInstance();
+        user = auth.getCurrentUser();
+
+        if (user == null){
+            Intent i = new Intent(getApplicationContext(),profile_signin.class);
+            startActivity(i);
+            finish();
+        }  else {
+            name.setText(user.getDisplayName());
+            email.setText(user.getEmail());
+        }
+
+        sign_out.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                Intent i = new Intent(getApplicationContext(),profile_signin.class);
+                startActivity(i);
+                finish();
+            }
+        });
 
         GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
         if(acct != null){
@@ -72,12 +92,12 @@ public class profile_logout extends AppCompatActivity {
             overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
         });
 
-        sign_out.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                signOut();
-            }
-        });
+//        sign_out.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                signOut();
+//            }
+//        });
 
         bnv = findViewById(R.id.bnv);
 
@@ -112,13 +132,13 @@ public class profile_logout extends AppCompatActivity {
         });
 
     }
-    public void signOut(){
-        gsc.signOut().addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-                finish();
-                startActivity(new Intent(profile_logout.this,profile_signin.class));
-            }
-        });
-    }
+//    public void signOut(){
+//        gsc.signOut().addOnCompleteListener(new OnCompleteListener<Void>() {
+//            @Override
+//            public void onComplete(@NonNull Task<Void> task) {
+//                finish();
+//                startActivity(new Intent(profile_logout.this,profile_signin.class));
+//            }
+//        });
+//    }
 }
