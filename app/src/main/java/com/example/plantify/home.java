@@ -179,28 +179,36 @@ public class home extends AppCompatActivity {
         h_bhp_cart_click.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onCartClick();
+                String name = "Broken Heart Plant";
+                int price = 499;
+                onCartClick(name,price);
             }
         });
 
         h_jmp_cart_click.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onCartClick();
+                String name = "Jade Mini Plant";
+                int price = 499;
+                onCartClick(name,price);
             }
         });
 
         h_bwp_cart_click.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onCartClick();
+                String name = "Brazilian Wood Plant";
+                int price = 499;
+                onCartClick(name,price);
             }
         });
 
         h_pp_cart_click.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onCartClick();
+                String name = "Peacock Plant";
+                int price = 499;
+                onCartClick(name,price);
             }
         });
 
@@ -338,8 +346,11 @@ public class home extends AppCompatActivity {
 
     }
 
-    public void onCartClick() {
+    public void onCartClick(String name, int price) {
         Intent intent = new Intent(getApplicationContext(), cart.class);
+        intent.putExtra("img",R.drawable.broken_heart_plant_2);
+        intent.putExtra("name",name);
+        intent.putExtra("price",price);
         startActivity(intent);
     }
 

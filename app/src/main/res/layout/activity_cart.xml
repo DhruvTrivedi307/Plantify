@@ -99,12 +99,13 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Selected Plant Size :-"
+                            android:text="Selected Plant Size :"
                             android:textSize="16dp"
                             android:fontFamily="@font/outfit_medium"
                             android:textColor="@color/theme_text"
                             android:layout_marginBottom="5dp"/>
                         <TextView
+                            android:id="@+id/item_size"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Small"

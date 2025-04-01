@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.example.plantify" />
+                  <option name="mobileSdkAppId" value="1:834811480397:android:dbebf14e081d62cef44f04" />
+                  <option name="projectId" value="plantify-a2ddb" />
+                  <option name="projectNumber" value="834811480397" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

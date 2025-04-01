@@ -9,11 +9,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -28,26 +30,19 @@ import com.google.android.gms.tasks.Task;
 public class create_account extends AppCompatActivity {
     EditText passwordEditText;
     CheckBox toggleCheckBox;
-
-    LinearLayout sign_in;
+    ImageView sign_in;
     GoogleSignInOptions gso;
     GoogleSignInClient gsc;
-    private EditText fname, lname, phone, email, password;
-    private CheckBox toggle;
-    private Button createAccount;
-    private DatabaseHelper dbHelper;
+    EditText fname, lname, phone, email, password;
+    CheckBox toggle;
+    AppCompatButton createAccount;
+    DatabaseHelper dbHelper;
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_create_account);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
 
         passwordEditText = findViewById(R.id.password);
         toggleCheckBox = findViewById(R.id.toggle);
@@ -73,7 +68,7 @@ public class create_account extends AppCompatActivity {
             }
         });
 
-        // Handle Create Account Button Click
+//         Handle Create Account Button Click
         createAccount.setOnClickListener(view -> registerUser());
 
         toggleCheckBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
