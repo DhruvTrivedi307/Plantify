@@ -51,7 +51,7 @@ public class home extends AppCompatActivity {
 
     TextView txtCount;
     private int count = 1;
-    Button btnMinus,btnPlus;
+    Button btnMinus,btnPlus,buy_now_bottom;
 
     @SuppressLint({"MissingInflatedId", "WrongViewCast"})
     @Override
@@ -85,6 +85,22 @@ public class home extends AppCompatActivity {
         btnMinus = findViewById(R.id.btnMinus);
         btnPlus = findViewById(R.id.btnPlus);
         txtCount = findViewById(R.id.txtCount);
+        buy_now_bottom = findViewById(R.id.buy_now_bottom);
+
+        buy_now_bottom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String name = "Jade Mini Plant";
+                int price = 279;
+                String description = "One of the most popular houseplants, and our all-time bestseller, this easy-growing plant with its heart-shaped leaves is loved for its beautiful fenestrations. Quick to grow with delicate trailing vines that can be styled for every space, the Philodendron broken heart is the monstera charm you want to add to your home if you don't have the space for the huge monstera. Scientifically known as the Monstera adansonii, this broken heart plant thrives indoors in bright indirect light and with very little care.";
+                Intent i = new Intent(getApplicationContext(),product.class);
+                i.putExtra("img",R.drawable.jade_mini_plats);
+                i.putExtra("name",name);
+                i.putExtra("price",price);
+                i.putExtra("description",description);
+                startActivity(i);
+            }
+        });
 
 
         btnMinus.setOnClickListener(new View.OnClickListener() {

@@ -34,6 +34,7 @@
 
 
         <ImageView
+            android:id="@+id/cross"
             android:layout_width="50dp"
             android:layout_height="40dp"
             android:layout_gravity="center"
@@ -50,6 +51,11 @@
         android:layout_height="1dp"
         android:background="@color/black"
         />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:scrollbars="none">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -63,6 +69,7 @@
             android:orientation="vertical"
             >
             <TextView
+                android:id="@+id/plants"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Type of plants"
@@ -73,6 +80,7 @@
                 />
 
             <TextView
+                android:id="@+id/price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Price"
@@ -83,6 +91,7 @@
                 />
 
             <TextView
+                android:id="@+id/size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Size"
@@ -150,6 +159,7 @@
 
     </LinearLayout>
 
+    </ScrollView>
 
     <androidx.appcompat.widget.AppCompatButton
         app:cornerRadius="20dp"
