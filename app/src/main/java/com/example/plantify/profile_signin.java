@@ -114,14 +114,10 @@ public class profile_signin extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
-                                    // Sign in success, update UI with the signed-in user's information
-//                                    Log.d(TAG, "signInWithEmail:success");
-//                                    FirebaseUser user = mAuth.getCurrentUser();
                                     Intent i = new Intent(profile_signin.this,profile_logout.class);
                                     startActivity(i);
                                     finish();
                                 } else {
-                                    // If sign in fails, display a message to the user.
                                     Log.w(TAG, "signInWithEmail:failure", task.getException());
                                     Toast.makeText(profile_signin.this, "Please Create your Account First ", Toast.LENGTH_SHORT).show();
                                 }

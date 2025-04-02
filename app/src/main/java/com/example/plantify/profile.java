@@ -40,13 +40,11 @@ public class profile extends AppCompatActivity {
             userRef = FirebaseDatabase.getInstance().getReference("users").child(userId);
         }
 
-        // Initialize TextViews
         fname = findViewById(R.id.fname);
         lname = findViewById(R.id.lname);
         phone_no = findViewById(R.id.phone_no);
         email_id = findViewById(R.id.email);
 
-        // Fetch user data from Firebase
         if (userRef != null) {
             userRef.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
@@ -57,7 +55,6 @@ public class profile extends AppCompatActivity {
                         String phone = dataSnapshot.child("phone").getValue(String.class);
                         String email = dataSnapshot.child("email").getValue(String.class);
 
-                        // Set data to TextViews
                         fname.setText(firstName);
                         lname.setText(lastName);
                         phone_no.setText(phone);
@@ -67,7 +64,6 @@ public class profile extends AppCompatActivity {
 
                 @Override
                 public void onCancelled(DatabaseError databaseError) {
-                    // Handle possible errors
                 }
             });
         }
