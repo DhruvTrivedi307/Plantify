@@ -103,7 +103,9 @@
             android:name=".shop"
             android:exported="false"
             android:screenOrientation="locked"
-            android:theme="@style/Theme.Plantify" />
+            android:theme="@style/Theme.Plantify" >
+
+        </activity>
         <activity
             android:name=".home"
             android:exported="false"
@@ -119,6 +121,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
     </application>
 

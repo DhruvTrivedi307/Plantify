@@ -16,28 +16,31 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    VideoView vv;
+    // VideoView vv;
     private static final int SPLASH_TIME_OUT = 3000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        vv = findViewById(R.id.vv);
 
-        String path = "android.resource://"+getPackageName()+"/"+R.raw.splash;
-        Uri uri = Uri.parse(path);
-        vv.setVideoURI(uri);
-        vv.start();
-
-        new Handler().postDelayed(() -> {
-            startActivity(new Intent(this, home.class));
-            finish();
-        }, SPLASH_TIME_OUT);
-
-        getWindow().getDecorView().setSystemUiVisibility(
-                View.SYSTEM_UI_FLAG_HIDE_NAVIGATION |View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-        );
+        startActivity(new Intent(MainActivity.this, home.class));
+        finish();
+//        vv = findViewById(R.id.vv);
+//
+//        String path = "android.resource://"+getPackageName()+"/"+R.raw.splash;
+//        Uri uri = Uri.parse(path);
+//        vv.setVideoURI(uri);
+//        vv.start();
+//
+//        new Handler().postDelayed(() -> {
+//            startActivity(new Intent(this, home.class));
+//            finish();
+//        }, SPLASH_TIME_OUT);
+//
+//        getWindow().getDecorView().setSystemUiVisibility(
+//                View.SYSTEM_UI_FLAG_HIDE_NAVIGATION |View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+//        );
 
     }
 }

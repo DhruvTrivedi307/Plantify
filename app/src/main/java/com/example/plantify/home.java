@@ -33,7 +33,6 @@ public class home extends AppCompatActivity {
     private ViewPager2 vp;
     BottomNavigationView bnv;
     int currentPage = 0;
-    RadioGroup rg;
     ImageView search_icon,cart_icon;
     LinearLayout tools,bestsellers,easy_to_care,pots,seeds;
     ImageView h_bhp,h_jmp,h_bwp,h_pp;
@@ -41,7 +40,6 @@ public class home extends AppCompatActivity {
     private String selectedSize = "";
     Button viewAll, h_bhp_cart_click, h_jmp_cart_click, h_bwp_cart_click, h_pp_cart_click;
     TextView size;
-
     TextView txtCount;
     private int count = 1;
     Button btnMinus,btnPlus,buy_now_bottom;
