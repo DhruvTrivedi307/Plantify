@@ -2,6 +2,7 @@ package com.example.plantify;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,6 +38,10 @@ public class cart extends AppCompatActivity {
     private int count = 1;
     ImageView back,item_img;
     RecyclerView recyclerView;
+    TextView subTotalPrice,grandTotalPrice,checkoutPrice;
+
+    int totalPrice = 0;
+    int totalQty = 0;
 
 //    int[] item_images = {R.drawable.peacock_plant, R.drawable.brazilian_wood_plant, R.drawable.money_plant_golden};
 //    int[] item_prices = {499, 899, 479};
@@ -71,21 +76,36 @@ public class cart extends AppCompatActivity {
 
         empty = findViewById(R.id.empty);
 
+        subTotalPrice = findViewById(R.id.subTotalPrice);
+        grandTotalPrice = findViewById(R.id.grandTotalPrice);
+        checkoutPrice = findViewById(R.id.checkoutPrice);
+
 //        cart_item c = new cart_item(item_images, item_prices, item_names, item_sizes, item_quantities);
 
 //        recyclerView.setAdapter(c);
 
         Intent i = getIntent();
 
-//        if(i.getStringExtra("page").equals("shop")){
-//
-//        } else {
+
+        if(i.getStringExtra("name") == null){
+
+        } else {
             img.add(i.getIntExtra("img", 0));
             name.add(i.getStringExtra("name"));
             price.add(i.getIntExtra("price", 0));
             size.add(i.getStringExtra("size"));
             qty.add(i.getIntExtra("qty", 0));
-//        }
+        }
+
+        for (int p : price) {
+            totalPrice += p;
+        }
+
+
+
+        subTotalPrice.setText(String.valueOf(totalPrice));
+        grandTotalPrice.setText(String.valueOf(totalPrice));
+        checkoutPrice.setText(String.valueOf(totalPrice));
 
 //        img.(i.getIntExtra("img", 0));
 //        item_price.append(String.valueOf(price));

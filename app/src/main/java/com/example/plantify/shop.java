@@ -315,7 +315,6 @@ public class shop extends AppCompatActivity {
 
         cart_icon.setOnClickListener(v -> {
             Intent i = new Intent(getApplicationContext(),cart.class);
-            i.putExtra("page","shop");
             startActivity(i);
             overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
         });

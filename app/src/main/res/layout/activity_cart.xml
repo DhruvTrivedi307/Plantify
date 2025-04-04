@@ -127,6 +127,7 @@
                             android:layout_weight="1" />
 
                         <TextView
+                            android:id="@+id/subTotalPrice"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="₹499"/>
@@ -214,6 +215,7 @@
                             android:layout_weight="1" />
 
                         <TextView
+                            android:id="@+id/grandTotalPrice"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="₹499"
@@ -248,6 +250,7 @@
                 android:layout_marginLeft="30dp">
 
                 <TextView
+                    android:id="@+id/checkoutPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="₹499"
