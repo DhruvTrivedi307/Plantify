@@ -8,7 +8,6 @@
     android:orientation="vertical"
     tools:context=".cart">
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -50,6 +49,14 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Cart is Empty"
+                android:visibility="gone"
+                android:id="@+id/empty"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -58,133 +65,25 @@
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:fontFamily="@font/outfit_bold"/>
+
                 <LinearLayout
                     android:id="@+id/cart_container"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-            <LinearLayout
-                android:id="@+id/main"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="15dp"
-                tools:ignore="DuplicateIds">
-
-                <ImageView
-                    android:id="@+id/item_img"
-                    android:layout_width="161dp"
-                    android:layout_height="198dp"
-                    android:layout_gravity="left"
-                    android:src="@drawable/peacock_plant" />
-
-                <LinearLayout
-                    android:layout_marginLeft="20dp"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/item_name"
-                        android:layout_width="wrap_content"
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Peacock Plant"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:fontFamily="@font/outfit_medium"
-                        android:layout_marginBottom="10dp"/>
-
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Selected Plant Size :"
-                            android:textSize="16dp"
-                            android:fontFamily="@font/outfit_medium"
-                            android:textColor="@color/theme_text"
-                            android:layout_marginBottom="5dp"/>
-                        <TextView
-                            android:id="@+id/item_size"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Small"
-                            android:textSize="16dp"
-                            android:fontFamily="@font/outfit_medium"
-                            android:textColor="@color/theme_text"/>
-
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginBottom="20dp">
-
-                        <TextView
-                            android:id="@+id/priceText2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/sansita_swashed"
-                            android:text="₹1999"
-                            android:textSize="10dp"/>
-
-                        <TextView
-                            android:id="@+id/item_price"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:fontFamily="@font/sansita_swashed"
-                            android:text="₹499"
-                            android:textColor="@color/theme"
-                            android:textSize="12dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="30dp"
-                        android:orientation="horizontal"
-                        android:gravity="center"
-                        android:background="@drawable/button_stroke">
-
-                        <androidx.appcompat.widget.AppCompatButton
-                            android:id="@+id/btnMinus"
-                            android:layout_width="20dp"
-                            android:layout_height="40dp"
-                            android:text="-"
-                            android:background="@android:color/transparent"
-                            android:textSize="15sp"
-                            android:textColor="#666666"/>
-
-                        <TextView
-                            android:id="@+id/txtCount"
-                            android:layout_width="50dp"
-                            android:layout_height="40dp"
-                            android:text="1"
-                            android:textSize="15sp"
-                            android:gravity="center"
-                            android:textColor="#333333"/>
-
-                        <androidx.appcompat.widget.AppCompatButton
-                            android:id="@+id/btnPlus"
-                            android:layout_width="20dp"
-                            android:layout_height="40dp"
-                            android:text="+"
-                            android:background="@android:color/transparent"
-                            android:textSize="15sp"
-                            android:textColor="#666666"/>
-
-                    </LinearLayout>
+                        android:id="@+id/cart"/>
 
                 </LinearLayout>
-            </LinearLayout>
-                </LinearLayout>
-            <View
-                android:layout_marginTop="30dp"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_weight="1"
-                android:background="#CCCCCC"/>
+<!--            <View-->
+<!--                android:layout_marginTop="30dp"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="#CCCCCC"/>-->
 
             <TextView
                 android:layout_width="wrap_content"

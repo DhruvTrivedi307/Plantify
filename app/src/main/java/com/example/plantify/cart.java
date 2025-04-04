@@ -9,20 +9,46 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class cart extends AppCompatActivity {
 
     Button btnMinus,btnPlus;
-    TextView txtCount,item_name,item_price,item_size;
+    TextView txtCount,item_name,item_price,item_size,empty;
     private int count = 1;
     ImageView back,item_img;
+    RecyclerView recyclerView;
 
+//    int[] item_images = {R.drawable.peacock_plant, R.drawable.brazilian_wood_plant, R.drawable.money_plant_golden};
+//    int[] item_prices = {499, 899, 479};
+//    String[] item_names = {"Peacock Plant", "Brazilian Wood Plant", "Money Plant Golden"};
+//    String[] item_sizes = {"Small", "Medium", "Large"};
+//    int[] item_quantities = {1, 1, 1};
+
+    static ArrayList<Integer> img = new ArrayList<>();
+    static ArrayList<Integer> price = new ArrayList<>();
+    static ArrayList<String> name = new ArrayList<>();
+    static ArrayList<String> size = new ArrayList<>();
+    static ArrayList<Integer> qty = new ArrayList<>();
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -41,53 +67,37 @@ public class cart extends AppCompatActivity {
         item_price = findViewById(R.id.item_price);
         item_size = findViewById(R.id.item_size);
 
+        recyclerView = findViewById(R.id.cart);
+
+        empty = findViewById(R.id.empty);
+
+//        cart_item c = new cart_item(item_images, item_prices, item_names, item_sizes, item_quantities);
+
+//        recyclerView.setAdapter(c);
+
         Intent i = getIntent();
 
-        int img = i.getIntExtra("img", 0);
-        String name = i.getStringExtra("name");
-        int price = i.getIntExtra("price", 0);
-        String size = i.getStringExtra("size");
-        int qty = i.getIntExtra("qty", 0);
+//        if(i.getStringExtra("page").equals("shop")){
+//
+//        } else {
+            img.add(i.getIntExtra("img", 0));
+            name.add(i.getStringExtra("name"));
+            price.add(i.getIntExtra("price", 0));
+            size.add(i.getStringExtra("size"));
+            qty.add(i.getIntExtra("qty", 0));
+//        }
 
-        if (img != 0) {
-            item_img.setImageResource(img);
-        }
+//        img.(i.getIntExtra("img", 0));
+//        item_price.append(String.valueOf(price));
+//        item_size.append(size);
+//        item_images.append(String.valueOf(img));
+//        txtCount.setText(String.valueOf(qty));
 
-        if (name != null) {
-            item_name.setText(name);
-            item_name.setText(name);
-        } else {
-            item_name.setText("No Name Available");
-        }
 
-        item_price.setText("₹" + price);
+        cart_item c = new cart_item(img, price, name, size, qty);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+        recyclerView.setAdapter(c);
 
-        btnMinus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (count > 1) {
-                    count--;
-                    txtCount.setText(String.valueOf(count));
-                }
-            }
-        });
-
-        btnPlus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (count < 5) {
-                    count++;
-                    txtCount.setText(String.valueOf(count));
-                }
-            }
-        });
-
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
 
 
     }

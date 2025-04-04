@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,6 +23,12 @@ public class shop extends AppCompatActivity {
     LinearLayout filter;
     LinearLayout h_bhp, h_jmp, h_plp, h_fbp, h_lbp, h_stp, h_pgp, h_mpg, h_pp, h_bwp, h_arp, h_apbp, h_bpx, h_bpp, h_flp, h_vjmp;
     AppCompatButton h_bhp_cart_click, h_jmp_cart_click, h_plp_cart_click, h_fbp_cart_click, h_lbp_cart_click, h_stp_cart_click, h_pgp_cart_click, h_mpg_cart_click, h_pp_cart_click, h_bwp_cart_click, h_arp_cart_click, h_apbp_cart_click, h_bpx_cart_click, h_bpp_cart_click, h_flp_cart_click, h_vjmp_cart_click;
+
+//    int[] item_images = {R.drawable.peacock_plant, R.drawable.brazilian_wood_plant, R.drawable.money_plant_golden};
+//    int[] item_prices = {499, 899, 479};
+//    String[] item_names = {"Peacock Plant", "Brazilian Wood Plant", "Money Plant Golden"};
+//    String[] item_sizes = {"Small", "Medium", "Small"};
+//    int[] item_quantities = {1, 1, 1};
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -187,67 +194,87 @@ public class shop extends AppCompatActivity {
         });
 
         h_bhp_cart_click.setOnClickListener(v -> {
-            onCartClick();
+//            Intent intent = new Intent(getApplicationContext(), cart.class);
+//            intent.putExtra("img", R.drawable.broken_heart_plant_2);
+//            intent.putExtra("name", "Broken heart Plant");
+//            intent.putExtra("price", 499);
+//            intent.putExtra("qty", 1);
+//            intent.putExtra("size", "Small");
+//            startActivity(intent);
+            onCartClick(R.drawable.broken_heart_plant_2, "Broken heart Plant", 499, "Small", 1);
         });
+
 
         h_jmp_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            int currentCount = cart_item.count;
+            Toast.makeText(this, currentCount+"", Toast.LENGTH_SHORT).show();
+            onCartClick(R.drawable.jade_mini_plats, "Jade Mini Plats", 499, "Small", 1);
+            if(currentCount < 1){
+                h_jmp_cart_click.setText("Plant added");
+                h_jmp_cart_click.setEnabled(false);
+                h_jmp_cart_click.setBackground(getResources().getDrawable(R.drawable.edit_text_stroke));
+            } else {
+                h_jmp_cart_click.setText("Add to cart");
+                h_jmp_cart_click.setEnabled(true);
+                h_jmp_cart_click.setBackground(getResources().getDrawable(R.drawable.button_stroke_shop_page));
+            }
         });
 
+
         h_plp_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.peace_lily_plant, "Peace Lily Plant", 499, "Small", 1);
         });
 
         h_fbp_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.ficus_bonsai_plant, "Ficus Bonsai Plant", 499, "Small", 1);
         });
 
         h_lbp_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.lucky_bamboo_plant, "Lucky Bamboo Plant", 499, "Small", 1);
         });
 
         h_stp_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.stromanthe_triostar_plant, "Stormanthe Triostar Plant", 499, "Small", 1);
         });
 
         h_pgp_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.peperomia_green_plant, "Peperomia Green Plant", 499, "Small", 1);
         });
 
         h_mpg_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.money_plant_golden, "Money Plant Golden", 499, "Small", 1);
         });
 
         h_pp_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.peacock_plant, "Peacock Plant", 499, "Small", 1);
         });
 
         h_bwp_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.brazilian_wood_plant, "Brazilian Wood Plant", 499, "Small", 1);
         });
 
         h_arp_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.aglaonema_red_plant, "Aglaonema Red Plant", 499, "Small", 1);
         });
 
         h_apbp_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.aglaonema_pink_beauty_plant, "Aglaonema Pink Beauty Plant", 499, "Small", 1);
         });
 
         h_bpx_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.bamboo_palm_xl, "Bamboo Palm XL", 499, "Small", 1);
         });
 
         h_bpp_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.bamboo_palm_plant, "Bamboo Palm Plant", 499, "Small", 1);
         });
 
         h_flp_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.fiddle_leaf_fig_plant, "Fiddle Leaf Fig Plant", 499, "Small", 1);
         });
 
         h_vjmp_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.variegated_jade_mini_plant, "Variegated Jade Mini Plant", 499, "Small", 1);
         });
 
         bnv.setSelectedItemId(R.id.shop);
@@ -288,6 +315,7 @@ public class shop extends AppCompatActivity {
 
         cart_icon.setOnClickListener(v -> {
             Intent i = new Intent(getApplicationContext(),cart.class);
+            i.putExtra("page","shop");
             startActivity(i);
             overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
         });
@@ -303,10 +331,16 @@ public class shop extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void onCartClick() {
+    public boolean onCartClick(int img, String name, int price, String size, int qty) {
         main.performHapticFeedback(HapticFeedbackConstants.CONTEXT_CLICK);
         Intent intent = new Intent(getApplicationContext(), cart.class);
+        intent.putExtra("img", img);
+        intent.putExtra("name", name);
+        intent.putExtra("price", price);
+        intent.putExtra("qty", qty);
+        intent.putExtra("size", size);
         startActivity(intent);
+        return true;
     }
 
     @Override
