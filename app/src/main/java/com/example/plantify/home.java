@@ -231,9 +231,10 @@ public class home extends AppCompatActivity {
 
 
         List<Integer> imgs = Arrays.asList(
-                R.drawable.carousel_img_1,
-                R.drawable.carousel_img_2,
-                R.drawable.carousel_img_1,
+                R.drawable.carousel_img_6,
+                R.drawable.carousel_img_5,
+                R.drawable.carousel_img_4,
+                R.drawable.carousel_img_3,
                 R.drawable.carousel_img_2,
                 R.drawable.carousel_img_1
         );
