@@ -57,7 +57,7 @@ public class cart_item extends RecyclerView.Adapter<cart_item.cart_itemHolder> {
     }
 
     public class cart_itemHolder extends RecyclerView.ViewHolder {
-        ImageView item_image;
+        ImageView item_image,remove_btn;
         TextView item_name,item_size,item_price;
 
         TextView txtCount;
@@ -73,6 +73,7 @@ public class cart_item extends RecyclerView.Adapter<cart_item.cart_itemHolder> {
             txtCount = itemView.findViewById(R.id.txtCount);
             btnMinus = itemView.findViewById(R.id.btnMinus);
             btnPlus = itemView.findViewById(R.id.btnPlus);
+            remove_btn = itemView.findViewById(R.id.remove_btn);
 
 //            btnMinus.setOnClickListener(new View.OnClickListener() {
 //                @Override
@@ -121,6 +122,23 @@ public class cart_item extends RecyclerView.Adapter<cart_item.cart_itemHolder> {
                     if (count < 5) {
                         count++;
                         txtCount.setText(String.valueOf(count));
+                    }
+                }
+            });
+
+            remove_btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int position = getAdapterPosition();
+                    if (position != RecyclerView.NO_POSITION){
+                        item_images.remove(position);
+                        item_prices.remove(position);
+                        item_names.remove(position);
+                        item_sizes.remove(position);
+                        item_quantities.remove(position);
+
+                        notifyItemRemoved(position);
+                        notifyItemRangeChanged(position, item_names.size());
                     }
                 }
             });

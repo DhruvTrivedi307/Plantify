@@ -102,9 +102,10 @@ public class cart extends AppCompatActivity {
         }
 
 
-        subTotalPrice.setText(String.valueOf("₹"+totalPrice));
-        grandTotalPrice.setText(String.valueOf("₹"+totalPrice));
-        checkoutPrice.setText(String.valueOf("₹"+totalPrice));
+
+        subTotalPrice.setText(String.valueOf(totalPrice));
+        grandTotalPrice.setText(String.valueOf(totalPrice));
+        checkoutPrice.setText(String.valueOf(totalPrice));
 
 //        img.(i.getIntExtra("img", 0));
 //        item_price.append(String.valueOf(price));
@@ -116,6 +117,8 @@ public class cart extends AppCompatActivity {
         cart_item c = new cart_item(img, price, name, size, qty);
         recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
         recyclerView.setAdapter(c);
+
+
 
     }
 }

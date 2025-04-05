@@ -204,7 +204,7 @@ public class trending extends AppCompatActivity {
 
         bnv = findViewById(R.id.bnv);
 
-        bnv.setSelectedItemId(R.id.trending);
+//        bnv.setSelectedItemId(R.id.trending);
 
         bnv.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -262,5 +262,10 @@ public class trending extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
         overridePendingTransition(0, R.anim.fade_out);
+    }
+
+    protected void onResume() {
+        super.onResume();
+        bnv.setSelectedItemId(R.id.trending);
     }
 }
