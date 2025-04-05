@@ -196,6 +196,7 @@ public class cart_item extends RecyclerView.Adapter<cart_item.cart_itemHolder> {
 
                         notifyItemRemoved(position);
                         notifyItemRangeChanged(position, item_names.size());
+                        Toast.makeText(itemView.getContext(), "", Toast.LENGTH_SHORT).show();
                     }
                 }
             });
