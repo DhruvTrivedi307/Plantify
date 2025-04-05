@@ -214,4 +214,3 @@ public class cart_item extends RecyclerView.Adapter<cart_item.cart_itemHolder> {
     }
 
 }
-
