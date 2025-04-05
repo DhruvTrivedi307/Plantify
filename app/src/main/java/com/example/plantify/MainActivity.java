@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        finish();
+//        finish();
         vv = findViewById(R.id.vv);
 
         String path = "android.resource://"+getPackageName()+"/"+R.raw.splash;

@@ -93,6 +93,7 @@ public class home extends AppCompatActivity {
                 i.putExtra("price",price);
                 i.putExtra("description",description);
                 startActivity(i);
+
             }
         });
 
@@ -134,7 +135,7 @@ public class home extends AppCompatActivity {
             public void onClick(View v) {
                 main.performHapticFeedback(HapticFeedbackConstants.CONTEXT_CLICK);
                 String name = "Broken Heart Plant";
-                int price = 499;
+                int price = 299;
                 String description = "One of the most popular houseplants, and our all-time bestseller, this easy-growing plant with its heart-shaped leaves is loved for its beautiful fenestrations. Quick to grow with delicate trailing vines that can be styled for every space, the Philodendron broken heart is the monstera charm you want to add to your home if you don't have the space for the huge monstera. Scientifically known as the Monstera adansonii, this broken heart plant thrives indoors in bright indirect light and with very little care.";
                 Intent i = new Intent(getApplicationContext(),product.class);
                 i.putExtra("img",R.drawable.broken_heart_plant_2);
@@ -148,16 +149,17 @@ public class home extends AppCompatActivity {
         h_jmp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                main.performHapticFeedback(HapticFeedbackConstants.CONTEXT_CLICK);
-                String name = "Jade Mini Plant";
-                int price = 499;
-                String description = "An easy-to-care-for succulent, the Crassula Green Mini boasts lush foliage that enhances any room. Its coin-like round plump leaves are considered lucky in Feng Shui.";
-                Intent i = new Intent(getApplicationContext(),product.class);
-                i.putExtra("img",R.drawable.jade_mini_plats);
-                i.putExtra("name",name);
-                i.putExtra("price",price);
-                i.putExtra("description",description);
-                startActivity(i);
+//                main.performHapticFeedback(HapticFeedbackConstants.CONTEXT_CLICK);
+//                String name = "Jade Mini Plant";
+//                int price = 499;
+//                String description = "An easy-to-care-for succulent, the Crassula Green Mini boasts lush foliage that enhances any room. Its coin-like round plump leaves are considered lucky in Feng Shui.";
+//                Intent i = new Intent(getApplicationContext(),product.class);
+//                i.putExtra("img",R.drawable.jade_mini_plats);
+//                i.putExtra("name",name);
+//                i.putExtra("price",price);
+//                i.putExtra("description",description);
+//                startActivity(i);
+                onCartClick(R.drawable.jade_mini_plats,"Jade Mini Plant",279,"Small",1);
             }
         });
 
@@ -165,15 +167,16 @@ public class home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 main.performHapticFeedback(HapticFeedbackConstants.CONTEXT_CLICK);
-                String name = "Brazilian Wood Plant";
-                int price = 499;
-                String description = "Also known as Dracaena fragrans, this plant has broad, arching leaves and is known for its air-purifying qualities. It thrives in low to medium light and requires moderate watering.";
-                Intent i = new Intent(getApplicationContext(),product.class);
-                i.putExtra("img",R.drawable.brazilian_wood_plant);
-                i.putExtra("name",name);
-                i.putExtra("price",price);
-                i.putExtra("description",description);
-                startActivity(i);
+//                String name = "Brazilian Wood Plant";
+//                int price = 499;
+//                String description = "Also known as Dracaena fragrans, this plant has broad, arching leaves and is known for its air-purifying qualities. It thrives in low to medium light and requires moderate watering.";
+//                Intent i = new Intent(getApplicationContext(),product.class);
+//                i.putExtra("img",R.drawable.brazilian_wood_plant);
+//                i.putExtra("name",name);
+//                i.putExtra("price",price);
+//                i.putExtra("description",description);
+//                startActivity(i);
+                onCartClick(R.drawable.brazilian_wood_plant,"Brazilian Wood Plant",499,"Small",1);
             }
         });
 
@@ -190,42 +193,35 @@ public class home extends AppCompatActivity {
                 i.putExtra("price",price);
                 i.putExtra("description",description);
                 startActivity(i);
+                onCartClick(R.drawable.peacock_plant,"Peacock Plant",699,"Small",1);
             }
         });
 
         h_bhp_cart_click.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String name = "Broken Heart Plant";
-                int price = 499;
-                onCartClick(name,price);
+                onCartClick(R.drawable.broken_heart_plant_2,"Broken Heart Plant",299,"Small",1);
             }
         });
 
         h_jmp_cart_click.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String name = "Jade Mini Plant";
-                int price = 499;
-                onCartClick(name,price);
+                onCartClick(R.drawable.jade_mini_plats,"Jade Mini Plant",279,"Small",1);
             }
         });
 
         h_bwp_cart_click.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String name = "Brazilian Wood Plant";
-                int price = 499;
-                onCartClick(name,price);
+                onCartClick(R.drawable.brazilian_wood_plant,"Brazilian Wood Plant",499,"Small",1);
             }
         });
 
         h_pp_cart_click.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String name = "Peacock Plant";
-                int price = 499;
-                onCartClick(name,price);
+                onCartClick(R.drawable.peacock_plant,"Peacock Plant",699,"Small",1);
             }
         });
 
@@ -388,6 +384,7 @@ public class home extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
+        finish();
         overridePendingTransition(0, R.anim.fade_out);
     }
 
@@ -395,5 +392,17 @@ public class home extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         handler.removeCallbacks(runnable);
+    }
+
+    public boolean onCartClick(int img, String name, int price, String size, int qty) {
+        main.performHapticFeedback(HapticFeedbackConstants.CONTEXT_CLICK);
+        Intent intent = new Intent(getApplicationContext(), cart.class);
+        intent.putExtra("img", img);
+        intent.putExtra("name", name);
+        intent.putExtra("price", price);
+        intent.putExtra("qty", qty);
+        intent.putExtra("size", size);
+        startActivity(intent);
+        return true;
     }
 }

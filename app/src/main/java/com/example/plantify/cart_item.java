@@ -1,6 +1,9 @@
 package com.example.plantify;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -89,7 +92,7 @@ public class cart_item extends RecyclerView.Adapter<cart_item.cart_itemHolder> {
                 @Override
                 public void onClick(View v) {
                     int position = getAdapterPosition();
-                    if (position != RecyclerView.NO_POSITION) {
+//                    if (position != RecyclerView.NO_POSITION) {
                         int count = Integer.parseInt(txtCount.getText().toString());
 
                         if (count > 0) {
@@ -104,12 +107,11 @@ public class cart_item extends RecyclerView.Adapter<cart_item.cart_itemHolder> {
                                 item_sizes.remove(position);
                                 item_quantities.remove(position);
 
-                                // Notify adapter about the item removal
                                 notifyItemRemoved(position);
-                                notifyItemRangeChanged(position, item_names.size()); // Refresh remaining items
+                                notifyItemRangeChanged(position, item_names.size());
                             }
                         }
-                    }
+//                    }
                 }
             });
 
