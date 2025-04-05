@@ -1,14 +1,13 @@
 package com.example.plantify;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatButton;
@@ -24,7 +23,7 @@ public class cart_item extends RecyclerView.Adapter<cart_item.cart_itemHolder> {
     static ArrayList<String> item_sizes;
     static ArrayList<Integer> item_quantities;
 
-    public static int count = -1;
+    public static int count = 0;
 
     public cart_item(ArrayList<Integer> item_images, ArrayList<Integer> item_prices, ArrayList<String> item_names, ArrayList<String> item_sizes, ArrayList<Integer> item_quantities) {
         this.item_images = item_images;
@@ -89,39 +88,97 @@ public class cart_item extends RecyclerView.Adapter<cart_item.cart_itemHolder> {
 //                }
 //            });
 
+//            btnMinus.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    int position = getAdapterPosition();
+//                    if (position != RecyclerView.NO_POSITION) {
+////                        int count = Integer.parseInt(txtCount.getText().toString());
+//                        int count = item_quantities.get(position);
+//
+//                        if (count > 1) {
+//                            count--;
+//                            item_quantities.set(position, count);
+//                            txtCount.setText(String.valueOf(count));
+//
+//                            // If count reaches 0, remove the item from all lists
+////                            if (count == 0) {
+////                                item_images.remove(position);
+////                                item_prices.remove(position);
+////                                item_names.remove(position);
+////                                item_sizes.remove(position);
+////                                item_quantities.remove(position);
+////
+////                                // Notify adapter about the item removal
+////                                notifyItemRemoved(position);
+////                                notifyItemRangeChanged(position, item_names.size()); // Refresh remaining items
+////                            }
+//                        }
+//                        Toast.makeText(itemView.getContext(), count+"", Toast.LENGTH_SHORT).show();
+//                    }
+//                }
+//            });
+//
+//            btnPlus.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+////                    if (count < 5) {
+////                        count++;
+////                        txtCount.setText(String.valueOf(count));
+//////                        Intent i = new Intent(itemView.getContext(), cart.class);
+//////                        itemView.getContext().startActivity(i);
+////                    }
+////                    Toast.makeText(itemView.getContext(), count+"", Toast.LENGTH_SHORT).show();
+//                    int position = getAdapterPosition();
+//                    if (position != RecyclerView.NO_POSITION) {
+//                        int count = item_quantities.get(position);
+//
+//                        if (count < 5) {
+//                            count++;
+//                            item_quantities.set(position, count); // Update the quantity in the list
+//                            txtCount.setText(String.valueOf(count));
+//                        }
+//                        Toast.makeText(itemView.getContext(), count + "", Toast.LENGTH_SHORT).show();
+//                    }
+//                }
+//            });
+
             btnMinus.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     int position = getAdapterPosition();
-//                    if (position != RecyclerView.NO_POSITION) {
-                        int count = Integer.parseInt(txtCount.getText().toString());
+                    if (position != RecyclerView.NO_POSITION) {
+                        int count = item_quantities.get(position);
 
-                        if (count > 0) {
+                        if (count > 1) {
                             count--;
+                            item_quantities.set(position, count);
                             txtCount.setText(String.valueOf(count));
 
-                            // If count reaches 0, remove the item from all lists
-                            if (count == 0) {
-                                item_images.remove(position);
-                                item_prices.remove(position);
-                                item_names.remove(position);
-                                item_sizes.remove(position);
-                                item_quantities.remove(position);
-
-                                notifyItemRemoved(position);
-                                notifyItemRangeChanged(position, item_names.size());
+                            if (listener != null) {
+                                listener.onQuantityChanged();
                             }
                         }
-//                    }
+                    }
                 }
             });
 
             btnPlus.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (count < 5) {
-                        count++;
-                        txtCount.setText(String.valueOf(count));
+                    int position = getAdapterPosition();
+                    if (position != RecyclerView.NO_POSITION) {
+                        int count = item_quantities.get(position);
+
+                        if (count < 5) {
+                            count++;
+                            item_quantities.set(position, count);
+                            txtCount.setText(String.valueOf(count));
+
+                            if (listener != null) {
+                                listener.onQuantityChanged();
+                            }
+                        }
                     }
                 }
             });
@@ -146,6 +203,15 @@ public class cart_item extends RecyclerView.Adapter<cart_item.cart_itemHolder> {
         }
     }
 
+    public interface OnQuantityChangeListener {
+        void onQuantityChanged();
+    }
+
+    private OnQuantityChangeListener listener;
+
+    public void setOnQuantityChangeListener(OnQuantityChangeListener listener) {
+        this.listener = listener;
+    }
 
 }
 
