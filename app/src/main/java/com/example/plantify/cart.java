@@ -114,8 +114,19 @@ public class cart extends AppCompatActivity {
 //        txtCount.setText(String.valueOf(qty));
 
 
+//        cart_item c = new cart_item(img, price, name, size, qty);
+//        recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+//        recyclerView.setAdapter(c);
+
         cart_item c = new cart_item(img, price, name, size, qty);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+        c.setOnQuantityChangeListener(new cart_item.OnQuantityChangeListener() {
+            @Override
+            public void onQuantityChanged() {
+                updateTotalPrice();
+            }
+        });
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         recyclerView.setAdapter(c);
 
         back.setOnClickListener(new View.OnClickListener() {
@@ -137,5 +148,16 @@ public class cart extends AppCompatActivity {
         i.putStringArrayListExtra("name",name);
         startActivity(i);
         finish();
+    }
+
+    private void updateTotalPrice() {
+        int totalPrice = 0;
+        for (int i = 0; i < price.size(); i++) {
+            totalPrice += price.get(i) * qty.get(i); // Multiply price by quantity
+        }
+
+        subTotalPrice.setText(String.valueOf(totalPrice));
+        grandTotalPrice.setText(String.valueOf(totalPrice));
+        checkoutPrice.setText(String.valueOf(totalPrice));
     }
 }
