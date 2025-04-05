@@ -16,6 +16,10 @@ import androidx.appcompat.widget.AppCompatButton;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Objects;
+
 public class shop extends AppCompatActivity {
 
     LinearLayout main;
@@ -29,6 +33,9 @@ public class shop extends AppCompatActivity {
 //    String[] item_names = {"Peacock Plant", "Brazilian Wood Plant", "Money Plant Golden"};
 //    String[] item_sizes = {"Small", "Medium", "Small"};
 //    int[] item_quantities = {1, 1, 1};
+
+//    String[] name = Objects.requireNonNull(getIntent().getStringArrayListExtra("name")).toArray(new String[0]);
+    boolean isavail = false;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -207,19 +214,27 @@ public class shop extends AppCompatActivity {
 
         h_jmp_cart_click.setOnClickListener(v -> {
             int currentCount = cart_item.count;
-            Toast.makeText(this, currentCount+"", Toast.LENGTH_SHORT).show();
-            onCartClick(R.drawable.jade_mini_plats, "Jade Mini Plats", 499, "Small", 1);
-            if(currentCount < 1){
-                h_jmp_cart_click.setText("Plant added");
-                h_jmp_cart_click.setEnabled(false);
-                h_jmp_cart_click.setBackground(getResources().getDrawable(R.drawable.edit_text_stroke));
-            } else {
-                h_jmp_cart_click.setText("Add to cart");
-                h_jmp_cart_click.setEnabled(true);
-                h_jmp_cart_click.setBackground(getResources().getDrawable(R.drawable.button_stroke_shop_page));
-            }
+            onCartClick(R.drawable.jade_mini_plats, "Jade Plant Mini", 499, "Small", 1);
+//            Intent i = getIntent();
+//            String[] name = Objects.requireNonNull(getIntent().getStringArrayListExtra("name")).toArray(new String[0]);
+//            ArrayList<String> name = i.getStringArrayListExtra("name");
+//            Toast.makeText(this, name+"", Toast.LENGTH_SHORT).show();
+//            for (String n : name){
+//                if ("Jade Plant Mini".equals(n)){
+//                    isavail = true;
+//                }
+//            }
+//
+//            if (name != null && isavail) {
+//                h_jmp_cart_click.setText("Plant added");
+//                h_jmp_cart_click.setEnabled(false);
+//                h_jmp_cart_click.setBackground(getResources().getDrawable(R.drawable.edit_text_stroke));
+//            } else {
+//                h_jmp_cart_click.setText("Add to cart");
+//                h_jmp_cart_click.setEnabled(true);
+//                h_jmp_cart_click.setBackground(getResources().getDrawable(R.drawable.button_stroke_shop_page));
+//            }
         });
-
 
         h_plp_cart_click.setOnClickListener(v -> {
             onCartClick(R.drawable.peace_lily_plant, "Peace Lily Plant", 499, "Small", 1);
@@ -277,7 +292,7 @@ public class shop extends AppCompatActivity {
             onCartClick(R.drawable.variegated_jade_mini_plant, "Variegated Jade Mini Plant", 499, "Small", 1);
         });
 
-        bnv.setSelectedItemId(R.id.shop);
+//        bnv.setSelectedItemId(R.id.shop);
         bnv.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -346,5 +361,10 @@ public class shop extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
         overridePendingTransition(0, R.anim.fade_out);
+    }
+
+    protected void onResume() {
+        super.onResume();
+        bnv.setSelectedItemId(R.id.shop);
     }
 }

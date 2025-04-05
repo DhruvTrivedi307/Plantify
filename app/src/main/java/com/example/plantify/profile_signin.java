@@ -128,7 +128,7 @@ public class profile_signin extends AppCompatActivity {
 
         bnv = findViewById(R.id.bnv);
 
-        bnv.setSelectedItemId(R.id.profile);
+//        bnv.setSelectedItemId(R.id.profile);
 
         bnv.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -210,5 +210,10 @@ public class profile_signin extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
         overridePendingTransition(0, R.anim.fade_out);
+    }
+
+    protected void onResume() {
+        super.onResume();
+        bnv.setSelectedItemId(R.id.profile);
     }
 }

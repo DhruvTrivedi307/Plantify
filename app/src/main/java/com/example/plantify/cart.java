@@ -80,6 +80,8 @@ public class cart extends AppCompatActivity {
         grandTotalPrice = findViewById(R.id.grandTotalPrice);
         checkoutPrice = findViewById(R.id.checkoutPrice);
 
+        back = findViewById(R.id.back);
+
 //        cart_item c = new cart_item(item_images, item_prices, item_names, item_sizes, item_quantities);
 
 //        recyclerView.setAdapter(c);
@@ -101,8 +103,6 @@ public class cart extends AppCompatActivity {
             totalPrice += p;
         }
 
-
-
         subTotalPrice.setText(String.valueOf(totalPrice));
         grandTotalPrice.setText(String.valueOf(totalPrice));
         checkoutPrice.setText(String.valueOf(totalPrice));
@@ -118,7 +118,24 @@ public class cart extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
         recyclerView.setAdapter(c);
 
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), shop.class);
+                i.putStringArrayListExtra("name",name);
+                startActivity(i);
+                finish();
+            }
+        });
 
+    }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent i = new Intent(getApplicationContext(), shop.class);
+        i.putStringArrayListExtra("name",name);
+        startActivity(i);
+        finish();
     }
 }

@@ -2,6 +2,7 @@ package com.example.plantify;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Paint;
 import android.os.Bundle;
 import android.os.Handler;
@@ -326,7 +327,7 @@ public class home extends AppCompatActivity {
             }
         });
 
-        bnv.setSelectedItemId(R.id.home);
+//        bnv.setSelectedItemId(R.id.home);
 
         bnv.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -388,12 +389,18 @@ public class home extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        overridePendingTransition(0, R.anim.fade_out);
+        finishAffinity();
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
         handler.removeCallbacks(runnable);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        bnv.setSelectedItemId(R.id.home);
     }
 }
