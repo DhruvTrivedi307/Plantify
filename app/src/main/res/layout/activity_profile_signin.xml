@@ -240,7 +240,8 @@
         app:itemTextAppearanceInactive="@style/BottomNavInactiveText"
         app:itemTextColor="@color/bottom_nav_selector"
         app:labelVisibilityMode="labeled"
-        app:menu="@menu/menu" />
+        app:menu="@menu/menu"
+        app:itemRippleColor="@color/background_gray"/>
     
 </LinearLayout>
 </LinearLayout>

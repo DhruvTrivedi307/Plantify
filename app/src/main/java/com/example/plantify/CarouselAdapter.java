@@ -10,17 +10,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 public class CarouselAdapter extends RecyclerView.Adapter<CarouselAdapter.CarouselViewHolder> {
-    private List<Integer> images;
-    private Context context;
+    private final List<Integer> images;
+    private final Context context;
 
     public CarouselAdapter(Context context, List<Integer> images) {
         this.context = context;
         this.images = images;
-    }
-
-    public CarouselAdapter(home context, List<Integer> imgs) {
-        this.context = context;
-        this.images = imgs;
     }
 
     @NonNull
@@ -32,12 +27,14 @@ public class CarouselAdapter extends RecyclerView.Adapter<CarouselAdapter.Carous
 
     @Override
     public void onBindViewHolder(@NonNull CarouselViewHolder holder, int position) {
-        holder.imageView.setImageResource(images.get(position));
+        if (images != null && position < images.size()) {
+            holder.imageView.setImageResource(images.get(position));
+        }
     }
 
     @Override
     public int getItemCount() {
-        return images.size();
+        return (images != null) ? images.size() : 0;
     }
 
     static class CarouselViewHolder extends RecyclerView.ViewHolder {

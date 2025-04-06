@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.HapticFeedbackConstants;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.VideoView;
@@ -24,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        startActivity(new Intent(MainActivity.this, home.class));
-        finish();
+//        startActivity(new Intent(MainActivity.this, home.class));
+//        finish();
         vv = findViewById(R.id.vv);
 
         String path = "android.resource://"+getPackageName()+"/"+R.raw.splash;
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         vv.start();
 
         new Handler().postDelayed(() -> {
+            vv.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS);
             startActivity(new Intent(this, home.class));
             finish();
         }, SPLASH_TIME_OUT);
