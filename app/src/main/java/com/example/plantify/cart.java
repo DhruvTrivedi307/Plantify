@@ -139,8 +139,8 @@ public class cart extends AppCompatActivity {
             totalPrice += price.get(i) * qty.get(i); // Multiply price by quantity
         }
 
-        subTotalPrice.setText(String.valueOf(totalPrice));
-        grandTotalPrice.setText(String.valueOf(totalPrice));
-        checkoutPrice.setText(String.valueOf(totalPrice));
+        subTotalPrice.setText("₹"+String.valueOf(totalPrice));
+        grandTotalPrice.setText("₹"+String.valueOf(totalPrice));
+        checkoutPrice.setText("₹"+String.valueOf(totalPrice));
     }
 }

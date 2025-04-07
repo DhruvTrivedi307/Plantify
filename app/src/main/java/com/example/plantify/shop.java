@@ -208,13 +208,13 @@ public class shop extends AppCompatActivity {
 //            intent.putExtra("qty", 1);
 //            intent.putExtra("size", "Small");
 //            startActivity(intent);
-            onCartClick(R.drawable.broken_heart_plant_2, "Broken heart Plant", 499, "Small", 1);
+            onCartClick(R.drawable.broken_heart_plant_2, "Broken heart Plant", 299, "Small", 1);
         });
 
 
         h_jmp_cart_click.setOnClickListener(v -> {
             int currentCount = cart_item.count;
-            onCartClick(R.drawable.jade_mini_plats, "Jade Plant Mini", 499, "Small", 1);
+            onCartClick(R.drawable.jade_mini_plats, "Jade Plant Mini", 279, "Small", 1);
 //            Intent i = getIntent();
 //            String[] name = Objects.requireNonNull(getIntent().getStringArrayListExtra("name")).toArray(new String[0]);
 //            ArrayList<String> name = i.getStringArrayListExtra("name");
@@ -237,31 +237,31 @@ public class shop extends AppCompatActivity {
         });
 
         h_plp_cart_click.setOnClickListener(v -> {
-            onCartClick(R.drawable.peace_lily_plant, "Peace Lily Plant", 499, "Small", 1);
+            onCartClick(R.drawable.peace_lily_plant, "Peace Lily Plant", 299, "Small", 1);
         });
 
         h_fbp_cart_click.setOnClickListener(v -> {
-            onCartClick(R.drawable.ficus_bonsai_plant, "Ficus Bonsai Plant", 499, "Small", 1);
+            onCartClick(R.drawable.ficus_bonsai_plant, "Ficus Bonsai Plant", 949, "Small", 1);
         });
 
         h_lbp_cart_click.setOnClickListener(v -> {
-            onCartClick(R.drawable.lucky_bamboo_plant, "Lucky Bamboo Plant", 499, "Small", 1);
+            onCartClick(R.drawable.lucky_bamboo_plant, "Lucky Bamboo Plant", 349, "Small", 1);
         });
 
         h_stp_cart_click.setOnClickListener(v -> {
-            onCartClick(R.drawable.stromanthe_triostar_plant, "Stormanthe Triostar Plant", 499, "Small", 1);
+            onCartClick(R.drawable.stromanthe_triostar_plant, "Stormanthe Triostar Plant", 349, "Small", 1);
         });
 
         h_pgp_cart_click.setOnClickListener(v -> {
-            onCartClick(R.drawable.peperomia_green_plant, "Peperomia Green Plant", 499, "Small", 1);
+            onCartClick(R.drawable.peperomia_green_plant, "Peperomia Green Plant", 279, "Small", 1);
         });
 
         h_mpg_cart_click.setOnClickListener(v -> {
-            onCartClick(R.drawable.money_plant_golden, "Money Plant Golden", 499, "Small", 1);
+            onCartClick(R.drawable.money_plant_golden, "Money Plant Golden", 279, "Small", 1);
         });
 
         h_pp_cart_click.setOnClickListener(v -> {
-            onCartClick(R.drawable.peacock_plant, "Peacock Plant", 499, "Small", 1);
+            onCartClick(R.drawable.peacock_plant, "Peacock Plant", 699, "Small", 1);
         });
 
         h_bwp_cart_click.setOnClickListener(v -> {
@@ -269,27 +269,27 @@ public class shop extends AppCompatActivity {
         });
 
         h_arp_cart_click.setOnClickListener(v -> {
-            onCartClick(R.drawable.aglaonema_red_plant, "Aglaonema Red Plant", 499, "Small", 1);
+            onCartClick(R.drawable.aglaonema_red_plant, "Aglaonema Red Plant", 749, "Small", 1);
         });
 
         h_apbp_cart_click.setOnClickListener(v -> {
-            onCartClick(R.drawable.aglaonema_pink_beauty_plant, "Aglaonema Pink Beauty Plant", 499, "Small", 1);
+            onCartClick(R.drawable.aglaonema_pink_beauty_plant, "Aglaonema Pink Beauty Plant", 714, "Small", 1);
         });
 
         h_bpx_cart_click.setOnClickListener(v -> {
-            onCartClick(R.drawable.bamboo_palm_xl, "Bamboo Palm XL", 499, "Small", 1);
+            onCartClick(R.drawable.bamboo_palm_xl, "Bamboo Palm XL", 857, "Small", 1);
         });
 
         h_bpp_cart_click.setOnClickListener(v -> {
-            onCartClick(R.drawable.bamboo_palm_plant, "Bamboo Palm Plant", 499, "Small", 1);
+            onCartClick(R.drawable.bamboo_palm_plant, "Bamboo Palm Plant", 399, "Small", 1);
         });
 
         h_flp_cart_click.setOnClickListener(v -> {
-            onCartClick(R.drawable.fiddle_leaf_fig_plant, "Fiddle Leaf Fig Plant", 499, "Small", 1);
+            onCartClick(R.drawable.fiddle_leaf_fig_plant, "Fiddle Leaf Fig Plant", 1199, "Small", 1);
         });
 
         h_vjmp_cart_click.setOnClickListener(v -> {
-            onCartClick(R.drawable.variegated_jade_mini_plant, "Variegated Jade Mini Plant", 499, "Small", 1);
+            onCartClick(R.drawable.variegated_jade_mini_plant, "Variegated Jade Mini Plant", 299, "Small", 1);
         });
 
 //        bnv.setSelectedItemId(R.id.shop);

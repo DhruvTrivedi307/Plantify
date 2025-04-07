@@ -73,7 +73,7 @@
 
             <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="400dp"
+                android:layout_height="410dp"
                 android:src="@drawable/trending_page_display_img"
                 android:layout_gravity="center"/>
 
@@ -1369,6 +1369,7 @@
         app:itemTextAppearanceInactive="@style/BottomNavInactiveText"
         app:itemTextColor="@color/bottom_nav_selector"
         app:labelVisibilityMode="labeled"
-        app:menu="@menu/menu" />
+        app:menu="@menu/menu"
+        app:itemRippleColor="@color/background_gray"/>
 
 </LinearLayout>

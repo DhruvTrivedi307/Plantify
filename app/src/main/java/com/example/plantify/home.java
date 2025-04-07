@@ -9,6 +9,7 @@ import android.os.Looper;
 import android.view.HapticFeedbackConstants;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -21,6 +22,8 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
 
 import java.util.Arrays;
 import java.util.List;
@@ -43,6 +46,7 @@ public class home extends AppCompatActivity {
     TextView txtCount;
     private int count = 1;
     Button btnMinus,btnPlus,buy_now_bottom;
+    TabLayout tabLayout;
 
     @SuppressLint({"MissingInflatedId", "WrongViewCast"})
     @Override
@@ -231,21 +235,35 @@ public class home extends AppCompatActivity {
 
 
         List<Integer> imgs = Arrays.asList(
-                R.drawable.carousel_img_6,
-                R.drawable.carousel_img_5,
-                R.drawable.carousel_img_4,
-                R.drawable.carousel_img_3,
+                R.drawable.carousel_img_1,
                 R.drawable.carousel_img_2,
-                R.drawable.carousel_img_1
+                R.drawable.carousel_img_3,
+                R.drawable.carousel_img_4,
+                R.drawable.carousel_img_5
         );
 
         CarouselAdapter c = new CarouselAdapter(this, imgs);
         vp.setAdapter(c);
 
-        TextView priceText = findViewById(R.id.priceText);
-        priceText.setPaintFlags(priceText.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
-        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) TextView priceText2 = findViewById(R.id.priceText2);
-        priceText2.setPaintFlags(priceText.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+        ViewPager2 viewPager2 = findViewById(R.id.vp);
+        tabLayout = findViewById(R.id.tabLayout);
+
+        viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+            @Override
+            public void onPageSelected(int position) {
+                for (int i = 0; i < tabLayout.getTabCount(); i++) {
+                    View tabView = tabLayout.getTabAt(i).getCustomView();
+                    if (tabView instanceof ImageView) {
+                        ((ImageView) tabView).setImageResource(i == position ? R.drawable.dot_active : R.drawable.dot_inactive);
+                    }
+                }
+            }
+        });
+
+        // Link dots with ViewPager2
+        new TabLayoutMediator(tabLayout, viewPager2, (tab, position) -> {
+            tab.setCustomView(getTabView(position));
+        }).attach();
 
         runnable = new Runnable() {
             @Override
@@ -374,6 +392,20 @@ public class home extends AppCompatActivity {
         small.setOnClickListener(sizeClickListener);
         medium.setOnClickListener(sizeClickListener);
 
+    }
+
+    private View getTabView(int position) {
+        ImageView dot = new ImageView(this);
+
+        // Reduce the size of dots (optional)
+        int dotSize = 30; // Change this for smaller/larger dots
+
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(dotSize, dotSize);
+        params.setMargins(0, 0, 0, 0); // Adjust margins to reduce spacing
+        dot.setLayoutParams(params);
+
+        dot.setImageResource(R.drawable.dot_inactive); // Default: Inactive dot
+        return dot;
     }
 
     public void onCartClick(String name, int price) {

@@ -51,55 +51,55 @@
             android:padding="20dp">
 
             <TextView
-                android:id="@+id/empty"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Your Cart is Empty"
-                android:visibility="gone" />
+                android:visibility="gone"
+                android:id="@+id/empty"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/outfit_bold"
                 android:text="Order Summary"
-                android:textColor="@color/black"
                 android:textSize="20dp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:fontFamily="@font/outfit_bold"/>
 
-            <LinearLayout
-                android:id="@+id/cart_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/cart"
+                <LinearLayout
+                    android:id="@+id/cart_container"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-            </LinearLayout>
-            <!--            <View-->
-            <!--                android:layout_marginTop="30dp"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="1dp"-->
-            <!--                android:layout_weight="1"-->
-            <!--                android:background="#CCCCCC"/>-->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cart"/>
+
+                </LinearLayout>
+<!--            <View-->
+<!--                android:layout_marginTop="30dp"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="#CCCCCC"/>-->
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/outfit_bold"
                 android:text="Payment Details"
                 android:textColor="@color/black"
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/outfit_bold"/>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:backgroundTint="@color/background_gray"
-                app:cardCornerRadius="10dp">
+                app:cardCornerRadius="10dp"
+                android:layout_marginTop="20dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -111,15 +111,15 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:paddingLeft="20dp"
-                        android:paddingTop="20dp"
-                        android:paddingRight="20dp">
+                        android:paddingRight="20dp"
+                        android:paddingTop="20dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/outfit_medium"
                             android:text="Subtotal"
-                            android:textSize="14dp" />
+                            android:fontFamily="@font/outfit_medium"
+                            android:textSize="14dp"/>
 
                         <View
                             android:layout_width="0dp"
@@ -130,7 +130,7 @@
                             android:id="@+id/subTotalPrice"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="₹499" />
+                            android:text="₹499"/>
 
                     </LinearLayout>
 
@@ -139,15 +139,15 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:paddingLeft="20dp"
-                        android:paddingTop="20dp"
-                        android:paddingRight="20dp">
+                        android:paddingRight="20dp"
+                        android:paddingTop="20dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/outfit_medium"
                             android:text="Discount"
-                            android:textSize="14dp" />
+                            android:fontFamily="@font/outfit_medium"
+                            android:textSize="14dp"/>
 
                         <View
                             android:layout_width="0dp"
@@ -157,7 +157,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="₹0" />
+                            android:text="₹0"/>
 
                     </LinearLayout>
 
@@ -166,15 +166,15 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:paddingLeft="20dp"
-                        android:paddingTop="20dp"
-                        android:paddingRight="20dp">
+                        android:paddingRight="20dp"
+                        android:paddingTop="20dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/outfit_medium"
                             android:text="Shipping"
-                            android:textSize="14dp" />
+                            android:fontFamily="@font/outfit_medium"
+                            android:textSize="14dp"/>
 
                         <View
                             android:layout_width="0dp"
@@ -184,15 +184,15 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="FREE" />
+                            android:text="FREE"/>
 
                     </LinearLayout>
 
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:layout_margin="10dp"
-                        android:background="@color/edit_text_stroke" />
+                        android:background="@color/edit_text_stroke"
+                        android:layout_margin="10dp"/>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -205,9 +205,9 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/outfit_medium"
                             android:text="Grand Total"
-                            android:textSize="16dp" />
+                            android:fontFamily="@font/outfit_medium"
+                            android:textSize="16dp"/>
 
                         <View
                             android:layout_width="0dp"
@@ -218,8 +218,8 @@
                             android:id="@+id/grandTotalPrice"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/outfit_bold"
-                            android:text="₹499" />
+                            android:text="₹499"
+                            android:fontFamily="@font/outfit_bold"/>
 
                     </LinearLayout>
 

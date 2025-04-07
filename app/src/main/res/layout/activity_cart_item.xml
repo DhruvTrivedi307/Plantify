@@ -37,12 +37,12 @@
                 android:textStyle="bold"
                 android:fontFamily="@font/outfit_medium"
                 android:layout_marginBottom="10dp"
-                android:layout_marginTop="20dp"/>
+                android:layout_marginTop="10dp"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -96,8 +96,7 @@
                 android:text="Quantity : "
                 android:textSize="16dp"
                 android:fontFamily="@font/outfit_medium"
-                android:textColor="@color/theme_text"
-                android:layout_marginTop="20dp"/>
+                android:textColor="@color/theme_text" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -143,11 +142,11 @@
 
                 <ImageView
                     android:id="@+id/remove_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
                     android:src="@drawable/remove_shopping_bag"
                     android:layout_gravity="bottom"
-                    android:layout_marginLeft="30dp"/>
+                    android:layout_marginLeft="10dp"/>
 
             </LinearLayout>
 
