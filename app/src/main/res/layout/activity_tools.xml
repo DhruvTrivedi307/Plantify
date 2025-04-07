@@ -86,7 +86,7 @@
                 <ImageView
                     android:layout_width="26dp"
                     android:layout_height="33dp"
-                    android:src="@drawable/filter"
+                    android:src="@drawable/filter_icon"
                     android:layout_gravity="center"/>
 
                 <TextView
