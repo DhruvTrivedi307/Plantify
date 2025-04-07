@@ -41,7 +41,6 @@ public class cart extends AppCompatActivity {
     TextView subTotalPrice,grandTotalPrice,checkoutPrice;
 
     int totalPrice = 0;
-    int totalQty = 0;
 
 //    int[] item_images = {R.drawable.peacock_plant, R.drawable.brazilian_wood_plant, R.drawable.money_plant_golden};
 //    int[] item_prices = {499, 899, 479};
@@ -54,6 +53,8 @@ public class cart extends AppCompatActivity {
     static ArrayList<String> name = new ArrayList<>();
     static ArrayList<String> size = new ArrayList<>();
     static ArrayList<Integer> qty = new ArrayList<>();
+
+
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -87,15 +88,31 @@ public class cart extends AppCompatActivity {
         Intent i = getIntent();
 
 
-        if(i.getStringExtra("name") == null){
+        if (i.getStringExtra("name") == null) {
 
         } else {
-            img.add(i.getIntExtra("img", 0));
-            name.add(i.getStringExtra("name"));
-            price.add(i.getIntExtra("price", 0));
-            size.add(i.getStringExtra("size"));
-            qty.add(i.getIntExtra("qty", 0));
+            String productName = i.getStringExtra("name");
+
+            if (name.contains(productName)) {
+                // Product exists, check quantity
+                int index = name.indexOf(productName);
+                int currentQty = qty.get(index);
+
+                if (currentQty < 5) {
+                    qty.set(index, currentQty + 1);
+                }
+                // If quantity is 5, do nothing
+            } else {
+                // Product does not exist, add it
+                img.add(i.getIntExtra("img", 0));
+                name.add(productName);
+                price.add(i.getIntExtra("price", 0));
+                size.add(i.getStringExtra("size"));
+                qty.add(i.getIntExtra("qty", 0));
+            }
         }
+
+
 
         for (int p : price) {
             totalPrice += p;
@@ -128,9 +145,6 @@ public class cart extends AppCompatActivity {
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         recyclerView.setAdapter(c);
-
-
-
     }
 
     private void updateTotalPrice() {

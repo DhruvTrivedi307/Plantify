@@ -7,4 +7,6 @@
         <item name="colorControlActivated">#000000</item> <!-- Change to your preferred color -->
     </style>
 
+    <style name="Theme.Plantify" parent="Base.Theme.Plantify" />
+
 </resources>

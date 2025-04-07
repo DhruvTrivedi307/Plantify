@@ -84,7 +84,7 @@ public class shop extends AppCompatActivity {
         filter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(shop.this, filter_type_of_plants.class));
+                startActivity(new Intent(shop.this, filter.class));
             }
         });
 

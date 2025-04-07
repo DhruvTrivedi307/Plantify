@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.content.SharedPreferences;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioGroup;
@@ -200,36 +201,28 @@ public class home extends AppCompatActivity {
         h_bhp_cart_click.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String name = "Broken Heart Plant";
-                int price = 499;
-                onCartClick(name,price);
+                onCartClick(R.drawable.broken_heart_plant_2,"Broken Heart Plant",299,"Small",1);
             }
         });
 
         h_jmp_cart_click.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String name = "Jade Mini Plant";
-                int price = 499;
-                onCartClick(name,price);
+                onCartClick(R.drawable.jade_mini_plats,"Jade Mini Plant",279,"Small",1);
             }
         });
 
         h_bwp_cart_click.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String name = "Brazilian Wood Plant";
-                int price = 499;
-                onCartClick(name,price);
+                onCartClick(R.drawable.brazilian_wood_plant,"Brazilian Wood Plant",499,"Small",1);
             }
         });
 
         h_pp_cart_click.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String name = "Peacock Plant";
-                int price = 499;
-                onCartClick(name,price);
+                onCartClick(R.drawable.peacock_plant,"Peacock Plant",699,"Small",1);
             }
         });
 
@@ -344,7 +337,6 @@ public class home extends AppCompatActivity {
             }
         });
 
-        bnv.setSelectedItemId(R.id.home);
 
         bnv.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -408,24 +400,33 @@ public class home extends AppCompatActivity {
         return dot;
     }
 
-    public void onCartClick(String name, int price) {
-        main.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS);
+    public boolean onCartClick(int img, String name, int price, String size, int qty) {
+        main.performHapticFeedback(HapticFeedbackConstants.CONTEXT_CLICK);
         Intent intent = new Intent(getApplicationContext(), cart.class);
-        intent.putExtra("img",R.drawable.broken_heart_plant_2);
-        intent.putExtra("name",name);
-        intent.putExtra("price",price);
+        intent.putExtra("img", img);
+        intent.putExtra("name", name);
+        intent.putExtra("price", price);
+        intent.putExtra("qty", qty);
+        intent.putExtra("size", size);
         startActivity(intent);
+        return true;
     }
 
     @Override
     public void onBackPressed() {
         super.onBackPressed();
         overridePendingTransition(0, R.anim.fade_out);
+        finishAffinity();
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
         handler.removeCallbacks(runnable);
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        bnv.setSelectedItemId(R.id.home);
     }
 }
