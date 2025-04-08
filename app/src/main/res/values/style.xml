@@ -2,11 +2,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <style name="plantify" parent="Theme.AppCompat.Light.NoActionBar">
 
-        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorAccent">@color/colorAccent</item>
 
-        <!-- Defining that new color in ColorPrimaryDark -->
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
     </style>
     <style name="Theme.Plantify" parent="Theme.MaterialComponents.Light.NoActionBar">

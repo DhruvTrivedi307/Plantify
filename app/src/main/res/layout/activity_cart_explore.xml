@@ -6,37 +6,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".cart">
+    tools:context=".cart_explore">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="4dp"
+        android:orientation="horizontal"
+        android:paddingTop="40dp"
+        android:paddingBottom="20dp">
+
+        <ImageButton
+            android:background="@android:color/transparent"
+            android:id="@+id/back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/arrow_back"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:elevation="4dp"
-            android:orientation="horizontal"
-            android:paddingTop="40dp"
-            android:paddingBottom="20dp">
+            android:layout_gravity="center"
+            android:paddingLeft="5dp"
+            android:text="Cart"
+            android:textColor="@color/theme_text"
+            android:textSize="14dp"
+            android:fontFamily="@font/outfit_medium"/>
 
-            <ImageButton
-                android:background="@android:color/transparent"
-                android:id="@+id/back"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginStart="16dp"
-                android:src="@drawable/arrow_back"
-                android:layout_gravity="center"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:paddingLeft="5dp"
-                android:text="Cart"
-                android:textColor="@color/theme_text"
-                android:textSize="14dp"
-                android:fontFamily="@font/outfit_medium"/>
-
-        </LinearLayout>
+    </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -66,24 +67,24 @@
                 android:textColor="@color/black"
                 android:fontFamily="@font/outfit_bold"/>
 
-                <LinearLayout
-                    android:id="@+id/cart_container"
+            <LinearLayout
+                android:id="@+id/cart_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:id="@+id/cart_e"/>
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/cart"/>
-
-                </LinearLayout>
-<!--            <View-->
-<!--                android:layout_marginTop="30dp"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="1dp"-->
-<!--                android:layout_weight="1"-->
-<!--                android:background="#CCCCCC"/>-->
+            </LinearLayout>
+            <!--            <View-->
+            <!--                android:layout_marginTop="30dp"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="1dp"-->
+            <!--                android:layout_weight="1"-->
+            <!--                android:background="#CCCCCC"/>-->
 
             <TextView
                 android:layout_width="wrap_content"
@@ -282,5 +283,7 @@
         </LinearLayout>
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
 
 </LinearLayout>

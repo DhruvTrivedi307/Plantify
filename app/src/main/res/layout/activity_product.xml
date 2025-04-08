@@ -148,7 +148,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Select Plant Size: "
+                        android:text="Select Size: "
                         android:fontFamily="@font/outfit_medium"
                         android:textColor="@color/black"
                         android:layout_marginBottom="10dp"/>
@@ -275,6 +275,7 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
+                        android:id="@+id/p_bhp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
@@ -321,6 +322,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/p_jmp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
@@ -338,7 +340,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/outfit_bold"
                             android:paddingTop="5dp"
-                            android:text="Jade Plant Mini" />
+                            android:text="Jade Mini Plant" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -367,6 +369,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/p_bwp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
@@ -413,6 +416,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/p_pp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
@@ -459,6 +463,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/p_fbp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
@@ -505,6 +510,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/p_lbp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
@@ -550,51 +556,51 @@
 
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginBottom="20dp"
-                        android:orientation="vertical">
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginLeft="20dp"-->
+<!--                        android:layout_marginTop="20dp"-->
+<!--                        android:layout_marginBottom="20dp"-->
+<!--                        android:orientation="vertical">-->
 
-                        <ImageView
-                            android:layout_width="160dp"
-                            android:layout_height="200dp"
-                            android:src="@drawable/broken_heart_plant" />
+<!--                        <ImageView-->
+<!--                            android:layout_width="160dp"-->
+<!--                            android:layout_height="200dp"-->
+<!--                            android:src="@drawable/broken_heart_plant" />-->
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/outfit_bold"
-                            android:paddingTop="5dp"
-                            android:text="Broken Heart Plant" />
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:fontFamily="@font/outfit_bold"-->
+<!--                            android:paddingTop="5dp"-->
+<!--                            android:text="Broken Heart Plant" />-->
 
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:orientation="horizontal">-->
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/sansita_swashed"
-                                android:paddingRight="5dp"
-                                android:text="₹1999"
-                                android:textSize="10dp" />
+<!--                            <TextView-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:fontFamily="@font/sansita_swashed"-->
+<!--                                android:paddingRight="5dp"-->
+<!--                                android:text="₹1999"-->
+<!--                                android:textSize="10dp" />-->
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/sansita_swashed"
-                                android:padding="5dp"
-                                android:text="₹499"
-                                android:textColor="@color/theme"
-                                android:textSize="12dp" />
+<!--                            <TextView-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:fontFamily="@font/sansita_swashed"-->
+<!--                                android:padding="5dp"-->
+<!--                                android:text="₹499"-->
+<!--                                android:textColor="@color/theme"-->
+<!--                                android:textSize="12dp" />-->
 
-                        </LinearLayout>
+<!--                        </LinearLayout>-->
 
-                    </LinearLayout>
+<!--                    </LinearLayout>-->
 
                 </LinearLayout>
 
@@ -627,14 +633,14 @@
                 android:fontFamily="@font/outfit_medium"/>
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/add_to_cart"
                 android:layout_width="180dp"
                 android:layout_height="40dp"
                 android:background="@drawable/radius"
                 android:hint="ADD TO CART"
                 android:layout_margin="10dp"
                 android:textColorHint="@color/white"
-                android:fontFamily="@font/outfit_medium"
-                android:id="@+id/add_to_cart"/>
+                android:fontFamily="@font/outfit_medium"/>
 
         </LinearLayout>
 

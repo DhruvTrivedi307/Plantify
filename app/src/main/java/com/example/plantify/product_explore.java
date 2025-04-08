@@ -57,7 +57,7 @@ public class product_explore extends AppCompatActivity {
 
         Intent i = getIntent();
 
-        if (i != null) {
+//        if (i != null) {
             int img = i.getIntExtra("img", 0);
             String name = i.getStringExtra("name");
             int price = i.getIntExtra("price", 0);
@@ -81,7 +81,7 @@ public class product_explore extends AppCompatActivity {
             }
 
             productPrice.setText("₹" + price);
-        }
+//        }
 
         btnMinus.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,7 +106,13 @@ public class product_explore extends AppCompatActivity {
         buy_now.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), checkout.class);
+                Intent i = new Intent(product_explore.this, checkout.class);
+                i.putExtra("page","product");
+                i.putExtra("img",img);
+                i.putExtra("name",name);
+                i.putExtra("price",price);
+                i.putExtra("size","Small");
+                i.putExtra("qty", Integer.parseInt(txtCount.getText().toString()));
                 startActivity(i);
             }
         });

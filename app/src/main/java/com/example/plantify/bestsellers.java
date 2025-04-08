@@ -18,7 +18,7 @@ public class bestsellers extends AppCompatActivity {
 
     LinearLayout main;
     LinearLayout b_lbp, b_fbp, b_pp, b_bwp, b_jmp, b_mpg, b_bhp, b_plp;
-    AppCompatButton b_lbp_cart_click, b_fbp_cart_click, b_pp_cart_click, b_bwp_cart_click, b_jmp_cart_click, b_mpg_cart_click, b_bhp_cart_click;
+    AppCompatButton b_lbp_cart_click, b_fbp_cart_click, b_pp_cart_click, b_bwp_cart_click, b_jmp_cart_click, b_mpg_cart_click, b_bhp_cart_click,b_plp_cart_click;
     ImageView cart_icon,search_icon;
 
     @SuppressLint("MissingInflatedId")
@@ -45,6 +45,7 @@ public class bestsellers extends AppCompatActivity {
         b_jmp_cart_click = findViewById(R.id.b_jmp_cart_click);
         b_mpg_cart_click = findViewById(R.id.b_mpg_cart_click);
         b_bhp_cart_click = findViewById(R.id.b_bhp_cart_click);
+        b_plp_cart_click = findViewById(R.id.b_plp_cart_click);
 
         cart_icon = findViewById(R.id.cart_icon);
         search_icon = findViewById(R.id.search_icon);
@@ -97,33 +98,39 @@ public class bestsellers extends AppCompatActivity {
             RedirectProduct(R.drawable.peace_lily_plant,name,price);
         });
 
+
         b_lbp_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.lucky_bamboo_plant,"Lucky Bamboo Plant","Small",349,1);
         });
 
         b_fbp_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.ficus_bonsai_plant,"Ficus Bonsai Plant","Small",949,1);
         });
 
         b_pp_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.peacock_plant,"Peacock Plant","Small",699,1);
         });
 
         b_bwp_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.brazilian_wood_plant,"Brazilian Wood Plant","Small",499,1);
         });
 
         b_jmp_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.jade_mini_plats,"Jade Mini Plant","Small",279,1);
         });
 
         b_mpg_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.money_plant_golden,"Money Golden Plant","Small",279,1);
         });
 
         b_bhp_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.broken_heart_plant_2,"Broken Heart Plant","Small",299,1);
         });
+
+        b_plp_cart_click.setOnClickListener(v -> {
+            onCartClick(R.drawable.peace_lily_plant,"Peace Lily Plant","Small",299,1);
+        });
+
 
         search_icon.setOnClickListener(v -> {
             Intent i = new Intent(getApplicationContext(),search.class);
@@ -140,16 +147,21 @@ public class bestsellers extends AppCompatActivity {
     }
 
     public void RedirectProduct(int imageResId,String name, int price){
-        Intent intent = new Intent(getApplicationContext(), product_explore.class);
+        Intent intent = new Intent(getApplicationContext(), product.class);
         intent.putExtra("img", imageResId);
         intent.putExtra("name", name);
         intent.putExtra("price", price);
         startActivity(intent);
     }
 
-    public void onCartClick() {
+    public void onCartClick(int img,String name,String size, int price,int qty) {
         main.performHapticFeedback(HapticFeedbackConstants.CONTEXT_CLICK);
         Intent intent = new Intent(getApplicationContext(), cart.class);
+        intent.putExtra("img",img);
+        intent.putExtra("name",name);
+        intent.putExtra("size",size);
+        intent.putExtra("price",price);
+        intent.putExtra("qty",qty);
         startActivity(intent);
     }
 }

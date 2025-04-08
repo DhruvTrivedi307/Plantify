@@ -19,8 +19,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class checkout extends AppCompatActivity {
 
-    ImageView p_img;
-    TextView p_name,quantity,subtotalPrice,grandtotalPrice,bottomnavPrice,Plantsize;
+    TextView subtotalPrice,grandtotalPrice,bottomnavPrice,Plantsize;
     EditText fname,lname,mono,email,pin_code,city,state,add1,add2;
     AppCompatButton checkout;
 
@@ -29,10 +28,6 @@ public class checkout extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_checkout);
-
-        p_img = findViewById(R.id.p_img);
-        p_name = findViewById(R.id.p_name);
-        quantity = findViewById(R.id.quantity);
         subtotalPrice = findViewById(R.id.subtotalPrice);
         grandtotalPrice = findViewById(R.id.grandtotalPrice);
         bottomnavPrice = findViewById(R.id.bottomnavPrice);
@@ -51,27 +46,27 @@ public class checkout extends AppCompatActivity {
 
 
         Intent i = getIntent();
-        int img = i.getIntExtra("img",0);
-        String name = i.getStringExtra("name");
+//        int img = i.getIntExtra("img",0);
+//        String name = i.getStringExtra("name");
         int price = i.getIntExtra("price",0);
-        String page = i.getStringExtra("page");
+//        String page = i.getStringExtra("page");
         int qty = i.getIntExtra("qty",1);
-        String size = i.getStringExtra("size");
+//        String size = i.getStringExtra("size");
         int totalPrice = qty*price;
 
 
-        if("product".equals(page)){
-            p_img.setImageResource(img);
-            p_name.setText(name);
-            quantity.setText(String.valueOf(qty));
+//        if("product".equals(page)){
+//            p_img.setImageResource(img);
+//            p_name.setText(name);
+//            quantity.setText(String.valueOf(qty));
             subtotalPrice.setText(String.valueOf("₹"+totalPrice));
             grandtotalPrice.setText(String.valueOf("₹"+totalPrice));
             bottomnavPrice.setText(String.valueOf("₹"+totalPrice));
-            Plantsize.setText(String.valueOf(size));
-        } else {
-            Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
-            finish();
-        }
+//            Plantsize.setText(String.valueOf(size));
+//        } else {
+//            Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
+//            finish();
+//        }
 
         checkout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,7 +86,6 @@ public class checkout extends AppCompatActivity {
                     i.putExtra("add2",add2.getText().toString().trim());
                     i.putExtra("totalPrice", totalPrice);
                     startActivity(i);
-
                 }
             }
         });

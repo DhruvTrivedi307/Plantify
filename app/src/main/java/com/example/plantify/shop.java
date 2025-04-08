@@ -105,7 +105,7 @@ public class shop extends AppCompatActivity {
         h_plp.setOnClickListener(v -> {
             String name = "Peace Lily Plant";
             int price = 299;
-            String description = " Known for its elegant white blooms and lush green leaves, the Peace Lily is a popular houseplant that purifies indoor air. It thrives in low to medium light conditions and prefers consistently moist soil.";
+            String description = "Known for its elegant white blooms and lush green leaves, the Peace Lily is a popular houseplant that purifies indoor air. It thrives in low to medium light conditions and prefers consistently moist soil.";
             RedirectProduct(R.drawable.peace_lily_plant,name,price,description);
         });
 

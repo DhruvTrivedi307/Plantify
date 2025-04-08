@@ -17,7 +17,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class tools extends AppCompatActivity {
 
-    LinearLayout main;
+    LinearLayout main,filter;
     LinearLayout dmm, hwp, dpw, fpw, cps, pis, ss, ws;
     AppCompatButton dmm_cart_click, hwp_cart_click, dpw_cart_click, fpw_cart_click, cps_cart_click, pis_cart_click, ss_cart_click, ws_cart_click;
 
@@ -28,6 +28,7 @@ public class tools extends AppCompatActivity {
         setContentView(R.layout.activity_tools);
 
         main = findViewById(R.id.main);
+        filter = findViewById(R.id.filter);
 
         dmm = findViewById(R.id.dmm);
         hwp = findViewById(R.id.hwp);
@@ -103,35 +104,35 @@ public class tools extends AppCompatActivity {
         });
 
         dmm_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.dom_metallic_mister,"Dom Metallic Mister","Small",859,1);
         });
 
         hwp_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.hydra_watering_pitcher,"Hydra Watering Pitcher","Samll",399,1);
         });
 
         dpw_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.double_prong_weeder,"Double Prong Weeder","Small",399,1);
         });
 
         fpw_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.five_prong_weeder,"Five Prong Weeder","Small",969,1);
         });
 
         cps_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.curve_pruning_saw,"Curve Pruning Saw - 33 Cm","Small",599,1);
         });
 
         pis_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.plastic_impulse_sprinkler,"Plastic Impulse Sprinkler","Small",879,1);
         });
 
         ss_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.sprinkler_stand,"Sprinkler Stand","Small",839,1);
         });
 
         ws_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.watermatic_stake,"Watermatic Stake","Small",529,1);
         });
 
         ImageView search_icon = findViewById(R.id.search_icon);
@@ -149,10 +150,17 @@ public class tools extends AppCompatActivity {
             overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
         });
 
+        filter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(tools.this, filter_type_of_plants.class);
+                startActivity(i);
+            }
+        });
     }
 
     public void RedirectProduct(int imageResId,String name, int price, String description){
-        Intent intent = new Intent(getApplicationContext(), product_explore.class);
+        Intent intent = new Intent(getApplicationContext(), product.class);
         intent.putExtra("img", imageResId);
         intent.putExtra("name", name);
         intent.putExtra("price", price);
@@ -160,9 +168,14 @@ public class tools extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void onCartClick() {
+    public void onCartClick(int img,String name,String size, int price,int qty) {
         main.performHapticFeedback(HapticFeedbackConstants.CONTEXT_CLICK);
         Intent intent = new Intent(getApplicationContext(), cart.class);
+        intent.putExtra("img",img);
+        intent.putExtra("name",name);
+        intent.putExtra("size",size);
+        intent.putExtra("price",price);
+        intent.putExtra("qty",qty);
         startActivity(intent);
     }
 

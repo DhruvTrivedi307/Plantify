@@ -17,7 +17,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class easy_to_care extends AppCompatActivity {
 
-    LinearLayout main;
+    LinearLayout main,filter;
     LinearLayout e_apbp, e_bpp, e_bpx, e_arp, e_flp, e_csp, e_mdp, e_pgp, e_vjmp, e_bhp;
     AppCompatButton e_apbp_cart_click, e_bpp_cart_click, e_bpx_cart_click, e_arp_cart_click, e_flp_cart_click, e_csp_cart_click, e_mdp_cart_click, e_pgp_cart_click, e_vjmp_cart_click, e_bhp_cart_click;
 
@@ -28,6 +28,7 @@ public class easy_to_care extends AppCompatActivity {
         setContentView(R.layout.activity_easy_to_care);
 
         main = findViewById(R.id.main);
+        filter = findViewById(R.id.filter);
 
         e_apbp = findViewById(R.id.e_apbp);
         e_bpp = findViewById(R.id.e_bpp);
@@ -121,43 +122,43 @@ public class easy_to_care extends AppCompatActivity {
         });
 
         e_apbp_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.aglaonema_pink_beauty_plant,"Aglaonema Pink Beauty Plant","Small",719,1);
         });
 
         e_bpp_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.bamboo_palm_plant,"Bamboo Palm Plant","Small",399,1);
         });
 
         e_bpx_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.bamboo_palm_xl,"Bamboo Palm XL","Small",857,1);
         });
 
         e_arp_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.aglaonema_red_plant,"Aglaonema Red Plant","Small",749,1);
         });
 
         e_flp_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.fiddle_leaf_fig_plant,"Fiddle Leaf Fig Plant","Small",1199,1);
         });
 
         e_csp_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.chlorophytum_spider_plant,"Chlorophytum Spider Plant","Small",739,1);
         });
 
         e_mdp_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.monstera_deliciosa_plant,"Monstera Deliciosa Plant","Small",289,1);
         });
 
         e_pgp_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.peperomia_green_plant,"Peperomia Green Plant","Small",899,1);
         });
 
         e_vjmp_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.variegated_jade_mini_plant,"Variegated Jade Mini Plant","Small",299,1);
         });
 
         e_bhp_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.broken_heart_plant,"Broken Heart Plant","Small",299,1);
         });
 
         ImageView search_icon = findViewById(R.id.search_icon);
@@ -175,6 +176,13 @@ public class easy_to_care extends AppCompatActivity {
             overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
         });
 
+        filter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(easy_to_care.this,filter_type_of_plants.class);
+                startActivity(i);
+            }
+        });
     }
 
     public void RedirectProduct(int imageResId,String name, int price, String description){
@@ -186,9 +194,14 @@ public class easy_to_care extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void onCartClick() {
-        main.performHapticFeedback(HapticFeedbackConstants.CLOCK_TICK);
+    public void onCartClick(int img,String name,String size, int price,int qty) {
+        main.performHapticFeedback(HapticFeedbackConstants.CONTEXT_CLICK);
         Intent intent = new Intent(getApplicationContext(), cart.class);
+        intent.putExtra("img",img);
+        intent.putExtra("name",name);
+        intent.putExtra("size",size);
+        intent.putExtra("price",price);
+        intent.putExtra("qty",qty);
         startActivity(intent);
     }
 

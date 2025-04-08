@@ -2,18 +2,13 @@ package com.example.plantify;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.core.graphics.Insets;
@@ -22,17 +17,9 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-
 import java.util.ArrayList;
-import java.util.List;
 
-public class cart extends AppCompatActivity {
+public class cart_explore extends AppCompatActivity {
 
     Button btnMinus,btnPlus;
     TextView txtCount,item_name,item_price,item_size,empty;
@@ -57,14 +44,12 @@ public class cart extends AppCompatActivity {
     static ArrayList<String> size = new ArrayList<>();
     static ArrayList<Integer> qty = new ArrayList<>();
 
-
-
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_cart);
+        setContentView(R.layout.activity_cart_explore);
 
         btnMinus = findViewById(R.id.btnMinus);
         btnPlus = findViewById(R.id.btnPlus);
@@ -78,7 +63,7 @@ public class cart extends AppCompatActivity {
 
         checkout = findViewById(R.id.checkout);
 
-        recyclerView = findViewById(R.id.cart);
+        recyclerView = findViewById(R.id.cart_e);
 
         empty = findViewById(R.id.empty);
 
@@ -120,8 +105,12 @@ public class cart extends AppCompatActivity {
         checkout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(cart.this, checkout.class);
+                Intent i = new Intent(cart_explore.this, checkout.class);
+                i.putExtra("page","product");
+                i.putExtra("img",img);
+                i.putExtra("name",name);
                 i.putExtra("price",price);
+                i.putExtra("size","Small");
                 i.putExtra("qty", Integer.parseInt(txtCount.getText().toString()));
                 startActivity(i);
             }
@@ -138,27 +127,24 @@ public class cart extends AppCompatActivity {
         grandTotalPrice.setText(String.valueOf(totalPrice));
         checkoutPrice.setText(String.valueOf(totalPrice));
 
-//        img.(i.getIntExtra("img", 0));
-//        item_price.append(String.valueOf(price));
-//        item_size.append(size);
-//        item_images.append(String.valueOf(img));
-//        txtCount.setText(String.valueOf(qty));
 
-
-//        cart_item c = new cart_item(img, price, name, size, qty);
-//        recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
-//        recyclerView.setAdapter(c);
-
-        cart_item c = new cart_item(img, price, name, size, qty);
-        c.setOnQuantityChangeListener(new cart_item.OnQuantityChangeListener() {
+        cart_item_explore c = new cart_item_explore(img, price, name, qty);
+        c.setOnQuantityChangeListener(new cart_item_explore.OnQuantityChangeListener() {
             @Override
             public void onQuantityChanged() {
                 updateTotalPrice();
             }
         });
+//        c.setOnQuantityChangeListener(new cart_item_explore() {
+//            @Override
+//            public void onQuantityChanged() {
+//                updateTotalPrice();
+//            }
+//        });
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         recyclerView.setAdapter(c);
+
     }
 
     private void updateTotalPrice() {
