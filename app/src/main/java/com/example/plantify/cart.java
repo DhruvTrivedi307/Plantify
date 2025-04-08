@@ -22,6 +22,7 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -42,7 +43,8 @@ public class cart extends AppCompatActivity {
     TextView subTotalPrice,grandTotalPrice,checkoutPrice;
 
     AppCompatButton checkout;
-
+    LinearLayout cart_data, empty_cart;
+    BottomNavigationView bnv;
     int totalPrice = 0;
 
 //    int[] item_images = {R.drawable.peacock_plant, R.drawable.brazilian_wood_plant, R.drawable.money_plant_golden};
@@ -80,13 +82,22 @@ public class cart extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.cart);
 
-        empty = findViewById(R.id.empty);
+        empty_cart = findViewById(R.id.empty_cart);
 
         subTotalPrice = findViewById(R.id.subTotalPrice);
         grandTotalPrice = findViewById(R.id.grandTotalPrice);
         checkoutPrice = findViewById(R.id.checkoutPrice);
 
+        cart_data = findViewById(R.id.cart_data);
 
+        bnv = findViewById(R.id.bnv);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
 //        cart_item c = new cart_item(item_images, item_prices, item_names, item_sizes, item_quantities);
 
@@ -112,31 +123,29 @@ public class cart extends AppCompatActivity {
                 name.add(productName);
                 price.add(i.getIntExtra("price", 0));
                 size.add(i.getStringExtra("size"));
-                qty.add(i.getIntExtra("qty", 0));
+                qty.add(i.getIntExtra("qty", 1));
             }
         }
 
-
-        checkout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(cart.this, checkout.class);
-                i.putExtra("price",price);
-                i.putExtra("qty", Integer.parseInt(txtCount.getText().toString()));
-                startActivity(i);
-            }
-        });
-
+        updateTotalPrice();
+        updateCartVisibility();
 
         for (int p : price) {
             totalPrice += p;
         }
 
+        checkout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(cart.this, checkout.class);
+                i.putExtra("price",totalPrice);
+                startActivity(i);
+            }
+        });
 
-
-        subTotalPrice.setText(String.valueOf(totalPrice));
-        grandTotalPrice.setText(String.valueOf(totalPrice));
-        checkoutPrice.setText(String.valueOf(totalPrice));
+//        subTotalPrice.setText(String.valueOf(totalPrice));
+//        grandTotalPrice.setText(String.valueOf(totalPrice));
+//        checkoutPrice.setText(String.valueOf(totalPrice));
 
 //        img.(i.getIntExtra("img", 0));
 //        item_price.append(String.valueOf(price));
@@ -161,8 +170,20 @@ public class cart extends AppCompatActivity {
         recyclerView.setAdapter(c);
     }
 
+    private void updateCartVisibility(){
+        if (name.isEmpty()){
+            empty_cart.setVisibility(View.VISIBLE);
+            cart_data.setVisibility(View.GONE);
+            bnv.setVisibility(View.GONE);
+        } else {
+            empty_cart.setVisibility(View.GONE);
+            cart_data.setVisibility(View.VISIBLE);
+            bnv.setVisibility(View.VISIBLE);
+        }
+    }
+
     private void updateTotalPrice() {
-        int totalPrice = 0;
+        totalPrice = 0;
         for (int i = 0; i < price.size(); i++) {
             totalPrice += price.get(i) * qty.get(i);
         }

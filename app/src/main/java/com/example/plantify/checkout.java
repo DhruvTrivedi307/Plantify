@@ -32,7 +32,6 @@ public class checkout extends AppCompatActivity {
         grandtotalPrice = findViewById(R.id.grandtotalPrice);
         bottomnavPrice = findViewById(R.id.bottomnavPrice);
         Plantsize = findViewById(R.id.size);
-        // Contact Information
         fname = findViewById(R.id.fname);
         lname = findViewById(R.id.lname);
         mono = findViewById(R.id.mono);
@@ -46,50 +45,62 @@ public class checkout extends AppCompatActivity {
 
 
         Intent i = getIntent();
-//        int img = i.getIntExtra("img",0);
-//        String name = i.getStringExtra("name");
         int price = i.getIntExtra("price",0);
-//        String page = i.getStringExtra("page");
         int qty = i.getIntExtra("qty",1);
-//        String size = i.getStringExtra("size");
         int totalPrice = qty*price;
 
-
-//        if("product".equals(page)){
-//            p_img.setImageResource(img);
-//            p_name.setText(name);
-//            quantity.setText(String.valueOf(qty));
-            subtotalPrice.setText(String.valueOf("₹"+totalPrice));
-            grandtotalPrice.setText(String.valueOf("₹"+totalPrice));
-            bottomnavPrice.setText(String.valueOf("₹"+totalPrice));
-//            Plantsize.setText(String.valueOf(size));
-//        } else {
-//            Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
-//            finish();
-//        }
+        subtotalPrice.setText(String.valueOf("₹"+totalPrice));
+        grandtotalPrice.setText(String.valueOf("₹"+totalPrice));
+        bottomnavPrice.setText(String.valueOf("₹"+totalPrice));
 
         checkout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(fname.getText().toString().trim().isEmpty() || lname.getText().toString().trim().isEmpty() || mono.getText().toString().trim().isEmpty() || email.getText().toString().trim().isEmpty() || pin_code.getText().toString().trim().isEmpty() || city.getText().toString().trim().isEmpty() || state.getText().toString().trim().isEmpty() || add1.getText().toString().trim().isEmpty()){
-                    Toast.makeText(checkout.this, "Please first fill all details", Toast.LENGTH_SHORT).show();
-                } else {
-                    Intent i = new Intent(checkout.this, payment.class);
-                    i.putExtra("fname",fname.getText().toString().trim());
-                    i.putExtra("lname",lname.getText().toString().trim());
-                    i.putExtra("mono",mono.getText().toString().trim());
-                    i.putExtra("email",email.getText().toString().trim());
-                    i.putExtra("pin_code",pin_code.getText().toString().trim());
-                    i.putExtra("city",city.getText().toString().trim());
-                    i.putExtra("state",state.getText().toString().trim());
-                    i.putExtra("add1",add1.getText().toString().trim());
-                    i.putExtra("add2",add2.getText().toString().trim());
-                    i.putExtra("totalPrice", totalPrice);
-                    startActivity(i);
+                String firstName = fname.getText().toString().trim();
+                String lastName = lname.getText().toString().trim();
+                String mobileNumber = mono.getText().toString().trim();
+                String emailAddress = email.getText().toString().trim();
+                String pinCode = pin_code.getText().toString().trim();
+                String cityName = city.getText().toString().trim();
+                String stateName = state.getText().toString().trim();
+                String address1 = add1.getText().toString().trim();
+                String address2 = add2.getText().toString().trim();
+
+                if (firstName.isEmpty() || lastName.isEmpty() || mobileNumber.isEmpty() ||
+                    emailAddress.isEmpty() || pinCode.isEmpty() || cityName.isEmpty() ||
+                    stateName.isEmpty() || address1.isEmpty()) {
+                    Toast.makeText(checkout.this, "Please fill all required details", Toast.LENGTH_SHORT).show();
+                    return;
                 }
+
+                if (!android.util.Patterns.EMAIL_ADDRESS.matcher(emailAddress).matches()) {
+                    email.setError("Invalid email format");
+                    return;
+                }
+
+                if (mobileNumber.length() != 10 || !mobileNumber.matches("\\d+")) {
+                    mono.setError("Enter a valid 10-digit mobile number");
+                    return;
+                }
+
+                if (pinCode.length() != 6 || !pinCode.matches("\\d+")) {
+                    pin_code.setError("Enter a valid 6-digit PIN code");
+                    return;
+                }
+
+                Intent i = new Intent(checkout.this, payment.class);
+                i.putExtra("fname", firstName);
+                i.putExtra("lname", lastName);
+                i.putExtra("mono", mobileNumber);
+                i.putExtra("email", emailAddress);
+                i.putExtra("pin_code", pinCode);
+                i.putExtra("city", cityName);
+                i.putExtra("state", stateName);
+                i.putExtra("add1", address1);
+                i.putExtra("add2", address2);
+                i.putExtra("totalPrice", totalPrice);
+                startActivity(i);
             }
         });
-
-
     }
 }
