@@ -40,7 +40,7 @@ public class home extends AppCompatActivity {
     ImageView search_icon,cart_icon;
     LinearLayout tools,bestsellers,easy_to_care,pots,seeds;
     ImageView h_bhp,h_jmp,h_bwp,h_pp;
-    AppCompatButton small,medium;
+    AppCompatButton small,medium,addtocart;
     private String selectedSize = "";
     Button viewAll, h_bhp_cart_click, h_jmp_cart_click, h_bwp_cart_click, h_pp_cart_click;
     TextView size;
@@ -84,6 +84,15 @@ public class home extends AppCompatActivity {
         btnPlus = findViewById(R.id.btnPlus);
         txtCount = findViewById(R.id.txtCount);
         buy_now_bottom = findViewById(R.id.buy_now_bottom);
+        addtocart = findViewById(R.id.addtocart);
+
+        addtocart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                main.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS);
+                onCartClick(R.drawable.jade_mini_plats,"Jade Mini Plant",279,"Small",1);
+            }
+        });
 
         buy_now_bottom.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -839,6 +839,7 @@
                     android:fontFamily="@font/outfit_medium"/>
 
                 <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/addtocart"
                     android:layout_width="180dp"
                     android:layout_height="40dp"
                     android:background="@drawable/radius"

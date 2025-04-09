@@ -1268,88 +1268,121 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginBottom="10dp"
-                    android:fontFamily="@font/outfit_medium"
                     android:text="Select Plant Size: "
-                    android:textColor="@color/black" />
+                    android:fontFamily="@font/outfit_medium"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="10dp"/>
 
                 <TextView
+                    android:id="@+id/size"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text=""
                     android:fontFamily="@font/outfit_medium"
-                    android:text="Small"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"/>
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_marginLeft="20dp">
 
                 <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/small"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
-                    android:layout_marginLeft="20dp"
-                    android:background="@drawable/button_stroke"
-                    android:fontFamily="@font/outfit_medium"
-                    android:hint="Small" />
+                    android:background="@drawable/size_button_selector"
+                    android:hint="Small"
+                    android:fontFamily="@font/outfit_medium"/>
 
                 <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/medium"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
+                    android:background="@drawable/size_button_selector"
                     android:layout_marginLeft="20dp"
-                    android:background="@drawable/button_stroke"
-                    android:fontFamily="@font/outfit_medium"
-                    android:hint="Medium" />
-
+                    android:hint="Medium"
+                    android:fontFamily="@font/outfit_medium"/>
 
             </LinearLayout>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:fontFamily="@font/outfit_medium"
                 android:text="Quantity"
-                android:textColor="@color/black" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginLeft="20dp"
-                android:background="@drawable/button_stroke"
                 android:fontFamily="@font/outfit_medium"
-                android:hint="-       1       +" />
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="10dp"/>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
                 android:orientation="horizontal"
-                android:padding="20dp">
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/button_stroke">
 
                 <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnMinus"
+                    android:layout_width="20dp"
+                    android:layout_height="40dp"
+                    android:text="-"
+                    android:background="@android:color/transparent"
+                    android:textSize="15sp"
+                    android:textColor="#666666"/>
+
+                <TextView
+                    android:id="@+id/txtCount"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:text="1"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:textColor="#333333"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnPlus"
+                    android:layout_width="20dp"
+                    android:layout_height="40dp"
+                    android:text="+"
+                    android:background="@android:color/transparent"
+                    android:textSize="15sp"
+                    android:textColor="#666666"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_margin="10dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buy_now_bottom"
                     android:layout_width="180dp"
                     android:layout_height="40dp"
                     android:background="@drawable/button_stroke"
-                    android:fontFamily="@font/outfit_medium"
                     android:hint="BUY NOW"
-                    android:layout_marginRight="10dp"
-                    android:textColorHint="@color/theme" />
+                    android:layout_margin="10dp"
+                    android:textColorHint="@color/theme"
+                    android:fontFamily="@font/outfit_medium"/>
 
                 <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/addtocart"
                     android:layout_width="180dp"
                     android:layout_height="40dp"
                     android:background="@drawable/radius"
-                    android:fontFamily="@font/outfit_medium"
                     android:hint="ADD TO CART"
-                    android:layout_marginLeft="10dp"
-                    android:textColorHint="@color/white" />
+                    android:layout_margin="10dp"
+                    android:textColorHint="@color/white"
+                    android:fontFamily="@font/outfit_medium"/>
 
             </LinearLayout>
 

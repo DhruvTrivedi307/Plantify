@@ -10,16 +10,21 @@ import android.view.View;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class trending extends AppCompatActivity {
 
-    LinearLayout t_bpp, t_flp, t_apbp, t_arp, t_bpx, t_csp, t_mdp, t_dmm, t_hwp, t_stp, t_bs, t_as, t_fpw, t_cps, t_bhp, t_jpm, t_bwp, t_pp, t_fbp, t_lbp, t_pgp;
+    LinearLayout t_bpp, t_flp, t_apbp, t_arp, t_bpx, t_csp, t_mdp, t_dmm, t_hwp, t_stp, t_bs, t_as, t_fpw, t_cps, t_bhp, t_jpm, t_bwp, t_pp, t_fbp, t_lbp, t_pgp, main;
     BottomNavigationView bnv;
+    AppCompatButton small,medium,addtocart,buy_now_bottom;
+    TextView size;
+    private String selectedSize = "";
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -48,6 +53,14 @@ public class trending extends AppCompatActivity {
         t_fbp = findViewById(R.id.t_fbp);
         t_lbp = findViewById(R.id.t_lbp);
         t_pgp = findViewById(R.id.t_pgp);
+
+        small = findViewById(R.id.small);
+        medium = findViewById(R.id.medium);
+
+        main = findViewById(R.id.main);
+
+        addtocart = findViewById(R.id.addtocart);
+        buy_now_bottom = findViewById(R.id.buy_now_bottom);
 
         t_bpp.setOnClickListener(v -> {
             String name = "Bamboo Palm Plant";
@@ -202,6 +215,30 @@ public class trending extends AppCompatActivity {
             RedirectProduct(R.drawable.peperomia_green_plant,name,price,description);
         });
 
+        addtocart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                main.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS);
+                onCartClick(R.drawable.lucky_bamboo_plant,"Lucky bamboo Plant",349,"Small",1);
+            }
+        });
+
+        buy_now_bottom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                main.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS);
+                String name = "Lucky bamboo Plant";
+                int price = 349;
+                String description = "Symbolizing good fortune and prosperity, the Lucky Bamboo is easy to grow and can thrive in water or soil. It prefers indirect light and adds an elegant touch to any decor.";
+                Intent i = new Intent(getApplicationContext(),product.class);
+                i.putExtra("img",R.drawable.lucky_bamboo_plant);
+                i.putExtra("name",name);
+                i.putExtra("price",price);
+                i.putExtra("description",description);
+                startActivity(i);
+            }
+        });
+
         bnv = findViewById(R.id.bnv);
 
 //        bnv.setSelectedItemId(R.id.trending);
@@ -247,6 +284,26 @@ public class trending extends AppCompatActivity {
             overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
         });
 
+        View.OnClickListener sizeClickListener = v -> {
+            small.setSelected(false);
+            medium.setSelected(false);
+            v.setSelected(true);
+
+            if (v == small) {
+                main.performHapticFeedback(HapticFeedbackConstants.GESTURE_END);
+                selectedSize = "Small";
+                size.setText(selectedSize);
+            } else if (v == medium) {
+                main.performHapticFeedback(HapticFeedbackConstants.GESTURE_START);
+                selectedSize = "Medium";
+                size.setText(selectedSize);
+            }
+
+        };
+
+        small.setOnClickListener(sizeClickListener);
+        medium.setOnClickListener(sizeClickListener);
+
     }
 
     public void RedirectProduct(int imageResId,String name, int price, String description){
@@ -256,6 +313,18 @@ public class trending extends AppCompatActivity {
         intent.putExtra("price", price);
         intent.putExtra("description", description);
         startActivity(intent);
+    }
+
+    public boolean onCartClick(int img, String name, int price, String size, int qty) {
+        main.performHapticFeedback(HapticFeedbackConstants.CONTEXT_CLICK);
+        Intent intent = new Intent(getApplicationContext(), cart.class);
+        intent.putExtra("img", img);
+        intent.putExtra("name", name);
+        intent.putExtra("price", price);
+        intent.putExtra("qty", qty);
+        intent.putExtra("size", size);
+        startActivity(intent);
+        return true;
     }
 
     @Override
