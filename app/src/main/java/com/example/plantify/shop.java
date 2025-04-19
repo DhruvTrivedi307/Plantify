@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.HapticFeedbackConstants;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -28,6 +29,7 @@ public class shop extends AppCompatActivity {
     LinearLayout h_bhp, h_jmp, h_plp, h_fbp, h_lbp, h_stp, h_pgp, h_mpg, h_pp, h_bwp, h_arp, h_apbp, h_bpx, h_bpp, h_flp, h_vjmp;
     AppCompatButton h_bhp_cart_click, h_jmp_cart_click, h_plp_cart_click, h_fbp_cart_click, h_lbp_cart_click, h_stp_cart_click, h_pgp_cart_click, h_mpg_cart_click, h_pp_cart_click, h_bwp_cart_click, h_arp_cart_click, h_apbp_cart_click, h_bpx_cart_click, h_bpp_cart_click, h_flp_cart_click, h_vjmp_cart_click;
 
+    Button indoorBTN;
 //    int[] item_images = {R.drawable.peacock_plant, R.drawable.brazilian_wood_plant, R.drawable.money_plant_golden};
 //    int[] item_prices = {499, 899, 479};
 //    String[] item_names = {"Peacock Plant", "Brazilian Wood Plant", "Money Plant Golden"};
@@ -80,11 +82,34 @@ public class shop extends AppCompatActivity {
         h_vjmp_cart_click = findViewById(R.id.h_vjmp_cart_click);
         
         filter = findViewById(R.id.filter);
+        indoorBTN = findViewById(R.id.indoorBTN);
+
+        indoorBTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                h_bhp.setVisibility(View.VISIBLE);
+                h_jmp.setVisibility(View.VISIBLE);
+                h_plp.setVisibility(View.GONE);
+                h_fbp.setVisibility(View.GONE);
+                h_lbp.setVisibility(View.GONE);
+                h_stp.setVisibility(View.GONE);
+                h_pgp.setVisibility(View.GONE);
+                h_mpg.setVisibility(View.GONE);
+                h_pp.setVisibility(View.GONE);
+                h_bwp.setVisibility(View.GONE);
+                h_arp.setVisibility(View.GONE);
+                h_apbp.setVisibility(View.GONE);
+                h_bpx.setVisibility(View.GONE);
+                h_bpp.setVisibility(View.GONE);
+                h_flp.setVisibility(View.GONE);
+                h_vjmp.setVisibility(View.GONE);
+            }
+        });
 
         filter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(shop.this, filter_by_price.class));
+                startActivity(new Intent(shop.this, filter_type_of_plants.class));
             }
         });
 
