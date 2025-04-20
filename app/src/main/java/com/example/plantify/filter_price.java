@@ -4,9 +4,15 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.view.HapticFeedbackConstants;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
+import com.google.android.material.slider.RangeSlider;
+
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -27,6 +33,8 @@ public class filter_price extends Fragment {
     public filter_price() {
         // Required empty public constructor
     }
+
+    RangeSlider priceRangeSlider;
 
     /**
      * Use this factory method to create a new instance of
@@ -59,6 +67,27 @@ public class filter_price extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_filter_price, container, false);
+        View view = inflater.inflate(R.layout.fragment_filter_price, container, false);
+
+        // Now you can safely access views from the layout
+        priceRangeSlider = view.findViewById(R.id.priceRangeSlider);
+        TextView rangeTextView = view.findViewById(R.id.range);
+
+        // Set initial range values
+        priceRangeSlider.setValues(100f, 2000f); // Note: use float values
+        rangeTextView.setText("₹100 - ₹2000");
+
+        // Optional: Add listener for changes
+        priceRangeSlider.addOnChangeListener((slider, value, fromUser) -> {
+            float min = slider.getValues().get(0);
+            float max = slider.getValues().get(1);
+            // You can log or use min and max values here
+            List<Float> values = slider.getValues();
+            String range = "₹" + Math.round(values.get(0)) + " - ₹" + Math.round(values.get(1));
+            rangeTextView.setText(range);
+            rangeTextView.performHapticFeedback(HapticFeedbackConstants.CLOCK_TICK);
+        });
+
+        return view;
     }
 }

@@ -47,12 +47,6 @@ public class cart extends AppCompatActivity {
     BottomNavigationView bnv;
     int totalPrice = 0;
 
-//    int[] item_images = {R.drawable.peacock_plant, R.drawable.brazilian_wood_plant, R.drawable.money_plant_golden};
-//    int[] item_prices = {499, 899, 479};
-//    String[] item_names = {"Peacock Plant", "Brazilian Wood Plant", "Money Plant Golden"};
-//    String[] item_sizes = {"Small", "Medium", "Large"};
-//    int[] item_quantities = {1, 1, 1};
-
     static ArrayList<Integer> img = new ArrayList<>();
     static ArrayList<Integer> price = new ArrayList<>();
     static ArrayList<String> name = new ArrayList<>();

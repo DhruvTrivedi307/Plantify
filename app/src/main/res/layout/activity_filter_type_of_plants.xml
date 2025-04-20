@@ -8,22 +8,20 @@
     android:orientation="vertical"
     tools:context=".filter_type_of_plants">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@color/white"
-        android:elevation="4dp"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/logo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="40dp"
             android:text="Filter"
             android:textSize="25dp"
-            android:fontFamily="@font/outfit_bold"
+            android:fontFamily="@font/outfit_medium"
             android:textColor="@color/black"
             android:layout_gravity="center"/>
 
@@ -35,110 +33,144 @@
 
         <ImageView
             android:id="@+id/cross"
-            android:layout_width="50dp"
+            android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:layout_marginRight="15dp"
-            android:src="@drawable/cancel"
+            android:src="@drawable/close"
             android:textColor="@color/black"
-            android:textSize="18dp" />
+            android:padding="5dp"/>
 
 
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/black"
-    />
-
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:scrollbars="none">
+        android:layout_height="2dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/edit_text_stroke"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="horizontal"
+        android:layout_weight="1"
         android:padding="20dp"
         >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:layout_marginLeft="15dp"
             >
             <TextView
                 android:id="@+id/type_of_plants"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Type of plants"
                 android:fontFamily="@font/outfit_medium"
-                android:textSize="20dp"
-                android:layout_marginTop="15dp"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:paddingTop="15dp"
+                android:padding="10dp"
                 />
 
             <TextView
                 android:id="@+id/price"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Price"
                 android:textColor="@color/black"
                 android:fontFamily="@font/outfit_medium"
-                android:textSize="20dp"
-                android:layout_marginTop="25dp"
+                android:textSize="18dp"
+                android:padding="10dp"
+                android:layout_marginTop="5dp"
                 />
 
             <TextView
                 android:id="@+id/size"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Size"
                 android:textColor="@color/black"
                 android:fontFamily="@font/outfit_medium"
-                android:textSize="20dp"
-                android:layout_marginTop="25dp"
+                android:textSize="18dp"
+                android:padding="10dp"
+                android:layout_marginTop="5dp"
                 />
 
             <TextView
                 android:id="@+id/i_o"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Indoor/Outdoor"
                 android:textColor="@color/black"
                 android:fontFamily="@font/outfit_medium"
-                android:textSize="20dp"
-                android:layout_marginTop="25dp"
+                android:textSize="18dp"
+                android:padding="10dp"
+                android:layout_marginTop="5dp"
                 />
 
         </LinearLayout>
-        <View
-            android:layout_width="1dp"
+
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:background="@color/black"
-            android:layout_marginLeft="25dp"/>
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/v_top"
+                android:layout_width="2dp"
+                android:layout_height="50dp"
+                android:background="@color/edit_text_stroke"
+                android:layout_marginLeft="10dp"/>
+
+            <View
+                android:id="@+id/v_p"
+                android:layout_width="2dp"
+                android:layout_height="50dp"
+                android:background="@color/edit_text_stroke"
+                android:layout_marginLeft="10dp"/>
+
+            <View
+                android:id="@+id/v_s"
+                android:layout_width="2dp"
+                android:layout_height="50dp"
+                android:background="@color/edit_text_stroke"
+                android:layout_marginLeft="10dp"/>
+
+            <View
+                android:id="@+id/v_io"
+                android:layout_width="2dp"
+                android:layout_height="50dp"
+                android:background="@color/edit_text_stroke"
+                android:layout_marginLeft="10dp"/>
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/edit_text_stroke"
+                android:layout_marginLeft="10dp"/>
+
+        </LinearLayout>
 
         <FrameLayout
             android:id="@+id/fragment"
             android:layout_width="210dp"
-            android:layout_height="wrap_content"
-            />
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
-
-    </ScrollView>
 
     <androidx.appcompat.widget.AppCompatButton
         app:cornerRadius="20dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="APPLY"
-        android:fontFamily="@font/inter_medium"
-        android:textColor="@color/white"
-        android:background="@drawable/sign_in_button_fill"
-        android:textSize="20sp"
+        android:layout_height="50dp"
+        android:hint="Apply"
+        android:fontFamily="@font/outfit_medium"
+        android:textColorHint="@color/white"
+        android:background="@drawable/price_range_select_fill"
+        android:textSize="18dp"
         android:layout_gravity="bottom"
         android:layout_margin="20dp"/>
 

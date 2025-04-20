@@ -116,7 +116,6 @@ public class create_account extends AppCompatActivity {
                                         String userId = user.getUid();
                                         DatabaseReference userRef = FirebaseDatabase.getInstance().getReference("users").child(userId);
 
-                                        // Create a HashMap to store user details
                                         HashMap<String, String> userData = new HashMap<>();
                                         userData.put("firstName", f_name);
                                         userData.put("lastName", l_name);
@@ -178,29 +177,6 @@ public class create_account extends AppCompatActivity {
             }
         });
     }
-
-//    private void registerUser() {
-//        String firstName = fname.getText().toString().trim();
-//        String lastName = lname.getText().toString().trim();
-//        String phoneNumber = phone.getText().toString().trim();
-//        String emailId = email.getText().toString().trim();
-//        String pass = password.getText().toString().trim();
-//
-//        if (firstName.isEmpty() || lastName.isEmpty() || phoneNumber.isEmpty() || emailId.isEmpty() || pass.isEmpty()) {
-//            Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show();
-//        } else {
-//            boolean isInserted = dbHelper.insertUser(firstName, lastName, phoneNumber, emailId, pass);
-//            if (isInserted) {
-//                Toast.makeText(this, "Account Created Successfully", Toast.LENGTH_SHORT).show();
-//                Intent intent = new Intent(this, profile_signin.class); // Redirect to Login
-//                startActivity(intent);
-//                finish();
-//            } else {
-//                Toast.makeText(this, "Error: Could not create account", Toast.LENGTH_SHORT).show();
-//            }
-//        }
-//    }
-
 
     @Override
     public void onStart() {

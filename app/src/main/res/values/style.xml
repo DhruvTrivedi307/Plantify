@@ -22,4 +22,10 @@
         <item name="fontFamily">sans-serif-medium</item>
         <item name="android:textColor">@color/black</item>
     </style>
+    <style name="CustomRangeSlider">
+        <item name="trackColorActive">@android:color/black</item>
+        <item name="trackColorInactive">@color/theme_text</item>
+        <item name="thumbColor">@android:color/black</item>
+        <item name="haloColor">@android:color/transparent</item>
+    </style>
 </resources>
