@@ -168,6 +168,19 @@ public class product extends AppCompatActivity {
             productName.setText("No Name Available");
         }
 
+
+        if (cart_item.item_names != null && cart_item.item_quantities != null) {
+            int index = cart_item.item_names.indexOf(name);
+            if (index != -1) {
+                count = cart_item.item_quantities.get(index);
+                txtCount.setText(String.valueOf(count));
+            } else {
+                count = 1;
+                txtCount.setText(String.valueOf(count));
+            }
+        }
+
+
         if (desc != null) {
             description.setText(desc);
         } else {

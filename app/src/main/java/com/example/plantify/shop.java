@@ -89,20 +89,20 @@ public class shop extends AppCompatActivity {
             public void onClick(View v) {
                 h_bhp.setVisibility(View.VISIBLE);
                 h_jmp.setVisibility(View.VISIBLE);
+                h_lbp.setVisibility(View.VISIBLE);
+                h_mpg.setVisibility(View.VISIBLE);
+                h_bwp.setVisibility(View.VISIBLE);
+                h_bpp.setVisibility(View.VISIBLE);
+                h_flp.setVisibility(View.GONE);
+                h_vjmp.setVisibility(View.GONE);
                 h_plp.setVisibility(View.GONE);
                 h_fbp.setVisibility(View.GONE);
-                h_lbp.setVisibility(View.GONE);
                 h_stp.setVisibility(View.GONE);
                 h_pgp.setVisibility(View.GONE);
-                h_mpg.setVisibility(View.GONE);
                 h_pp.setVisibility(View.GONE);
-                h_bwp.setVisibility(View.GONE);
                 h_arp.setVisibility(View.GONE);
                 h_apbp.setVisibility(View.GONE);
                 h_bpx.setVisibility(View.GONE);
-                h_bpp.setVisibility(View.GONE);
-                h_flp.setVisibility(View.GONE);
-                h_vjmp.setVisibility(View.GONE);
             }
         });
 
@@ -233,7 +233,7 @@ public class shop extends AppCompatActivity {
 //            intent.putExtra("qty", 1);
 //            intent.putExtra("size", "Small");
 //            startActivity(intent);
-            onCartClick(R.drawable.broken_heart_plant_2, "Broken heart Plant", 299, "Small", 1);
+            onCartClick(R.drawable.broken_heart_plant_2, "Broken Heart Plant", 299, "Small", 1);
         });
 
 
