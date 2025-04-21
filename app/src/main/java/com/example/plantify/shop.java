@@ -250,7 +250,7 @@ public class shop extends AppCompatActivity {
 //            for (String n : name){
 //                if ("Jade Plant Mini".equals(n)){
 //                    isavail = true;
-//                }
+//                 }
 //            }
 //
 //            if (name != null && isavail) {
@@ -389,6 +389,7 @@ public class shop extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
         overridePendingTransition(0, R.anim.fade_out);
+        startActivity(new Intent(shop.this,home.class));
     }
 
     protected void onResume() {

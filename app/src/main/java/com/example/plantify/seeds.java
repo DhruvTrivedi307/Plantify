@@ -55,40 +55,40 @@ public class seeds extends AppCompatActivity {
         s_tomatos_cart_click = findViewById(R.id.s_tomatos_cart_click);
         
         s_amaranths_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.amaranth_seeds,"Amaranth Seeds",499,"Small",1);
         });
         s_beetroots_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.beetroot_seeds,"Beetroot Seeds",99,"Small",1);
         });
         s_broccolis_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.broccoli_seeds,"Broccoli Seeds",129,"Small",1);
         });
         s_capsicums_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.capsicum_seeds,"Capsicum Seeds",99,"Small",1);
         });
         s_corianders_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.coriander_seeds,"Coriander Seeds",99,"Small",1);
         });
         s_fenugreek_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.fenugreek_seeds,"Fenugreek Seed",99,"Small",1);
         });
         s_greenchilli_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.green_chilli_seed,"Green Chilli Seed",99,"Small",1);
         });
         s_greencucumber_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.green_cucumber_seeds,"Green Cucumber Seeds",99,"Small",1);
         });
         s_okras_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.okra_seeds,"Okra Seeds",119,"Small",1);
         });
         s_redamaranthus_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.red_amaranthus_seeds,"Red Amaranthus Seeds",99,"Small",1);
         });
         s_spinch_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.spinach_seeds,"Spinch Seeds",99,"Small",1);
         });
         s_tomatos_cart_click.setOnClickListener(v -> {
-            onCartClick();
+            onCartClick(R.drawable.tomato_seeds,"Tomato Seeds",79,"Small",1);
         });
 
         s_amaranths.setOnClickListener(new View.OnClickListener() {
@@ -229,7 +229,7 @@ public class seeds extends AppCompatActivity {
     }
 
     public void RedirectProduct(int imageResId,String name, int price, String description){
-        Intent intent = new Intent(getApplicationContext(), product_explore.class);
+        Intent intent = new Intent(getApplicationContext(), product.class);
         intent.putExtra("img", imageResId);
         intent.putExtra("name", name);
         intent.putExtra("price", price);
@@ -237,9 +237,17 @@ public class seeds extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void onCartClick() {
+    public boolean onCartClick(int img, String name, int price, String size, int qty) {
         main.performHapticFeedback(HapticFeedbackConstants.CONTEXT_CLICK);
         Intent intent = new Intent(getApplicationContext(), cart.class);
+        intent.putExtra("img", img);
+        intent.putExtra("name", name);
+        intent.putExtra("price", price);
+        intent.putExtra("qty", qty);
+        intent.putExtra("size", size);
         startActivity(intent);
+        return true;
     }
+
+
 }
