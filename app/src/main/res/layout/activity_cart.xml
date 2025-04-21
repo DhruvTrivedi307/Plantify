@@ -43,11 +43,14 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginTop="150dp"
-        android:id="@+id/empty_cart">
+        android:id="@+id/empty_cart"
+        android:layout_gravity="center"
+        android:gravity="center">
 
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="400dp"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
             android:src="@drawable/empty_cart_image" />
 
         <TextView
@@ -57,6 +60,17 @@
             android:textSize="20dp"
             android:fontFamily="@font/outfit_bold"
             android:gravity="center"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cont"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:textSize="12dp"
+            android:hint="Continue to Shop"
+            android:textColorHint="@color/theme_text"
+            android:background="@drawable/rounded_button"
+            android:fontFamily="@font/outfit_medium"
+            android:layout_marginTop="20dp"/>
 
     </LinearLayout>
 

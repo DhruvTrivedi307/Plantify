@@ -42,7 +42,7 @@ public class cart extends AppCompatActivity {
     RecyclerView recyclerView;
     TextView subTotalPrice,grandTotalPrice,checkoutPrice;
 
-    AppCompatButton checkout;
+    AppCompatButton checkout,cont;
     LinearLayout cart_data, empty_cart;
     BottomNavigationView bnv;
     int totalPrice = 0;
@@ -73,6 +73,7 @@ public class cart extends AppCompatActivity {
         item_size = findViewById(R.id.item_size);
 
         checkout = findViewById(R.id.checkout);
+        cont = findViewById(R.id.cont);
 
         recyclerView = findViewById(R.id.cart);
 
@@ -87,6 +88,13 @@ public class cart extends AppCompatActivity {
         bnv = findViewById(R.id.bnv);
 
         back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+        cont.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();

@@ -14,11 +14,14 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.ViewModel;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Objects;
 
 public class shop extends AppCompatActivity {
@@ -392,4 +395,13 @@ public class shop extends AppCompatActivity {
         super.onResume();
         bnv.setSelectedItemId(R.id.shop);
     }
+
+}
+
+class FilterViewModel extends ViewModel {
+    public MutableLiveData<List<String>> selectedPlants = new MutableLiveData<>(new ArrayList<>());
+    public MutableLiveData<Float> minPrice = new MutableLiveData<>(100f);
+    public MutableLiveData<Float> maxPrice = new MutableLiveData<>(2000f);
+    public MutableLiveData<List<String>> selectedSize = new MutableLiveData<>(new ArrayList<>());
+    public MutableLiveData<List<String>> selectedIOplants = new MutableLiveData<>(new ArrayList<>());
 }

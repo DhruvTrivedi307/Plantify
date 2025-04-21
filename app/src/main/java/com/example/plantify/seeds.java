@@ -10,6 +10,7 @@ import android.widget.LinearLayout;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -18,7 +19,7 @@ public class seeds extends AppCompatActivity {
 
     LinearLayout main;
     LinearLayout s_amaranths,s_beetroots,s_broccolis,s_capsicums,s_corianders,s_fenugreek,s_greenchilli,s_greencucumber,s_okras,s_redamaranthus,s_spinch,s_tomatos;
-    LinearLayout s_amaranths_cart_click, s_beetroots_cart_click, s_broccolis_cart_click, s_capsicums_cart_click, s_corianders_cart_click, s_fenugreek_cart_click, s_greenchilli_cart_click, s_greencucumber_cart_click, s_okras_cart_click, s_redamaranthus_cart_click, s_spinch_cart_click, s_tomatos_cart_click;
+    AppCompatButton s_amaranths_cart_click, s_beetroots_cart_click, s_broccolis_cart_click, s_capsicums_cart_click, s_corianders_cart_click, s_fenugreek_cart_click, s_greenchilli_cart_click, s_greencucumber_cart_click, s_okras_cart_click, s_redamaranthus_cart_click, s_spinch_cart_click, s_tomatos_cart_click;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,55 +41,55 @@ public class seeds extends AppCompatActivity {
         s_spinch = findViewById(R.id.s_spinchs);
         s_tomatos = findViewById(R.id.s_tomatos);
 
-//        s_amaranths_cart_click = findViewById(R.id.s_amaranths_cart_click);
-//        s_beetroots_cart_click = findViewById(R.id.s_beetroots_cart_click);
-//        s_broccolis_cart_click = findViewById(R.id.s_broccolis_cart_click);
-//        s_capsicums_cart_click = findViewById(R.id.s_capsicums_cart_click);
-//        s_corianders_cart_click = findViewById(R.id.s_corianders_cart_click);
-//        s_fenugreek_cart_click = findViewById(R.id.s_fenugreek_cart_click);
-//        s_greenchilli_cart_click = findViewById(R.id.s_greenchillis_cart_click);
-//        s_greencucumber_cart_click = findViewById(R.id.s_greencucumbers_cart_click);
-//        s_okras_cart_click = findViewById(R.id.s_okras_cart_click);
-//        s_redamaranthus_cart_click = findViewById(R.id.s_redamaranthuss_cart_click);
-//        s_spinch_cart_click = findViewById(R.id.s_spinchs_cart_click);
-//        s_tomatos_cart_click = findViewById(R.id.s_tomatos_cart_click);
+        s_amaranths_cart_click = findViewById(R.id.s_amaranths_cart_click);
+        s_beetroots_cart_click = findViewById(R.id.s_beetroots_cart_click);
+        s_broccolis_cart_click = findViewById(R.id.s_broccolis_cart_click);
+        s_capsicums_cart_click = findViewById(R.id.s_capsicums_cart_click);
+        s_corianders_cart_click = findViewById(R.id.s_corianders_cart_click);
+        s_fenugreek_cart_click = findViewById(R.id.s_fenugreek_cart_click);
+        s_greenchilli_cart_click = findViewById(R.id.s_greenchillis_cart_click);
+        s_greencucumber_cart_click = findViewById(R.id.s_greencucumbers_cart_click);
+        s_okras_cart_click = findViewById(R.id.s_okras_cart_click);
+        s_redamaranthus_cart_click = findViewById(R.id.s_redamaranthuss_cart_click);
+        s_spinch_cart_click = findViewById(R.id.s_spinchs_cart_click);
+        s_tomatos_cart_click = findViewById(R.id.s_tomatos_cart_click);
         
-//        s_amaranths_cart_click.setOnClickListener(v -> {
-//            onCartClick();
-//        });
-//        s_beetroots_cart_click.setOnClickListener(v -> {
-//            onCartClick();
-//        });
-//        s_broccolis_cart_click.setOnClickListener(v -> {
-//            onCartClick();
-//        });
-//        s_capsicums_cart_click.setOnClickListener(v -> {
-//            onCartClick();
-//        });
-//        s_corianders_cart_click.setOnClickListener(v -> {
-//            onCartClick();
-//        });
-//        s_fenugreek_cart_click.setOnClickListener(v -> {
-//            onCartClick();
-//        });
-//        s_greenchilli_cart_click.setOnClickListener(v -> {
-//            onCartClick();
-//        });
-//        s_greencucumber_cart_click.setOnClickListener(v -> {
-//            onCartClick();
-//        });
-//        s_okras_cart_click.setOnClickListener(v -> {
-//            onCartClick();
-//        });
-//        s_redamaranthus_cart_click.setOnClickListener(v -> {
-//            onCartClick();
-//        });
-//        s_spinch_cart_click.setOnClickListener(v -> {
-//            onCartClick();
-//        });
-//        s_tomatos_cart_click.setOnClickListener(v -> {
-//            onCartClick();
-//        });
+        s_amaranths_cart_click.setOnClickListener(v -> {
+            onCartClick();
+        });
+        s_beetroots_cart_click.setOnClickListener(v -> {
+            onCartClick();
+        });
+        s_broccolis_cart_click.setOnClickListener(v -> {
+            onCartClick();
+        });
+        s_capsicums_cart_click.setOnClickListener(v -> {
+            onCartClick();
+        });
+        s_corianders_cart_click.setOnClickListener(v -> {
+            onCartClick();
+        });
+        s_fenugreek_cart_click.setOnClickListener(v -> {
+            onCartClick();
+        });
+        s_greenchilli_cart_click.setOnClickListener(v -> {
+            onCartClick();
+        });
+        s_greencucumber_cart_click.setOnClickListener(v -> {
+            onCartClick();
+        });
+        s_okras_cart_click.setOnClickListener(v -> {
+            onCartClick();
+        });
+        s_redamaranthus_cart_click.setOnClickListener(v -> {
+            onCartClick();
+        });
+        s_spinch_cart_click.setOnClickListener(v -> {
+            onCartClick();
+        });
+        s_tomatos_cart_click.setOnClickListener(v -> {
+            onCartClick();
+        });
 
         s_amaranths.setOnClickListener(new View.OnClickListener() {
             @Override

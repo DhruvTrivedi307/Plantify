@@ -2,7 +2,6 @@ package com.example.plantify;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.HapticFeedbackConstants;
 import android.view.View;
