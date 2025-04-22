@@ -230,7 +230,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:fontFamily="@font/sansita_swashed"
-                            android:text="₹949"
+                            android:text="₹349"
                             android:textColor="@color/theme"
                             android:textSize="12dp"/>
 
@@ -387,7 +387,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:fontFamily="@font/sansita_swashed"
-                            android:text="₹499"
+                            android:text="₹689"
                             android:textColor="@color/theme"
                             android:textSize="12dp"/>
 

@@ -27,6 +27,11 @@ public class tools extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tools);
 
+        // Read price filter range from intent
+        Intent intent = getIntent();
+        float minPrice = intent.getFloatExtra("min_price", 100f);
+        float maxPrice = intent.getFloatExtra("max_price", 2000f);
+
         main = findViewById(R.id.main);
         filter = findViewById(R.id.filter);
 
@@ -56,7 +61,7 @@ public class tools extends AppCompatActivity {
 
         hwp.setOnClickListener(v -> {
             String name = "Hydra Watering Pitcher";
-            int price = 399;
+            int price = 829;
             String description = "An ergonomically designed premium watering jug, ideal for easily watering indoor and outdoor plants without stress.";
             RedirectProduct(R.drawable.hydra_watering_pitcher,name,price,description);
         });
@@ -70,7 +75,7 @@ public class tools extends AppCompatActivity {
 
         fpw.setOnClickListener(v -> {
             String name = "Five Prong Weeder";
-            int price = 969;
+            int price = 350;
             String description = "This tool comes with five metal prongs and a wooden handle, making it suitable for comfortably turning soil and cleaning leaves from the garden. The product height is approximately 33 cm.";
             RedirectProduct(R.drawable.five_prong_weeder,name,price,description);
         });
@@ -84,21 +89,21 @@ public class tools extends AppCompatActivity {
 
         pis.setOnClickListener(v -> {
             String name = "Plastic Impulse Sprinkler";
-            int price = 879;
+            int price = 599;
             String description = "The Pyramid Plastic Sprinkler is ideal for watering medium-sized lawns. It has an adjustable shower head that covers a radius of 15 to 20 square feet. The body is made of plastic. ";
             RedirectProduct(R.drawable.plastic_impulse_sprinkler,name,price,description);
         });
 
         ss.setOnClickListener(v -> {
             String name = "Sprinkler Stand";
-            int price = 839;
+            int price = 599;
             String description = "Primarily used as an attachment for the Concorde Brass G2 and G3 sprinkler heads, this stand is made of mild steel with brass components. It offers dual compatibility for both sprinkler types. ";
             RedirectProduct(R.drawable.sprinkler_stand,name,price,description);
         });
 
         ws.setOnClickListener(v -> {
             String name = "Watermatic Stack";
-            int price = 299;
+            int price = 529;
             String description = " An automatic watering system suitable for both indoor and outdoor plants. The Watermatic Stake is easy to use and install, providing consistent watering for your garden throughout the year. ";
             RedirectProduct(R.drawable.watermatic_stake,name,price,description);
         });
@@ -108,7 +113,7 @@ public class tools extends AppCompatActivity {
         });
 
         hwp_cart_click.setOnClickListener(v -> {
-            onCartClick(R.drawable.hydra_watering_pitcher,"Hydra Watering Pitcher","Samll",399,1);
+            onCartClick(R.drawable.hydra_watering_pitcher,"Hydra Watering Pitcher","Samll",829,1);
         });
 
         dpw_cart_click.setOnClickListener(v -> {
@@ -116,7 +121,7 @@ public class tools extends AppCompatActivity {
         });
 
         fpw_cart_click.setOnClickListener(v -> {
-            onCartClick(R.drawable.five_prong_weeder,"Five Prong Weeder","Small",969,1);
+            onCartClick(R.drawable.five_prong_weeder,"Five Prong Weeder","Small",350,1);
         });
 
         cps_cart_click.setOnClickListener(v -> {
@@ -124,11 +129,11 @@ public class tools extends AppCompatActivity {
         });
 
         pis_cart_click.setOnClickListener(v -> {
-            onCartClick(R.drawable.plastic_impulse_sprinkler,"Plastic Impulse Sprinkler","Small",879,1);
+            onCartClick(R.drawable.plastic_impulse_sprinkler,"Plastic Impulse Sprinkler","Small",599,1);
         });
 
         ss_cart_click.setOnClickListener(v -> {
-            onCartClick(R.drawable.sprinkler_stand,"Sprinkler Stand","Small",839,1);
+            onCartClick(R.drawable.sprinkler_stand,"Sprinkler Stand","Small",599,1);
         });
 
         ws_cart_click.setOnClickListener(v -> {
@@ -158,6 +163,16 @@ public class tools extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        // Hide tools not in selected price range
+        if (!isPriceInRange(859, minPrice, maxPrice)) dmm.setVisibility(View.GONE);
+        if (!isPriceInRange(829, minPrice, maxPrice)) hwp.setVisibility(View.GONE);
+        if (!isPriceInRange(399, minPrice, maxPrice)) dpw.setVisibility(View.GONE);
+        if (!isPriceInRange(350, minPrice, maxPrice)) fpw.setVisibility(View.GONE);
+        if (!isPriceInRange(599, minPrice, maxPrice)) cps.setVisibility(View.GONE);
+        if (!isPriceInRange(599, minPrice, maxPrice)) pis.setVisibility(View.GONE);
+        if (!isPriceInRange(599, minPrice, maxPrice)) ss.setVisibility(View.GONE);
+        if (!isPriceInRange(529, minPrice, maxPrice)) ws.setVisibility(View.GONE);
     }
 
     public void RedirectProduct(int imageResId,String name, int price, String description){
@@ -178,6 +193,11 @@ public class tools extends AppCompatActivity {
         intent.putExtra("price",price);
         intent.putExtra("qty",qty);
         startActivity(intent);
+    }
+
+    // Returns true if price is within [min, max] range
+    private boolean isPriceInRange(int price, float min, float max) {
+        return price >= min && price <= max;
     }
 
     @Override

@@ -28,6 +28,13 @@ public class bestsellers extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bestsellers);
 
+        Intent intent = getIntent();
+        boolean airPlants = intent.getBooleanExtra("air_plants", false);
+        boolean floweringPlants = intent.getBooleanExtra("flowering_plants", false);
+        boolean climbers = intent.getBooleanExtra("climbers", false);
+        float minPrice = intent.getFloatExtra("min_price", 100f);
+        float maxPrice = intent.getFloatExtra("max_price", 2000f);
+
         main = findViewById(R.id.main);
         filter = findViewById(R.id.filter);
 
@@ -52,51 +59,73 @@ public class bestsellers extends AppCompatActivity {
         cart_icon = findViewById(R.id.cart_icon);
         search_icon = findViewById(R.id.search_icon);
 
+        boolean hasFilter = airPlants || floweringPlants || climbers || minPrice > 100f || maxPrice < 2000f;
+
+        if (hasFilter) {
+            b_lbp.setVisibility(View.GONE);
+            b_fbp.setVisibility(View.GONE);
+            b_pp.setVisibility(View.GONE);
+            b_bwp.setVisibility(View.GONE);
+            b_jmp.setVisibility(View.GONE);
+            b_mpg.setVisibility(View.GONE);
+            b_bhp.setVisibility(View.GONE);
+            b_plp.setVisibility(View.GONE);
+
+            if (isPriceInRange(349, minPrice, maxPrice) && (airPlants || !airPlants && !floweringPlants && !climbers)) b_lbp.setVisibility(View.VISIBLE);
+            if (isPriceInRange(349, minPrice, maxPrice) && (airPlants || !airPlants && !floweringPlants && !climbers)) b_fbp.setVisibility(View.VISIBLE);
+            if (isPriceInRange(699, minPrice, maxPrice) && (climbers || !airPlants && !floweringPlants && !climbers)) b_pp.setVisibility(View.VISIBLE);
+            if (isPriceInRange(689, minPrice, maxPrice) && (climbers || !airPlants && !floweringPlants && !climbers)) b_bwp.setVisibility(View.VISIBLE);
+            if (isPriceInRange(279, minPrice, maxPrice) && (floweringPlants || !airPlants && !floweringPlants && !climbers)) b_jmp.setVisibility(View.VISIBLE);
+            if (isPriceInRange(279, minPrice, maxPrice) && (floweringPlants || !airPlants && !floweringPlants && !climbers)) b_mpg.setVisibility(View.VISIBLE);
+            if (isPriceInRange(299, minPrice, maxPrice) && (airPlants || !airPlants && !floweringPlants && !climbers)) b_bhp.setVisibility(View.VISIBLE);
+            if (isPriceInRange(299, minPrice, maxPrice) && (floweringPlants || !airPlants && !floweringPlants && !climbers)) b_plp.setVisibility(View.VISIBLE);
+        }
+
         b_lbp.setOnClickListener(v -> {
             String name = "Lucky Bamboo Plant";
-            int price = 499;
+            int price = 349;
             RedirectProduct(R.drawable.lucky_bamboo_plant,name,price);
         });
 
         b_fbp.setOnClickListener(v -> {
             String name = "Ficus Bonsai Plant";
-            int price = 499;
+            int price = 349;
             RedirectProduct(R.drawable.ficus_bonsai_plant,name,price);
         });
 
         b_pp.setOnClickListener(v -> {
             String name = "Peacock Plant";
-            int price = 499;
+            int price = 699;
             RedirectProduct(R.drawable.peacock_plant,name,price);
         });
 
         b_bwp.setOnClickListener(v -> {
             String name = "Bamboo Palm Plant";
-            int price = 499;
+            int price = 689;
             RedirectProduct(R.drawable.brazilian_wood_plant,name,price);
         });
 
         b_jmp.setOnClickListener(v -> {
             String name = "Jade Plant Mini";
-            int price = 499;
+            int price = 279;
             RedirectProduct(R.drawable.jade_mini_plats,name,price);
         });
 
         b_mpg.setOnClickListener(v -> {
             String name = "Money Plant Golden";
-            int price = 499;
+            int price = 279;
             RedirectProduct(R.drawable.money_plant_golden,name,price);
         });
 
         b_bhp.setOnClickListener(v -> {
             String name = "Broken Heart Plant";
-            int price = 499;
+            int price = 299;
             RedirectProduct(R.drawable.broken_heart_plant_2,name,price);
         });
 
         b_plp.setOnClickListener(v -> {
             String name = "Peace Lily Plant";
-            int price = 499;
+            int price = 299;
             RedirectProduct(R.drawable.peace_lily_plant,name,price);
         });
 
@@ -106,7 +135,7 @@ public class bestsellers extends AppCompatActivity {
         });
 
         b_fbp_cart_click.setOnClickListener(v -> {
-            onCartClick(R.drawable.ficus_bonsai_plant,"Ficus Bonsai Plant","Small",949,1);
+            onCartClick(R.drawable.ficus_bonsai_plant,"Ficus Bonsai Plant","Small",349,1);
         });
 
         b_pp_cart_click.setOnClickListener(v -> {
@@ -114,7 +143,7 @@ public class bestsellers extends AppCompatActivity {
         });
 
         b_bwp_cart_click.setOnClickListener(v -> {
-            onCartClick(R.drawable.brazilian_wood_plant,"Brazilian Wood Plant","Small",499,1);
+            onCartClick(R.drawable.brazilian_wood_plant,"Brazilian Wood Plant","Small",689,1);
         });
 
         b_jmp_cart_click.setOnClickListener(v -> {
@@ -156,6 +185,15 @@ public class bestsellers extends AppCompatActivity {
         });
 
     }
+
+    private boolean isPriceInRange(int price, float min, float max) {
+        return price >= min && price <= max;
+    }
+
+    private boolean shouldShowPlant(boolean categoryCondition, int price, float min, float max) {
+        return categoryCondition && isPriceInRange(price, min, max);
+    }
+
 
     public void RedirectProduct(int imageResId,String name, int price){
         Intent intent = new Intent(getApplicationContext(), product.class);

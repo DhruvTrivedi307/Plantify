@@ -232,7 +232,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:fontFamily="@font/sansita_swashed"
-                            android:text="₹399"
+                            android:text="₹829"
                             android:textColor="@color/theme"
                             android:textSize="12dp"/>
 
@@ -390,7 +390,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:fontFamily="@font/sansita_swashed"
-                            android:text="₹969"
+                            android:text="₹350"
                             android:textColor="@color/theme"
                             android:textSize="12dp"/>
 
@@ -547,7 +547,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:fontFamily="@font/sansita_swashed"
-                            android:text="₹879"
+                            android:text="₹599"
                             android:textColor="@color/theme"
                             android:textSize="12dp"/>
 
@@ -630,7 +630,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:fontFamily="@font/sansita_swashed"
-                            android:text="₹839"
+                            android:text="₹599"
                             android:textColor="@color/theme"
                             android:textSize="12dp"/>
 

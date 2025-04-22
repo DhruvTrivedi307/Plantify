@@ -25,6 +25,10 @@ public class pots extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pots);
 
+        Intent intent = getIntent();
+        float minPrice = intent.getFloatExtra("min_price", 100f);
+        float maxPrice = intent.getFloatExtra("max_price", 2000f);
+
         main = findViewById(R.id.main);
 
         filter = findViewById(R.id.filter);
@@ -40,73 +44,99 @@ public class pots extends AppCompatActivity {
         p_tccp = findViewById(R.id.p_tccp);
         p_vep = findViewById(R.id.p_vep);
 
+        boolean airPlants = intent.getBooleanExtra("air_plants", false);
+        boolean floweringPlants = intent.getBooleanExtra("flowering_plants", false);
+        boolean climbers = intent.getBooleanExtra("climbers", false);
+
+        if (airPlants || floweringPlants || climbers || minPrice > 100f || maxPrice < 2000f) {
+            // Hide all initially
+            p_gwp.setVisibility(View.GONE);
+            p_owp.setVisibility(View.GONE);
+            p_rwwp.setVisibility(View.GONE);
+            p_rcp.setVisibility(View.GONE);
+            p_cagcp.setVisibility(View.GONE);
+            p_stp.setVisibility(View.GONE);
+            p_tfbcp.setVisibility(View.GONE);
+            p_tffcp.setVisibility(View.GONE);
+            p_tccp.setVisibility(View.GONE);
+            p_vep.setVisibility(View.GONE);
+
+            // Show only the ones that match the selected type and price
+            if (isPriceInRange(479, minPrice, maxPrice) && airPlants) p_gwp.setVisibility(View.VISIBLE);
+            if (isPriceInRange(499, minPrice, maxPrice) && airPlants) p_owp.setVisibility(View.VISIBLE);
+            if (isPriceInRange(829, minPrice, maxPrice) && floweringPlants) p_rwwp.setVisibility(View.VISIBLE);
+            if (isPriceInRange(899, minPrice, maxPrice) && floweringPlants) p_rcp.setVisibility(View.VISIBLE);
+            if (isPriceInRange(1289, minPrice, maxPrice) && climbers) p_cagcp.setVisibility(View.VISIBLE);
+            if (isPriceInRange(1099, minPrice, maxPrice) && climbers) p_stp.setVisibility(View.VISIBLE);
+        }
+
         p_gwp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RedirectProduct(R.drawable.gradient_wooden_planter,"Gradient Wooden Planter",129,"This Gradient Wooden Planter features a natural wood finish with a smooth gradient effect, adding an earthy charm to any space. Perfect for indoor plants, it blends rustic elegance with modern aesthetics.");
+                RedirectProduct(R.drawable.gradient_wooden_planter,"Gradient Wooden Planter",479,"This Gradient Wooden Planter features a natural wood finish with a smooth gradient effect, adding an earthy charm to any space. Perfect for indoor plants, it blends rustic elegance with modern aesthetics.");
             }
         });
 
         p_owp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RedirectProduct(R.drawable.orbit_wooden_planter,"Orbit Wooden Planter",199,"The Orbit Wooden Planter features a smooth, rounded design with a rich wooden texture, adding a natural charm to any space. Perfect for showcasing vibrant plants, it blends elegance with simplicity.");
+                RedirectProduct(R.drawable.orbit_wooden_planter,"Orbit Wooden Planter",499,"The Orbit Wooden Planter features a smooth, rounded design with a rich wooden texture, adding a natural charm to any space. Perfect for showcasing vibrant plants, it blends elegance with simplicity.");
             }
         });
 
         p_rwwp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RedirectProduct(R.drawable.ridged_waves_wooden_pot,"Ridged Waves Wooden Pot",249,"The Ridged Waves Wooden Pot showcases an artistic wavy texture, adding a modern yet earthy touch. Its unique design enhances the beauty of any plant, making it a perfect decor piece.");
+                RedirectProduct(R.drawable.ridged_waves_wooden_pot,"Ridged Waves Wooden Pot",829,"The Ridged Waves Wooden Pot showcases an artistic wavy texture, adding a modern yet earthy touch. Its unique design enhances the beauty of any plant, making it a perfect decor piece.");
             }
         });
 
         p_rcp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RedirectProduct(R.drawable.roma_ceramic_pot,"Roma Ceramic Pot",499,"Introducing the exquisite Roma Pot, a stunning ceramic masterpiece inspired by the timeless beauty of old Roman architecture. Reminiscent of majestic pillars, this unique pot brings an air of elegance and grandeur to your indoor or outdoor space.");
+                RedirectProduct(R.drawable.roma_ceramic_pot,"Roma Ceramic Pot",899,"Introducing the exquisite Roma Pot, a stunning ceramic masterpiece inspired by the timeless beauty of old Roman architecture. Reminiscent of majestic pillars, this unique pot brings an air of elegance and grandeur to your indoor or outdoor space.");
             }
         });
 
         p_cagcp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RedirectProduct(R.drawable.cats_are_gods_ceramic_planter,"Cats Are Gods Ceramic Planter",339,"The stunning ceramic planters are hand-crafted with the finest clay, locally sourced from Hyderabad and Andhra Pradesh. These beautiful planters are built to last and promise to stay with your plants for more than 20 years without fading, chipping or losing their charm. The ceramic is skillfully baked and vitrified at 1200°C, giving it a stronger built and a longer-lasting life.");
+                RedirectProduct(R.drawable.cats_are_gods_ceramic_planter,"Cats Are Gods Ceramic Planter",1289,"The stunning ceramic planters are hand-crafted with the finest clay, locally sourced from Hyderabad and Andhra Pradesh. These beautiful planters are built to last and promise to stay with your plants for more than 20 years without fading, chipping or losing their charm. The ceramic is skillfully baked and vitrified at 1200°C, giving it a stronger built and a longer-lasting life.");
             }
         });
 
         p_stp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RedirectProduct(R.drawable.sienna_terracotta_pots,"Sienna Terracotta Pots",359,"The Sienna Terracotta Set of 3 Pots brings you three premium pots in aesthetic colors, adorned with elegant designs. These pots are sturdy, strong, and durable, making them the perfect companions for your plants. Find luxury and convenience all in one with these stunning terracotta pots.");
+                RedirectProduct(R.drawable.sienna_terracotta_pots,"Sienna Terracotta Pots",1099,"The Sienna Terracotta Set of 3 Pots brings you three premium pots in aesthetic colors, adorned with elegant designs. These pots are sturdy, strong, and durable, making them the perfect companions for your plants. Find luxury and convenience all in one with these stunning terracotta pots.");
             }
         });
 
         p_tfbcp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RedirectProduct(R.drawable.tulip_fantasy_bowl_ceramic_planter,"Tulip Fantasy Bowl Ceramic Planter",429,"Our tulip fantasy planter is beautiful in its simplicity. The minimalist design with carefully handcrafted shape means its the best fit for your plants while also elevating the decor of your home. Made of premium grade ceramic, the planter sports the silkiest glaze you will ever come across in planters. ");
+                RedirectProduct(R.drawable.tulip_fantasy_bowl_ceramic_planter,"Tulip Fantasy Bowl Ceramic Planter",879,"Our tulip fantasy planter is beautiful in its simplicity. The minimalist design with carefully handcrafted shape means its the best fit for your plants while also elevating the decor of your home. Made of premium grade ceramic, the planter sports the silkiest glaze you will ever come across in planters. ");
             }
         });
 
         p_tffcp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RedirectProduct(R.drawable.tulip_fantasy_flat_ceramic_planter,"Tulip Fantasy Flat Ceramic Planter",279,"Our tulip fantasy planter is beautiful in its simplicity. The minimalist design with carefully handcrafted shape means its the best fit for your plants while also elevating the decor of your home. Made of premium grade ceramic, the planter sports the silkiest glaze you will ever come across in planters. ");
+                RedirectProduct(R.drawable.tulip_fantasy_flat_ceramic_planter,"Tulip Fantasy Flat Ceramic Planter",839,"Our tulip fantasy planter is beautiful in its simplicity. The minimalist design with carefully handcrafted shape means its the best fit for your plants while also elevating the decor of your home. Made of premium grade ceramic, the planter sports the silkiest glaze you will ever come across in planters. ");
             }
         });
 
         p_tccp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RedirectProduct(R.drawable.twilight_clouds_ceramic_planter,"Twilight Clouds Ceramic Planter", 189,"The stunning ceramic planters are hand-crafted with the finest clay, locally sourced from Hyderabad and Andhra Pradesh. These beautiful planters are built to last and promise to stay with your plants for more than 20 years without fading, chipping or losing their charm. ");
+                RedirectProduct(R.drawable.twilight_clouds_ceramic_planter,"Twilight Clouds Ceramic Planter", 699,"The stunning ceramic planters are hand-crafted with the finest clay, locally sourced from Hyderabad and Andhra Pradesh. These beautiful planters are built to last and promise to stay with your plants for more than 20 years without fading, chipping or losing their charm. ");
             }
         });
 
         p_vep.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RedirectProduct(R.drawable.verona_eco_planter,"Verona Eco Planter",399,"Elevate your indoor décor with the Verona Eco Series planters, stylish and functional additions that seamlessly blend eco-friendly materials with contemporary design. Shop these stunning planters in different size in the color of your choice! Why get one when you can get them all?");
+                RedirectProduct(R.drawable.verona_eco_planter,"Verona Eco Planter",699,"Elevate your indoor décor with the Verona Eco Series planters, stylish and functional additions that seamlessly blend eco-friendly materials with contemporary design. Shop these stunning planters in different size in the color of your choice! Why get one when you can get them all?");
             }
         });
 
@@ -152,4 +182,7 @@ public class pots extends AppCompatActivity {
         finish();
     }
 
+    private boolean isPriceInRange(int price, float min, float max) {
+        return price >= min && price <= max;
+    }
 }

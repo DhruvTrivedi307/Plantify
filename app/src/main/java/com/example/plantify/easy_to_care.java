@@ -27,6 +27,10 @@ public class easy_to_care extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_easy_to_care);
 
+        Intent intent = getIntent();
+        float minPrice = intent.getFloatExtra("min_price", 100f);
+        float maxPrice = intent.getFloatExtra("max_price", 2000f);
+
         main = findViewById(R.id.main);
         filter = findViewById(R.id.filter);
 
@@ -51,72 +55,98 @@ public class easy_to_care extends AppCompatActivity {
         e_vjmp_cart_click = findViewById(R.id.e_vjmp_cart_click);
         e_bhp_cart_click = findViewById(R.id.e_bhp_cart_click);
 
+        boolean hasFilter = minPrice > 100f || maxPrice < 2000f;
+
+        if (hasFilter) {
+            e_apbp.setVisibility(View.GONE);
+            e_bpp.setVisibility(View.GONE);
+            e_bpx.setVisibility(View.GONE);
+            e_arp.setVisibility(View.GONE);
+            e_flp.setVisibility(View.GONE);
+            e_csp.setVisibility(View.GONE);
+            e_mdp.setVisibility(View.GONE);
+            e_pgp.setVisibility(View.GONE);
+            e_vjmp.setVisibility(View.GONE);
+            e_bhp.setVisibility(View.GONE);
+
+            if (isPriceInRange(719, minPrice, maxPrice)) e_apbp.setVisibility(View.VISIBLE);
+            if (isPriceInRange(799, minPrice, maxPrice)) e_bpp.setVisibility(View.VISIBLE);
+            if (isPriceInRange(857, minPrice, maxPrice)) e_bpx.setVisibility(View.VISIBLE);
+            if (isPriceInRange(849, minPrice, maxPrice)) e_arp.setVisibility(View.VISIBLE);
+            if (isPriceInRange(1199, minPrice, maxPrice)) e_flp.setVisibility(View.VISIBLE);
+            if (isPriceInRange(1146, minPrice, maxPrice)) e_csp.setVisibility(View.VISIBLE);
+            if (isPriceInRange(867, minPrice, maxPrice)) e_mdp.setVisibility(View.VISIBLE);
+            if (isPriceInRange(899, minPrice, maxPrice)) e_pgp.setVisibility(View.VISIBLE);
+            if (isPriceInRange(299, minPrice, maxPrice)) e_vjmp.setVisibility(View.VISIBLE);
+            if (isPriceInRange(299, minPrice, maxPrice)) e_bhp.setVisibility(View.VISIBLE);
+        }
+
         e_apbp.setOnClickListener(v -> {
             String name = "Aglaonema Pink Beauty Plant";
-            int price = 499;
+            int price = 719;
             String description = "This variety of Aglaonema, often referred to as ‘Pink Aglaonema’ or ‘Lady Valentine,’ is renowned for its striking pink and green variegated leaves. It’s a popular houseplant due to its vibrant foliage and relatively easy care requirements.  ";
             RedirectProduct(R.drawable.aglaonema_pink_beauty_plant,name,price,description);
         });
 
         e_bpp.setOnClickListener(v -> {
             String name = "Bamboo Plam Plant";
-            int price = 499;
+            int price = 799;
             String description = "Known for its elegant, feathery fronds, the Bamboo Palm (Chamaedorea seifrizii) is a popular indoor plant that thrives in low light conditions and helps purify indoor air.";
             RedirectProduct(R.drawable.bamboo_palm_plant,name,price,description);
         });
 
         e_bpx.setOnClickListener(v -> {
             String name = "Bamboo Palm XL";
-            int price = 499;
+            int price = 857;
             String description = "This is likely a larger variant of the Bamboo Palm, offering the same air-purifying benefits and aesthetic appeal as its standard counterpart.";
             RedirectProduct(R.drawable.bamboo_palm_xl,name,price,description);
         });
 
         e_arp.setOnClickListener(v -> {
             String name = "Aglaonema Red Planin";
-            int price = 499;
+            int price = 849;
             String description = "Similar to the Pink Beauty, the Red Aglaonema features lush foliage with red and green hues, adding a vibrant touch to indoor spaces.";
             RedirectProduct(R.drawable.aglaonema_red_plant,name,price,description);
         });
 
         e_flp.setOnClickListener(v -> {
             String name = "Fiddle Leaf Fig Plant";
-            int price = 499;
+            int price = 1199;
             String description = "Recognized for its large, glossy leaves, the Fiddle Leaf Fig (Ficus lyrata) is a popular choice for adding a bold, green statement to interiors.  ";
             RedirectProduct(R.drawable.fiddle_leaf_fig_plant,name,price,description);
         });
 
         e_csp.setOnClickListener(v -> {
             String name = "Chlorophytum Spider Plant";
-            int price = 499;
+            int price = 1146;
             String description = "The Spider Plant (Chlorophytum comosum) is an easy-to-grow houseplant known for its arching leaves and small white flowers. It’s also appreciated for its air-purifying qualities.";
             RedirectProduct(R.drawable.chlorophytum_spider_plant,name,price,description);
         });
 
         e_mdp.setOnClickListener(v -> {
             String name = "Monstera Deliciosa Plant";
-            int price = 499;
+            int price = 867;
             String description = "Known for its unique, glossy, and large leaves with natural splits and holes, the Monstera Deliciosa adds a tropical vibe to any space. It’s a low-maintenance plant that thrives in indirect light and requires minimal watering.  ";
             RedirectProduct(R.drawable.monstera_deliciosa_plant,name,price,description);
         });
 
         e_pgp.setOnClickListener(v -> {
             String name = "Peperomia Green Plant";
-            int price = 499;
+            int price = 899;
             String description = "Peperomia is a compact, low-maintenance plant with attractive foliage, making it ideal for small spaces or desktops.";
             RedirectProduct(R.drawable.peperomia_green_plant,name,price,description);
         });
 
         e_vjmp.setOnClickListener(v -> {
             String name = "Variegated Jade Mini Plant";
-            int price = 499;
+            int price = 299;
             String description = "A smaller variant of the Jade Plant (Crassula ovata) featuring variegated leaves. Jade plants are succulents known for their thick, fleshy leaves and are considered symbols of good luck.";
             RedirectProduct(R.drawable.variegated_jade_mini_plant,name,price,description);
         });
 
         e_bhp.setOnClickListener(v -> {
             String name = "Broken Heart Plant";
-            int price = 499;
+            int price = 299;
             String description = "Commonly known as the Swiss Cheese Plant, it boasts large, glossy leaves with unique holes, adding a tropical feel to indoor spaces.";
             RedirectProduct(R.drawable.broken_heart_plant,name,price,description);
         });
@@ -126,7 +156,7 @@ public class easy_to_care extends AppCompatActivity {
         });
 
         e_bpp_cart_click.setOnClickListener(v -> {
-            onCartClick(R.drawable.bamboo_palm_plant,"Bamboo Palm Plant","Small",399,1);
+            onCartClick(R.drawable.bamboo_palm_plant,"Bamboo Palm Plant","Small",799,1);
         });
 
         e_bpx_cart_click.setOnClickListener(v -> {
@@ -134,7 +164,7 @@ public class easy_to_care extends AppCompatActivity {
         });
 
         e_arp_cart_click.setOnClickListener(v -> {
-            onCartClick(R.drawable.aglaonema_red_plant,"Aglaonema Red Plant","Small",749,1);
+            onCartClick(R.drawable.aglaonema_red_plant,"Aglaonema Red Plant","Small",849,1);
         });
 
         e_flp_cart_click.setOnClickListener(v -> {
@@ -142,11 +172,11 @@ public class easy_to_care extends AppCompatActivity {
         });
 
         e_csp_cart_click.setOnClickListener(v -> {
-            onCartClick(R.drawable.chlorophytum_spider_plant,"Chlorophytum Spider Plant","Small",739,1);
+            onCartClick(R.drawable.chlorophytum_spider_plant,"Chlorophytum Spider Plant","Small",1146,1);
         });
 
         e_mdp_cart_click.setOnClickListener(v -> {
-            onCartClick(R.drawable.monstera_deliciosa_plant,"Monstera Deliciosa Plant","Small",289,1);
+            onCartClick(R.drawable.monstera_deliciosa_plant,"Monstera Deliciosa Plant","Small",867,1);
         });
 
         e_pgp_cart_click.setOnClickListener(v -> {
@@ -184,6 +214,10 @@ public class easy_to_care extends AppCompatActivity {
                 startActivity(i);
             }
         });
+    }
+
+    private boolean isPriceInRange(int price, float min, float max) {
+        return price >= min && price <= max;
     }
 
     public void RedirectProduct(int imageResId,String name, int price, String description){
