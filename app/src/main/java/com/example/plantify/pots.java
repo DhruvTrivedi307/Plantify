@@ -16,7 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class pots extends AppCompatActivity {
 
-    LinearLayout main;
+    LinearLayout main,filter;
     LinearLayout p_gwp,p_owp,p_rwwp,p_rcp,p_cagcp,p_stp,p_tfbcp,p_tffcp,p_tccp,p_vep;
 
     @SuppressLint("MissingInflatedId")
@@ -26,6 +26,8 @@ public class pots extends AppCompatActivity {
         setContentView(R.layout.activity_pots);
 
         main = findViewById(R.id.main);
+
+        filter = findViewById(R.id.filter);
 
         p_gwp = findViewById(R.id.p_gwp);
         p_owp = findViewById(R.id.p_owp);
@@ -123,6 +125,15 @@ public class pots extends AppCompatActivity {
             overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
         });
 
+        filter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(pots.this,filter_type_of_plants.class);
+                i.putExtra("page",pots.class.getName());
+                startActivity(i);
+            }
+        });
+
     }
 
     public void RedirectProduct(int imageResId,String name, int price,String desc){
@@ -133,6 +144,12 @@ public class pots extends AppCompatActivity {
         intent.putExtra("price", price);
         intent.putExtra("description",desc);
         startActivity(intent);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 
 }

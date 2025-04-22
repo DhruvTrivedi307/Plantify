@@ -12,6 +12,7 @@
         android:orientation="vertical"
         >
         <CheckBox
+            android:id="@+id/indoor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Indoor"
@@ -20,6 +21,7 @@
             />
 
         <CheckBox
+            android:id="@+id/outdoor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Outdoor"
@@ -28,6 +30,7 @@
             />
 
         <CheckBox
+            android:id="@+id/outdoor_shade_loving_plant"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Outdoor Shade Loving Plant"
@@ -36,6 +39,7 @@
             />
 
         <CheckBox
+            android:id="@+id/outdoor_sun_loving_plant"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Outdoor Sun Loving Plant"

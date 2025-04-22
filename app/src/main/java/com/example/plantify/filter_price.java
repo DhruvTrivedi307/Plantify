@@ -1,6 +1,8 @@
 package com.example.plantify;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -57,17 +59,15 @@ public class filter_price extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_filter_price, container, false);
 
-        air_plants = view.findViewById(R.id.air_plants);
-        flowering_plants = view.findViewById(R.id.flowering_plants);
-        climbers = view.findViewById(R.id.climbers);
-        water_plants = view.findViewById(R.id.water_plants);
-        fruit_plants = view.findViewById(R.id.fruit_plants);
-
         priceRangeSlider = view.findViewById(R.id.priceRangeSlider);
         TextView rangeTextView = view.findViewById(R.id.range);
 
-        priceRangeSlider.setValues(100f, 2000f);
-        rangeTextView.setText("₹100 - ₹2000");
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("PlantFilterPrefs", Context.MODE_PRIVATE);
+        float minPrice = sharedPreferences.getFloat("min_price", 100f); // Default to ₹100 if not saved
+        float maxPrice = sharedPreferences.getFloat("max_price", 2000f); // Default to ₹2000 if not saved
+
+        priceRangeSlider.setValues(minPrice, maxPrice);
+        rangeTextView.setText("₹" + Math.round(minPrice) + " - ₹" + Math.round(maxPrice));
 
         priceRangeSlider.addOnChangeListener((slider, value, fromUser) -> {
             float min = slider.getValues().get(0);
@@ -76,17 +76,12 @@ public class filter_price extends Fragment {
             String range = "₹" + Math.round(values.get(0)) + " - ₹" + Math.round(values.get(1));
             rangeTextView.setText(range);
             rangeTextView.performHapticFeedback(HapticFeedbackConstants.CLOCK_TICK);
-        });
 
-        FilterViewModel viewModel = new ViewModelProvider(requireActivity()).get(FilterViewModel.class);
-
-        priceRangeSlider.setValues(viewModel.minPrice.getValue(), viewModel.maxPrice.getValue());
-
-        priceRangeSlider.addOnChangeListener((slider, value, fromUser) -> {
-            float min = slider.getValues().get(0);
-            float max = slider.getValues().get(1);
-            viewModel.minPrice.setValue(min);
-            viewModel.maxPrice.setValue(max);
+            // Save the selected price range
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putFloat("min_price", min);
+            editor.putFloat("max_price", max);
+            editor.apply();
         });
 
         return view;

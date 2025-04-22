@@ -1,5 +1,8 @@
 package com.example.plantify;
 
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,9 +10,11 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 
 public class filter_size extends Fragment {
 
+    CheckBox small, medium;
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
@@ -38,10 +43,30 @@ public class filter_size extends Fragment {
         }
     }
 
+    @SuppressLint("MissingInflatedId")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_filter_size, container, false);
+        View view = inflater.inflate(R.layout.fragment_filter_size, container, false);
+        small = view.findViewById(R.id.small);
+        medium = view.findViewById(R.id.medium);
+
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("PlantFilterPrefs", Context.MODE_PRIVATE);
+        small.setChecked(sharedPreferences.getBoolean("small_size", false));
+        medium.setChecked(sharedPreferences.getBoolean("medium_size", false));
+
+        small.setOnCheckedChangeListener((buttonView, isChecked) -> saveState());
+        medium.setOnCheckedChangeListener((buttonView, isChecked) -> saveState());
+
+        return view;
+    }
+
+    private void saveState() {
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("PlantFilterPrefs", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean("small_size", small.isChecked());
+        editor.putBoolean("medium_size", medium.isChecked());
+        editor.apply();
     }
 }

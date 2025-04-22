@@ -19,6 +19,7 @@ import androidx.lifecycle.ViewModel;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.net.HttpCookie;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -85,34 +86,16 @@ public class shop extends AppCompatActivity {
         h_vjmp_cart_click = findViewById(R.id.h_vjmp_cart_click);
         
         filter = findViewById(R.id.filter);
-        indoorBTN = findViewById(R.id.indoorBTN);
 
-        indoorBTN.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                h_bhp.setVisibility(View.VISIBLE);
-                h_jmp.setVisibility(View.VISIBLE);
-                h_lbp.setVisibility(View.VISIBLE);
-                h_mpg.setVisibility(View.VISIBLE);
-                h_bwp.setVisibility(View.VISIBLE);
-                h_bpp.setVisibility(View.VISIBLE);
-                h_flp.setVisibility(View.GONE);
-                h_vjmp.setVisibility(View.GONE);
-                h_plp.setVisibility(View.GONE);
-                h_fbp.setVisibility(View.GONE);
-                h_stp.setVisibility(View.GONE);
-                h_pgp.setVisibility(View.GONE);
-                h_pp.setVisibility(View.GONE);
-                h_arp.setVisibility(View.GONE);
-                h_apbp.setVisibility(View.GONE);
-                h_bpx.setVisibility(View.GONE);
-            }
-        });
+
 
         filter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(shop.this, filter_type_of_plants.class));
+//                startActivity(new Intent(shop.this, filter_type_of_plants.class));
+                Intent i = new Intent(shop.this,filter_type_of_plants.class);
+                i.putExtra("page",shop.class.getName());
+                startActivity(i);
             }
         });
 
@@ -362,6 +345,124 @@ public class shop extends AppCompatActivity {
             overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
         });
 
+        Intent intent = getIntent();
+
+        boolean airPlants = intent.getBooleanExtra("air_plants", false);
+        boolean floweringPlants = intent.getBooleanExtra("flowering_plants", false);
+        boolean climbers = intent.getBooleanExtra("climbers", false);
+        boolean focalPlants = intent.getBooleanExtra("focal_plants", false);
+        boolean fruitPlants = intent.getBooleanExtra("fruit_plants", false);
+        boolean groundCovers = intent.getBooleanExtra("ground_covers", false);
+        float minPrice = intent.getFloatExtra("min_price", 100f);
+        float maxPrice = intent.getFloatExtra("max_price", 2000f);
+        boolean small = intent.getBooleanExtra("small_size", false);
+        boolean medium = intent.getBooleanExtra("medium_size", false);
+        boolean indoor = intent.getBooleanExtra("indoor", false);
+        boolean outdoor = intent.getBooleanExtra("outdoor", false);
+        boolean outdoorShadeLovingPlant = intent.getBooleanExtra("outdoor_shade_loving_plant", false);
+        boolean outdoorSunLovingPlant = intent.getBooleanExtra("outdoor_sun_loving_plant", false);
+
+        if (airPlants) {
+            // Example logic: show only indoor air plants
+            // Your logic here
+            h_bhp.setVisibility(View.VISIBLE);
+            h_jmp.setVisibility(View.VISIBLE);
+
+            h_plp.setVisibility(View.VISIBLE);
+            h_fbp.setVisibility(View.VISIBLE);
+
+            h_lbp.setVisibility(View.GONE);
+            h_stp.setVisibility(View.GONE);
+
+            h_pgp.setVisibility(View.GONE);
+            h_mpg.setVisibility(View.GONE);
+
+            h_pp.setVisibility(View.GONE);
+            h_bwp.setVisibility(View.GONE);
+
+            h_arp.setVisibility(View.GONE);
+            h_apbp.setVisibility(View.GONE);
+
+            h_bpx.setVisibility(View.GONE);
+            h_bpp.setVisibility(View.GONE);
+
+            h_flp.setVisibility(View.GONE);
+            h_vjmp.setVisibility(View.GONE);
+        }
+
+        if (floweringPlants) {
+            h_bhp.setVisibility(View.GONE);
+            h_jmp.setVisibility(View.GONE);
+
+            h_plp.setVisibility(View.GONE);
+            h_fbp.setVisibility(View.GONE);
+
+            h_lbp.setVisibility(View.GONE);
+            h_stp.setVisibility(View.GONE);
+
+            h_pgp.setVisibility(View.VISIBLE);
+            h_mpg.setVisibility(View.VISIBLE);
+
+            h_pp.setVisibility(View.GONE);
+            h_bwp.setVisibility(View.GONE);
+
+            h_arp.setVisibility(View.VISIBLE);
+            h_apbp.setVisibility(View.VISIBLE);
+
+            h_bpx.setVisibility(View.GONE);
+            h_bpp.setVisibility(View.GONE);
+
+            h_flp.setVisibility(View.GONE);
+            h_vjmp.setVisibility(View.GONE);
+        }
+
+        if (climbers) {
+            h_bhp.setVisibility(View.GONE);
+            h_jmp.setVisibility(View.GONE);
+
+            h_plp.setVisibility(View.GONE);
+            h_fbp.setVisibility(View.GONE);
+
+            h_lbp.setVisibility(View.GONE);
+            h_stp.setVisibility(View.GONE);
+
+            h_pgp.setVisibility(View.GONE);
+            h_mpg.setVisibility(View.GONE);
+
+            h_pp.setVisibility(View.VISIBLE);
+            h_bwp.setVisibility(View.VISIBLE);
+
+            h_arp.setVisibility(View.GONE);
+            h_apbp.setVisibility(View.GONE);
+
+            h_bpx.setVisibility(View.GONE);
+            h_bpp.setVisibility(View.GONE);
+
+            h_flp.setVisibility(View.GONE);
+            h_vjmp.setVisibility(View.GONE);
+            Toast.makeText(this, "done", Toast.LENGTH_SHORT).show();
+        }
+
+        if (focalPlants){
+            Toast.makeText(this, "done", Toast.LENGTH_SHORT).show();
+        }
+
+//
+// Create toast message
+//        String toastMessage = "Filters:\n";
+//
+//        if (airPlants) toastMessage += "Air Plants\n";
+//        if (floweringPlants) toastMessage += "Flowering Plants\n";
+//        if (climbers) toastMessage += "Climbers\n";
+//        toastMessage += "Price: ₹" + minPrice + " - ₹" + maxPrice + "\n";
+//        if (small) toastMessage += "Size: Small\n";
+//        if (medium) toastMessage += "Size: Medium\n";
+//        if (indoor) toastMessage += "Indoor\n";
+//        if (outdoor) toastMessage += "Outdoor\n";
+//
+// Show the toast
+//        Toast.makeText(this, toastMessage.trim(), Toast.LENGTH_LONG).show();
+
     }
 
     public void RedirectProduct(int imageResId,String name, int price, String description){
@@ -405,4 +506,6 @@ class FilterViewModel extends ViewModel {
     public MutableLiveData<Float> maxPrice = new MutableLiveData<>(2000f);
     public MutableLiveData<List<String>> selectedSize = new MutableLiveData<>(new ArrayList<>());
     public MutableLiveData<List<String>> selectedIOplants = new MutableLiveData<>(new ArrayList<>());
+    public HttpCookie air_Plants;
+    public HttpCookie floweringPlants;
 }

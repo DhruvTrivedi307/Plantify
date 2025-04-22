@@ -17,7 +17,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class seeds extends AppCompatActivity {
 
-    LinearLayout main;
+    LinearLayout main,filter;
     LinearLayout s_amaranths,s_beetroots,s_broccolis,s_capsicums,s_corianders,s_fenugreek,s_greenchilli,s_greencucumber,s_okras,s_redamaranthus,s_spinch,s_tomatos;
     AppCompatButton s_amaranths_cart_click, s_beetroots_cart_click, s_broccolis_cart_click, s_capsicums_cart_click, s_corianders_cart_click, s_fenugreek_cart_click, s_greenchilli_cart_click, s_greencucumber_cart_click, s_okras_cart_click, s_redamaranthus_cart_click, s_spinch_cart_click, s_tomatos_cart_click;
     @SuppressLint("MissingInflatedId")
@@ -27,6 +27,7 @@ public class seeds extends AppCompatActivity {
         setContentView(R.layout.activity_seeds);
 
         main = findViewById(R.id.main);
+        filter = findViewById(R.id.filter);
 
         s_amaranths = findViewById(R.id.s_amaranths);
         s_beetroots = findViewById(R.id.s_beetroots);
@@ -226,6 +227,15 @@ public class seeds extends AppCompatActivity {
             overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
         });
 
+        filter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(seeds.this,filter_type_of_plants.class);
+                i.putExtra("page",seeds.class.getName());
+                startActivity(i);
+            }
+        });
+
     }
 
     public void RedirectProduct(int imageResId,String name, int price, String description){
@@ -249,5 +259,9 @@ public class seeds extends AppCompatActivity {
         return true;
     }
 
-
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 }

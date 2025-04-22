@@ -153,7 +153,8 @@ public class tools extends AppCompatActivity {
         filter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(tools.this, filter_type_of_plants.class);
+                Intent i = new Intent(tools.this,filter_type_of_plants.class);
+                i.putExtra("page",tools.class.getName());
                 startActivity(i);
             }
         });
@@ -177,6 +178,12 @@ public class tools extends AppCompatActivity {
         intent.putExtra("price",price);
         intent.putExtra("qty",qty);
         startActivity(intent);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 
 }

@@ -180,6 +180,7 @@ public class easy_to_care extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(easy_to_care.this,filter_type_of_plants.class);
+                i.putExtra("page",easy_to_care.class.getName());
                 startActivity(i);
             }
         });
@@ -203,6 +204,12 @@ public class easy_to_care extends AppCompatActivity {
         intent.putExtra("price",price);
         intent.putExtra("qty",qty);
         startActivity(intent);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 
 }

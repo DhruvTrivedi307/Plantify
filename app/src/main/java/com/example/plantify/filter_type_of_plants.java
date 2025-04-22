@@ -2,6 +2,7 @@ package com.example.plantify;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.HapticFeedbackConstants;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -19,7 +21,7 @@ import androidx.fragment.app.FragmentTransaction;
 public class filter_type_of_plants extends AppCompatActivity {
 
     ImageView cross;
-
+    AppCompatButton applyButton;
     TextView price,size,i_o,type_of_plants;
     FragmentTransaction ft;
     View v_top,v_p,v_s,v_io;
@@ -82,7 +84,7 @@ public class filter_type_of_plants extends AppCompatActivity {
         cross.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(filter_type_of_plants.this, shop.class));
+                finish();
             }
         });
 
@@ -149,10 +151,45 @@ public class filter_type_of_plants extends AppCompatActivity {
             }
         });
 
+        applyButton = findViewById(R.id.apply);
+        applyButton.setOnClickListener(v -> {
+            SharedPreferences preferences = getSharedPreferences("PlantFilterPrefs", MODE_PRIVATE);
+            String page = getIntent().getStringExtra("page");
+
+            Intent intent = new Intent(filter_type_of_plants.this, shop.class);
+            try {
+                Class<?> cls = Class.forName(page);
+                intent = new Intent(filter_type_of_plants.this, cls);
+                // add extras here
+                startActivity(intent);
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            };
+
+
+            // Add selected values to intent
+            intent.putExtra("air_plants", preferences.getBoolean("air_plants", false));
+            intent.putExtra("flowering_plants", preferences.getBoolean("flowering_plants", false));
+            intent.putExtra("climbers", preferences.getBoolean("climbers", false));
+            intent.putExtra("focal_plants", preferences.getBoolean("focal_plants", false));
+            intent.putExtra("fruit_plants", preferences.getBoolean("fruit_plants", false));
+            intent.putExtra("ground_covers", preferences.getBoolean("ground_covers", false));
+            intent.putExtra("min_price", preferences.getFloat("min_price", 100f));
+            intent.putExtra("max_price", preferences.getFloat("max_price", 2000f));
+            intent.putExtra("small_size", preferences.getBoolean("small_size", false));
+            intent.putExtra("medium_size", preferences.getBoolean("medium_size", false));
+            intent.putExtra("indoor", preferences.getBoolean("indoor", false));
+            intent.putExtra("outdoor", preferences.getBoolean("outdoor", false));
+            intent.putExtra("outdoor_shade_loving_plant", preferences.getBoolean("outdoor_shade_loving_plant", false));
+            intent.putExtra("outdoor_sun_loving_plant", preferences.getBoolean("outdoor_sun_loving_plant", false));
+
+            startActivity(intent);
+        });
+
     }
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        startActivity(new Intent(filter_type_of_plants.this, shop.class));
+        finish();
     }
 }

@@ -162,6 +162,7 @@
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/apply"
         app:cornerRadius="20dp"
         android:layout_width="match_parent"
         android:layout_height="50dp"

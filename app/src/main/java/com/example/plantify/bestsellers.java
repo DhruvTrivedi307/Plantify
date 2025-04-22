@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.HapticFeedbackConstants;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -16,7 +17,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class bestsellers extends AppCompatActivity {
 
-    LinearLayout main;
+    LinearLayout main,filter;
     LinearLayout b_lbp, b_fbp, b_pp, b_bwp, b_jmp, b_mpg, b_bhp, b_plp;
     AppCompatButton b_lbp_cart_click, b_fbp_cart_click, b_pp_cart_click, b_bwp_cart_click, b_jmp_cart_click, b_mpg_cart_click, b_bhp_cart_click,b_plp_cart_click;
     ImageView cart_icon,search_icon;
@@ -28,6 +29,7 @@ public class bestsellers extends AppCompatActivity {
         setContentView(R.layout.activity_bestsellers);
 
         main = findViewById(R.id.main);
+        filter = findViewById(R.id.filter);
 
         b_lbp = findViewById(R.id.b_lbp);
         b_fbp = findViewById(R.id.b_fbp);
@@ -144,6 +146,15 @@ public class bestsellers extends AppCompatActivity {
             overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
         });
 
+        filter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(bestsellers.this,filter_type_of_plants.class);
+                i.putExtra("page",bestsellers.class.getName());
+                startActivity(i);
+            }
+        });
+
     }
 
     public void RedirectProduct(int imageResId,String name, int price){
@@ -163,5 +174,11 @@ public class bestsellers extends AppCompatActivity {
         intent.putExtra("price",price);
         intent.putExtra("qty",qty);
         startActivity(intent);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 }
