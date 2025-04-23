@@ -40,7 +40,7 @@ public class shop extends AppCompatActivity {
 //    String[] item_sizes = {"Small", "Medium", "Small"};
 //    int[] item_quantities = {1, 1, 1};
 
-//    String[] name = Objects.requireNonNull(getIntent().getStringArrayListExtra("name")).toArray(new String[0]);
+    //    String[] name = Objects.requireNonNull(getIntent().getStringArrayListExtra("name")).toArray(new String[0]);
     boolean isavail = false;
 
     @SuppressLint("MissingInflatedId")
@@ -84,7 +84,7 @@ public class shop extends AppCompatActivity {
         h_bpp_cart_click = findViewById(R.id.h_bpp_cart_click);
         h_flp_cart_click = findViewById(R.id.h_flp_cart_click);
         h_vjmp_cart_click = findViewById(R.id.h_vjmp_cart_click);
-        
+
         filter = findViewById(R.id.filter);
 
 
@@ -115,7 +115,7 @@ public class shop extends AppCompatActivity {
 
         h_plp.setOnClickListener(v -> {
             String name = "Peace Lily Plant";
-            int price = 299;
+            int price = 929;
             String description = "Known for its elegant white blooms and lush green leaves, the Peace Lily is a popular houseplant that purifies indoor air. It thrives in low to medium light conditions and prefers consistently moist soil.";
             RedirectProduct(R.drawable.peace_lily_plant,name,price,description);
         });
@@ -164,7 +164,7 @@ public class shop extends AppCompatActivity {
 
         h_bwp.setOnClickListener(v -> {
             String name = "Brazilian Wood Plant";
-            int price = 499;
+            int price = 639;
             String description = "Also known as Dracaena fragrans, this plant has broad, arching leaves and is known for its air-purifying qualities. It thrives in low to medium light and requires moderate watering.";
             RedirectProduct(R.drawable.brazilian_wood_plant,name,price,description);
         });
@@ -192,7 +192,7 @@ public class shop extends AppCompatActivity {
 
         h_bpp.setOnClickListener(v -> {
             String name = "Bamboo Palm Plant";
-            int price = 399;
+            int price = 899;
             String description = "A compact version of the Bamboo Palm, ideal for smaller spaces. It requires low to medium light and regular watering to keep the soil moist.";
             RedirectProduct(R.drawable.bamboo_palm_plant,name,price,description);
         });
@@ -206,19 +206,12 @@ public class shop extends AppCompatActivity {
 
         h_vjmp.setOnClickListener(v -> {
             String name = "Variegated Jade Mini Plant";
-            int price = 299;
+            int price = 1140;
             String description = "A succulent with fleshy, variegated leaves featuring shades of green and cream. It’s easy to care for, requiring bright light and minimal watering.";
             RedirectProduct(R.drawable.variegated_jade_mini_plant,name,price,description);
         });
 
         h_bhp_cart_click.setOnClickListener(v -> {
-//            Intent intent = new Intent(getApplicationContext(), cart.class);
-//            intent.putExtra("img", R.drawable.broken_heart_plant_2);
-//            intent.putExtra("name", "Broken heart Plant");
-//            intent.putExtra("price", 499);
-//            intent.putExtra("qty", 1);
-//            intent.putExtra("size", "Small");
-//            startActivity(intent);
             onCartClick(R.drawable.broken_heart_plant_2, "Broken Heart Plant", 299, "Small", 1);
         });
 
@@ -226,29 +219,10 @@ public class shop extends AppCompatActivity {
         h_jmp_cart_click.setOnClickListener(v -> {
             int currentCount = cart_item.count;
             onCartClick(R.drawable.jade_mini_plats, "Jade Plant Mini", 279, "Small", 1);
-//            Intent i = getIntent();
-//            String[] name = Objects.requireNonNull(getIntent().getStringArrayListExtra("name")).toArray(new String[0]);
-//            ArrayList<String> name = i.getStringArrayListExtra("name");
-//            Toast.makeText(this, name+"", Toast.LENGTH_SHORT).show();
-//            for (String n : name){
-//                if ("Jade Plant Mini".equals(n)){
-//                    isavail = true;
-//                 }
-//            }
-//
-//            if (name != null && isavail) {
-//                h_jmp_cart_click.setText("Plant added");
-//                h_jmp_cart_click.setEnabled(false);
-//                h_jmp_cart_click.setBackground(getResources().getDrawable(R.drawable.edit_text_stroke));
-//            } else {
-//                h_jmp_cart_click.setText("Add to cart");
-//                h_jmp_cart_click.setEnabled(true);
-//                h_jmp_cart_click.setBackground(getResources().getDrawable(R.drawable.button_stroke_shop_page));
-//            }
         });
 
         h_plp_cart_click.setOnClickListener(v -> {
-            onCartClick(R.drawable.peace_lily_plant, "Peace Lily Plant", 299, "Small", 1);
+            onCartClick(R.drawable.peace_lily_plant, "Peace Lily Plant", 929, "Small", 1);
         });
 
         h_fbp_cart_click.setOnClickListener(v -> {
@@ -276,7 +250,7 @@ public class shop extends AppCompatActivity {
         });
 
         h_bwp_cart_click.setOnClickListener(v -> {
-            onCartClick(R.drawable.brazilian_wood_plant, "Brazilian Wood Plant", 499, "Small", 1);
+            onCartClick(R.drawable.brazilian_wood_plant, "Brazilian Wood Plant", 639, "Small", 1);
         });
 
         h_arp_cart_click.setOnClickListener(v -> {
@@ -292,7 +266,7 @@ public class shop extends AppCompatActivity {
         });
 
         h_bpp_cart_click.setOnClickListener(v -> {
-            onCartClick(R.drawable.bamboo_palm_plant, "Bamboo Palm Plant", 399, "Small", 1);
+            onCartClick(R.drawable.bamboo_palm_plant, "Bamboo Palm Plant", 899, "Small", 1);
         });
 
         h_flp_cart_click.setOnClickListener(v -> {
@@ -300,7 +274,7 @@ public class shop extends AppCompatActivity {
         });
 
         h_vjmp_cart_click.setOnClickListener(v -> {
-            onCartClick(R.drawable.variegated_jade_mini_plant, "Variegated Jade Mini Plant", 299, "Small", 1);
+            onCartClick(R.drawable.variegated_jade_mini_plant, "Variegated Jade Mini Plant", 1140, "Small", 1);
         });
 
 //        bnv.setSelectedItemId(R.id.shop);
@@ -350,9 +324,6 @@ public class shop extends AppCompatActivity {
         boolean airPlants = intent.getBooleanExtra("air_plants", false);
         boolean floweringPlants = intent.getBooleanExtra("flowering_plants", false);
         boolean climbers = intent.getBooleanExtra("climbers", false);
-        boolean focalPlants = intent.getBooleanExtra("focal_plants", false);
-        boolean fruitPlants = intent.getBooleanExtra("fruit_plants", false);
-        boolean groundCovers = intent.getBooleanExtra("ground_covers", false);
         float minPrice = intent.getFloatExtra("min_price", 100f);
         float maxPrice = intent.getFloatExtra("max_price", 2000f);
         boolean small = intent.getBooleanExtra("small_size", false);
@@ -362,106 +333,69 @@ public class shop extends AppCompatActivity {
         boolean outdoorShadeLovingPlant = intent.getBooleanExtra("outdoor_shade_loving_plant", false);
         boolean outdoorSunLovingPlant = intent.getBooleanExtra("outdoor_sun_loving_plant", false);
 
-        if (airPlants) {
-            // Example logic: show only indoor air plants
-            // Your logic here
+        // Hide all plant views initially
+        h_bhp.setVisibility(View.GONE);
+        h_jmp.setVisibility(View.GONE);
+        h_plp.setVisibility(View.GONE);
+        h_fbp.setVisibility(View.GONE);
+        h_lbp.setVisibility(View.GONE);
+        h_stp.setVisibility(View.GONE);
+        h_pgp.setVisibility(View.GONE);
+        h_mpg.setVisibility(View.GONE);
+        h_pp.setVisibility(View.GONE);
+        h_bwp.setVisibility(View.GONE);
+        h_arp.setVisibility(View.GONE);
+        h_apbp.setVisibility(View.GONE);
+        h_bpx.setVisibility(View.GONE);
+        h_bpp.setVisibility(View.GONE);
+        h_flp.setVisibility(View.GONE);
+        h_vjmp.setVisibility(View.GONE);
+
+        // Apply filters
+        setPlantVisibility(h_bhp, airPlants, 299, minPrice, maxPrice);
+        setPlantVisibility(h_jmp, airPlants, 279, minPrice, maxPrice);
+        setPlantVisibility(h_plp, airPlants, 929, minPrice, maxPrice);
+        setPlantVisibility(h_fbp, airPlants, 949, minPrice, maxPrice);
+        setPlantVisibility(h_lbp, airPlants, 349, minPrice, maxPrice);
+        setPlantVisibility(h_stp, airPlants, 349, minPrice, maxPrice);
+        setPlantVisibility(h_pgp, floweringPlants, 279, minPrice, maxPrice);
+        setPlantVisibility(h_mpg, floweringPlants, 279, minPrice, maxPrice);
+        setPlantVisibility(h_arp, floweringPlants || airPlants, 749, minPrice, maxPrice);
+        setPlantVisibility(h_apbp, floweringPlants || airPlants, 714, minPrice, maxPrice);
+        setPlantVisibility(h_pp, climbers || airPlants, 699, minPrice, maxPrice);
+        setPlantVisibility(h_bwp, climbers || airPlants, 639, minPrice, maxPrice);
+        setPlantVisibility(h_bpx, airPlants, 857, minPrice, maxPrice);
+        setPlantVisibility(h_bpp, airPlants, 899, minPrice, maxPrice);
+        setPlantVisibility(h_flp, airPlants, 1199, minPrice, maxPrice);
+        setPlantVisibility(h_vjmp, airPlants, 1140, minPrice, maxPrice);
+        setPlantVisibility(h_bpx, indoor, 857, minPrice, maxPrice);
+        setPlantVisibility(h_bpp, indoor, 899, minPrice, maxPrice);
+        setPlantVisibility(h_lbp, outdoor, 349, minPrice, maxPrice);
+        setPlantVisibility(h_stp, outdoor, 349, minPrice, maxPrice);
+        setPlantVisibility(h_flp, outdoorShadeLovingPlant, 1199, minPrice, maxPrice);
+        setPlantVisibility(h_vjmp, outdoorShadeLovingPlant, 1140, minPrice, maxPrice);
+        setPlantVisibility(h_pgp, outdoorSunLovingPlant, 279, minPrice, maxPrice);
+        setPlantVisibility(h_mpg, outdoorSunLovingPlant, 279, minPrice, maxPrice);
+
+        // Optional: handle default visibility if no filters are applied
+        if (!(airPlants || floweringPlants || climbers || small || medium || indoor || outdoor || outdoorShadeLovingPlant || outdoorSunLovingPlant)) {
             h_bhp.setVisibility(View.VISIBLE);
             h_jmp.setVisibility(View.VISIBLE);
-
             h_plp.setVisibility(View.VISIBLE);
             h_fbp.setVisibility(View.VISIBLE);
-
-            h_lbp.setVisibility(View.GONE);
-            h_stp.setVisibility(View.GONE);
-
-            h_pgp.setVisibility(View.GONE);
-            h_mpg.setVisibility(View.GONE);
-
-            h_pp.setVisibility(View.GONE);
-            h_bwp.setVisibility(View.GONE);
-
-            h_arp.setVisibility(View.GONE);
-            h_apbp.setVisibility(View.GONE);
-
-            h_bpx.setVisibility(View.GONE);
-            h_bpp.setVisibility(View.GONE);
-
-            h_flp.setVisibility(View.GONE);
-            h_vjmp.setVisibility(View.GONE);
-        }
-
-        if (floweringPlants) {
-            h_bhp.setVisibility(View.GONE);
-            h_jmp.setVisibility(View.GONE);
-
-            h_plp.setVisibility(View.GONE);
-            h_fbp.setVisibility(View.GONE);
-
-            h_lbp.setVisibility(View.GONE);
-            h_stp.setVisibility(View.GONE);
-
+            h_lbp.setVisibility(View.VISIBLE);
+            h_stp.setVisibility(View.VISIBLE);
             h_pgp.setVisibility(View.VISIBLE);
             h_mpg.setVisibility(View.VISIBLE);
-
-            h_pp.setVisibility(View.GONE);
-            h_bwp.setVisibility(View.GONE);
-
-            h_arp.setVisibility(View.VISIBLE);
-            h_apbp.setVisibility(View.VISIBLE);
-
-            h_bpx.setVisibility(View.GONE);
-            h_bpp.setVisibility(View.GONE);
-
-            h_flp.setVisibility(View.GONE);
-            h_vjmp.setVisibility(View.GONE);
-        }
-
-        if (climbers) {
-            h_bhp.setVisibility(View.GONE);
-            h_jmp.setVisibility(View.GONE);
-
-            h_plp.setVisibility(View.GONE);
-            h_fbp.setVisibility(View.GONE);
-
-            h_lbp.setVisibility(View.GONE);
-            h_stp.setVisibility(View.GONE);
-
-            h_pgp.setVisibility(View.GONE);
-            h_mpg.setVisibility(View.GONE);
-
             h_pp.setVisibility(View.VISIBLE);
             h_bwp.setVisibility(View.VISIBLE);
-
-            h_arp.setVisibility(View.GONE);
-            h_apbp.setVisibility(View.GONE);
-
-            h_bpx.setVisibility(View.GONE);
-            h_bpp.setVisibility(View.GONE);
-
-            h_flp.setVisibility(View.GONE);
-            h_vjmp.setVisibility(View.GONE);
-            Toast.makeText(this, "done", Toast.LENGTH_SHORT).show();
+            h_arp.setVisibility(View.VISIBLE);
+            h_apbp.setVisibility(View.VISIBLE);
+            h_bpx.setVisibility(View.VISIBLE);
+            h_bpp.setVisibility(View.VISIBLE);
+            h_flp.setVisibility(View.VISIBLE);
+            h_vjmp.setVisibility(View.VISIBLE);
         }
-
-        if (focalPlants){
-            Toast.makeText(this, "done", Toast.LENGTH_SHORT).show();
-        }
-
-//
-// Create toast message
-//        String toastMessage = "Filters:\n";
-//
-//        if (airPlants) toastMessage += "Air Plants\n";
-//        if (floweringPlants) toastMessage += "Flowering Plants\n";
-//        if (climbers) toastMessage += "Climbers\n";
-//        toastMessage += "Price: ₹" + minPrice + " - ₹" + maxPrice + "\n";
-//        if (small) toastMessage += "Size: Small\n";
-//        if (medium) toastMessage += "Size: Medium\n";
-//        if (indoor) toastMessage += "Indoor\n";
-//        if (outdoor) toastMessage += "Outdoor\n";
-//
-// Show the toast
-//        Toast.makeText(this, toastMessage.trim(), Toast.LENGTH_LONG).show();
 
     }
 
@@ -498,14 +432,17 @@ public class shop extends AppCompatActivity {
         bnv.setSelectedItemId(R.id.shop);
     }
 
-}
+    // Helper method to check if price is in range
+    private boolean isPriceInRange(int price, float min, float max) {
+        return price >= min && price <= max;
+    }
 
-class FilterViewModel extends ViewModel {
-    public MutableLiveData<List<String>> selectedPlants = new MutableLiveData<>(new ArrayList<>());
-    public MutableLiveData<Float> minPrice = new MutableLiveData<>(100f);
-    public MutableLiveData<Float> maxPrice = new MutableLiveData<>(2000f);
-    public MutableLiveData<List<String>> selectedSize = new MutableLiveData<>(new ArrayList<>());
-    public MutableLiveData<List<String>> selectedIOplants = new MutableLiveData<>(new ArrayList<>());
-    public HttpCookie air_Plants;
-    public HttpCookie floweringPlants;
+    // Encapsulated visibility logic for plant views
+    private void setPlantVisibility(View view, boolean categoryCondition, int price, float min, float max) {
+        if (categoryCondition && isPriceInRange(price, min, max)) {
+            view.setVisibility(View.VISIBLE);
+        } else {
+            view.setVisibility(View.GONE);
+        }
+    }
 }

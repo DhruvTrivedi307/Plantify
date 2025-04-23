@@ -69,7 +69,12 @@ public class search extends AppCompatActivity {
                         }
                     }
                     adapter.updateData(filtered);
-                    suggestionList.setVisibility(View.VISIBLE);
+
+                    if (!filtered.isEmpty()) {
+                        suggestionList.setVisibility(View.VISIBLE);
+                    } else {
+                        suggestionList.setVisibility(View.GONE);
+                    }
                 } else {
                     suggestionList.setVisibility(View.GONE);
                 }
