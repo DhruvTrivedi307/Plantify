@@ -18,6 +18,7 @@ public class pots extends AppCompatActivity {
 
     LinearLayout main,filter;
     LinearLayout p_gwp,p_owp,p_rwwp,p_rcp,p_cagcp,p_stp,p_tfbcp,p_tffcp,p_tccp,p_vep;
+    androidx.appcompat.widget.AppCompatButton p_gwp_cart_click, p_owp_cart_click, p_rwwp_cart_click, p_rcp_cart_click, p_cagcp_cart_click, p_stp_cart_click, p_tfbcp_cart_click, p_tffcp_cart_click, p_tccp_cart_click, p_vep_cart_click;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -47,6 +48,29 @@ public class pots extends AppCompatActivity {
         boolean airPlants = intent.getBooleanExtra("air_plants", false);
         boolean floweringPlants = intent.getBooleanExtra("flowering_plants", false);
         boolean climbers = intent.getBooleanExtra("climbers", false);
+
+        // Cart click buttons
+        p_gwp_cart_click = findViewById(R.id.p_gwp_cart_click);
+        p_owp_cart_click = findViewById(R.id.p_owp_cart_click);
+        p_rwwp_cart_click = findViewById(R.id.p_rwwp_cart_click);
+        p_rcp_cart_click = findViewById(R.id.p_rcp_cart_click);
+        p_cagcp_cart_click = findViewById(R.id.p_cagcp_cart_click);
+        p_stp_cart_click = findViewById(R.id.p_stp_cart_click);
+        p_tfbcp_cart_click = findViewById(R.id.p_tfbcp_cart_click);
+        p_tffcp_cart_click = findViewById(R.id.p_tffcp_cart_click);
+        p_tccp_cart_click = findViewById(R.id.p_tccp_cart_click);
+        p_vep_cart_click = findViewById(R.id.p_vep_cart_click);
+
+        p_gwp_cart_click.setOnClickListener(v -> onCartClick(R.drawable.gradient_wooden_planter, "Gradient Wooden Planter", "Small", 479, 1));
+        p_owp_cart_click.setOnClickListener(v -> onCartClick(R.drawable.orbit_wooden_planter, "Orbit Wooden Planter", "Small", 499, 1));
+        p_rwwp_cart_click.setOnClickListener(v -> onCartClick(R.drawable.ridged_waves_wooden_pot, "Ridged Waves Wooden Pot", "Small", 829, 1));
+        p_rcp_cart_click.setOnClickListener(v -> onCartClick(R.drawable.roma_ceramic_pot, "Roma Ceramic Pot", "Small", 899, 1));
+        p_cagcp_cart_click.setOnClickListener(v -> onCartClick(R.drawable.cats_are_gods_ceramic_planter, "Cats Are Gods Ceramic Planter", "Small", 1289, 1));
+        p_stp_cart_click.setOnClickListener(v -> onCartClick(R.drawable.sienna_terracotta_pots, "Sienna Terracotta Pots", "Small", 1099, 1));
+        p_tfbcp_cart_click.setOnClickListener(v -> onCartClick(R.drawable.tulip_fantasy_bowl_ceramic_planter, "Tulip Fantasy Bowl Ceramic Planter", "Small", 879, 1));
+        p_tffcp_cart_click.setOnClickListener(v -> onCartClick(R.drawable.tulip_fantasy_flat_ceramic_planter, "Tulip Fantasy Flat Ceramic Planter", "Small", 839, 1));
+        p_tccp_cart_click.setOnClickListener(v -> onCartClick(R.drawable.twilight_clouds_ceramic_planter, "Twilight Clouds Ceramic Planter", "Small", 699, 1));
+        p_vep_cart_click.setOnClickListener(v -> onCartClick(R.drawable.verona_eco_planter, "Verona Eco Planter", "Small", 699, 1));
 
         if (airPlants || floweringPlants || climbers || minPrice > 100f || maxPrice < 2000f) {
             // Hide all initially
@@ -173,6 +197,17 @@ public class pots extends AppCompatActivity {
         intent.putExtra("name", name);
         intent.putExtra("price", price);
         intent.putExtra("description",desc);
+        startActivity(intent);
+    }
+
+    public void onCartClick(int img,String name,String size, int price,int qty) {
+        main.performHapticFeedback(HapticFeedbackConstants.CONTEXT_CLICK);
+        Intent intent = new Intent(getApplicationContext(), cart.class);
+        intent.putExtra("img",img);
+        intent.putExtra("name",name);
+        intent.putExtra("size",size);
+        intent.putExtra("price",price);
+        intent.putExtra("qty",qty);
         startActivity(intent);
     }
 

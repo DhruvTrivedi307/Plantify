@@ -324,9 +324,6 @@ public class shop extends AppCompatActivity {
         boolean airPlants = intent.getBooleanExtra("air_plants", false);
         boolean floweringPlants = intent.getBooleanExtra("flowering_plants", false);
         boolean climbers = intent.getBooleanExtra("climbers", false);
-        boolean focalPlants = intent.getBooleanExtra("focal_plants", false);
-        boolean fruitPlants = intent.getBooleanExtra("fruit_plants", false);
-        boolean groundCovers = intent.getBooleanExtra("ground_covers", false);
         float minPrice = intent.getFloatExtra("min_price", 100f);
         float maxPrice = intent.getFloatExtra("max_price", 2000f);
         boolean small = intent.getBooleanExtra("small_size", false);
@@ -371,9 +368,17 @@ public class shop extends AppCompatActivity {
         setPlantVisibility(h_bpp, airPlants, 899, minPrice, maxPrice);
         setPlantVisibility(h_flp, airPlants, 1199, minPrice, maxPrice);
         setPlantVisibility(h_vjmp, airPlants, 1140, minPrice, maxPrice);
+        setPlantVisibility(h_bpx, indoor, 857, minPrice, maxPrice);
+        setPlantVisibility(h_bpp, indoor, 899, minPrice, maxPrice);
+        setPlantVisibility(h_lbp, outdoor, 349, minPrice, maxPrice);
+        setPlantVisibility(h_stp, outdoor, 349, minPrice, maxPrice);
+        setPlantVisibility(h_flp, outdoorShadeLovingPlant, 1199, minPrice, maxPrice);
+        setPlantVisibility(h_vjmp, outdoorShadeLovingPlant, 1140, minPrice, maxPrice);
+        setPlantVisibility(h_pgp, outdoorSunLovingPlant, 279, minPrice, maxPrice);
+        setPlantVisibility(h_mpg, outdoorSunLovingPlant, 279, minPrice, maxPrice);
 
         // Optional: handle default visibility if no filters are applied
-        if (!(airPlants || floweringPlants || climbers || focalPlants || fruitPlants || groundCovers || small || medium || indoor || outdoor || outdoorShadeLovingPlant || outdoorSunLovingPlant)) {
+        if (!(airPlants || floweringPlants || climbers || small || medium || indoor || outdoor || outdoorShadeLovingPlant || outdoorSunLovingPlant)) {
             h_bhp.setVisibility(View.VISIBLE);
             h_jmp.setVisibility(View.VISIBLE);
             h_plp.setVisibility(View.VISIBLE);
@@ -440,15 +445,4 @@ public class shop extends AppCompatActivity {
             view.setVisibility(View.GONE);
         }
     }
-}
-
-// Inserted methods above this line.
-class FilterViewModel extends ViewModel {
-    public MutableLiveData<List<String>> selectedPlants = new MutableLiveData<>(new ArrayList<>());
-    public MutableLiveData<Float> minPrice = new MutableLiveData<>(100f);
-    public MutableLiveData<Float> maxPrice = new MutableLiveData<>(2000f);
-    public MutableLiveData<List<String>> selectedSize = new MutableLiveData<>(new ArrayList<>());
-    public MutableLiveData<List<String>> selectedIOplants = new MutableLiveData<>(new ArrayList<>());
-    public HttpCookie air_Plants;
-    public HttpCookie floweringPlants;
 }

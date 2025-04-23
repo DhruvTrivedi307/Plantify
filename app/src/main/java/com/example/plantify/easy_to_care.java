@@ -31,6 +31,10 @@ public class easy_to_care extends AppCompatActivity {
         float minPrice = intent.getFloatExtra("min_price", 100f);
         float maxPrice = intent.getFloatExtra("max_price", 2000f);
 
+        boolean airPlants = intent.getBooleanExtra("air_plants", false);
+        boolean floweringPlants = intent.getBooleanExtra("flowering_plants", false);
+        boolean climbers = intent.getBooleanExtra("climbers", false);
+
         main = findViewById(R.id.main);
         filter = findViewById(R.id.filter);
 
@@ -55,7 +59,7 @@ public class easy_to_care extends AppCompatActivity {
         e_vjmp_cart_click = findViewById(R.id.e_vjmp_cart_click);
         e_bhp_cart_click = findViewById(R.id.e_bhp_cart_click);
 
-        boolean hasFilter = minPrice > 100f || maxPrice < 2000f;
+        boolean hasFilter = airPlants || floweringPlants || climbers || minPrice > 100f || maxPrice < 2000f;
 
         if (hasFilter) {
             e_apbp.setVisibility(View.GONE);
@@ -69,16 +73,12 @@ public class easy_to_care extends AppCompatActivity {
             e_vjmp.setVisibility(View.GONE);
             e_bhp.setVisibility(View.GONE);
 
-            if (isPriceInRange(719, minPrice, maxPrice)) e_apbp.setVisibility(View.VISIBLE);
-            if (isPriceInRange(799, minPrice, maxPrice)) e_bpp.setVisibility(View.VISIBLE);
-            if (isPriceInRange(857, minPrice, maxPrice)) e_bpx.setVisibility(View.VISIBLE);
-            if (isPriceInRange(849, minPrice, maxPrice)) e_arp.setVisibility(View.VISIBLE);
-            if (isPriceInRange(1199, minPrice, maxPrice)) e_flp.setVisibility(View.VISIBLE);
-            if (isPriceInRange(1146, minPrice, maxPrice)) e_csp.setVisibility(View.VISIBLE);
-            if (isPriceInRange(867, minPrice, maxPrice)) e_mdp.setVisibility(View.VISIBLE);
-            if (isPriceInRange(899, minPrice, maxPrice)) e_pgp.setVisibility(View.VISIBLE);
-            if (isPriceInRange(299, minPrice, maxPrice)) e_vjmp.setVisibility(View.VISIBLE);
-            if (isPriceInRange(299, minPrice, maxPrice)) e_bhp.setVisibility(View.VISIBLE);
+            if (isPriceInRange(719, minPrice, maxPrice) && airPlants) e_apbp.setVisibility(View.VISIBLE);
+            if (isPriceInRange(799, minPrice, maxPrice) && airPlants) e_bpp.setVisibility(View.VISIBLE);
+            if (isPriceInRange(857, minPrice, maxPrice) && floweringPlants) e_bpx.setVisibility(View.VISIBLE);
+            if (isPriceInRange(849, minPrice, maxPrice) && floweringPlants) e_arp.setVisibility(View.VISIBLE);
+            if (isPriceInRange(1199, minPrice, maxPrice) && climbers) e_flp.setVisibility(View.VISIBLE);
+            if (isPriceInRange(1146, minPrice, maxPrice) && climbers) e_csp.setVisibility(View.VISIBLE);
         }
 
         e_apbp.setOnClickListener(v -> {

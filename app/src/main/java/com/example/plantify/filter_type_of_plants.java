@@ -22,9 +22,9 @@ public class filter_type_of_plants extends AppCompatActivity {
 
     ImageView cross;
     AppCompatButton applyButton;
-    TextView price,size,i_o,type_of_plants;
+    TextView price,i_o,type_of_plants;
     FragmentTransaction ft;
-    View v_top,v_p,v_s,v_io;
+    View v_top,v_p,v_io;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -40,19 +40,17 @@ public class filter_type_of_plants extends AppCompatActivity {
 
         cross = findViewById(R.id.cross);
         price = findViewById(R.id.price);
-        size = findViewById(R.id.size);
         i_o = findViewById(R.id.i_o);
         type_of_plants = findViewById(R.id.type_of_plants);
 
         v_top = findViewById(R.id.v_top);
         v_p = findViewById(R.id.v_p);
-        v_s = findViewById(R.id.v_s);
         v_io = findViewById(R.id.v_io);
 
+        i_o.setVisibility(View.GONE);
 
         type_of_plants.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.theme));
         price.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
-        size.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
         i_o.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
         v_top.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.theme));
 
@@ -67,12 +65,10 @@ public class filter_type_of_plants extends AppCompatActivity {
                 type_of_plants.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_PRESS);
                 type_of_plants.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.theme));
                 price.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
-                size.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
                 i_o.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
 
                 v_top.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.theme));
                 v_p.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.edit_text_stroke));
-                v_s.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.edit_text_stroke));
                 v_io.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.edit_text_stroke));
 
                 ft = getSupportFragmentManager().beginTransaction();
@@ -95,37 +91,14 @@ public class filter_type_of_plants extends AppCompatActivity {
                 type_of_plants.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_PRESS);
                 type_of_plants.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
                 price.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.theme));
-                size.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
                 i_o.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
 
                 v_top.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.edit_text_stroke));
                 v_p.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.theme));
-                v_s.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.edit_text_stroke));
                 v_io.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.edit_text_stroke));
 
                 ft = getSupportFragmentManager().beginTransaction();
                 ft.replace(R.id.fragment,new filter_price());
-                ft.commit();
-            }
-        });
-
-        size.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("ResourceAsColor")
-            @Override
-            public void onClick(View v) {
-                type_of_plants.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_PRESS);
-                type_of_plants.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
-                price.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
-                size.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.theme));
-                i_o.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
-
-                v_top.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.edit_text_stroke));
-                v_p.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.edit_text_stroke));
-                v_s.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.theme));
-                v_io.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.edit_text_stroke));
-
-                ft = getSupportFragmentManager().beginTransaction();
-                ft.replace(R.id.fragment,new filter_size());
                 ft.commit();
             }
         });
@@ -137,12 +110,10 @@ public class filter_type_of_plants extends AppCompatActivity {
                 type_of_plants.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_PRESS);
                 type_of_plants.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
                 price.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
-                size.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
                 i_o.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.theme));
 
                 v_top.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.edit_text_stroke));
                 v_p.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.edit_text_stroke));
-                v_s.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.edit_text_stroke));
                 v_io.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.theme));
 
                 ft = getSupportFragmentManager().beginTransaction();
@@ -150,6 +121,17 @@ public class filter_type_of_plants extends AppCompatActivity {
                 ft.commit();
             }
         });
+
+        Intent i = getIntent();
+        String p = i.getStringExtra("page");
+        try {
+            Class<?> cl = Class.forName(p);
+            if (cl == shop.class) {
+                i_o.setVisibility(View.VISIBLE);
+            }
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
 
         applyButton = findViewById(R.id.apply);
         applyButton.setOnClickListener(v -> {
@@ -171,9 +153,6 @@ public class filter_type_of_plants extends AppCompatActivity {
             intent.putExtra("air_plants", preferences.getBoolean("air_plants", false));
             intent.putExtra("flowering_plants", preferences.getBoolean("flowering_plants", false));
             intent.putExtra("climbers", preferences.getBoolean("climbers", false));
-            intent.putExtra("focal_plants", preferences.getBoolean("focal_plants", false));
-            intent.putExtra("fruit_plants", preferences.getBoolean("fruit_plants", false));
-            intent.putExtra("ground_covers", preferences.getBoolean("ground_covers", false));
             intent.putExtra("min_price", preferences.getFloat("min_price", 100f));
             intent.putExtra("max_price", preferences.getFloat("max_price", 2000f));
             intent.putExtra("small_size", preferences.getBoolean("small_size", false));

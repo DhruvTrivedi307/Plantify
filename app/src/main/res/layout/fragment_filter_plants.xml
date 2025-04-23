@@ -38,34 +38,6 @@
             android:fontFamily="@font/outfit_medium"
             />
 
-        <CheckBox
-            android:id="@+id/water_plants"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Focal Plants"
-            android:layout_marginLeft="20dp"
-            android:fontFamily="@font/outfit_medium"
-            />
-
-        <CheckBox
-            android:id="@+id/fruit_plants"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Fruit Plants"
-            android:layout_marginLeft="20dp"
-            android:fontFamily="@font/outfit_medium"
-            />
-
-        <CheckBox
-            android:id="@+id/ground_covers"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Ground Covers"
-            android:layout_marginLeft="20dp"
-            android:fontFamily="@font/outfit_medium"
-            />
-
-
     </LinearLayout>
 
 </LinearLayout>
