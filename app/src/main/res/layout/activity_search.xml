@@ -18,7 +18,6 @@
             android:layout_height="50dp"
             android:background="@drawable/search_box"
             android:orientation="horizontal"
-            android:padding="10dp"
             android:layout_margin="20dp">
 
             <ImageView
@@ -26,14 +25,14 @@
                 android:layout_height="18dp"
                 android:src="@drawable/arrow_back"
                 android:layout_gravity="center"
-                android:layout_margin="10dp"
+                android:layout_margin="20dp"
                 app:tint="@color/theme_text"
                 android:id="@+id/back"/>
 
             <EditText
                 android:id="@+id/search"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:hint="Search Products here"
                 android:background="@android:color/transparent"
                 android:layout_gravity="center"
@@ -43,83 +42,16 @@
 
         </LinearLayout>
 
-        <LinearLayout
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/suggestionsRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Trending Searches"
-                android:textSize="16dp"
-                android:fontFamily="@font/outfit_medium"
-                android:textColor="@color/black"
-                android:layout_marginBottom="10dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Indoor Plants"
-                android:textSize="14dp"
-                android:fontFamily="@font/outfit_medium"
-                android:textColor="@color/theme_text"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="10dp"/>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/edit_text_stroke"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Outdoor Plants"
-                android:textSize="14dp"
-                android:fontFamily="@font/outfit_medium"
-                android:textColor="@color/theme_text"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="10dp"/>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/edit_text_stroke"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Large Plants"
-                android:textSize="14dp"
-                android:fontFamily="@font/outfit_medium"
-                android:textColor="@color/theme_text"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="10dp"/>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/edit_text_stroke"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Soil and fertiliser"
-                android:textSize="14dp"
-                android:fontFamily="@font/outfit_medium"
-                android:textColor="@color/theme_text"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="10dp"/>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/edit_text_stroke"/>
-
-
-        </LinearLayout>
+            android:visibility="gone"
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            android:background="@android:color/white"
+            android:overScrollMode="never"
+            android:scrollbars="vertical" />
 
     </LinearLayout>
 
