@@ -342,7 +342,8 @@
                             android:layout_marginLeft="10dp"
                             android:fontFamily="@font/sansita_swashed"
                             android:text="₹1999"
-                            android:textSize="10dp"/>
+                            android:textSize="10dp"
+                            android:foreground="@drawable/strikethrough_foreground"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -419,7 +420,8 @@
                             android:layout_marginLeft="10dp"
                             android:fontFamily="@font/sansita_swashed"
                             android:text="₹1999"
-                            android:textSize="10dp"/>
+                            android:textSize="10dp"
+                            android:foreground="@drawable/strikethrough_foreground"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -506,7 +508,8 @@
                             android:layout_marginLeft="10dp"
                             android:fontFamily="@font/sansita_swashed"
                             android:text="₹1999"
-                            android:textSize="10dp"/>
+                            android:textSize="10dp"
+                            android:foreground="@drawable/strikethrough_foreground"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -584,7 +587,8 @@
                             android:layout_marginLeft="10dp"
                             android:fontFamily="@font/sansita_swashed"
                             android:text="₹1999"
-                            android:textSize="10dp"/>
+                            android:textSize="10dp"
+                            android:foreground="@drawable/strikethrough_foreground"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -690,16 +694,18 @@
                     android:id="@+id/priceText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
+                    android:layout_marginTop="10dp"
                     android:fontFamily="@font/sansita_swashed"
-                    android:text="₹1999" />
+                    android:text="₹1999"
+                    android:foreground="@drawable/strikethrough_foreground"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
                     android:fontFamily="@font/sansita_swashed"
-                    android:text="₹499"
+                    android:text="₹279"
                     android:textColor="@color/theme"
                     android:textSize="15dp" />
 
@@ -742,7 +748,7 @@
                     android:id="@+id/size"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=""
+                    android:text="Small"
                     android:fontFamily="@font/outfit_medium"
                     android:textColor="@color/black"/>
 
@@ -776,7 +782,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Quantity"
+                android:text="Quantity:"
                 android:fontFamily="@font/outfit_medium"
                 android:textColor="@color/black"
                 android:layout_marginTop="10dp"
@@ -785,11 +791,11 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="30dp"
+                android:layout_height="40dp"
                 android:orientation="horizontal"
                 android:gravity="center"
-                android:layout_marginLeft="20dp"
-                android:background="@drawable/button_stroke">
+                android:background="@drawable/button_stroke"
+                android:layout_marginLeft="20dp">
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btnMinus"

@@ -13,6 +13,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -34,7 +35,6 @@ public class profile_logout extends AppCompatActivity {
     BottomNavigationView bnv;
     FirebaseAuth auth;
     FirebaseUser user;
-    LinearLayout edit_profile;
     private DatabaseReference userRef;
 
     @SuppressLint("MissingInflatedId")
@@ -55,15 +55,6 @@ public class profile_logout extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
         user = auth.getCurrentUser();
 
-//        if (user == null){
-//            Intent i = new Intent(getApplicationContext(),profile_signin.class);
-//            startActivity(i);
-//            finish();
-//        } else {
-//            name.setText(user.getDisplayName());
-//            email.setText(user.getEmail());
-//        }
-
         if (user != null) {
             String userId = user.getUid();
             userRef = FirebaseDatabase.getInstance().getReference("users").child(userId);
@@ -76,9 +67,11 @@ public class profile_logout extends AppCompatActivity {
                     if (snapshot.exists()){
                         String f_name = snapshot.child("firstName").getValue(String.class);
                         String l_name = snapshot.child("lastName").getValue(String.class);
-                        name.setText(f_name);
+                        String email_id = snapshot.child("email").getValue(String.class);
+                        name.setText(f_name+",");
                         String fl = String.valueOf(f_name.charAt(0));
                         String sl = String.valueOf(l_name.charAt(0));
+                        email.setText(email_id);
                         first_letter.setText(fl);
                         second_letter.setText(sl);
                     }
@@ -112,20 +105,9 @@ public class profile_logout extends AppCompatActivity {
             String personEmail = acct.getEmail();
             first_letter.setText(String.valueOf(firstName.charAt(0)));
             second_letter.setText(String.valueOf(lastName.charAt(0)));
-            name.setText(firstName);
+            name.setText(firstName+",");
             email.setText(personEmail);
         }
-
-        edit_profile = findViewById(R.id.edit_profile);
-
-        edit_profile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(),profile.class);
-                startActivity(i);
-                overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
-            }
-        });
 
         ImageView search_icon = findViewById(R.id.search_icon);
         ImageView cart_icon = findViewById(R.id.cart_icon);
@@ -182,13 +164,4 @@ public class profile_logout extends AppCompatActivity {
         });
 
     }
-//    public void signOut(){
-//        gsc.signOut().addOnCompleteListener(new OnCompleteListener<Void>() {
-//            @Override
-//            public void onComplete(@NonNull Task<Void> task) {
-//                finish();
-//                startActivity(new Intent(profile_logout.this,profile_signin.class));
-//            }
-//        });
-//    }
 }

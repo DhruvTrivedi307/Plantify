@@ -142,7 +142,7 @@
                                 android:padding="5dp"
                                 android:text="₹849"
                                 android:textColor="@color/theme"
-                                android:textSize="12dp" />
+                                android:textSize="14dp" />
 
                         </LinearLayout>
 
@@ -190,7 +190,7 @@
                                 android:padding="5dp"
                                 android:text="₹699"
                                 android:textColor="@color/theme"
-                                android:textSize="12dp" />
+                                android:textSize="14dp" />
 
                         </LinearLayout>
 
@@ -238,7 +238,7 @@
                                 android:padding="5dp"
                                 android:text="₹269"
                                 android:textColor="@color/theme"
-                                android:textSize="12dp" />
+                                android:textSize="14dp" />
 
                         </LinearLayout>
 
@@ -286,7 +286,7 @@
                                 android:padding="5dp"
                                 android:text="₹499"
                                 android:textColor="@color/theme"
-                                android:textSize="12dp" />
+                                android:textSize="14dp" />
 
                         </LinearLayout>
 
@@ -334,7 +334,7 @@
                                 android:padding="5dp"
                                 android:text="₹499"
                                 android:textColor="@color/theme"
-                                android:textSize="12dp" />
+                                android:textSize="14dp" />
 
                         </LinearLayout>
 
@@ -382,7 +382,7 @@
                                 android:padding="5dp"
                                 android:text="₹449"
                                 android:textColor="@color/theme"
-                                android:textSize="12dp" />
+                                android:textSize="14dp" />
 
                         </LinearLayout>
 
@@ -431,7 +431,7 @@
                                 android:padding="5dp"
                                 android:text="₹379"
                                 android:textColor="@color/theme"
-                                android:textSize="12dp" />
+                                android:textSize="14dp" />
 
                         </LinearLayout>
 
@@ -441,14 +441,23 @@
 
             </HorizontalScrollView>
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="100dp"
-                android:layout_height="30dp"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_margin="10dp"
-                android:background="@drawable/button_stroke"
-                android:hint="View All"
-                android:textColorHint="@color/theme" />
+                android:layout_margin="20dp"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/view_top_selling"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button_stroke"
+                    android:layout_marginLeft="20dp"
+                    android:hint="View All"
+                    android:fontFamily="@font/outfit_medium"/>
+
+            </LinearLayout>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -514,7 +523,7 @@
                                 android:padding="5dp"
                                 android:text="₹699"
                                 android:textColor="@color/theme"
-                                android:textSize="12dp" />
+                                android:textSize="14dp" />
 
                         </LinearLayout>
 
@@ -562,7 +571,7 @@
                                 android:padding="5dp"
                                 android:text="₹499"
                                 android:textColor="@color/theme"
-                                android:textSize="12dp" />
+                                android:textSize="14dp" />
 
                         </LinearLayout>
 
@@ -610,7 +619,7 @@
                                 android:padding="5dp"
                                 android:text="₹359"
                                 android:textColor="@color/theme"
-                                android:textSize="12dp" />
+                                android:textSize="14dp" />
 
                         </LinearLayout>
 
@@ -658,7 +667,7 @@
                                 android:padding="5dp"
                                 android:text="₹849"
                                 android:textColor="@color/theme"
-                                android:textSize="12dp" />
+                                android:textSize="14dp" />
 
                         </LinearLayout>
 
@@ -706,7 +715,7 @@
                                 android:padding="5dp"
                                 android:text="₹379"
                                 android:textColor="@color/theme"
-                                android:textSize="12dp" />
+                                android:textSize="14dp" />
 
                         </LinearLayout>
 
@@ -754,7 +763,7 @@
                                 android:padding="5dp"
                                 android:text="₹879"
                                 android:textColor="@color/theme"
-                                android:textSize="12dp" />
+                                android:textSize="14dp" />
 
                         </LinearLayout>
 
@@ -803,7 +812,7 @@
                                 android:padding="5dp"
                                 android:text="₹499"
                                 android:textColor="@color/theme"
-                                android:textSize="12dp" />
+                                android:textSize="14dp" />
 
                         </LinearLayout>
 
@@ -813,14 +822,23 @@
 
             </HorizontalScrollView>
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="100dp"
-                android:layout_height="30dp"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_margin="10dp"
-                android:background="@drawable/button_stroke"
-                android:hint="View All"
-                android:textColorHint="@color/theme" />
+                android:layout_margin="20dp"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/view_best_sellers"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button_stroke"
+                    android:layout_marginLeft="20dp"
+                    android:hint="View All"
+                    android:fontFamily="@font/outfit_medium"/>
+
+            </LinearLayout>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -886,7 +904,7 @@
                                 android:padding="5dp"
                                 android:text="₹449"
                                 android:textColor="@color/theme"
-                                android:textSize="12dp" />
+                                android:textSize="14dp" />
 
                         </LinearLayout>
 
@@ -934,7 +952,7 @@
                                 android:padding="5dp"
                                 android:text="₹509"
                                 android:textColor="@color/theme"
-                                android:textSize="12dp" />
+                                android:textSize="14dp" />
 
                         </LinearLayout>
 
@@ -982,7 +1000,7 @@
                                 android:padding="5dp"
                                 android:text="₹289"
                                 android:textColor="@color/theme"
-                                android:textSize="12dp" />
+                                android:textSize="14dp" />
 
                         </LinearLayout>
 
@@ -1030,7 +1048,7 @@
                                 android:padding="5dp"
                                 android:text="₹389"
                                 android:textColor="@color/theme"
-                                android:textSize="12dp" />
+                                android:textSize="14dp" />
 
                         </LinearLayout>
 
@@ -1078,7 +1096,7 @@
                                 android:padding="5dp"
                                 android:text="₹899"
                                 android:textColor="@color/theme"
-                                android:textSize="12dp" />
+                                android:textSize="14dp" />
 
                         </LinearLayout>
 
@@ -1126,7 +1144,7 @@
                                 android:padding="5dp"
                                 android:text="₹579"
                                 android:textColor="@color/theme"
-                                android:textSize="12dp" />
+                                android:textSize="14dp" />
 
                         </LinearLayout>
 
@@ -1175,7 +1193,7 @@
                                 android:padding="5dp"
                                 android:text="₹719"
                                 android:textColor="@color/theme"
-                                android:textSize="12dp" />
+                                android:textSize="14dp" />
 
                         </LinearLayout>
 
@@ -1185,14 +1203,23 @@
 
             </HorizontalScrollView>
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="100dp"
-                android:layout_height="30dp"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_margin="10dp"
-                android:background="@drawable/button_stroke"
-                android:hint="View All"
-                android:textColorHint="@color/theme" />
+                android:layout_margin="20dp"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/view_indoor_plants"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button_stroke"
+                    android:layout_marginLeft="20dp"
+                    android:hint="View All"
+                    android:fontFamily="@font/outfit_medium"/>
+
+            </LinearLayout>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -1247,7 +1274,8 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:fontFamily="@font/sansita_swashed"
-                    android:text="₹1999" />
+                    android:text="₹1999"
+                    android:foreground="@drawable/strikethrough_foreground"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -1278,7 +1306,7 @@
                     android:id="@+id/size"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=""
+                    android:text="Small"
                     android:fontFamily="@font/outfit_medium"
                     android:textColor="@color/black"/>
 
@@ -1312,7 +1340,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Quantity"
+                android:text="Quantity:"
                 android:fontFamily="@font/outfit_medium"
                 android:textColor="@color/black"
                 android:layout_marginTop="10dp"
@@ -1321,11 +1349,11 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="30dp"
+                android:layout_height="40dp"
                 android:orientation="horizontal"
                 android:gravity="center"
-                android:layout_marginLeft="20dp"
-                android:background="@drawable/button_stroke">
+                android:background="@drawable/button_stroke"
+                android:layout_marginLeft="20dp">
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btnMinus"

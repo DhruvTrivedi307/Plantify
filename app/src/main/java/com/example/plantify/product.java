@@ -18,6 +18,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.Objects;
+
 public class product extends AppCompatActivity {
 
     ImageView productImg,back,cart_icon,search_icon;
@@ -142,9 +144,6 @@ public class product extends AppCompatActivity {
             }
         });
 
-
-
-
         small.setSelected(true);
         size.setText("Small");
         View.OnClickListener sizeClickListener = v -> {
@@ -158,9 +157,7 @@ public class product extends AppCompatActivity {
             } else if (v == medium) {
                 selectedSize = "Medium";
                 size.setText(selectedSize);
-
             }
-
         };
 
         small.setOnClickListener(sizeClickListener);
@@ -172,6 +169,8 @@ public class product extends AppCompatActivity {
         String name = i.getStringExtra("name");
         int price = i.getIntExtra("price", 0);
         String desc = i.getStringExtra("description");
+        int qty = i.getIntExtra("qty", 0);
+        String s_size = i.getStringExtra("size");
 
         if (img != 0) {
             productImg.setImageResource(img);
@@ -184,6 +183,20 @@ public class product extends AppCompatActivity {
             productName.setText("No Name Available");
         }
 
+        if (size != null) {
+            size.setText(s_size);
+            if (Objects.equals(s_size, "Small")){
+                small.setSelected(true);
+                medium.setSelected(false);
+            } else if (Objects.equals(s_size, "Medium")) {
+                small.setSelected(false);
+                medium.setSelected(true);
+            }
+        }
+
+        if (qty != 0) {
+            txtCount.setText(String.valueOf(qty));
+        }
 
         if (cart_item.item_names != null && cart_item.item_quantities != null) {
             int index = cart_item.item_names.indexOf(name);

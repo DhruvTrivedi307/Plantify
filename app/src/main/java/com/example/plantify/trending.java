@@ -7,6 +7,7 @@ import android.view.DragEvent;
 import android.view.HapticFeedbackConstants;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -22,9 +23,11 @@ public class trending extends AppCompatActivity {
 
     LinearLayout t_bpp, t_flp, t_apbp, t_arp, t_bpx, t_csp, t_mdp, t_dmm, t_hwp, t_stp, t_bs, t_as, t_fpw, t_cps, t_bhp, t_jpm, t_bwp, t_pp, t_fbp, t_lbp, t_pgp, main;
     BottomNavigationView bnv;
-    AppCompatButton small,medium,addtocart,buy_now_bottom;
-    TextView size;
+    AppCompatButton small,medium,addtocart,buy_now_bottom,view_top_selling,view_best_sellers,view_indoor_plants;
+    Button btnMinus,btnPlus;
+    TextView size, txtCount;
     private String selectedSize = "";
+    private int count = 1;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -54,8 +57,18 @@ public class trending extends AppCompatActivity {
         t_lbp = findViewById(R.id.t_lbp);
         t_pgp = findViewById(R.id.t_pgp);
 
+        view_top_selling = findViewById(R.id.view_top_selling);
+        view_best_sellers = findViewById(R.id.view_best_sellers);
+        view_indoor_plants = findViewById(R.id.view_indoor_plants);
+
         small = findViewById(R.id.small);
         medium = findViewById(R.id.medium);
+
+        size = findViewById(R.id.size);
+        txtCount = findViewById(R.id.txtCount);
+
+        btnMinus = findViewById(R.id.btnMinus);
+        btnPlus = findViewById(R.id.btnPlus);
 
         main = findViewById(R.id.main);
 
@@ -215,6 +228,30 @@ public class trending extends AppCompatActivity {
             RedirectProduct(R.drawable.peperomia_green_plant,name,price,description);
         });
 
+        view_top_selling.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                startActivity(new Intent(trending.this,bestsellers.class));
+            }
+        });
+
+        view_best_sellers.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                startActivity(new Intent(trending.this,tools.class));
+            }
+        });
+
+        view_indoor_plants.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                startActivity(new Intent(trending.this,easy_to_care.class));
+            }
+        });
+
         addtocart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -230,11 +267,15 @@ public class trending extends AppCompatActivity {
                 String name = "Lucky bamboo Plant";
                 int price = 349;
                 String description = "Symbolizing good fortune and prosperity, the Lucky Bamboo is easy to grow and can thrive in water or soil. It prefers indirect light and adds an elegant touch to any decor.";
+                int qty = count;
+                String size = selectedSize;
                 Intent i = new Intent(getApplicationContext(),product.class);
                 i.putExtra("img",R.drawable.lucky_bamboo_plant);
                 i.putExtra("name",name);
                 i.putExtra("price",price);
                 i.putExtra("description",description);
+                i.putExtra("qty",qty);
+                i.putExtra("size",size);
                 startActivity(i);
             }
         });
@@ -284,6 +325,7 @@ public class trending extends AppCompatActivity {
             overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
         });
 
+        small.setSelected(true);
         View.OnClickListener sizeClickListener = v -> {
             small.setSelected(false);
             medium.setSelected(false);
@@ -303,6 +345,37 @@ public class trending extends AppCompatActivity {
 
         small.setOnClickListener(sizeClickListener);
         medium.setOnClickListener(sizeClickListener);
+
+        addtocart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                main.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS);
+                String sel_size = selectedSize;
+                onCartClick(R.drawable.jade_mini_plats,"Jade Mini Plant",279,sel_size,count);
+            }
+        });
+
+        btnMinus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                main.performHapticFeedback(HapticFeedbackConstants.GESTURE_END);
+                if (count > 1) {
+                    count--;
+                    txtCount.setText(String.valueOf(count));
+                }
+            }
+        });
+
+        btnPlus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                main.performHapticFeedback(HapticFeedbackConstants.GESTURE_START);
+                if (count < 5) {
+                    count++;
+                    txtCount.setText(String.valueOf(count));
+                }
+            }
+        });
 
     }
 

@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -86,14 +87,6 @@ public class home extends AppCompatActivity {
         buy_now_bottom = findViewById(R.id.buy_now_bottom);
         addtocart = findViewById(R.id.addtocart);
 
-        addtocart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                main.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS);
-                onCartClick(R.drawable.jade_mini_plats,"Jade Mini Plant",279,"Small",1);
-            }
-        });
-
         buy_now_bottom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -101,11 +94,15 @@ public class home extends AppCompatActivity {
                 String name = "Jade Mini Plant";
                 int price = 279;
                 String description = "One of the most popular houseplants, and our all-time bestseller, this easy-growing plant with its heart-shaped leaves is loved for its beautiful fenestrations. Quick to grow with delicate trailing vines that can be styled for every space, the Philodendron broken heart is the monstera charm you want to add to your home if you don't have the space for the huge monstera. Scientifically known as the Monstera adansonii, this broken heart plant thrives indoors in bright indirect light and with very little care.";
+                int qty = count;
+                String size = selectedSize;
                 Intent i = new Intent(getApplicationContext(),product.class);
                 i.putExtra("img",R.drawable.jade_mini_plats);
                 i.putExtra("name",name);
                 i.putExtra("price",price);
                 i.putExtra("description",description);
+                i.putExtra("qty",qty);
+                i.putExtra("size",size);
                 startActivity(i);
             }
         });
@@ -373,6 +370,7 @@ public class home extends AppCompatActivity {
             }
         });
 
+        small.setSelected(true);
         View.OnClickListener sizeClickListener = v -> {
             small.setSelected(false);
             medium.setSelected(false);
@@ -392,6 +390,15 @@ public class home extends AppCompatActivity {
 
         small.setOnClickListener(sizeClickListener);
         medium.setOnClickListener(sizeClickListener);
+
+        addtocart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                main.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS);
+                String sel_size = selectedSize;
+                onCartClick(R.drawable.jade_mini_plats,"Jade Mini Plant",279,sel_size,count);
+            }
+        });
 
     }
 

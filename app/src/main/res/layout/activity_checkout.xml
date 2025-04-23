@@ -79,7 +79,8 @@
                 android:textSize="15dp"
                 android:textColorHint="@color/edit_text_stroke"
                 android:background="@drawable/edit_text_stroke"
-                android:fontFamily="@font/outfit_medium"/>
+                android:fontFamily="@font/outfit_medium"
+                android:inputType="textPersonName"/>
 
             <TextView
                 android:layout_marginTop="25dp"
@@ -100,7 +101,8 @@
                 android:textSize="15dp"
                 android:textColorHint="@color/edit_text_stroke"
                 android:background="@drawable/edit_text_stroke"
-                android:fontFamily="@font/outfit_medium"/>
+                android:fontFamily="@font/outfit_medium"
+                android:inputType="textPersonName"/>
 
             <TextView
                 android:layout_marginTop="25dp"
@@ -123,7 +125,8 @@
                 android:digits="0123456789"
                 android:textColorHint="@color/edit_text_stroke"
                 android:background="@drawable/edit_text_stroke"
-                android:fontFamily="@font/outfit_medium"/>
+                android:fontFamily="@font/outfit_medium"
+                android:inputType="number"/>
 
             <TextView
                 android:layout_marginTop="25dp"
@@ -144,7 +147,8 @@
                 android:textSize="15dp"
                 android:textColorHint="@color/edit_text_stroke"
                 android:background="@drawable/edit_text_stroke"
-                android:fontFamily="@font/outfit_medium"/>
+                android:fontFamily="@font/outfit_medium"
+                android:inputType="textEmailAddress"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -184,7 +188,8 @@
                 android:textColorHint="@color/edit_text_stroke"
                 android:background="@drawable/edit_text_stroke"
                 android:fontFamily="@font/outfit_medium"
-                android:padding="10dp" />
+                android:padding="10dp"
+                android:inputType="number"/>
 
             <TextView
                 android:layout_marginTop="25dp"
@@ -205,7 +210,8 @@
                 android:textColorHint="@color/edit_text_stroke"
                 android:background="@drawable/edit_text_stroke"
                 android:fontFamily="@font/outfit_medium"
-                android:padding="10dp" />
+                android:padding="10dp"
+                android:inputType="textCapWords"/>
 
             <TextView
                 android:layout_marginTop="25dp"
@@ -226,7 +232,8 @@
                 android:textColorHint="@color/edit_text_stroke"
                 android:background="@drawable/edit_text_stroke"
                 android:fontFamily="@font/outfit_medium"
-                android:padding="10dp" />
+                android:padding="10dp"
+                android:inputType="textCapWords"/>
 
             <TextView
                 android:layout_marginTop="25dp"
@@ -247,13 +254,14 @@
                 android:textColorHint="@color/edit_text_stroke"
                 android:background="@drawable/edit_text_stroke"
                 android:fontFamily="@font/outfit_medium"
-                android:padding="10dp" />
+                android:padding="10dp"
+                android:inputType="textPostalAddress"/>
 
             <TextView
                 android:layout_marginTop="25dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Address line 2*"
+                android:text="Address line 2"
                 android:textColor="@color/theme_text"
                 android:fontFamily="@font/outfit_medium"
                 android:textSize="15dp" />
@@ -268,7 +276,8 @@
                 android:textColorHint="@color/edit_text_stroke"
                 android:background="@drawable/edit_text_stroke"
                 android:fontFamily="@font/outfit_medium"
-                android:padding="10dp" />
+                android:padding="10dp"
+                android:inputType="textPostalAddress"/>
 
             <View
                 android:layout_width="match_parent"

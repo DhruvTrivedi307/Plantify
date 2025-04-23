@@ -85,9 +85,6 @@
                 android:layout_gravity="right"
                 android:layout_marginRight="20dp">
 
-
-
-
                 <ImageView
                     android:layout_width="26dp"
                     android:layout_height="33dp"
@@ -103,6 +100,17 @@
                     android:textColor="@color/black"/>
 
             </LinearLayout>
+
+            <TextView
+                android:id="@+id/not_avail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No plants available in this price range."
+                android:fontFamily="@font/outfit_bold"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:visibility="gone"
+                android:layout_marginTop="250dp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"

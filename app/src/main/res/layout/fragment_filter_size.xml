@@ -17,7 +17,8 @@
             android:layout_height="wrap_content"
             android:text="Small"
             android:layout_marginLeft="20dp"
-            android:fontFamily="@font/outfit_medium"/>
+            android:fontFamily="@font/outfit_medium"
+            android:backgroundTint="@color/theme"/>
 
         <CheckBox
             android:id="@+id/medium"
@@ -25,7 +26,8 @@
             android:layout_height="wrap_content"
             android:text="Medium"
             android:layout_marginLeft="20dp"
-            android:fontFamily="@font/outfit_medium"/>
+            android:fontFamily="@font/outfit_medium"
+            android:backgroundTint="@color/theme"/>
 
     </LinearLayout>
 

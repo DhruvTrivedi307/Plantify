@@ -128,6 +128,9 @@ public class filter_type_of_plants extends AppCompatActivity {
             Class<?> cl = Class.forName(p);
             if (cl == shop.class) {
                 i_o.setVisibility(View.VISIBLE);
+            } else if (cl == tools.class) {
+                type_of_plants.setVisibility(View.GONE);
+                ft.replace(R.id.fragment,new filter_price());
             }
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);

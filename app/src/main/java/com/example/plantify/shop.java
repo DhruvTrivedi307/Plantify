@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -32,16 +33,7 @@ public class shop extends AppCompatActivity {
     LinearLayout filter;
     LinearLayout h_bhp, h_jmp, h_plp, h_fbp, h_lbp, h_stp, h_pgp, h_mpg, h_pp, h_bwp, h_arp, h_apbp, h_bpx, h_bpp, h_flp, h_vjmp;
     AppCompatButton h_bhp_cart_click, h_jmp_cart_click, h_plp_cart_click, h_fbp_cart_click, h_lbp_cart_click, h_stp_cart_click, h_pgp_cart_click, h_mpg_cart_click, h_pp_cart_click, h_bwp_cart_click, h_arp_cart_click, h_apbp_cart_click, h_bpx_cart_click, h_bpp_cart_click, h_flp_cart_click, h_vjmp_cart_click;
-
-    Button indoorBTN;
-//    int[] item_images = {R.drawable.peacock_plant, R.drawable.brazilian_wood_plant, R.drawable.money_plant_golden};
-//    int[] item_prices = {499, 899, 479};
-//    String[] item_names = {"Peacock Plant", "Brazilian Wood Plant", "Money Plant Golden"};
-//    String[] item_sizes = {"Small", "Medium", "Small"};
-//    int[] item_quantities = {1, 1, 1};
-
-    //    String[] name = Objects.requireNonNull(getIntent().getStringArrayListExtra("name")).toArray(new String[0]);
-    boolean isavail = false;
+    TextView not_avail;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -87,12 +79,11 @@ public class shop extends AppCompatActivity {
 
         filter = findViewById(R.id.filter);
 
-
+        not_avail = findViewById(R.id.not_avail);
 
         filter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                startActivity(new Intent(shop.this, filter_type_of_plants.class));
                 Intent i = new Intent(shop.this,filter_type_of_plants.class);
                 i.putExtra("page",shop.class.getName());
                 startActivity(i);
@@ -377,30 +368,25 @@ public class shop extends AppCompatActivity {
             setPlantVisibility(h_vjmp, outdoorShadeLovingPlant, 1140, minPrice, maxPrice);
             setPlantVisibility(h_pgp, outdoorSunLovingPlant, 279, minPrice, maxPrice);
             setPlantVisibility(h_mpg, outdoorSunLovingPlant, 279, minPrice, maxPrice);
-            Toast.makeText(this, "Out", Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(this, "In", Toast.LENGTH_SHORT).show();
-            priceVisibility(h_bhp,299,minPrice,maxPrice);
-            priceVisibility(h_jmp, 279,minPrice,maxPrice);
-            priceVisibility(h_plp, 929, minPrice, maxPrice);
-            priceVisibility(h_fbp,949,minPrice,maxPrice);
-            priceVisibility(h_lbp,349,minPrice,maxPrice);
-            priceVisibility(h_stp,349,minPrice,maxPrice);
-            priceVisibility(h_pgp,279,minPrice,maxPrice);
-            priceVisibility(h_mpg,279,minPrice,maxPrice);
-            priceVisibility(h_pp,699,minPrice,maxPrice);
-            priceVisibility(h_bwp,639,minPrice,maxPrice);
-            priceVisibility(h_arp,749,minPrice,maxPrice);
-            priceVisibility(h_apbp,714,minPrice,maxPrice);
-            priceVisibility(h_bpx,857,minPrice,maxPrice);
-            priceVisibility(h_bpp,899,minPrice,maxPrice);
-            priceVisibility(h_flp,1199,minPrice,maxPrice);
-            priceVisibility(h_vjmp,1140,minPrice,maxPrice);
         }
-
-
-
-
+//        else {
+//            priceVisibility(h_bhp,299,minPrice,maxPrice);
+//            priceVisibility(h_jmp, 279,minPrice,maxPrice);
+//            priceVisibility(h_plp, 929, minPrice, maxPrice);
+//            priceVisibility(h_fbp,949,minPrice,maxPrice);
+//            priceVisibility(h_lbp,349,minPrice,maxPrice);
+//            priceVisibility(h_stp,349,minPrice,maxPrice);
+//            priceVisibility(h_pgp,279,minPrice,maxPrice);
+//            priceVisibility(h_mpg,279,minPrice,maxPrice);
+//            priceVisibility(h_pp,699,minPrice,maxPrice);
+//            priceVisibility(h_bwp,639,minPrice,maxPrice);
+//            priceVisibility(h_arp,749,minPrice,maxPrice);
+//            priceVisibility(h_apbp,714,minPrice,maxPrice);
+//            priceVisibility(h_bpx,857,minPrice,maxPrice);
+//            priceVisibility(h_bpp,899,minPrice,maxPrice);
+//            priceVisibility(h_flp,1199,minPrice,maxPrice);
+//            priceVisibility(h_vjmp,1140,minPrice,maxPrice);
+//        }
 
         // Optional: handle default visibility if no filters are applied
         if (!(airPlants || floweringPlants || climbers || small || medium || indoor || outdoor || outdoorShadeLovingPlant || outdoorSunLovingPlant)) {
@@ -422,7 +408,37 @@ public class shop extends AppCompatActivity {
             h_vjmp.setVisibility(View.VISIBLE);
         }
 
+        if (!isPriceInRange(299,minPrice,maxPrice)) h_bhp.setVisibility(View.GONE);
+        if (!isPriceInRange(279,minPrice,maxPrice)) h_jmp.setVisibility(View.GONE);
+        if (!isPriceInRange(929,minPrice,maxPrice)) h_plp.setVisibility(View.GONE);
+        if (!isPriceInRange(949,minPrice,maxPrice)) h_fbp.setVisibility(View.GONE);
+        if (!isPriceInRange(349,minPrice,maxPrice)) h_lbp.setVisibility(View.GONE);
+        if (!isPriceInRange(349,minPrice,maxPrice)) h_stp.setVisibility(View.GONE);
+        if (!isPriceInRange(279,minPrice,maxPrice)) h_pgp.setVisibility(View.GONE);
+        if (!isPriceInRange(279,minPrice,maxPrice)) h_mpg.setVisibility(View.GONE);
+        if (!isPriceInRange(699,minPrice,maxPrice)) h_pp.setVisibility(View.GONE);
+        if (!isPriceInRange(639,minPrice,maxPrice)) h_bwp.setVisibility(View.GONE);
+        if (!isPriceInRange(749,minPrice,maxPrice)) h_arp.setVisibility(View.GONE);
+        if (!isPriceInRange(714,minPrice,maxPrice)) h_apbp.setVisibility(View.GONE);
+        if (!isPriceInRange(857,minPrice,maxPrice)) h_bpx.setVisibility(View.GONE);
+        if (!isPriceInRange(899,minPrice,maxPrice)) h_bpp.setVisibility(View.GONE);
+        if (!isPriceInRange(1199,minPrice,maxPrice)) h_flp.setVisibility(View.GONE);
+        if (!isPriceInRange(1140,minPrice,maxPrice)) h_vjmp.setVisibility(View.GONE);
 
+        boolean not = h_bhp.getVisibility() == View.VISIBLE || h_jmp.getVisibility() == View.VISIBLE ||
+                h_plp.getVisibility() == View.VISIBLE || h_fbp.getVisibility() == View.VISIBLE ||
+                h_lbp.getVisibility() == View.VISIBLE || h_stp.getVisibility() == View.VISIBLE ||
+                h_pgp.getVisibility() == View.VISIBLE || h_mpg.getVisibility() == View.VISIBLE ||
+                h_pp.getVisibility() == View.VISIBLE || h_bwp.getVisibility() == View.VISIBLE ||
+                h_arp.getVisibility() == View.VISIBLE || h_apbp.getVisibility() == View.VISIBLE ||
+                h_bpx.getVisibility() == View.VISIBLE || h_bpp.getVisibility() == View.VISIBLE ||
+                h_flp.getVisibility() == View.VISIBLE || h_vjmp.getVisibility() == View.VISIBLE;
+
+        if (!not){
+            not_avail.setVisibility(View.VISIBLE);
+        }else{
+            not_avail.setVisibility(View.GONE);
+        }
 
     }
 
@@ -473,11 +489,11 @@ public class shop extends AppCompatActivity {
         }
     }
 
-    private void priceVisibility(View view, int price,float min,float max){
-        if (isPriceInRange(price, min, max)) {
-            view.setVisibility(View.VISIBLE);
-        } else {
-            view.setVisibility(View.GONE);
-        }
-    }
+//    private void priceVisibility(View view, int price,float min,float max){
+//        if (isPriceInRange(price, min, max)) {
+//            view.setVisibility(View.VISIBLE);
+//        } else {
+//            view.setVisibility(View.GONE);
+//        }
+//    }
 }

@@ -7,6 +7,7 @@ import android.view.HapticFeedbackConstants;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +21,7 @@ public class easy_to_care extends AppCompatActivity {
     LinearLayout main,filter;
     LinearLayout e_apbp, e_bpp, e_bpx, e_arp, e_flp, e_csp, e_mdp, e_pgp, e_vjmp, e_bhp;
     AppCompatButton e_apbp_cart_click, e_bpp_cart_click, e_bpx_cart_click, e_arp_cart_click, e_flp_cart_click, e_csp_cart_click, e_mdp_cart_click, e_pgp_cart_click, e_vjmp_cart_click, e_bhp_cart_click;
+    TextView not_avail;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -58,6 +60,8 @@ public class easy_to_care extends AppCompatActivity {
         e_pgp_cart_click = findViewById(R.id.e_pgp_cart_click);
         e_vjmp_cart_click = findViewById(R.id.e_vjmp_cart_click);
         e_bhp_cart_click = findViewById(R.id.e_bhp_cart_click);
+
+        not_avail = findViewById(R.id.not_avail);
 
         boolean hasFilter = airPlants || floweringPlants || climbers || minPrice > 100f || maxPrice < 2000f;
 
@@ -214,6 +218,12 @@ public class easy_to_care extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        if (e_apbp.getVisibility() == View.GONE && e_bpp.getVisibility() == View.GONE && e_bpx.getVisibility() == View.GONE && e_arp.getVisibility() == View.GONE && e_flp.getVisibility() == View.GONE && e_csp.getVisibility() == View.GONE) {
+            not_avail.setVisibility(View.VISIBLE);
+        } else {
+            not_avail.setVisibility(View.GONE);
+        }
     }
 
     private boolean isPriceInRange(int price, float min, float max) {

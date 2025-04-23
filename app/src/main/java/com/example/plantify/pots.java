@@ -7,6 +7,7 @@ import android.view.HapticFeedbackConstants;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +20,7 @@ public class pots extends AppCompatActivity {
     LinearLayout main,filter;
     LinearLayout p_gwp,p_owp,p_rwwp,p_rcp,p_cagcp,p_stp,p_tfbcp,p_tffcp,p_tccp,p_vep;
     androidx.appcompat.widget.AppCompatButton p_gwp_cart_click, p_owp_cart_click, p_rwwp_cart_click, p_rcp_cart_click, p_cagcp_cart_click, p_stp_cart_click, p_tfbcp_cart_click, p_tffcp_cart_click, p_tccp_cart_click, p_vep_cart_click;
+    TextView not_avail;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -44,6 +46,8 @@ public class pots extends AppCompatActivity {
         p_tffcp = findViewById(R.id.p_tffcp);
         p_tccp = findViewById(R.id.p_tccp);
         p_vep = findViewById(R.id.p_vep);
+
+        not_avail = findViewById(R.id.not_avail);
 
         boolean airPlants = intent.getBooleanExtra("air_plants", false);
         boolean floweringPlants = intent.getBooleanExtra("flowering_plants", false);
@@ -187,6 +191,12 @@ public class pots extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        if (p_gwp.getVisibility() == View.GONE && p_owp.getVisibility() == View.GONE && p_rwwp.getVisibility() == View.GONE && p_rcp.getVisibility() == View.GONE && p_cagcp.getVisibility() == View.GONE && p_stp.getVisibility() == View.GONE && p_tfbcp.getVisibility() == View.GONE && p_tffcp.getVisibility() == View.GONE && p_tccp.getVisibility() == View.GONE && p_vep.getVisibility() == View.GONE){
+            not_avail.setVisibility(View.VISIBLE);
+        }else{
+            not_avail.setVisibility(View.GONE);
+        }
 
     }
 

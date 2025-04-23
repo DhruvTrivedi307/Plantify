@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:valueFrom="100"
             android:valueTo="2000"
-            android:stepSize="100"
+            android:stepSize="50"
             tools:values="[100,2000]"
             app:trackHeight="4dp"
             app:thumbRadius="8dp"

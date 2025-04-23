@@ -7,6 +7,7 @@ import android.view.HapticFeedbackConstants;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +21,7 @@ public class seeds extends AppCompatActivity {
     LinearLayout main;
     LinearLayout s_amaranths,s_beetroots,s_broccolis,s_capsicums,s_corianders,s_fenugreek,s_greenchilli,s_greencucumber,s_okras,s_redamaranthus,s_spinch,s_tomatos;
     AppCompatButton s_amaranths_cart_click, s_beetroots_cart_click, s_broccolis_cart_click, s_capsicums_cart_click, s_corianders_cart_click, s_fenugreek_cart_click, s_greenchilli_cart_click, s_greencucumber_cart_click, s_okras_cart_click, s_redamaranthus_cart_click, s_spinch_cart_click, s_tomatos_cart_click;
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -41,14 +41,12 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
         android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-
             android:padding="20dp">
 
             <TextView
@@ -103,7 +101,8 @@
                 android:textSize="15dp"
                 android:textColorHint="@color/edit_text_stroke"
                 android:background="@drawable/edit_text_stroke"
-                android:fontFamily="@font/outfit_medium"/>
+                android:fontFamily="@font/outfit_medium"
+                android:inputType="textPersonName"/>
 
             <TextView
                 android:layout_marginTop="25dp"
@@ -124,7 +123,8 @@
                 android:textSize="15dp"
                 android:textColorHint="@color/edit_text_stroke"
                 android:background="@drawable/edit_text_stroke"
-                android:fontFamily="@font/outfit_medium"/>
+                android:fontFamily="@font/outfit_medium"
+                android:inputType="textPersonName"/>
 
             <TextView
                 android:layout_marginTop="25dp"
@@ -166,7 +166,8 @@
                 android:textSize="15dp"
                 android:textColorHint="@color/edit_text_stroke"
                 android:background="@drawable/edit_text_stroke"
-                android:fontFamily="@font/outfit_medium"/>
+                android:fontFamily="@font/outfit_medium"
+                android:inputType="textEmailAddress"/>
 
             <TextView
                 android:layout_marginTop="25dp"
@@ -187,7 +188,8 @@
                 android:textSize="15dp"
                 android:textColorHint="@color/edit_text_stroke"
                 android:background="@drawable/edit_text_stroke"
-                android:fontFamily="@font/outfit_medium"/>
+                android:fontFamily="@font/outfit_medium"
+                android:inputType="textPassword"/>
 
             <CheckBox
                 android:id="@+id/toggle"
@@ -195,63 +197,20 @@
                 android:layout_height="wrap_content"
                 android:text="Show password"
                 android:layout_marginBottom="20dp"
-                />
+                android:fontFamily="@font/outfit_medium"
+                android:backgroundTint="@color/theme"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/createAccount"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:text="CREATE ACCOUNT"
+                android:hint="Create Account"
+                android:fontFamily="@font/outfit_medium"
+                android:textColorHint="@color/white"
                 android:textSize="15sp"
                 android:background="@drawable/sign_in_button_fill"
                 android:textColor="@color/white"/>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp">
-
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="1dp"
-                    android:layout_weight="1"
-                    android:background="#CCCCCC"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Or continue with"
-                    android:textColor="#888888"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp"
-                    android:textSize="14sp"
-                    android:textStyle="bold"/>
-
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="1dp"
-                    android:layout_weight="1"
-                    android:background="#CCCCCC"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/google_sign_in_button"
-                android:layout_gravity="center">
-
-                <ImageView
-                    android:id="@+id/sign_in"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:src="@drawable/google"
-                    android:layout_margin="10dp"/>
-
-            </LinearLayout>
 
         </LinearLayout>
 

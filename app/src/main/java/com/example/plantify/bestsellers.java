@@ -7,6 +7,7 @@ import android.view.HapticFeedbackConstants;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,6 +22,7 @@ public class bestsellers extends AppCompatActivity {
     LinearLayout b_lbp, b_fbp, b_pp, b_bwp, b_jmp, b_mpg, b_bhp, b_plp;
     AppCompatButton b_lbp_cart_click, b_fbp_cart_click, b_pp_cart_click, b_bwp_cart_click, b_jmp_cart_click, b_mpg_cart_click, b_bhp_cart_click,b_plp_cart_click;
     ImageView cart_icon,search_icon;
+    TextView not_avail;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -58,6 +60,8 @@ public class bestsellers extends AppCompatActivity {
 
         cart_icon = findViewById(R.id.cart_icon);
         search_icon = findViewById(R.id.search_icon);
+
+        not_avail = findViewById(R.id.not_avail);
 
         boolean hasFilter = airPlants || floweringPlants || climbers || minPrice > 100f || maxPrice < 2000f;
 
@@ -183,6 +187,12 @@ public class bestsellers extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        if (b_lbp.getVisibility() == View.GONE && b_fbp.getVisibility() == View.GONE && b_pp.getVisibility() == View.GONE && b_bwp.getVisibility() == View.GONE && b_jmp.getVisibility() == View.GONE && b_mpg.getVisibility() == View.GONE && b_bhp.getVisibility() == View.GONE && b_plp.getVisibility() == View.GONE) {
+            not_avail.setVisibility(View.VISIBLE);
+        } else {
+            not_avail.setVisibility(View.GONE);
+        }
 
     }
 

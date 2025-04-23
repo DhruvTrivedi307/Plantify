@@ -509,7 +509,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="5dp"
-                android:hint=""
+                android:hint="*empty*"
                 android:background="@android:color/transparent"
                 android:focusable="false"
                 android:clickable="false"
@@ -664,7 +664,8 @@
 
                     <RadioButton
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/theme"/>
 
                     <View
                         android:layout_width="match_parent"
@@ -673,7 +674,8 @@
 
                     <RadioButton
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/theme"/>
 
                     <View
                         android:layout_width="match_parent"
@@ -682,7 +684,8 @@
 
                     <RadioButton
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/theme"/>
 
                 </RadioGroup>
 

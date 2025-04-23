@@ -28,4 +28,7 @@
         <item name="thumbColor">@android:color/black</item>
         <item name="haloColor">@android:color/transparent</item>
     </style>
+    <style name="CustomCheckBox" parent="Widget.Material3.CompoundButton.CheckBox">
+        <item name="android:buttonTint">@color/checkbox_selector</item>
+    </style>
 </resources>

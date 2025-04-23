@@ -157,7 +157,7 @@
                         android:id="@+id/size"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text=""
+                        android:text="Small"
                         android:fontFamily="@font/outfit_medium"
                         android:textColor="@color/black"/>
 
@@ -304,7 +304,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/sansita_swashed"
-                                android:paddingRight="5dp"
+                                android:layout_marginRight="5dp"
+                                android:foreground="@drawable/strikethrough_foreground"
                                 android:text="₹1999"
                                 android:textSize="10dp" />
 
@@ -315,7 +316,7 @@
                                 android:padding="5dp"
                                 android:text="₹499"
                                 android:textColor="@color/theme"
-                                android:textSize="12dp" />
+                                android:textSize="14dp" />
 
                         </LinearLayout>
 
@@ -351,7 +352,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/sansita_swashed"
-                                android:paddingRight="5dp"
+                                android:layout_marginRight="5dp"
+                                android:foreground="@drawable/strikethrough_foreground"
                                 android:text="₹1999"
                                 android:textSize="10dp" />
 
@@ -362,7 +364,7 @@
                                 android:padding="5dp"
                                 android:text="₹499"
                                 android:textColor="@color/theme"
-                                android:textSize="12dp" />
+                                android:textSize="14dp" />
 
                         </LinearLayout>
 
@@ -398,7 +400,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/sansita_swashed"
-                                android:paddingRight="5dp"
+                                android:layout_marginRight="5dp"
+                                android:foreground="@drawable/strikethrough_foreground"
                                 android:text="₹1999"
                                 android:textSize="10dp" />
 
@@ -409,7 +412,7 @@
                                 android:padding="5dp"
                                 android:text="₹499"
                                 android:textColor="@color/theme"
-                                android:textSize="12dp" />
+                                android:textSize="14dp" />
 
                         </LinearLayout>
 
@@ -445,7 +448,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/sansita_swashed"
-                                android:paddingRight="5dp"
+                                android:layout_marginRight="5dp"
+                                android:foreground="@drawable/strikethrough_foreground"
                                 android:text="₹1999"
                                 android:textSize="10dp" />
 
@@ -456,7 +460,7 @@
                                 android:padding="5dp"
                                 android:text="₹499"
                                 android:textColor="@color/theme"
-                                android:textSize="12dp" />
+                                android:textSize="14dp" />
 
                         </LinearLayout>
 
@@ -492,7 +496,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/sansita_swashed"
-                                android:paddingRight="5dp"
+                                android:layout_marginRight="5dp"
+                                android:foreground="@drawable/strikethrough_foreground"
                                 android:text="₹1999"
                                 android:textSize="10dp" />
 
@@ -503,7 +508,7 @@
                                 android:padding="5dp"
                                 android:text="₹499"
                                 android:textColor="@color/theme"
-                                android:textSize="12dp" />
+                                android:textSize="14dp"/>
 
                         </LinearLayout>
 
@@ -516,7 +521,8 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="20dp"
                         android:layout_marginBottom="20dp"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:layout_marginRight="20dp">
 
                         <ImageView
                             android:layout_width="160dp"
@@ -539,7 +545,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/sansita_swashed"
-                                android:paddingRight="5dp"
+                                android:layout_marginRight="5dp"
+                                android:foreground="@drawable/strikethrough_foreground"
                                 android:text="₹1999"
                                 android:textSize="10dp" />
 
@@ -550,57 +557,11 @@
                                 android:padding="5dp"
                                 android:text="₹499"
                                 android:textColor="@color/theme"
-                                android:textSize="12dp" />
+                                android:textSize="14dp" />
 
                         </LinearLayout>
 
                     </LinearLayout>
-
-<!--                    <LinearLayout-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_marginLeft="20dp"-->
-<!--                        android:layout_marginTop="20dp"-->
-<!--                        android:layout_marginBottom="20dp"-->
-<!--                        android:orientation="vertical">-->
-
-<!--                        <ImageView-->
-<!--                            android:layout_width="160dp"-->
-<!--                            android:layout_height="200dp"-->
-<!--                            android:src="@drawable/broken_heart_plant" />-->
-
-<!--                        <TextView-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:fontFamily="@font/outfit_bold"-->
-<!--                            android:paddingTop="5dp"-->
-<!--                            android:text="Broken Heart Plant" />-->
-
-<!--                        <LinearLayout-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:orientation="horizontal">-->
-
-<!--                            <TextView-->
-<!--                                android:layout_width="wrap_content"-->
-<!--                                android:layout_height="wrap_content"-->
-<!--                                android:fontFamily="@font/sansita_swashed"-->
-<!--                                android:paddingRight="5dp"-->
-<!--                                android:text="₹1999"-->
-<!--                                android:textSize="10dp" />-->
-
-<!--                            <TextView-->
-<!--                                android:layout_width="wrap_content"-->
-<!--                                android:layout_height="wrap_content"-->
-<!--                                android:fontFamily="@font/sansita_swashed"-->
-<!--                                android:padding="5dp"-->
-<!--                                android:text="₹499"-->
-<!--                                android:textColor="@color/theme"-->
-<!--                                android:textSize="12dp" />-->
-
-<!--                        </LinearLayout>-->
-
-<!--                    </LinearLayout>-->
 
                 </LinearLayout>
 

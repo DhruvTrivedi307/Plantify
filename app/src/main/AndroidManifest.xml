@@ -24,14 +24,8 @@
             android:name=".payment_done"
             android:exported="false" />
         <activity
-            android:name=".cart_item_explore"
-            android:exported="false" />
-        <activity
             android:name=".cart_explore"
-            android:exported="false" /> <!-- <activity -->
-        <!-- android:name=".filter" -->
-        <!-- android:exported="false" -->
-        <!-- android:theme="@style/Theme.Plantify" /> -->
+            android:exported="false" />
         <activity
             android:name=".cart_item"
             android:exported="false"
@@ -53,18 +47,6 @@
             android:screenOrientation="locked" />
         <activity
             android:name=".payment"
-            android:exported="false"
-            android:screenOrientation="locked" />
-        <activity
-            android:name=".filter_by_indoor_outdoor"
-            android:exported="false"
-            android:screenOrientation="locked" />
-        <activity
-            android:name=".filter_by_size"
-            android:exported="false"
-            android:screenOrientation="locked" />
-        <activity
-            android:name=".filter_by_price"
             android:exported="false"
             android:screenOrientation="locked" />
         <activity

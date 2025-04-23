@@ -18,7 +18,7 @@
             android:text="Air Plants"
             android:layout_marginLeft="20dp"
             android:fontFamily="@font/outfit_medium"
-            />
+            android:backgroundTint="@color/theme"/>
 
         <CheckBox
             android:id="@+id/flowering_plants"
@@ -27,7 +27,7 @@
             android:text="Flowering Plants"
             android:layout_marginLeft="20dp"
             android:fontFamily="@font/outfit_medium"
-            />
+            android:backgroundTint="@color/theme"/>
 
         <CheckBox
             android:id="@+id/climbers"
@@ -36,7 +36,7 @@
             android:text="Climbers"
             android:layout_marginLeft="20dp"
             android:fontFamily="@font/outfit_medium"
-            />
+            android:backgroundTint="@color/theme"/>
 
     </LinearLayout>
 

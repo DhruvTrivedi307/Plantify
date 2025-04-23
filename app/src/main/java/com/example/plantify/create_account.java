@@ -48,13 +48,9 @@ import java.util.HashMap;
 public class create_account extends AppCompatActivity {
     EditText passwordEditText;
     CheckBox toggleCheckBox;
-    ImageView sign_in;
-    GoogleSignInOptions gso;
-    GoogleSignInClient gsc;
     EditText fname, lname, phone, email, password;
     CheckBox toggle;
     AppCompatButton createAccount;
-    DatabaseHelper dbHelper;
     FirebaseAuth mAuth;
     TextView signin;
 
@@ -66,7 +62,6 @@ public class create_account extends AppCompatActivity {
 
         passwordEditText = findViewById(R.id.password);
         toggleCheckBox = findViewById(R.id.toggle);
-        sign_in = findViewById(R.id.sign_in);
         signin = findViewById(R.id.signin);
 
         fname = findViewById(R.id.fname);
@@ -79,9 +74,6 @@ public class create_account extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-        // Initialize Database Helper
-//        dbHelper = new DatabaseHelper(this);
-
         // Password Toggle Feature
         toggle.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
@@ -91,7 +83,6 @@ public class create_account extends AppCompatActivity {
             }
         });
 
-//         Handle Create Account Button Click
         createAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -152,23 +143,6 @@ public class create_account extends AppCompatActivity {
             }
         });
 
-        gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
-        gsc = GoogleSignIn.getClient(this, gso);
-
-        GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
-        if(acct != null){
-            finish();
-            Intent i = new Intent(getApplicationContext(),profile_logout.class);
-            startActivity(i);
-        }
-
-        sign_in.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                signIn();
-            }
-        });
-
         signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -188,11 +162,6 @@ public class create_account extends AppCompatActivity {
             startActivity(i);
             finish();
         }
-    }
-
-    public void signIn(){
-        Intent signInInten = gsc.getSignInIntent();
-        startActivityForResult(signInInten,1000);
     }
 
     @Override

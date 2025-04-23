@@ -7,6 +7,7 @@ import android.view.HapticFeedbackConstants;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +21,7 @@ public class tools extends AppCompatActivity {
     LinearLayout main,filter;
     LinearLayout dmm, hwp, dpw, fpw, cps, pis, ss, ws;
     AppCompatButton dmm_cart_click, hwp_cart_click, dpw_cart_click, fpw_cart_click, cps_cart_click, pis_cart_click, ss_cart_click, ws_cart_click;
+    TextView not_avail;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -51,6 +53,8 @@ public class tools extends AppCompatActivity {
         pis_cart_click = findViewById(R.id.pis_cart_click);
         ss_cart_click = findViewById(R.id.ss_cart_click);
         ws_cart_click = findViewById(R.id.ws_cart_click);
+
+        not_avail = findViewById(R.id.not_avail);
 
         dmm.setOnClickListener(v -> {
             String name = "Dom Metallic Mister";
@@ -173,6 +177,14 @@ public class tools extends AppCompatActivity {
         if (!isPriceInRange(599, minPrice, maxPrice)) pis.setVisibility(View.GONE);
         if (!isPriceInRange(599, minPrice, maxPrice)) ss.setVisibility(View.GONE);
         if (!isPriceInRange(529, minPrice, maxPrice)) ws.setVisibility(View.GONE);
+
+        not_avail.setVisibility(View.GONE);
+        if (dmm.getVisibility() == View.GONE && hwp.getVisibility() == View.GONE && dpw.getVisibility() == View.GONE && fpw.getVisibility() == View.GONE &&
+                cps.getVisibility() == View.GONE && pis.getVisibility() == View.GONE && ss.getVisibility() == View.GONE && ws.getVisibility() == View.GONE) {
+            not_avail.setVisibility(View.VISIBLE);
+        } else {
+            not_avail.setVisibility(View.GONE);
+        }
     }
 
     public void RedirectProduct(int imageResId,String name, int price, String description){
