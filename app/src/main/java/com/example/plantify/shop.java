@@ -351,31 +351,56 @@ public class shop extends AppCompatActivity {
         h_flp.setVisibility(View.GONE);
         h_vjmp.setVisibility(View.GONE);
 
-        // Apply filters
-        setPlantVisibility(h_bhp, airPlants, 299, minPrice, maxPrice);
-        setPlantVisibility(h_jmp, airPlants, 279, minPrice, maxPrice);
-        setPlantVisibility(h_plp, airPlants, 929, minPrice, maxPrice);
-        setPlantVisibility(h_fbp, airPlants, 949, minPrice, maxPrice);
-        setPlantVisibility(h_lbp, airPlants, 349, minPrice, maxPrice);
-        setPlantVisibility(h_stp, airPlants, 349, minPrice, maxPrice);
-        setPlantVisibility(h_pgp, floweringPlants, 279, minPrice, maxPrice);
-        setPlantVisibility(h_mpg, floweringPlants, 279, minPrice, maxPrice);
-        setPlantVisibility(h_arp, floweringPlants || airPlants, 749, minPrice, maxPrice);
-        setPlantVisibility(h_apbp, floweringPlants || airPlants, 714, minPrice, maxPrice);
-        setPlantVisibility(h_pp, climbers || airPlants, 699, minPrice, maxPrice);
-        setPlantVisibility(h_bwp, climbers || airPlants, 639, minPrice, maxPrice);
-        setPlantVisibility(h_bpx, airPlants, 857, minPrice, maxPrice);
-        setPlantVisibility(h_bpp, airPlants, 899, minPrice, maxPrice);
-        setPlantVisibility(h_flp, airPlants, 1199, minPrice, maxPrice);
-        setPlantVisibility(h_vjmp, airPlants, 1140, minPrice, maxPrice);
-        setPlantVisibility(h_bpx, indoor, 857, minPrice, maxPrice);
-        setPlantVisibility(h_bpp, indoor, 899, minPrice, maxPrice);
-        setPlantVisibility(h_lbp, outdoor, 349, minPrice, maxPrice);
-        setPlantVisibility(h_stp, outdoor, 349, minPrice, maxPrice);
-        setPlantVisibility(h_flp, outdoorShadeLovingPlant, 1199, minPrice, maxPrice);
-        setPlantVisibility(h_vjmp, outdoorShadeLovingPlant, 1140, minPrice, maxPrice);
-        setPlantVisibility(h_pgp, outdoorSunLovingPlant, 279, minPrice, maxPrice);
-        setPlantVisibility(h_mpg, outdoorSunLovingPlant, 279, minPrice, maxPrice);
+        if(airPlants|| floweringPlants || climbers || indoor || outdoor || outdoorShadeLovingPlant || outdoorSunLovingPlant){
+            // Apply filters
+            setPlantVisibility(h_bhp, airPlants, 299, minPrice, maxPrice);
+            setPlantVisibility(h_jmp, airPlants, 279, minPrice, maxPrice);
+            setPlantVisibility(h_plp, airPlants, 929, minPrice, maxPrice);
+            setPlantVisibility(h_fbp, airPlants, 949, minPrice, maxPrice);
+            setPlantVisibility(h_lbp, airPlants, 349, minPrice, maxPrice);
+            setPlantVisibility(h_stp, airPlants, 349, minPrice, maxPrice);
+            setPlantVisibility(h_pgp, floweringPlants, 279, minPrice, maxPrice);
+            setPlantVisibility(h_mpg, floweringPlants, 279, minPrice, maxPrice);
+            setPlantVisibility(h_arp, floweringPlants || airPlants, 749, minPrice, maxPrice);
+            setPlantVisibility(h_apbp, floweringPlants || airPlants, 714, minPrice, maxPrice);
+            setPlantVisibility(h_pp, climbers || airPlants, 699, minPrice, maxPrice);
+            setPlantVisibility(h_bwp, climbers || airPlants, 639, minPrice, maxPrice);
+            setPlantVisibility(h_bpx, airPlants, 857, minPrice, maxPrice);
+            setPlantVisibility(h_bpp, airPlants, 899, minPrice, maxPrice);
+            setPlantVisibility(h_flp, airPlants, 1199, minPrice, maxPrice);
+            setPlantVisibility(h_vjmp, airPlants, 1140, minPrice, maxPrice);
+            setPlantVisibility(h_bpx, indoor, 857, minPrice, maxPrice);
+            setPlantVisibility(h_bpp, indoor, 899, minPrice, maxPrice);
+            setPlantVisibility(h_lbp, outdoor, 349, minPrice, maxPrice);
+            setPlantVisibility(h_stp, outdoor, 349, minPrice, maxPrice);
+            setPlantVisibility(h_flp, outdoorShadeLovingPlant, 1199, minPrice, maxPrice);
+            setPlantVisibility(h_vjmp, outdoorShadeLovingPlant, 1140, minPrice, maxPrice);
+            setPlantVisibility(h_pgp, outdoorSunLovingPlant, 279, minPrice, maxPrice);
+            setPlantVisibility(h_mpg, outdoorSunLovingPlant, 279, minPrice, maxPrice);
+            Toast.makeText(this, "Out", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "In", Toast.LENGTH_SHORT).show();
+            priceVisibility(h_bhp,299,minPrice,maxPrice);
+            priceVisibility(h_jmp, 279,minPrice,maxPrice);
+            priceVisibility(h_plp, 929, minPrice, maxPrice);
+            priceVisibility(h_fbp,949,minPrice,maxPrice);
+            priceVisibility(h_lbp,349,minPrice,maxPrice);
+            priceVisibility(h_stp,349,minPrice,maxPrice);
+            priceVisibility(h_pgp,279,minPrice,maxPrice);
+            priceVisibility(h_mpg,279,minPrice,maxPrice);
+            priceVisibility(h_pp,699,minPrice,maxPrice);
+            priceVisibility(h_bwp,639,minPrice,maxPrice);
+            priceVisibility(h_arp,749,minPrice,maxPrice);
+            priceVisibility(h_apbp,714,minPrice,maxPrice);
+            priceVisibility(h_bpx,857,minPrice,maxPrice);
+            priceVisibility(h_bpp,899,minPrice,maxPrice);
+            priceVisibility(h_flp,1199,minPrice,maxPrice);
+            priceVisibility(h_vjmp,1140,minPrice,maxPrice);
+        }
+
+
+
+
 
         // Optional: handle default visibility if no filters are applied
         if (!(airPlants || floweringPlants || climbers || small || medium || indoor || outdoor || outdoorShadeLovingPlant || outdoorSunLovingPlant)) {
@@ -396,6 +421,8 @@ public class shop extends AppCompatActivity {
             h_flp.setVisibility(View.VISIBLE);
             h_vjmp.setVisibility(View.VISIBLE);
         }
+
+
 
     }
 
@@ -440,6 +467,14 @@ public class shop extends AppCompatActivity {
     // Encapsulated visibility logic for plant views
     private void setPlantVisibility(View view, boolean categoryCondition, int price, float min, float max) {
         if (categoryCondition && isPriceInRange(price, min, max)) {
+            view.setVisibility(View.VISIBLE);
+        } else {
+            view.setVisibility(View.GONE);
+        }
+    }
+
+    private void priceVisibility(View view, int price,float min,float max){
+        if (isPriceInRange(price, min, max)) {
             view.setVisibility(View.VISIBLE);
         } else {
             view.setVisibility(View.GONE);
