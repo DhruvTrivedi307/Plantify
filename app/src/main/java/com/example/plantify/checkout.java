@@ -22,6 +22,7 @@ public class checkout extends AppCompatActivity {
     TextView subtotalPrice,grandtotalPrice,bottomnavPrice,Plantsize;
     EditText fname,lname,mono,email,pin_code,city,state,add1,add2;
     AppCompatButton checkout;
+    ImageView logo;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -42,6 +43,14 @@ public class checkout extends AppCompatActivity {
         add1 = findViewById(R.id.add1);
         add2 = findViewById(R.id.add2);
         checkout = findViewById(R.id.checkout);
+        logo = findViewById(R.id.logo);
+
+        logo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
 
         Intent i = getIntent();

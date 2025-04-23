@@ -217,6 +217,6 @@ public class bestsellers extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        finish();
+        startActivity(new Intent(bestsellers.this, home.class));
     }
 }

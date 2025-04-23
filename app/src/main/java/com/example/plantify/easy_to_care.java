@@ -243,7 +243,7 @@ public class easy_to_care extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        finish();
+        startActivity(new Intent(easy_to_care.this, home.class));
     }
 
 }

@@ -42,14 +42,14 @@
             android:layout_weight="1" />
 
         <ImageView
-            android:id="@+id/search_icon"
+            android:id="@+id/cart_icon"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_gravity="center"
             android:src="@drawable/cart" />
 
         <ImageView
-            android:id="@+id/cart_icon"
+            android:id="@+id/search_icon"
             android:layout_width="40dp"
             android:layout_height="30dp"
             android:layout_marginRight="5dp"

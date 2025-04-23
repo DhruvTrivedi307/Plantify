@@ -20,7 +20,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class product extends AppCompatActivity {
 
-    ImageView productImg,back;
+    ImageView productImg,back,cart_icon,search_icon;
     TextView productName,productPrice,txtCount;
     Button btnMinus,btnPlus;
     AppCompatButton small,medium;
@@ -40,6 +40,8 @@ public class product extends AppCompatActivity {
         productImg = findViewById(R.id.productImg);
         productName = findViewById(R.id.productName);
         productPrice = findViewById(R.id.productPrice);
+        cart_icon = findViewById(R.id.cart_icon);
+        search_icon = findViewById(R.id.search_icon);
 
         buy_now = findViewById(R.id.buy_now);
 
@@ -60,6 +62,20 @@ public class product extends AppCompatActivity {
         p_pp = findViewById(R.id.p_pp);
         p_fbp = findViewById(R.id.p_fbp);
         p_lbp = findViewById(R.id.p_lbp);
+
+        cart_icon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(product.this, cart.class));
+            }
+        });
+
+        search_icon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(product.this, search.class));
+            }
+        });
 
 
         p_bhp.setOnClickListener(new View.OnClickListener() {

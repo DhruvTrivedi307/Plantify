@@ -214,7 +214,7 @@ public class pots extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        finish();
+        startActivity(new Intent(pots.this, home.class));
     }
 
     private boolean isPriceInRange(int price, float min, float max) {

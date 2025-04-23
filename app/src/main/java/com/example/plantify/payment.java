@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.ScrollView;
@@ -25,6 +26,7 @@ public class payment extends AppCompatActivity {
     TextView grandtotalPrice,subtotalPrice,bottomnavPrice;
     AppCompatButton checkout;
     ProgressBar loading,loading2;
+    ImageView logo;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -48,6 +50,14 @@ public class payment extends AppCompatActivity {
         checkout = findViewById(R.id.checkout);
         loading = findViewById(R.id.loading);
         loading2 = findViewById(R.id.loading2);
+        logo = findViewById(R.id.logo);
+
+        logo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
 
         Intent i = getIntent();
@@ -90,5 +100,11 @@ public class payment extends AppCompatActivity {
                 }, 3000);
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 }
